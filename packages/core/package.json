@@ -1,0 +1,9 @@
+{
+  "name": "core",
+  "version": "0.0.1",
+  "description": "Core PickUp components",
+  "main": "index.js",
+  "author": "PickUp <https://www.playpickup.com>",
+  "license": "MIT",
+  "private": false
+}
