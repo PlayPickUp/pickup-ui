@@ -1,0 +1,8 @@
+.DS_Store
+.cache
+node_modules
+error_log
+*.log
+.env
+dist
+build
