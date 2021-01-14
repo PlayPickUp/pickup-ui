@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react";
+import { ReactNode } from "react";
 
 /**
  *
@@ -96,10 +96,40 @@ export interface DefaultZIndex {
 	overlay: number;
 }
 
+export interface DefaultGradients {
+	main: string;
+}
+
+export type MediaQuery = (minWidth: number) => string;
+
+export interface Breakpoints {
+	small: number;
+	medium: number;
+	large: number;
+}
+
 export type DefaultTheme = {
+	borderRadius: number;
+	breakpoints: Breakpoints;
+	mediaQuery: MediaQuery;
 	colors: DefaultThemeColors;
-	typography: DefaultTypography;
+	gradients: DefaultGradients;
 	shadows: DefaultShadows;
 	spacing: DefaultSpacing;
+	typography: DefaultTypography;
 	zIndex: DefaultZIndex;
 };
+
+/**
+ *
+ * Button Component
+ *
+ */
+
+export type ButtonVariant = "fit" | "full";
+export interface ButtonProps {
+	children: ReactNode;
+	disabled?: boolean;
+	style?: React.CSSProperties;
+	variant: ButtonVariant;
+}

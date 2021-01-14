@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import injectSheet from "react-jss";
 import { DefaultTheme } from "../../../types";
 
@@ -77,6 +78,6 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
 			},
 		},
 	},
-}))(({ children }: { children: any }) => children);
+}))(({ children }: { children: ReactNode | any }) => children);
 
 export default GlobalsAndReset;

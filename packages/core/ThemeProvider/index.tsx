@@ -1,6 +1,5 @@
 import React from "react";
 import { ThemeProvider as JSSThemeProvider } from "react-jss";
-import PropTypes from "prop-types";
 import merge from "lodash/merge";
 
 import { defaultTheme } from "./defaultTheme";
@@ -20,16 +19,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
 			{withReset ? <GlobalsAndReset>{children}</GlobalsAndReset> : children}
 		</JSSThemeProvider>
 	);
-};
-
-ThemeProvider.defaultProps = {
-	withReset: true,
-};
-
-ThemeProvider.propTypes = {
-	children: PropTypes.node.isRequired,
-	withReset: PropTypes.bool.isRequired,
-	theme: PropTypes.any,
 };
 
 export default ThemeProvider;

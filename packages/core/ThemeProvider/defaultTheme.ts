@@ -1,17 +1,20 @@
 import {
+	Breakpoints,
+	CreateShadow,
+	DefaultGradients,
+	DefaultShadows,
+	DefaultSpacing,
+	DefaultTheme,
 	DefaultThemeColors,
 	DefaultTypography,
+	DefaultZIndex,
 	FontFamilies,
 	FontStyles,
 	GreenMap,
 	GreyMap,
+	MediaQuery,
 	PurpleMap,
 	RedMap,
-	CreateShadow,
-	DefaultSpacing,
-	DefaultShadows,
-	DefaultTheme,
-	DefaultZIndex,
 } from "../../../types";
 
 // Color me PickUp ⚡
@@ -40,7 +43,7 @@ const red: RedMap = {
 const colors: DefaultThemeColors = {
 	primary: { ...purple },
 	secondary: { ...grey },
-	green: { ...green },
+	green,
 	purple,
 	grey,
 	red,
@@ -141,10 +144,34 @@ const zIndex: DefaultZIndex = {
 	overlay: 999,
 };
 
+// Default Border Radius
+const borderRadius = 4;
+
+// Media Queries
+const mediaQuery: MediaQuery = (minWidth: number) => {
+	return `@media (min-width: ${minWidth}px)`;
+};
+
+// Breakpoints
+const breakpoints: Breakpoints = {
+	small: 788,
+	medium: 1029,
+	large: 1280,
+};
+
+// Default Gradient Values
+const gradients: DefaultGradients = {
+	main: `linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%)`,
+};
+
 export const defaultTheme: DefaultTheme = {
+	borderRadius,
+	breakpoints,
 	colors,
-	typography,
+	gradients,
+	mediaQuery,
 	shadows,
 	spacing,
+	typography,
 	zIndex,
 };
