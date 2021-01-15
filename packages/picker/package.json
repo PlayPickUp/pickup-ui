@@ -1,8 +1,8 @@
 {
-  "name": "picker",
-  "version": "0.0.1",
-  "description": "PickUp React Picker",
-  "main": "index.js",
-  "author": "PickUp <https://www.playpickup.com>",
-  "license": "MIT"
+	"name": "picker",
+	"version": "0.0.1",
+	"description": "PickUp React Picker",
+	"main": "index.js",
+	"author": "PickUp <https://www.playpickup.com>",
+	"license": "MIT"
 }
