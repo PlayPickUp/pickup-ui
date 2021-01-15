@@ -9,14 +9,5 @@
 	"scripts": {
 		"lint": "yarn eslint .",
 		"format": "prettier --write --ignore-unknown ."
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx}": "yarn lint",
-		"*": "yarn format"
 	}
 }
