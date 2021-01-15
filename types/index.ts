@@ -127,9 +127,15 @@ export type DefaultTheme = {
  */
 
 export type ButtonVariant = "fit" | "full";
+
 export interface ButtonProps {
 	children: ReactNode;
 	disabled?: boolean;
 	style?: React.CSSProperties;
 	variant: ButtonVariant;
+	onClick?: () => unknown;
+	element: keyof JSX.IntrinsicElements;
+	to?: string;
+	href?: string;
+	className?: string;
 }

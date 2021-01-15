@@ -1,5 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 import { ButtonProps, DefaultTheme } from "../../../types";
 
@@ -24,22 +26,46 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	},
 }));
 
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<
+	ButtonProps & React.HTMLAttributes<HTMLOrSVGElement>
+> = ({
+	className,
 	children,
 	disabled,
+	element: Element = "button",
+	href,
+	onClick,
 	style,
+	to,
 	...rest
 }) => {
 	const classes = useStyles();
+
+	if (to) {
+		return (
+			<Link
+				to={to}
+				className={classNames(classes.root, className)}
+				style={style}
+				onClick={onClick}
+				{...rest}
+			>
+				{children}
+			</Link>
+		);
+	}
+
 	return (
-		<button
-			className={classes.root}
+		<Element
+			className={classNames(classes.root, className)}
 			disabled={disabled}
 			style={style}
+			onClick={onClick}
+			href={href}
 			{...rest}
 		>
 			{children}
-		</button>
+		</Element>
 	);
 };
 
