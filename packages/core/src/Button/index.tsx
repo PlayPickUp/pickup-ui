@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-import { ButtonProps, DefaultTheme } from "../../../types";
+import { ButtonProps, DefaultTheme } from "../../../../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
