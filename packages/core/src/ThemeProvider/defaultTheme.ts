@@ -56,7 +56,7 @@ const colors: DefaultThemeColors = {
 // Font and Typography
 const fontFamilies: FontFamilies = {
 	body: "Inter, Helvetica, sans-serif",
-	headline: "'Ringside Narrow', Helvetica, sans-serif",
+	headline: "'Ringside-Condensed', Helvetica, sans-serif",
 };
 
 const fontStyles: FontStyles = {
@@ -162,6 +162,7 @@ const breakpoints: Breakpoints = {
 // Default Gradient Values
 const gradients: DefaultGradients = {
 	main: `linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%)`,
+	hover: `linear-gradient(112.25deg, #914EFF 35.38%, #5D1BFF 122.56%)`,
 };
 
 export const defaultTheme: DefaultTheme = {

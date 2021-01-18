@@ -18,10 +18,20 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		padding: "0 30px",
 		appearance: "none",
 		borderRadius: theme.borderRadius,
-		backgroundColor: theme.gradients.main,
+		background: theme.gradients.main,
+		fontFamily: theme.typography.fontFamilies.headline,
+		fontSize: 18,
+		lineHeight: "24px",
+		letterSpcing: "0.3px",
 		color: theme.colors.white,
+		textTransform: "uppercase",
+		transition: "opacity 200ms ease-in-out",
+		opacity: 1,
 		fallbacks: {
-			backgroundColor: theme.colors.primary.base,
+			background: theme.colors.primary.base,
+		},
+		"&:hover": {
+			opacity: 0.85,
 		},
 	},
 }));
@@ -37,9 +47,10 @@ const Button: React.FC<
 	onClick,
 	style,
 	to,
+	variant = "fit",
 	...rest
 }) => {
-	const classes = useStyles();
+	const classes = useStyles({ variant });
 
 	if (to) {
 		return (

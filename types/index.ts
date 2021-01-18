@@ -7,8 +7,8 @@ import { ReactNode } from "react";
  */
 export interface ThemeProviderProps {
 	children: any;
-	withReset: boolean;
-	theme: DefaultTheme;
+	withReset?: boolean;
+	theme?: DefaultTheme;
 }
 
 export interface PurpleMap {
@@ -98,6 +98,7 @@ export interface DefaultZIndex {
 
 export interface DefaultGradients {
 	main: string;
+	hover: string;
 }
 
 export type MediaQuery = (minWidth: number) => string;
@@ -132,9 +133,9 @@ export interface ButtonProps {
 	children: ReactNode;
 	disabled?: boolean;
 	style?: React.CSSProperties;
-	variant: ButtonVariant;
+	variant?: ButtonVariant;
 	onClick?: () => unknown;
-	element: keyof JSX.IntrinsicElements;
+	element?: keyof JSX.IntrinsicElements;
 	to?: string;
 	href?: string;
 	className?: string;
