@@ -23,7 +23,7 @@ const playground = {
 		},
 	},
 	plugins: [
-		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+		new CleanWebpackPlugin({ cleanStaleWebpackAssets: true }),
 		new HtmlWebpackPlugin({
 			title: "PickUp-UI Playground",
 			template: "./playground/public/index.html",

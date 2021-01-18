@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 /**
  *
@@ -140,3 +140,26 @@ export interface ButtonProps {
 	href?: string;
 	className?: string;
 }
+
+/**
+ *
+ * Typography Component
+ *
+ */
+
+export interface TypographyProps {
+	children: ReactNode;
+	variant?:
+		| "title"
+		| "body"
+		| "heading2"
+		| "heading3"
+		| "heading4"
+		| "heading5"
+		| "heading6"
+		| "span";
+	className?: string;
+	style?: CSSProperties;
+}
+
+export type TypographyElementMap = Record<string, keyof JSX.IntrinsicElements>;
