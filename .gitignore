@@ -6,3 +6,4 @@ error_log
 .env
 dist
 build
+storybook-static
