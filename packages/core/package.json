@@ -2,12 +2,14 @@
 	"name": "@playpickup/core",
 	"version": "0.0.1",
 	"description": "Core PickUp components",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"author": "PlayPickUp <engineering@playpickup.com>",
 	"license": "MIT",
 	"private": false,
 	"scripts": {
 		"lint": "yarn eslint .",
-		"format": "prettier --write --ignore-unknown ."
+		"format": "prettier --write --ignore-unknown .",
+		"prepublish": "node ./scripts/prepublishCore.js"
 	}
 }
