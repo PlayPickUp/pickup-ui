@@ -1,6 +1,6 @@
 {
 	"name": "@playpickup/core",
-	"version": "0.0.1",
+	"version": "0.0.1-a",
 	"description": "Core PickUp components",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
