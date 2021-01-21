@@ -4,7 +4,7 @@ import merge from "lodash/merge";
 
 import { defaultTheme } from "./defaultTheme";
 
-import { ThemeProviderProps } from "../../../../types";
+import { ThemeProviderProps } from "../types";
 import GlobalsAndReset from "./GlobalsAndReset";
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({

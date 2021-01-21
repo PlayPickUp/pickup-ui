@@ -1,11 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
-import {
-	DefaultTheme,
-	TypographyElementMap,
-	TypographyProps,
-} from "../../../../types";
+import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {

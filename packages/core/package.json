@@ -2,13 +2,40 @@
 	"name": "@playpickup/core",
 	"version": "0.0.1-d",
 	"description": "Core PickUp components",
-	"main": "src/index.ts",
-	"types": "src/index.d.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
 	"author": "PlayPickUp <engineering@playpickup.com>",
 	"license": "MIT",
 	"private": false,
 	"scripts": {
 		"lint": "yarn eslint .",
-		"format": "prettier --write --ignore-unknown ."
+		"format": "prettier --write --ignore-unknown .",
+		"prepublishOnly": "yarn build",
+		"build": "rollup -c"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^17.0.0",
+		"@rollup/plugin-node-resolve": "^11.1.0",
+		"@types/classnames": "^2.2.11",
+		"@types/react": "^17.0.0",
+		"@types/react-dom": "^17.0.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"rollup": "^2.37.1",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-typescript2": "^0.29.0",
+		"tslib": "^2.1.0",
+		"typescript": "^4.1.3"
+	},
+	"peerDependencies": {
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6"
 	}
 }

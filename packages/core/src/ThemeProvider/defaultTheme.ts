@@ -15,7 +15,7 @@ import {
 	MediaQuery,
 	PurpleMap,
 	RedMap,
-} from "../../../../types";
+} from "../types";
 
 // Color me PickUp ⚡
 const purple: PurpleMap = {

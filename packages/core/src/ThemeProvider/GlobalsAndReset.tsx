@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import injectSheet from "react-jss";
-import { DefaultTheme } from "../../../../types";
+import { DefaultTheme } from "../types";
 
 const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
 	"@global": {
