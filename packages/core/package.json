@@ -1,9 +1,9 @@
 {
 	"name": "@playpickup/core",
-	"version": "0.0.1-c",
+	"version": "0.0.1-d",
 	"description": "Core PickUp components",
 	"main": "src/index.ts",
-	"types": "dist/index.d.ts",
+	"types": "src/index.d.ts",
 	"author": "PlayPickUp <engineering@playpickup.com>",
 	"license": "MIT",
 	"private": false,
