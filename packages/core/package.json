@@ -1,6 +1,6 @@
 {
 	"name": "@playpickup/core",
-	"version": "0.0.1-a",
+	"version": "0.0.1-b",
 	"description": "Core PickUp components",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -9,7 +9,6 @@
 	"private": false,
 	"scripts": {
 		"lint": "yarn eslint .",
-		"format": "prettier --write --ignore-unknown .",
-		"prepublish": "node ./scripts/prepublishCore.js"
+		"format": "prettier --write --ignore-unknown ."
 	}
 }
