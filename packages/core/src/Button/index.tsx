@@ -55,6 +55,7 @@ const Button: React.FC<
 	if (to) {
 		return (
 			<Link
+				data-testid="pickup-button"
 				to={to}
 				className={classNames(classes.root, className)}
 				style={style}
@@ -68,6 +69,7 @@ const Button: React.FC<
 
 	return (
 		<Element
+			data-testid="pickup-button"
 			className={classNames(classes.root, className)}
 			disabled={disabled}
 			style={style}
