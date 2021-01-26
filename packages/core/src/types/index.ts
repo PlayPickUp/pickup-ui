@@ -58,18 +58,26 @@ interface FontProperties {
 	fontSize: number | string;
 	lineHeight: string;
 	letterSpacing: string;
+	textTransform?: string;
 	color: string;
 }
 
 export interface FontStyles {
 	title: FontProperties;
 	heading2: FontProperties;
+	heading3: FontProperties;
 	body: FontProperties;
+	body2: FontProperties;
+}
+
+export interface ResponsiveFonts {
+	desktop: FontStyles;
+	mobile: FontStyles;
 }
 
 export interface DefaultTypography {
 	fontFamilies: FontFamilies;
-	fontStyles: FontStyles;
+	fontStyles: ResponsiveFonts;
 }
 export type CreateShadow = (
 	a: number,
@@ -159,6 +167,7 @@ export interface TypographyProps {
 		| "heading6"
 		| "span";
 	className?: string;
+	element?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 	style?: CSSProperties;
 }
 

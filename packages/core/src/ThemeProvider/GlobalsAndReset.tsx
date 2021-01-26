@@ -38,7 +38,7 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
 			width: "100%",
 			minHeight: "100%",
 			fontFamily: theme.typography.fontFamilies.body || "sans-serif",
-			fontSize: theme.typography.fontStyles.body.fontSize || "1rem",
+			fontSize: theme.typography.fontStyles.desktop.body.fontSize || "1rem",
 			fontWeight: 400,
 			color: theme.colors.black || "#000",
 			backgroundColor: theme.colors.white,

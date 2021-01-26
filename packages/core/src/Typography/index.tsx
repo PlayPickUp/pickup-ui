@@ -3,18 +3,40 @@ import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 
+// TODO: Find solution to template literals in typescript to use theme.mediaQuery + theme.breakpoints
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
 		position: "relative",
 	},
 	title: {
-		...theme.typography.fontStyles.title,
+		...theme.typography.fontStyles.mobile.title,
+		"@media screen and (min-width: 787px)": {
+			...theme.typography.fontStyles.desktop.title,
+		},
 	},
 	heading2: {
-		...theme.typography.fontStyles.heading2,
+		...theme.typography.fontStyles.mobile.heading2,
+		"@media screen and (min-width: 787px):": {
+			...theme.typography.fontStyles.desktop.heading2,
+		},
+	},
+	heading3: {
+		...theme.typography.fontStyles.mobile.heading3,
+		"@media screen and (min-width: 787px):": {
+			...theme.typography.fontStyles.desktop.heading3,
+		},
 	},
 	body: {
-		...theme.typography.fontStyles.body,
+		...theme.typography.fontStyles.mobile.body,
+		"@media screen and (min-width: 787px):": {
+			...theme.typography.fontStyles.desktop.body,
+		},
+	},
+	body2: {
+		...theme.typography.fontStyles.mobile.body2,
+		"@media screen and (min-width: 787px):": {
+			...theme.typography.fontStyles.desktop.body2,
+		},
 	},
 }));
 
@@ -31,16 +53,20 @@ const elementMap: TypographyElementMap = {
 
 const Typography: React.FC<
 	TypographyProps & React.HTMLAttributes<HTMLOrSVGElement>
-> = ({ children, className, style, variant = "p", ...rest }) => {
+> = ({ children, className, style, element, variant = "p", ...rest }) => {
 	const classes = useStyles();
-	const Element: keyof JSX.IntrinsicElements = elementMap[variant] || "span";
+	const Element: keyof JSX.IntrinsicElements = element
+		? element
+		: elementMap[variant] || "span";
 	return (
 		<Element
 			className={classNames({
 				[classes.root]: true,
 				[classes.title]: variant === "title",
 				[classes.body]: variant === "body",
+				[classes.body2]: variant === "body2",
 				[classes.heading2]: variant === "heading2",
+				[classes.heading3]: variant === "heading3",
 				className,
 			})}
 			style={style}

@@ -9,12 +9,12 @@ import {
 	DefaultTypography,
 	DefaultZIndex,
 	FontFamilies,
-	FontStyles,
 	GreenMap,
 	GreyMap,
 	MediaQuery,
 	PurpleMap,
 	RedMap,
+	ResponsiveFonts,
 } from "../types";
 
 // Color me PickUp ⚡
@@ -59,33 +59,104 @@ const fontFamilies: FontFamilies = {
 	headline: "'Ringside-Condensed', Helvetica, sans-serif",
 };
 
-const fontStyles: FontStyles = {
-	title: {
-		fontFamily: fontFamilies.headline,
-		fontWeight: 700,
-		fontStyle: "italic",
-		fontSize: 24,
-		lineHeight: "24px",
-		letterSpacing: "0.1.px",
-		color: "inherit",
+const fontStyles: ResponsiveFonts = {
+	desktop: {
+		title: {
+			fontFamily: fontFamilies.headline,
+			fontWeight: 600,
+			fontStyle: "italic",
+			fontSize: 48,
+			lineHeight: "54px",
+			letterSpacing: "0.1.px",
+			textTransform: "uppercase",
+			color: "inherit",
+		},
+		heading2: {
+			fontFamily: fontFamilies.headline,
+			fontWeight: 600,
+			fontStyle: "italic",
+			fontSize: 36,
+			lineHeight: "40px",
+			letterSpacing: "0.1px",
+			textTransform: "uppercase",
+			color: "inherit",
+		},
+		heading3: {
+			fontFamily: fontFamilies.headline,
+			fontStyle: "italic",
+			fontWeight: 600,
+			fontSize: 28,
+			lineHeight: "34px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
+		body: {
+			fontFamily: fontFamilies.body,
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: 18,
+			lineHeight: "30px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
+		body2: {
+			fontFamily: fontFamilies.body,
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: 13,
+			lineHeight: "20px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
 	},
-	heading2: {
-		fontFamily: fontFamilies.headline,
-		fontWeight: 700,
-		fontStyle: "italic",
-		fontSize: "21px",
-		lineHeight: "22px",
-		letterSpacing: "0.1px",
-		color: "inherit",
-	},
-	body: {
-		fontFamily: fontFamilies.body,
-		fontStyle: "normal",
-		fontWeight: "normal",
-		fontSize: 14,
-		lineHeight: "18px",
-		letterSpacing: "0.1px",
-		color: "inherit",
+	mobile: {
+		title: {
+			fontFamily: fontFamilies.headline,
+			fontWeight: 600,
+			fontStyle: "italic",
+			fontSize: 34,
+			lineHeight: "38px",
+			letterSpacing: "0.1.px",
+			textTransform: "uppercase",
+			color: "inherit",
+		},
+		heading2: {
+			fontFamily: fontFamilies.headline,
+			fontWeight: 600,
+			fontStyle: "italic",
+			fontSize: 28,
+			lineHeight: "34px",
+			letterSpacing: "0.1px",
+			textTransform: "uppercase",
+			color: "inherit",
+		},
+		heading3: {
+			fontFamily: fontFamilies.headline,
+			fontStyle: "italic",
+			fontWeight: 600,
+			fontSize: 22,
+			lineHeight: "26px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
+		body: {
+			fontFamily: fontFamilies.body,
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: 15,
+			lineHeight: "24px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
+		body2: {
+			fontFamily: fontFamilies.body,
+			fontStyle: "normal",
+			fontWeight: "normal",
+			fontSize: 12,
+			lineHeight: "18px",
+			letterSpacing: "0.1px",
+			color: "inherit",
+		},
 	},
 };
 
@@ -154,7 +225,7 @@ const mediaQuery: MediaQuery = (minWidth: number) => {
 
 // Breakpoints
 const breakpoints: Breakpoints = {
-	small: 788,
+	small: 787,
 	medium: 1029,
 	large: 1280,
 };
