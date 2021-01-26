@@ -1,83 +1,23 @@
 {
-	"name": "pickup-ui",
-	"version": "0.0.1",
-	"description": "A collection of React Components that make up the PickUp world. 🌎⚡",
-	"main": "index.js",
-	"repository": "git@github.com:PlayPickUp/pickup-ui.git",
-	"author": "PickUp <https://www.playpickup.com>",
-	"license": "MIT",
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	],
-	"dependencies": {
-		"classnames": "^2.2.6",
-		"lodash": "^4.17.20",
-		"react-jss": "^10.5.0"
-	},
-	"peerDependencies": {
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1",
-		"react-router-dom": "^5.2.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.12.10",
-		"@babel/plugin-syntax-jsx": "^7.12.1",
-		"@babel/preset-env": "^7.12.11",
-		"@babel/preset-react": "^7.12.10",
-		"@babel/preset-typescript": "^7.12.7",
-		"@storybook/addon-actions": "^6.1.14",
-		"@storybook/addon-essentials": "^6.1.14",
-		"@storybook/addon-links": "^6.1.14",
-		"@storybook/react": "^6.1.14",
-		"@testing-library/react": "^11.2.3",
-		"@types/classnames": "^2.2.11",
-		"@types/jest": "^26.0.20",
-		"@types/lodash": "^4.14.167",
-		"@types/node": "^14.14.21",
-		"@types/react": "^17.0.0",
-		"@types/react-dom": "^17.0.0",
-		"@types/react-router-dom": "^5.1.7",
-		"@typescript-eslint/eslint-plugin": "^4.13.0",
-		"@typescript-eslint/parser": "^4.13.0",
-		"babel-jest": "^26.6.3",
-		"babel-loader": "^8.2.2",
-		"clean-webpack-plugin": "^3.0.0",
-		"css-loader": "^5.0.1",
-		"eslint": "^7.17.0",
-		"eslint-plugin-react": "^7.22.0",
-		"file-loader": "^6.2.0",
-		"fs-extra": "^9.1.0",
-		"html-webpack-plugin": "^5.0.0-beta.5",
-		"husky": ">=4",
-		"jest": "^26.6.3",
-		"lint-staged": ">=10",
-		"prettier": "2.2.1",
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1",
-		"react-router-dom": "^5.2.0",
-		"react-test-renderer": "^17.0.1",
-		"style-loader": "^2.0.0",
-		"typescript": "^4.1.3",
-		"webpack": "^5.13.0",
-		"webpack-cli": "^4.3.1",
-		"webpack-dev-server": "^3.11.2"
-	},
-	"scripts": {
-		"build": "webpack --config webpack.config.prod.js && node ./scripts/buildCore.js",
-		"start:playground": "webpack serve --config webpack.config.dev.js",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook",
-		"test": "jest",
-		"publish:core": "yarn build && cd packages/core && yarn version && yarn publish"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{ts,tsx}": "yarn eslint .",
-		"*": "prettier --write --ignore-unknown ."
-	}
+  "name": "pickup-ui",
+  "version": "0.0.1",
+  "description": "A collection of React Components that make up the PickUp world. 🌎⚡",
+  "main": "index.js",
+  "repository": "git@github.com:PlayPickUp/pickup-ui.git",
+  "author": "PickUp <https://www.playpickup.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "yarn eslint .",
+    "*": "prettier --write --ignore-unknown ."
+  }
 }

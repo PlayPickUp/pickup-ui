@@ -169,6 +169,7 @@ export interface TypographyProps {
 	className?: string;
 	element?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 	style?: CSSProperties;
+	color?: string;
 }
 
 export type TypographyElementMap = Record<string, keyof JSX.IntrinsicElements>;

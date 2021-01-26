@@ -1,9 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Color prop is passed successfully 1`] = `
+<div>
+  <span
+    class="root-0-2-1 root-d4-0-2-8"
+  >
+    I am red text!
+  </span>
+</div>
+`;
+
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <h1
-    class="root-0-2-1 title-0-2-2"
+    class="root-0-2-1 root-d3-0-2-7 title-0-2-2"
   >
     PlayPickUp
   </h1>
