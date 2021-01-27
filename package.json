@@ -7,9 +7,14 @@
   "author": "PickUp <https://www.playpickup.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "packages/*"
+    ]
+  },
   "scripts": {},
   "husky": {
     "hooks": {
