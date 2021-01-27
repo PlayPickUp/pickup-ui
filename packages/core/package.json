@@ -1,6 +1,6 @@
 {
 	"name": "@playpickup/core",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Core PickUp components",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
@@ -25,6 +25,7 @@
 		"@types/classnames": "^2.2.11",
 		"@types/react": "^17.0.0",
 		"@types/react-dom": "^17.0.0",
+		"@types/react-router-dom": "^5.1.7",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"rollup": "^2.37.1",
@@ -40,6 +41,7 @@
 	"dependencies": {
 		"classnames": "^2.2.6",
 		"lodash": "^4.17.20",
-		"react-jss": "^10.5.1"
+		"react-jss": "^10.5.1",
+		"react-router-dom": "^5.2.0"
 	}
 }
