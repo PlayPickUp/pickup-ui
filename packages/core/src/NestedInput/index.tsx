@@ -68,6 +68,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
 			<div className={classes.root}>
 				<div className={classes.inputContainer}>
 					<input
+						data-testid="nested-input"
 						className={classes.input}
 						id={id}
 						name={name}
