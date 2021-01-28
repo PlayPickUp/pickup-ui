@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { ChangeEvent, CSSProperties, ReactNode } from "react";
 
 /**
  *
@@ -138,7 +138,7 @@ export type DefaultTheme = {
 export type ButtonVariant = "fit" | "full";
 
 export interface ButtonProps {
-	children: ReactNode;
+	children?: ReactNode;
 	disabled?: boolean;
 	style?: React.CSSProperties;
 	variant?: ButtonVariant;
@@ -147,6 +147,8 @@ export interface ButtonProps {
 	to?: string;
 	href?: string;
 	className?: string;
+	useSubmit?: boolean;
+	submitText?: string;
 }
 
 /**
@@ -173,3 +175,18 @@ export interface TypographyProps {
 }
 
 export type TypographyElementMap = Record<string, keyof JSX.IntrinsicElements>;
+
+/**
+ *
+ * NestedInput Component
+ *
+ */
+export interface NestedInputProps {
+	buttonText: string;
+	id: string;
+	name: string;
+	placeholder: string;
+	errors?: any;
+	touched?: any;
+	handleChange: (e: ChangeEvent) => unknown;
+}

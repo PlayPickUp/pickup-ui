@@ -18,6 +18,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		padding: "0 30px",
 		appearance: "none",
 		borderRadius: theme.borderRadius,
+		border: "none",
 		background: theme.gradients.main,
 		fontFamily: theme.typography.fontFamilies.headline,
 		fontSize: 18,
@@ -37,7 +38,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 }));
 
 const Button: React.FC<
-	ButtonProps & React.HTMLAttributes<HTMLOrSVGElement>
+	ButtonProps & React.HTMLAttributes<HTMLOrSVGElement | HTMLInputElement>
 > = ({
 	className,
 	children,
@@ -48,6 +49,8 @@ const Button: React.FC<
 	style,
 	to,
 	variant = "fit",
+	useSubmit,
+	submitText,
 	...rest
 }) => {
 	const classes = useStyles({ variant });
@@ -64,6 +67,24 @@ const Button: React.FC<
 			>
 				{children}
 			</Link>
+		);
+	}
+
+	if (useSubmit) {
+		if (!submitText) {
+			console.warn("Must use submitText when useSubmit is set to true!");
+		}
+		return (
+			<input
+				data-testid="pickup-button"
+				className={classNames(classes.root, className)}
+				type="submit"
+				value={submitText || "Submit"}
+				onClick={onClick}
+				disabled={disabled}
+				style={style}
+				{...rest}
+			/>
 		);
 	}
 

@@ -15,9 +15,10 @@
 		"lint": "yarn eslint .",
 		"format": "prettier --write --ignore-unknown .",
 		"prepublishOnly": "yarn build",
-		"build": "rollup -c",
+		"build": "rollup --config",
 		"jest": "jest",
-		"test": "yarn lint && yarn jest"
+		"test": "yarn lint && yarn jest",
+		"start": "rollup --config --watch"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^17.0.0",
