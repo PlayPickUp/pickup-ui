@@ -17,6 +17,8 @@
     ]
   },
   "scripts": {
+    "test": "yarn workspaces run test",
+    "build": "yarn workspaces run build",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook"
   },

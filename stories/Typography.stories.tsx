@@ -31,8 +31,18 @@ export default {
       description: "Content to be rendered",
     },
     className: {
-      defaultValue: null,
       description: "className(s) to be passed to the component",
+    },
+    style: {
+      description: "CSS Style Object to be passed to the component",
+    },
+    element: {
+      description:
+        "Allows for overriding the variant's default underlying HTML Element",
+      control: {
+        type: "select",
+        options: ["p", "h1", "h2", "h3", "h4", "h5", "h6", "span"],
+      },
     },
   },
   args: {
