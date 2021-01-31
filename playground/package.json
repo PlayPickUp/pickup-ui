@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "start": "parcel serve ./src/index.html --open --no-autoinstall --log-level 4 --target browser",
-    "start:watch": "node ./scripts/watch.js"
+    "start:watch": "node ./scripts/watch.js",
+    "test": "echo No playground tests"
   },
   "devDependencies": {
     "@types/node": "^14.14.22",
@@ -16,7 +17,6 @@
   },
   "dependencies": {
     "formik": "^2.2.6",
-    "typescript": "^4.1.3",
     "yup": "^0.32.8"
   }
 }
