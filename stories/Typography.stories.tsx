@@ -26,6 +26,14 @@ export default {
         ],
       },
     },
+    children: {
+      defaultValue: "",
+      description: "Content to be rendered",
+    },
+    className: {
+      defaultValue: null,
+      description: "className(s) to be passed to the component",
+    },
   },
   args: {
     children: "PickUp",
