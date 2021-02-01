@@ -16,11 +16,6 @@
       "packages/*"
     ]
   },
-  "storybook-deployer": {
-    "gitUsername": "erwstout",
-    "gitEmail": "ericwstout@gmail.com",
-    "commitMessage": "Deploy Storybook to GitHub Pages"
-  },
   "scripts": {
     "test": "yarn workspaces run test",
     "build": "yarn workspaces run build",
