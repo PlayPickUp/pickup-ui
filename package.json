@@ -16,6 +16,11 @@
       "packages/*"
     ]
   },
+  "storybook-deployer": {
+    "gitUsername": "erwstout",
+    "gitEmail": "eric@playpickup.com",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
+  },
   "scripts": {
     "test": "yarn workspaces run test",
     "build": "yarn workspaces run build",
