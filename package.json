@@ -18,7 +18,7 @@
   },
   "storybook-deployer": {
     "gitUsername": "erwstout",
-    "gitEmail": "eric@playpickup.com",
+    "gitEmail": "ericwstout@gmail.com",
     "commitMessage": "Deploy Storybook to GitHub Pages"
   },
   "scripts": {
