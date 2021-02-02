@@ -1,13 +1,10 @@
 {
-	"name": "@playpickup/core",
-	"version": "0.0.7",
-	"description": "Core PickUp components",
+	"name": "@playpickup/icons",
+	"version": "0.0.1",
+	"description": "Package containing icon assets for pickup-ui",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
 	"author": "PlayPickUp <engineering@playpickup.com>",
 	"license": "MIT",
 	"private": false,
@@ -20,8 +17,9 @@
 		"test": "yarn lint && yarn jest",
 		"start": "rollup --config --watch"
 	},
-	"peerDependencies": {
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1"
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.34",
+		"@fortawesome/free-solid-svg-icons": "^5.15.2",
+		"@fortawesome/react-fontawesome": "^0.1.14"
 	}
 }
