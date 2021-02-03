@@ -1,4 +1,6 @@
-import { ChangeEvent, CSSProperties, ReactNode } from "react";
+import { ChangeEvent, CSSProperties, MouseEvent, ReactNode } from "react";
+
+import { IconProps } from "../../../icons/src/types";
 
 /**
  *
@@ -189,4 +191,26 @@ export interface NestedInputProps {
 	errors?: any;
 	touched?: any;
 	handleChange: (e: ChangeEvent) => unknown;
+}
+
+/**
+ *
+ * Fab (Floating Action Button) Component
+ *
+ */
+
+export interface FabProps {
+	className?: string;
+	innerClassName?: string;
+	innerStyle?: React.CSSProperties;
+	style?: React.CSSProperties;
+	icon: React.FC<IconProps>;
+	title: string;
+	size?: "small" | "large";
+	onClick: (e: MouseEvent) => unknown;
+	disabled?: boolean;
+	disablePopOver?: boolean;
+	color?: string;
+	iconColor?: string;
+	iconHoverColor?: string;
 }
