@@ -3,7 +3,7 @@ import { fireEvent, render } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import Fab from ".";
-import { Create } from "@playpickup/icons";
+import Create from "../../../icons/src/icon/Create";
 
 const handleChange = jest.fn();
 
