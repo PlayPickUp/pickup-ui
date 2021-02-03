@@ -10,10 +10,12 @@
 		"jsx": "react",
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true
-		// "rootDir": "src"
+		"esModuleInterop": true,
+		"removeComments": true,
+		// "rootDir": "./packages/core",
+		"declarationMap": true
 	},
-	"include": ["src/**/*"],
+	"include": ["src/index.ts"],
 	"exclude": [
 		"node_modules",
 		"build",

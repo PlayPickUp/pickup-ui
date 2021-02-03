@@ -1,7 +1,8 @@
 import React from "react";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import { ThemeProvider, Typography, NestedInput } from "@playpickup/core";
+import { ThemeProvider, Typography, NestedInput, Fab } from "@playpickup/core";
+import { Create } from "@playpickup/icons";
 
 import "./index.css";
 
@@ -50,6 +51,10 @@ const App: React.FC = () => (
           </Form>
         )}
       </Formik>
+    </div>
+    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+      <Fab icon={Create} title="Create Post" />
+      <Fab size="large" icon={Create} disablePopOver title="Create Post" />
     </div>
   </ThemeProvider>
 );
