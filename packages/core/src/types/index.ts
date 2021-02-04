@@ -1,7 +1,7 @@
 import { ColDef, DataGridProps } from "@material-ui/data-grid";
 import { ChangeEvent, CSSProperties, MouseEvent, ReactNode } from "react";
 
-import { IconProps } from "../../../icons/src/types";
+// import { IconProps } from "../../../icons/src/types";
 
 /**
  *
@@ -205,7 +205,7 @@ export interface FabProps {
 	innerClassName?: string;
 	innerStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-	icon: React.FC<IconProps>;
+	icon: React.FC<any>;
 	title: string;
 	size?: "small" | "large";
 	onClick: (e: MouseEvent) => unknown;
