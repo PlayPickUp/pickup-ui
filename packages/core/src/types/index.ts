@@ -1,3 +1,4 @@
+import { ColDef, DataGridProps } from "@material-ui/data-grid";
 import { ChangeEvent, CSSProperties, MouseEvent, ReactNode } from "react";
 
 import { IconProps } from "../../../icons/src/types";
@@ -213,4 +214,17 @@ export interface FabProps {
 	color?: string;
 	iconColor?: string;
 	iconHoverColor?: string;
+}
+
+/**
+ *
+ * Table Component
+ *
+ */
+export interface TableProps {
+	className?: string;
+	style?: React.CSSProperties;
+	columns: ColDef[];
+	rows: Array<Record<string, unknown>>;
+	pageSize: number;
 }
