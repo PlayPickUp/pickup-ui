@@ -35,7 +35,10 @@ export default {
 			moduleDirectories: ["node_modules"],
 		}),
 		commonjs(),
-		typescript({ useTsconfigDeclarationDir: true }),
+		typescript({
+			useTsconfigDeclarationDir: true,
+			tsconfig: "./tsconfig.json",
+		}),
 	],
 	external: ["react", "react-dom", "prop-types"],
 };

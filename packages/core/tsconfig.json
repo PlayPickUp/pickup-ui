@@ -12,10 +12,8 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"removeComments": true,
-		// "rootDir": "./packages/core",
 		"declarationMap": true
 	},
-	"include": ["src/index.ts"],
 	"exclude": [
 		"node_modules",
 		"build",
