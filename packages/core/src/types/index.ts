@@ -221,10 +221,36 @@ export interface FabProps {
  * Table Component
  *
  */
-export interface TableProps {
-	className?: string;
-	style?: React.CSSProperties;
-	columns: ColDef[];
-	rows: Array<Record<string, unknown>>;
-	pageSize: number;
+export interface HeadCell {
+	disablePadding: boolean;
+	id: keyof TableData;
+	label: string;
+	numeric: boolean;
+	width: number;
+}
+
+export type TableData = Record<any, any>;
+
+export type TableOrder = "asc" | "desc";
+export interface DataTableProps {
+	headCells: HeadCell[];
+	rows: Array<Record<string | number, any>>;
+	defaultSortColumn: string;
+	tableTitle: string;
+}
+
+export interface EnhancedTableProps {
+	classes: ReturnType<any>;
+	numSelected: number;
+	onRequestSort: (event: React.MouseEvent<unknown>, property: any) => void;
+	onSelectAllClick: (event: React.ChangeEvent<HTMLInputElement>) => void;
+	order: TableOrder;
+	orderBy: string;
+	rowCount: number;
+	headCells: HeadCell[];
+}
+
+export interface EnhancedTableToolbarProps {
+	numSelected: number;
+	tableTitle: string;
 }

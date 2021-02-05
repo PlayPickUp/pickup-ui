@@ -10,7 +10,7 @@ export {
 	Button,
 	Fab,
 	NestedInput,
-	// DataTable,
+	DataTable,
 	ThemeProvider,
 	Typography,
 	defaultTheme,
