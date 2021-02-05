@@ -436,7 +436,7 @@ exports[`DataTable renders without crashing, matches snapshot 1`] = `
           />
           <p
             class="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
-            id="mui-68787"
+            id="mui-76079"
           >
             Rows per page:
           </p>
@@ -445,9 +445,9 @@ exports[`DataTable renders without crashing, matches snapshot 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-68787 mui-1601"
+              aria-labelledby="mui-76079 mui-26536"
               class="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
-              id="mui-1601"
+              id="mui-26536"
               role="button"
               tabindex="0"
             >
