@@ -7,7 +7,7 @@ import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
 		position: "relative",
-		color: (props) => props.color || 'inherit'
+		color: (props) => props.color || "inherit",
 	},
 	title: {
 		...theme.typography.fontStyles.mobile.title,
@@ -54,8 +54,16 @@ const elementMap: TypographyElementMap = {
 
 const Typography: React.FC<
 	TypographyProps & React.HTMLAttributes<HTMLOrSVGElement>
-> = ({ children, className, style, element, variant = "p", color, ...rest }) => {
-	const classes = useStyles({color});
+> = ({
+	children,
+	className,
+	style,
+	element,
+	variant = "p",
+	color,
+	...rest
+}) => {
+	const classes = useStyles({ color });
 	const Element: keyof JSX.IntrinsicElements = element
 		? element
 		: elementMap[variant] || "span";
