@@ -6,7 +6,7 @@ import { FabProps } from "@playpickup/core/src/types";
 import { Create } from "@playpickup/icons";
 
 export default {
-  title: "Core/Floating Action Button (Fab)",
+  title: "Core/Fab",
   component: Fab,
   argTypes: {
     className: {
