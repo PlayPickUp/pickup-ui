@@ -22,14 +22,8 @@ const useToolbarStyles = makeStyles((theme: MUITheme) =>
 		},
 		highlight:
 			theme.palette.type === "light"
-				? {
-						color: theme.palette.primary.main,
-						backgroundColor: lighten(theme.palette.primary.light, 0.85),
-				  }
-				: {
-						color: theme.palette.text.primary,
-						backgroundColor: theme.palette.primary.dark,
-				  },
+				? {color: theme.palette.primary.main,backgroundColor: lighten(theme.palette.primary.light, 0.85)}
+				: {color: theme.palette.text.primary,backgroundColor: theme.palette.primary.dark},
 		title: {
 			flex: "1 1 100%",
 		},

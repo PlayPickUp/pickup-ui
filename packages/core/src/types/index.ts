@@ -1,7 +1,4 @@
-import { ColDef, DataGridProps } from "@material-ui/data-grid";
 import { ChangeEvent, CSSProperties, MouseEvent, ReactNode } from "react";
-
-// import { IconProps } from "../../../icons/src/types";
 
 /**
  *
