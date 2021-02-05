@@ -25,7 +25,7 @@
     "test": "yarn workspaces run test",
     "build": "yarn workspaces run build",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s ./stories/static",
     "deploy-storybook": "storybook-to-ghpages",
     "start": "node -e \"console.log('Starting all packages in watch mode!')\" && concurrently \"yarn start:playground\" \"yarn start:icons\" \"yarn storybook\"",
     "start:playground": "cd playground && yarn start",
