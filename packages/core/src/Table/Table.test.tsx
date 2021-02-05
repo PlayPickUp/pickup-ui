@@ -6,15 +6,6 @@ import DataTable from '.';
 
 import { rows, headCells } from './__mocks__/data.mock';
 
-test("DataTable renders without crashing, matches snapshot", () => {
-	const { container } = render(
-		<ThemeProvider>
-			<DataTable rows={rows} headCells={headCells as any} defaultSortColumn={"id"} tableTitle="Homebase Posts" />
-		</ThemeProvider>
-	)
-	expect(container).toMatchSnapshot();
-});
-
 test("Table title renders correctly", () => {
 	const { getByText } = render(
 		<ThemeProvider>
