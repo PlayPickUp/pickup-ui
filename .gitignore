@@ -7,3 +7,4 @@ error_log
 dist
 build
 storybook-static
+.npmrc

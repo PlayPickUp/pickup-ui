@@ -1,4 +1,10 @@
-import { ChangeEvent, CSSProperties, MouseEvent, ReactNode } from "react";
+import {
+	ChangeEvent,
+	CSSProperties,
+	MouseEvent,
+	ReactElement,
+	ReactNode,
+} from "react";
 
 /**
  *
@@ -222,8 +228,8 @@ export interface HeadCell {
 	disablePadding: boolean;
 	id: keyof TableData;
 	label: string;
-	numeric: boolean;
-	width: number;
+	numeric?: boolean;
+	width?: number | undefined;
 }
 
 export type TableData = Record<any, any>;
@@ -250,4 +256,17 @@ export interface EnhancedTableProps {
 export interface EnhancedTableToolbarProps {
 	numSelected: number;
 	tableTitle: string;
+}
+
+/**
+ *
+ * Icon Component
+ *
+ */
+export interface IconBaseProps {
+	children: ReactElement;
+	color?: string;
+	size?: number;
+	className?: string;
+	style?: React.CSSProperties;
 }

@@ -6,6 +6,7 @@ import {
   Typography,
   NestedInput,
   Fab,
+  Icon,
   DataTable,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
@@ -136,14 +137,9 @@ const App: React.FC = () => (
       </Formik>
     </div>
     <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-      <Fab icon={Create} title="Create Post" onClick={(e) => console.log(e)} />
-      <Fab
-        size="large"
-        icon={Create}
-        disablePopOver
-        title="Create Post"
-        onClick={(e) => console.log(e)}
-      />
+      <Icon>
+        <Create />
+      </Icon>
     </div>
     <div
       style={{
