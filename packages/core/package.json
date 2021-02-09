@@ -14,7 +14,7 @@
 		"prepublishOnly": "yarn build",
 		"build": "rollup --config",
 		"jest": "jest",
-		"test": "yarn lint && yarn jest",
+		"test": "yarn lint && yarn jest --ci",
 		"start": "rollup --config --watch"
 	},
 	"peerDependencies": {
@@ -24,5 +24,6 @@
 	"dependencies": {
 		"@material-ui/core": "^4.11.3",
 		"@material-ui/icons": "^4.11.2"
-	}
+	},
+	"devDependencies": {}
 }
