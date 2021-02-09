@@ -141,6 +141,13 @@ const App: React.FC = () => (
         <Create />
       </Icon>
     </div>
+    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+      <Fab
+        icon={Create}
+        title="Create post"
+        onClick={() => console.log("Clicked")}
+      />
+    </div>
     <div
       style={{
         display: "flex",
