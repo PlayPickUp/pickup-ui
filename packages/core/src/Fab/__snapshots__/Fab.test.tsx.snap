@@ -3,66 +3,72 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1 root-d0-0-2-4"
+    class="root-0-2-2 root-d0-0-2-5"
     data-testid="fab-root"
   >
     <button
-      class="button-0-2-2 button-d1-0-2-5"
+      class="button-0-2-3 button-d1-0-2-6"
       data-testid="fab-target"
     >
-      <svg
-        height="140"
-        version="1.1"
-        viewBox="0 0 140 140"
-        width="140"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+      <div
+        class="root-0-2-7 root-d0-0-2-8"
+        data-testid="icon"
+        style="border-radius: 50%;"
       >
-        <g
-          transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"
+        <svg
+          height="140"
+          version="1.1"
+          viewBox="0 0 140 140"
+          width="140"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
         >
-          <path
-            d="M22.627,14.87,15,22.5l-3.75.75L12,19.5l7.631-7.63a2.113,2.113,0,0,1,2.991,0l.009.008A2.116,2.116,0,0,1,22.627,14.87Z"
-            fill="none"
-            stroke="#9D9D9E"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-          />
-          <path
-            d="M8.246,20.25h-6a1.5,1.5,0,0,1-1.5-1.5V2.25a1.5,1.5,0,0,1,1.5-1.5h15a1.5,1.5,0,0,1,1.5,1.5V9"
-            fill="none"
-            stroke="#9D9D9E"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-          />
-          <path
-            d="M8.246 5.25L14.246 5.25"
-            fill="none"
-            stroke="#9D9D9E"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-          />
-          <path
-            d="M5.246 9.75L14.246 9.75"
-            fill="none"
-            stroke="#9D9D9E"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-          />
-          <path
-            d="M5.246 14.25L12.746 14.25"
-            fill="none"
-            stroke="#9D9D9E"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-          />
-        </g>
-      </svg>
+          <g
+            transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"
+          >
+            <path
+              d="M22.627,14.87,15,22.5l-3.75.75L12,19.5l7.631-7.63a2.113,2.113,0,0,1,2.991,0l.009.008A2.116,2.116,0,0,1,22.627,14.87Z"
+              fill="none"
+              stroke="#2C2933"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M8.246,20.25h-6a1.5,1.5,0,0,1-1.5-1.5V2.25a1.5,1.5,0,0,1,1.5-1.5h15a1.5,1.5,0,0,1,1.5,1.5V9"
+              fill="none"
+              stroke="#2C2933"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M8.246 5.25L14.246 5.25"
+              fill="none"
+              stroke="#2C2933"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M5.246 9.75L14.246 9.75"
+              fill="none"
+              stroke="#2C2933"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+            <path
+              d="M5.246 14.25L12.746 14.25"
+              fill="none"
+              stroke="#2C2933"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </g>
+        </svg>
+      </div>
     </button>
   </div>
 </div>

@@ -4,16 +4,21 @@ import { createUseStyles } from "react-jss";
 import Color from "color";
 
 import { defaultTheme } from "../ThemeProvider/defaultTheme";
+import Icon from "../Icon";
 import { DefaultTheme, FabProps } from "../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
+	"@keyframes fadeIn": {
+		from: { opacity: 0, bottom: `calc(100% + 0px)` },
+		to: { opacity: 1, bottom: `calc(100% + ${theme.spacing.base * 2}px)` },
+	},
 	root: {
 		display: "flex",
 		position: "relative",
 		alignItems: "center",
 		justifyContent: "center",
-		width: (props) => (props.size === "small" ? 40 : 48),
-		height: (props) => (props.size === "small" ? 40 : 48),
+		width: (props) => (props.size === "small" ? 42 : 54),
+		height: (props) => (props.size === "small" ? 42 : 54),
 		overflow: "visible",
 	},
 	button: {
@@ -21,14 +26,17 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		position: "relative",
 		alignItems: "center",
 		justifyContent: "center",
-		width: (props) => (props.size === "small" ? 40 : 48),
-		height: (props) => (props.size === "small" ? 40 : 48),
+		padding: 2,
+		width: (props) => (props.size === "small" ? 42 : 54),
+		height: (props) => (props.size === "small" ? 42 : 54),
 		backgroundColor: (props) =>
 			props.color ? props.color : theme.colors.white,
 		borderRadius: "50%",
-		border: `2px solid ${theme.colors.grey.base}`,
-		"&:hover": {
-			border: `2px solid ${theme.colors.primary.base}`,
+		"&:hover, &:focus, &:active": {
+			backgroundColor: (props) =>
+				props.color
+					? Color(props.color).lighten(0.5)
+					: theme.colors.purple.light,
 		},
 	},
 	title: {
@@ -46,6 +54,12 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		borderRadius: theme.borderRadius,
 		padding: theme.spacing.base,
 		color: theme.colors.white,
+		opacity: 0,
+		animationName: "$fadeIn",
+		animationDelay: "100ms",
+		animationDuration: "300ms",
+		animationFillMode: "forwards",
+		animationTimingFunction: "ease-out",
 	},
 }));
 
@@ -54,7 +68,7 @@ const Fab: React.FC<FabProps> = ({
 	color,
 	disablePopOver = false,
 	disabled = false,
-	icon: Icon,
+	icon: IconName,
 	iconColor = defaultTheme.colors.grey.base,
 	iconHoverColor = defaultTheme.colors.primary.base,
 	innerClassName,
@@ -88,13 +102,15 @@ const Fab: React.FC<FabProps> = ({
 				style={innerStyle}
 				onClick={onClick}
 				disabled={disabled}
-				onFocus={toggleHovered}
-				onBlur={toggleHovered}
+				// onFocus={toggleHovered}
+				// onBlur={toggleHovered}
 				onMouseEnter={toggleHovered}
 				onMouseLeave={toggleHovered}
 				{...rest}
 			>
-				<Icon color={isHovered ? iconHoverColor : iconColor} />
+				<Icon style={{ borderRadius: "50%" }}>
+					{React.createElement(IconName, { color: iconColor })}
+				</Icon>
 			</button>
 		</div>
 	);

@@ -208,7 +208,7 @@ export interface FabProps {
 	innerClassName?: string;
 	innerStyle?: React.CSSProperties;
 	style?: React.CSSProperties;
-	icon: React.FC<any>;
+	icon: any;
 	title: string;
 	size?: "small" | "large";
 	onClick: (e: MouseEvent) => unknown;
