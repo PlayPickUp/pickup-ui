@@ -61,6 +61,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		animationFillMode: "forwards",
 		animationTimingFunction: "ease-out",
 	},
+	disabled: {
+		cursor: "not-allowed",
+		backgroundColor: theme.colors.grey.light,
+	},
 }));
 
 const Fab: React.FC<FabProps> = ({
@@ -70,7 +74,6 @@ const Fab: React.FC<FabProps> = ({
 	disabled = false,
 	icon: IconName,
 	iconColor = defaultTheme.colors.grey.base,
-	iconHoverColor = defaultTheme.colors.primary.base,
 	innerClassName,
 	innerStyle,
 	onClick,
@@ -98,12 +101,14 @@ const Fab: React.FC<FabProps> = ({
 
 			<button
 				data-testid="fab-target"
-				className={classNames(classes.button, innerClassName)}
+				className={classNames({
+					[classes.button]: true,
+					innerClassName,
+					[classes.disabled]: disabled,
+				})}
 				style={innerStyle}
 				onClick={onClick}
 				disabled={disabled}
-				// onFocus={toggleHovered}
-				// onBlur={toggleHovered}
 				onMouseEnter={toggleHovered}
 				onMouseLeave={toggleHovered}
 				{...rest}
