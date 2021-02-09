@@ -8,6 +8,7 @@ import {
   Fab,
   Icon,
   DataTable,
+  Loader,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -163,6 +164,9 @@ const App: React.FC = () => (
         defaultSortColumn="id"
         tableTitle="Homebase Posts"
       />
+    </div>
+    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+      <Loader />
     </div>
   </ThemeProvider>
 );
