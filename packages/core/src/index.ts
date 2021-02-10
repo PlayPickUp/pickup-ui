@@ -8,6 +8,8 @@ import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
+export * from "./types";
+
 export {
 	Button,
 	DataTable,
