@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    class="root-0-2-1"
+    data-testid="textarea-wrapper"
+  >
+    <textarea
+      class="textarea-0-2-2"
+      data-testid="textarea"
+      id="excerpt"
+      name="excerpt"
+    >
+      This is an excerpt, it is a pretty cool excerpt. It contains text.
+    </textarea>
+  </div>
+</div>
+`;

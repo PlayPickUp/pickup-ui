@@ -8,6 +8,7 @@ import {
   Label,
   Loader,
   NestedInput,
+  TextArea,
   TextInput,
   ThemeProvider,
   Typography,
@@ -95,6 +96,7 @@ const headCells = [
 
 const App: React.FC = () => {
   const [firstName, setFirstName] = useState<string>("");
+  const [excerpt, setExcerpt] = useState<string>("");
   return (
     <ThemeProvider>
       <div style={{ padding: 40 }}>
@@ -185,6 +187,16 @@ const App: React.FC = () => {
           value={firstName}
           placeholder="John"
         />
+        <Label htmlFor="excerpt">Excerpt</Label>
+        <TextArea
+          id="excerpt"
+          name="excerpt"
+          handleChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+            setExcerpt(e.target.value)
+          }
+        >
+          {excerpt}
+        </TextArea>
       </div>
     </ThemeProvider>
   );

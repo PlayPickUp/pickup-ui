@@ -301,3 +301,19 @@ export interface LabelProps {
 	innerClassName?: string;
 	innerStyle?: React.CSSProperties;
 }
+
+/**
+ *
+ * TextArea Component
+ *
+ */
+export interface TextAreaProps {
+	className?: string;
+	style?: React.CSSProperties;
+	innerClassName?: string;
+	innerStyle?: React.CSSProperties;
+	value: string;
+	id: string;
+	name: string;
+	handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => unknown;
+}

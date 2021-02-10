@@ -5,6 +5,7 @@ import Icon from "./Icon";
 import Label from "./Label";
 import Loader from "./Loader";
 import NestedInput from "./NestedInput";
+import TextArea from "./TextArea";
 import TextInput from "./TextInput";
 import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
@@ -20,6 +21,7 @@ export {
 	Label,
 	Loader,
 	NestedInput,
+	TextArea,
 	TextInput,
 	ThemeProvider,
 	Typography,
