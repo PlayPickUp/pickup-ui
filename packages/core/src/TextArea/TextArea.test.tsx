@@ -1,12 +1,5 @@
 import React from "react";
-import {
-	findAllByDisplayValue,
-	findByDisplayValue,
-	findByText,
-	fireEvent,
-	render,
-	screen,
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import TextArea from ".";
