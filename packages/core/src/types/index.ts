@@ -270,3 +270,34 @@ export interface IconBaseProps {
 	className?: string;
 	style?: React.CSSProperties;
 }
+
+/**
+ *
+ * TextInput Component
+ *
+ */
+export interface TextInputProps {
+	className?: string;
+	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => unknown;
+	id: string;
+	innerClassName?: string;
+	innerStyle?: React.CSSProperties;
+	name: string;
+	style?: React.CSSProperties;
+	value: string;
+	placeholder?: string;
+}
+
+/**
+ *
+ * Label Component
+ *
+ */
+export interface LabelProps {
+	htmlFor: string;
+	children: string | ReactNode;
+	className?: string;
+	style?: React.CSSProperties;
+	innerClassName?: string;
+	innerStyle?: React.CSSProperties;
+}
