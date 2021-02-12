@@ -27,7 +27,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 		width: "auto",
 		backgroundColor: theme.colors.purple.light,
 		border: `1px solid ${theme.colors.purple.dark}`,
-		borderRadius: "50%",
+		borderRadius: "55px",
 		padding: `${theme.spacing.base / 2}px ${theme.spacing.base * 3.5}px`,
 		margin: `${theme.spacing.base * 2}px ${theme.spacing.base}px 0`,
 		fontSize: 12,
@@ -161,28 +161,29 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
 									{selectedItems.map((item: SelectItem, i: number) => (
 										<div key={`${item.value}${i}`} className={classes.tag}>
 											<span>{item.label}</span>
+											<button {...getRemoveButtonProps({ item })}>𝘅</button>
 										</div>
 									))}
 								</div>
 							) : null}
 							{/* {selectedItems.length > 0
-								? selectedItems.map((item: SelectItem, i: number) => (
-										<div key={`${item.value}${i}`}>
-											<div
-												style={{
-													display: "grid",
-													gridGap: 6,
-													gridAutoFlow: "column",
-													alignItems: "center",
-													position: "relative",
-												}}
-											>
-												<span>{item.label}</span>
-												<button {...getRemoveButtonProps({ item })}>𝘅</button>
-											</div>
-										</div>
-								  ))
-								: null} */}
+? selectedItems.map((item: SelectItem, i: number) => (
+<div key={`${item.value}${i}`}>
+<div
+style={{
+display: "grid",
+gridGap: 6,
+gridAutoFlow: "column",
+alignItems: "center",
+position: "relative",
+}}
+>
+<span>{item.label}</span>
+<button {...getRemoveButtonProps({ item })}>𝘅</button>
+</div>
+</div>
+))
+: null} */}
 							<input
 								{...getInputProps({
 									id,
