@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 
 import { DefaultTheme, TextInputProps } from "../types";
+import FormError from "../FormError";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
@@ -37,24 +38,27 @@ const TextInput: React.FC<TextInputProps> = ({
 	innerStyle,
 	name,
 	style,
-	value,
 	placeholder,
+	errors,
+	touched,
 }) => {
 	const classes = useStyles();
 	return (
-		<div className={classNames(classes.root, className)} style={style}>
-			<input
-				data-testid="text-input"
-				type="text"
-				id={id}
-				name={name}
-				value={value}
-				onChange={handleChange}
-				className={classNames(classes.input, innerClassName)}
-				placeholder={placeholder}
-				style={innerStyle}
-			/>
-		</div>
+		<>
+			<div className={classNames(classes.root, className)} style={style}>
+				<input
+					data-testid="text-input"
+					type="text"
+					id={id}
+					name={name}
+					onChange={handleChange}
+					className={classNames(classes.input, innerClassName)}
+					placeholder={placeholder}
+					style={innerStyle}
+				/>
+			</div>
+			<FormError errors={errors} touched={touched} name={name} />
+		</>
 	);
 };
 

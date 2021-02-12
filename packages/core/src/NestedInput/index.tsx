@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { createUseStyles, useTheme } from "react-jss";
+import { createUseStyles } from "react-jss";
 
-import Typography from "../Typography";
 import Button from "../Button";
 
 import { DefaultTheme, NestedInputProps } from "../types";
+import FormError from "../FormError";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
@@ -59,7 +59,6 @@ const NestedInput: React.FC<NestedInputProps> = ({
 }) => {
 	const [inputFocus, setInputFocus] = useState<boolean>(false);
 	const classes = useStyles({ inputFocus });
-	const theme: DefaultTheme = useTheme();
 
 	const toggleFocus = () => setInputFocus(!inputFocus);
 
@@ -83,13 +82,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
 					<Button useSubmit submitText={buttonText} />
 				</div>
 			</div>
-			{errors && errors[name] && touched && touched[name] ? (
-				<div style={{ marginTop: theme.spacing.base }}>
-					<Typography color={theme.colors.error} variant="body">
-						{errors[name]}
-					</Typography>
-				</div>
-			) : null}
+			<FormError errors={errors} touched={touched} name={name} />
 		</>
 	);
 };

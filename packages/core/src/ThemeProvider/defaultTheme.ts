@@ -207,7 +207,7 @@ const shadows: DefaultShadows = [
 
 // Base Unit Spacings
 const spacing: DefaultSpacing = {
-	base: 4,
+	base: 4, // 🚨 changing this value (4) could have VERY BAD CONCEQUENCES! BE VERY SURE, MAYBE YOU JUST NEED TO ADD A VALUE? 🤔
 };
 
 // Default zIndex values

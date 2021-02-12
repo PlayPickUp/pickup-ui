@@ -1,3 +1,4 @@
+import { FormikErrors, FormikValues as Values, FormikTouched } from "formik";
 import {
 	ChangeEvent,
 	CSSProperties,
@@ -184,21 +185,6 @@ export type TypographyElementMap = Record<string, keyof JSX.IntrinsicElements>;
 
 /**
  *
- * NestedInput Component
- *
- */
-export interface NestedInputProps {
-	buttonText: string;
-	id: string;
-	name: string;
-	placeholder: string;
-	errors?: any;
-	touched?: any;
-	handleChange: (e: ChangeEvent) => unknown;
-}
-
-/**
- *
  * Fab (Floating Action Button) Component
  *
  */
@@ -271,20 +257,29 @@ export interface IconBaseProps {
 	style?: React.CSSProperties;
 }
 
+export interface BaseFormikFields {
+	id: string;
+	name: string;
+	errors?: FormikErrors<unknown>;
+	touched?: FormikTouched<unknown>;
+}
+
+export type BaseFormikHandleChange = (e: ChangeEvent) => unknown;
+
+export interface BaseFormikFieldsWithHandleChange extends BaseFormikFields {
+	handleChange: BaseFormikHandleChange;
+}
+
 /**
  *
  * TextInput Component
  *
  */
-export interface TextInputProps {
+export interface TextInputProps extends BaseFormikFieldsWithHandleChange {
 	className?: string;
-	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => unknown;
-	id: string;
 	innerClassName?: string;
 	innerStyle?: React.CSSProperties;
-	name: string;
 	style?: React.CSSProperties;
-	value: string;
 	placeholder?: string;
 }
 
@@ -307,13 +302,60 @@ export interface LabelProps {
  * TextArea Component
  *
  */
-export interface TextAreaProps {
+export interface TextAreaProps extends BaseFormikFieldsWithHandleChange {
 	className?: string;
 	style?: React.CSSProperties;
 	innerClassName?: string;
 	innerStyle?: React.CSSProperties;
+}
+
+/**
+ *
+ * Select Component
+ *
+ */ export interface SelectItem {
+	label: string;
 	value: string;
+}
+
+export type BaseFormikSetFieldValue = (
+	field: string,
+	value: any,
+	shouldValidate?: boolean | undefined
+) => unknown;
+
+export interface SelectProps extends BaseFormikFields {
+	className?: string;
+	items: SelectItem[];
+	label: string;
+	placeholder?: string;
+	style?: React.CSSProperties;
+	multiSelect?: boolean;
+	setFieldValue: BaseFormikSetFieldValue;
+}
+
+export interface DropdownStyleProps {
+	isOpen: boolean;
+}
+
+/**
+ *
+ * NestedInput Component
+ *
+ */
+export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
+	buttonText: string;
+	placeholder: string;
+}
+
+/**
+ *
+ * MultiSelect Component
+ *
+ */
+export interface MultiSelectProps {
+	setFieldValue: BaseFormikSetFieldValue;
+	items: SelectItem[];
 	id: string;
 	name: string;
-	handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => unknown;
 }

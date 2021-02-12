@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 
 import { DefaultTheme, TextAreaProps } from "../types";
+import FormError from "../FormError";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
 	root: {
@@ -31,28 +32,30 @@ const TextArea: React.FC<TextAreaProps> = ({
 	style,
 	innerClassName,
 	innerStyle,
-	value,
 	id,
 	name,
 	handleChange,
+	errors,
+	touched,
 }) => {
 	const classes = useStyles();
 	return (
-		<div
-			data-testid="textarea-wrapper"
-			className={classNames(classes.root, className)}
-			style={style}
-		>
-			<textarea
-				id={id}
-				name={name}
-				onChange={handleChange}
-				className={classNames(classes.textarea, innerClassName)}
-				style={innerStyle}
-				value={value}
-				data-testid="textarea"
-			/>
-		</div>
+		<>
+			<div
+				data-testid="textarea-wrapper"
+				className={classNames(classes.root, className)}
+				style={style}
+			>
+				<textarea
+					id={id}
+					name={name}
+					onChange={handleChange}
+					className={classNames(classes.textarea, innerClassName)}
+					style={innerStyle}
+				/>
+			</div>
+			<FormError errors={errors} touched={touched} name={name} />
+		</>
 	);
 };
 

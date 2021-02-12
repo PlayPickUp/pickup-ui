@@ -8,10 +8,12 @@ import {
   Label,
   Loader,
   NestedInput,
+  Select,
   TextArea,
   TextInput,
   ThemeProvider,
   Typography,
+  MultiSelect,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -91,6 +93,25 @@ const headCells = [
     numeric: false,
     disablePadding: false,
     label: "Updated Date",
+  },
+];
+
+const leagues = [
+  {
+    value: "mlb",
+    label: "MLB",
+  },
+  {
+    value: "nfl",
+    label: "NFL",
+  },
+  {
+    value: "mma",
+    label: "MMA",
+  },
+  {
+    value: "golf",
+    label: "Golf",
   },
 ];
 
@@ -175,28 +196,72 @@ const App: React.FC = () => {
         <Loader />
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 350 }}
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
       >
-        <Label htmlFor="firstName">First Name</Label>
-        <TextInput
-          id="firstName"
-          name="firstName"
-          handleChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setFirstName(e.target.value)
-          }
-          value={firstName}
-          placeholder="John"
-        />
-        <Label htmlFor="excerpt">Excerpt</Label>
-        <TextArea
-          id="excerpt"
-          name="excerpt"
-          handleChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-            setExcerpt(e.target.value)
-          }
+        <Formik
+          initialValues={{ firstName: null, excerpt: "", leagues: "" }}
+          validationSchema={Yup.object().shape({
+            firstName: Yup.string()
+              .required("First Name is required!")
+              .nullable(),
+            excerpt: Yup.string().required("Excerpt is required!"),
+            leagues: Yup.string().required("Leagues are required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
         >
-          {excerpt}
-        </TextArea>
+          {({
+            errors,
+            touched,
+            handleChange,
+            handleSubmit,
+            setFieldValue,
+            values,
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <Label htmlFor="firstName">First Name</Label>
+              <TextInput
+                id="firstName"
+                name="firstName"
+                handleChange={handleChange}
+                placeholder="John"
+                errors={errors}
+                touched={touched}
+              />
+              <Label htmlFor="excerpt">Excerpt</Label>
+              <TextArea
+                id="excerpt"
+                name="excerpt"
+                handleChange={handleChange}
+                errors={errors}
+                touched={touched}
+              >
+                {values.excerpt}
+              </TextArea>
+              <Select
+                id="leagues"
+                name="leagues"
+                items={leagues}
+                label="League"
+                errors={errors}
+                touched={touched}
+                setFieldValue={setFieldValue}
+              />
+              <button type="submit">Submit</button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <MultiSelect
+          id="league2"
+          name="league2"
+          items={leagues}
+          setFieldValue={() => null}
+        />
       </div>
     </ThemeProvider>
   );
