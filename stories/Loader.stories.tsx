@@ -1,7 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 
-import { Loader, defaultTheme as PickUpTheme } from "@playpickup/core";
+import { Loader } from "@playpickup/core";
 import { IconBaseProps } from "@playpickup/core/src/types";
 
 export default {

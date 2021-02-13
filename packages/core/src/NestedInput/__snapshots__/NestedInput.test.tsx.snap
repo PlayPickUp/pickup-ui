@@ -11,10 +11,9 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       <input
         class="input-0-2-3"
         data-testid="nested-input"
-        id="email"
         name="email"
         placeholder="you@example.com"
-        type="text"
+        value="eric@playpickup.com"
       />
     </div>
     <div>

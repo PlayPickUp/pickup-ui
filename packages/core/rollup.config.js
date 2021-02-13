@@ -6,39 +6,39 @@ import typescript from "rollup-plugin-typescript2";
 const packageJson = require("./package.json");
 
 const globals = {
-	react: "React",
-	"react-dom": "ReactDOM",
-	"prop-types": "PropTypes",
+  react: "React",
+  "react-dom": "ReactDOM",
+  "prop-types": "PropTypes",
 };
 
 export default {
-	input: "src/index.ts",
-	output: [
-		{
-			file: packageJson.main,
-			format: "cjs",
-			sourcemap: true,
-			compact: true,
-			globals,
-		},
-		{
-			file: packageJson.module,
-			format: "esm",
-			sourcemap: true,
-			compact: true,
-			globals,
-		},
-	],
-	plugins: [
-		peerDepsExternal(),
-		resolve({
-			moduleDirectories: ["node_modules"],
-		}),
-		commonjs(),
-		typescript({
-			useTsconfigDeclarationDir: true,
-			tsconfig: "./tsconfig.json",
-		}),
-	],
-	external: ["react", "react-dom", "prop-types"],
+  input: "src/index.ts",
+  output: [
+    {
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true,
+      compact: true,
+      globals,
+    },
+    {
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true,
+      compact: true,
+      globals,
+    },
+  ],
+  plugins: [
+    peerDepsExternal(),
+    resolve({
+      moduleDirectories: ["node_modules"],
+    }),
+    commonjs(),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfig: "./tsconfig.json",
+    }),
+  ],
+  external: ["react", "react-dom", "prop-types"],
 };

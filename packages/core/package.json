@@ -1,33 +1,34 @@
 {
-	"name": "@playpickup/core",
-	"version": "0.4.1",
-	"description": "Core PickUp components",
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
-	"types": "dist/index.d.ts",
-	"author": "PlayPickUp <engineering@playpickup.com>",
-	"license": "MIT",
-	"private": false,
-	"scripts": {
-		"lint": "yarn eslint .",
-		"format": "prettier --write --ignore-unknown .",
-		"prepublishOnly": "yarn build",
-		"build": "rollup --config",
-		"jest": "jest",
-		"test": "yarn lint && yarn jest --ci",
-		"start": "rollup --config --watch"
-	},
-	"peerDependencies": {
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1"
-	},
-	"dependencies": {
-		"@material-ui/core": "^4.11.3",
-		"@material-ui/icons": "^4.11.2"
-	},
-	"jest": {
-		"setupFilesAfterEnv": [
-			"./scripts/setupTests.js"
-		]
-	}
+  "name": "@playpickup/core",
+  "version": "0.4.1",
+  "description": "Core PickUp components",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "author": "PlayPickUp <engineering@playpickup.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "yarn eslint .",
+    "format": "node -e \"console.log('🚨 RUN yarn format FROM ROOT NOT FROM THE PROJECT DIRECTORY!!! 🚨')\"",
+    "prepublishOnly": "yarn build",
+    "build": "rollup --config",
+    "jest": "jest",
+    "test": "yarn lint && yarn jest --ci",
+    "start": "rollup --config --watch"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@playpickup/icons": "^0.2.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./scripts/setupTests.js"
+    ]
+  }
 }

@@ -1,14 +1,19 @@
-import React from "react";
-import { Form, Formik } from "formik";
+import React, { useState } from "react";
+import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
-  ThemeProvider,
-  Typography,
-  NestedInput,
+  DataTable,
   Fab,
   Icon,
-  DataTable,
+  Label,
   Loader,
+  NestedInput,
+  Select,
+  TextArea,
+  TextInput,
+  ThemeProvider,
+  Typography,
+  MultiSelect,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -91,84 +96,174 @@ const headCells = [
   },
 ];
 
-const App: React.FC = () => (
-  <ThemeProvider>
-    <div style={{ padding: 40 }}>
-      <Typography variant="title">Hello, PickUp!</Typography>
-      <Typography
-        variant="heading3"
-        style={{ fontStyle: "normal", margin: "20px 0" }}
-      >
-        👋 Howdy human!1!
-      </Typography>
-      <Typography>
-        Feel free to throw some components in here for testing. It''s your lil
-        component playground!
-      </Typography>
-    </div>
-    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-      {/* Throw Some Stuff Here Dawgie */}
+const leagues = [
+  {
+    value: "mlb",
+    label: "MLB",
+  },
+  {
+    value: "nfl",
+    label: "NFL",
+  },
+  {
+    value: "mma",
+    label: "MMA",
+  },
+  {
+    value: "golf",
+    label: "Golf",
+  },
+];
 
-      {/* NestedInput component w/ Formik as wrapper */}
-      <Formik
-        initialValues={{ email: null }}
-        validationSchema={Yup.object().shape({
-          email: Yup.string()
-            .email("A valid email address is required!")
-            .required("Email address is required!")
-            .nullable(),
-        })}
-        onSubmit={(values) => {
-          console.log(values);
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <div style={{ padding: 40 }}>
+        <Typography variant="title">Hello, PickUp!</Typography>
+        <Typography
+          variant="heading3"
+          style={{ fontStyle: "normal", margin: "20px 0" }}
+        >
+          👋 Howdy human!1!
+        </Typography>
+        <Typography>
+          Feel free to throw some components in here for testing. It''s your lil
+          component playground!
+        </Typography>
+      </div>
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+        {/* Throw Some Stuff Here Dawgie */}
+
+        {/* NestedInput component w/ Formik as wrapper */}
+        <Formik
+          initialValues={{ email: "" }}
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
+              .email("A valid email address is required!")
+              .required("Email address is required!"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {() => (
+            <Form>
+              <Field
+                id="email"
+                name="email"
+                buttonText="Sign Up"
+                placeholder="email@example.com"
+                component={NestedInput}
+              />
+            </Form>
+          )}
+        </Formik>
+      </div>
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+        <Icon>
+          <Create />
+        </Icon>
+      </div>
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+        <Fab
+          icon={Create}
+          title="Create post"
+          onClick={() => console.log("Clicked")}
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          width: "100%",
         }}
       >
-        {({ errors, touched, handleChange }) => (
-          <Form>
-            <NestedInput
-              id="email"
-              name="email"
-              buttonText="Sign up"
-              placeholder="email@example.com"
-              errors={errors}
-              touched={touched}
-              handleChange={handleChange}
-            />
-          </Form>
-        )}
-      </Formik>
-    </div>
-    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-      <Icon>
-        <Create />
-      </Icon>
-    </div>
-    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-      <Fab
-        icon={Create}
-        title="Create post"
-        onClick={() => console.log("Clicked")}
-      />
-    </div>
-    <div
-      style={{
-        display: "flex",
-        marginTop: 40,
-        marginBottom: 40,
-        padding: 40,
-        width: "100%",
-      }}
-    >
-      <DataTable
-        headCells={headCells}
-        rows={rows}
-        defaultSortColumn="id"
-        tableTitle="Homebase Posts"
-      />
-    </div>
-    <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-      <Loader />
-    </div>
-  </ThemeProvider>
-);
+        <DataTable
+          headCells={headCells}
+          rows={rows}
+          defaultSortColumn="id"
+          tableTitle="Homebase Posts"
+        />
+      </div>
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+        <Loader />
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <Formik
+          initialValues={{
+            firstName: "Eric",
+            excerpt: "Initial Excerpt!",
+            leagues: "nfl",
+          }}
+          validationSchema={Yup.object().shape({
+            firstName: Yup.string().required("First Name is required!"),
+            excerpt: Yup.string(),
+            leagues: Yup.string(),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ handleSubmit }) => (
+            <Form onSubmit={handleSubmit}>
+              <Field
+                id="firstName"
+                name="firstName"
+                component={TextInput}
+                placeholder="John"
+                label="First Name"
+              />
+              <Field
+                id="excerpt"
+                name="excerpt"
+                label="Excerpt"
+                component={TextArea}
+              />
+              <Field
+                id="leagues"
+                name="leagues"
+                items={leagues}
+                label="League"
+                component={Select}
+              />
+              <button type="submit">Submit</button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <Formik
+          initialValues={{ leagueTwo: "" }}
+          validationSchema={Yup.object().shape({
+            leagueTwo: Yup.string().required("Leagues are required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ handleSubmit }) => (
+            <Form onSubmit={handleSubmit}>
+              <Field
+                id="leagueTwo"
+                name="leagueTwo"
+                items={leagues}
+                label="Leagues"
+                component={MultiSelect}
+              />
+
+              <button type="submit">Submit</button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </ThemeProvider>
+  );
+};
 
 export default App;

@@ -8,7 +8,9 @@
 
 A collection of packages that make up the PickUp component universe.
 
-## Installation
+> ## Important note: [Documentation](https://ui.playpickup.com) and jest tests are currently inacurrate/disabled/and or not fully implemented
+
+## 💾 Installation
 
 ```sh
 yarn add @playpickup/core @playpickup/icons
@@ -18,28 +20,30 @@ yarn add @playpickup/core @playpickup/icons
 npm install @playpickup/core @playpickup/icons --save
 ```
 
-## Quick Start
+## 🚦 Quick Start
 
 Below is a quick start guide on how to use the `Typography` component in a simple React app, with Typescript.
 
 ```tsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import {ThemeProvider, Typography} from '@playpickup/core';
+import { ThemeProvider, Typography } from "@playpickup/core";
 
 const App: React.FC = () => (
   <div>
     <ThemeProvider>
-      <Typography variant="title">
-        PlayPickUp!
-      </Typography>
+      <Typography variant="title">PlayPickUp!</Typography>
     </ThemeProvider>
   </div>
 );
 
-const el = document.getElementById('root');
+const el = document.getElementById("root");
 ReactDOM.render(<App />, el);
 ```
 
 > Be sure to include `ThemeProvider` in your application. ThemeProvider should be included as far up the component tree as possible.
+
+### ⚠ Project Status
+
+This library is still under active development and we cannot garauntee breaking changes won't be introduced. It is reccomended not to use this library in production outside of the PickUp ecosystem.

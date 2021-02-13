@@ -1,8 +1,7 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 
-import { Fab, defaultTheme as PickUpTheme } from "@playpickup/core";
-import { FabProps } from "@playpickup/core/src/types";
+import { Fab, defaultTheme as PickUpTheme, FabProps } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
 export default {
