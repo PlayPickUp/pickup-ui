@@ -8,9 +8,8 @@ exports[`TextInput renders without crashing, matches snapshot 1`] = `
     <input
       class="input-0-2-2"
       data-testid="text-input"
-      id="firstName"
       name="firstName"
-      type="text"
+      value=""
     />
   </div>
 </div>
