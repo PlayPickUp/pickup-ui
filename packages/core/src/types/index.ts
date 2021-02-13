@@ -1,14 +1,4 @@
-import {
-  FormikErrors,
-  FormikValues as Values,
-  FormikTouched,
-  FormikFormProps,
-  FieldProps,
-  FieldMetaProps,
-  FieldInputProps,
-  FormikProps,
-  FormikBag,
-} from "formik";
+import { FieldInputProps } from "formik";
 import {
   ChangeEvent,
   CSSProperties,

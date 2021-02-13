@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 import Downshift from "downshift";
 import Label from "../Label";
 import Icon from "../Icon";
 import { ChevronDown } from "@playpickup/icons";
-import find from "lodash/find";
 
 import { DefaultTheme, SelectItem, SelectProps } from "../types";
 import FormError from "../FormError";
