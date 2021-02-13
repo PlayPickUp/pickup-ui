@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 import { DefaultTheme, TextInputProps } from "../types";
 import FormError from "../FormError";
+import Label from "../Label";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
@@ -32,32 +33,29 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 
 const TextInput: React.FC<TextInputProps> = ({
   className,
-  handleChange,
-  id,
+  style,
   innerClassName,
   innerStyle,
-  name,
-  style,
-  placeholder,
-  errors,
-  touched,
+  label,
+  ...props
 }) => {
   const classes = useStyles();
   return (
     <>
+      {label && <Label htmlFor={props.name}>{label}</Label>}
       <div className={classNames(classes.root, className)} style={style}>
         <input
           data-testid="text-input"
-          type="text"
-          id={id}
-          name={name}
-          onChange={handleChange}
           className={classNames(classes.input, innerClassName)}
-          placeholder={placeholder}
           style={innerStyle}
+          {...props.field}
         />
       </div>
-      <FormError errors={errors} touched={touched} name={name} />
+      <FormError
+        errors={props.form.errors}
+        touched={props.form.touched}
+        name={props.field.name}
+      />
     </>
   );
 };

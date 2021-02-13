@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 import { DefaultTheme, TextAreaProps } from "../types";
 import FormError from "../FormError";
+import Label from "../Label";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
@@ -32,29 +33,29 @@ const TextArea: React.FC<TextAreaProps> = ({
   style,
   innerClassName,
   innerStyle,
-  id,
-  name,
-  handleChange,
-  errors,
-  touched,
+  label,
+  ...props
 }) => {
   const classes = useStyles();
   return (
     <>
+      {label && <Label htmlFor={props.field.name}>{label}</Label>}
       <div
         data-testid="textarea-wrapper"
         className={classNames(classes.root, className)}
         style={style}
       >
         <textarea
-          id={id}
-          name={name}
-          onChange={handleChange}
           className={classNames(classes.textarea, innerClassName)}
           style={innerStyle}
+          {...props.field}
         />
       </div>
-      <FormError errors={errors} touched={touched} name={name} />
+      <FormError
+        errors={props.form.errors}
+        touched={props.form.touched}
+        name={props.field.name}
+      />
     </>
   );
 };

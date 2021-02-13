@@ -10,7 +10,7 @@
   "private": false,
   "scripts": {
     "lint": "yarn eslint .",
-    "format": "prettier --write --ignore-unknown .",
+    "format": "node -e \"console.log('🚨 RUN yarn format FROM ROOT NOT FROM THE PROJECT DIRECTORY!!! 🚨')\"",
     "prepublishOnly": "yarn build",
     "build": "rollup --config",
     "jest": "jest",

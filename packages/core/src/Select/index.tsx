@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 import Downshift from "downshift";
 import Label from "../Label";
 import Icon from "../Icon";
 import { ChevronDown } from "@playpickup/icons";
+import find from "lodash/find";
 
 import { DefaultTheme, SelectItem, SelectProps } from "../types";
 import FormError from "../FormError";
@@ -79,16 +80,11 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 
 const Select: React.FC<SelectProps> = ({
   className,
-  id,
   items,
   label,
-  multiSelect = false,
-  name,
   placeholder = "Select an item...",
   style,
-  errors,
-  touched,
-  setFieldValue,
+  ...props
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -96,7 +92,10 @@ const Select: React.FC<SelectProps> = ({
   const classes = useStyles();
 
   const handleSelection = (name: string, selection: SelectItem): void => {
-    setFieldValue(name, selection.value);
+    if (!selection) {
+      return setIsMenuOpen(false);
+    }
+    props.form.setFieldValue(name, selection.value);
     setIsMenuOpen(false);
   };
 
@@ -104,7 +103,7 @@ const Select: React.FC<SelectProps> = ({
     <>
       <Downshift
         isOpen={isMenuOpen}
-        onChange={(selection) => handleSelection(name, selection)}
+        onChange={(selection) => handleSelection(props.field.name, selection)}
         itemToString={(item: SelectItem) => (item ? item.label : "")}
         onOuterClick={() => setIsMenuOpen(false)}
       >
@@ -126,8 +125,7 @@ const Select: React.FC<SelectProps> = ({
                 className={classes.selectButton}
                 {...getInputProps({
                   placeholder,
-                  id,
-                  name,
+                  ...props.field,
                 })}
               />
               <button
@@ -188,7 +186,11 @@ const Select: React.FC<SelectProps> = ({
           );
         }}
       </Downshift>
-      <FormError errors={errors} touched={touched} name={name} />
+      <FormError
+        errors={props.form.errors}
+        touched={props.form.touched}
+        name={props.field.name}
+      />
     </>
   );
 };

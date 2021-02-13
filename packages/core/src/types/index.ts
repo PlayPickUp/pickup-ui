@@ -1,4 +1,14 @@
-import { FormikErrors, FormikValues as Values, FormikTouched } from "formik";
+import {
+  FormikErrors,
+  FormikValues as Values,
+  FormikTouched,
+  FormikFormProps,
+  FieldProps,
+  FieldMetaProps,
+  FieldInputProps,
+  FormikProps,
+  FormikBag,
+} from "formik";
 import {
   ChangeEvent,
   CSSProperties,
@@ -260,8 +270,8 @@ export interface IconBaseProps {
 export interface BaseFormikFields {
   id: string;
   name: string;
-  errors?: FormikErrors<unknown>;
-  touched?: FormikTouched<unknown>;
+  field: FieldInputProps<any>;
+  form: Record<any, any>;
 }
 
 export type BaseFormikHandleChange = (e: ChangeEvent) => unknown;
@@ -281,6 +291,7 @@ export interface TextInputProps extends BaseFormikFieldsWithHandleChange {
   innerStyle?: React.CSSProperties;
   style?: React.CSSProperties;
   placeholder?: string;
+  label?: string;
 }
 
 /**
@@ -307,6 +318,7 @@ export interface TextAreaProps extends BaseFormikFieldsWithHandleChange {
   style?: React.CSSProperties;
   innerClassName?: string;
   innerStyle?: React.CSSProperties;
+  label?: string;
 }
 
 /**
@@ -330,8 +342,6 @@ export interface SelectProps extends BaseFormikFields {
   label: string;
   placeholder?: string;
   style?: React.CSSProperties;
-  multiSelect?: boolean;
-  setFieldValue: BaseFormikSetFieldValue;
 }
 
 export interface DropdownStyleProps {
@@ -353,9 +363,7 @@ export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
  * MultiSelect Component
  *
  */
-export interface MultiSelectProps {
-  setFieldValue: BaseFormikSetFieldValue;
+export interface MultiSelectProps extends BaseFormikFields {
   items: SelectItem[];
-  id: string;
-  name: string;
+  label: string;
 }

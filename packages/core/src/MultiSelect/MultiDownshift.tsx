@@ -1,12 +1,17 @@
-// @ts-nocheck
 import React, { ReactNode } from "react";
-import Downshift, { DownshiftState } from "downshift";
+import Downshift, {
+  DownshiftState,
+  ControllerStateAndHelpers,
+} from "downshift";
+import without from "lodash/without";
 
 import { SelectItem } from "../types";
+import { FieldInputProps } from "formik";
 
 export interface MultiDownshiftProps {
-  onChange: any;
+  onChange: (field: string, value: string) => void;
   itemToString: (item: SelectItem) => string;
+  field: FieldInputProps<any>;
   render?: any;
 }
 
@@ -40,13 +45,17 @@ class MultiDownshift extends React.Component<
 
   handleSelection = (
     selectedItem: SelectItem,
-    downshift: Record<any, unknown>
+    downshift: ControllerStateAndHelpers<SelectItem>
   ): void => {
     const callOnChange = () => {
-      const { onChange } = this.props;
+      const { onChange, field } = this.props;
       const { selectedItems } = this.state;
       if (onChange) {
-        onChange(selectedItems, this.getStateAndHelpers(downshift));
+        const transformedItems = selectedItems.map(
+          (item: SelectItem) => item.value
+        );
+        onChange(field.name, transformedItems.join(","));
+        this.getStateAndHelpers(downshift);
       }
     };
     if (this.state.selectedItems.includes(selectedItem)) {
@@ -57,6 +66,11 @@ class MultiDownshift extends React.Component<
   };
 
   removeItem = (item: SelectItem, cb?: () => unknown): void => {
+    const { onChange, field } = this.props;
+
+    const fieldArray = without(field.value.split(","), item.value);
+    onChange(field.name, fieldArray.toString());
+
     this.setState(({ selectedItems }) => {
       return {
         selectedItems: selectedItems.filter((i) => i !== item),
@@ -73,13 +87,13 @@ class MultiDownshift extends React.Component<
     );
   };
 
+  // @ts-ignore
   getRemoveButtonProps = ({ onClick, item, ...props } = {}): Record<
     any,
     unknown
   > => {
     return {
       onClick: (e) => {
-        // TODO: use something like downshift's composeEventHandlers utility instead
         onClick && onClick(e);
         e.stopPropagation();
         this.removeItem(item);
@@ -89,7 +103,7 @@ class MultiDownshift extends React.Component<
   };
 
   getStateAndHelpers = (
-    downshift: Record<any, unknown>
+    downshift: ControllerStateAndHelpers<SelectItem>
   ): Record<any, unknown> => {
     const { selectedItems } = this.state;
     const { getRemoveButtonProps, removeItem } = this;
@@ -103,7 +117,6 @@ class MultiDownshift extends React.Component<
 
   render(): ReactNode {
     const { render, children = render, ...props } = this.props;
-    // TODO: compose together props (rather than overwriting them) like downshift does
     return (
       <Downshift
         {...props}

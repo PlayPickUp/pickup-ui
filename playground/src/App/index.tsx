@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Formik } from "formik";
+import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   DataTable,
@@ -116,8 +116,6 @@ const leagues = [
 ];
 
 const App: React.FC = () => {
-  const [firstName, setFirstName] = useState<string>("");
-  const [excerpt, setExcerpt] = useState<string>("");
   return (
     <ThemeProvider>
       <div style={{ padding: 40 }}>
@@ -138,27 +136,24 @@ const App: React.FC = () => {
 
         {/* NestedInput component w/ Formik as wrapper */}
         <Formik
-          initialValues={{ email: null }}
+          initialValues={{ email: "" }}
           validationSchema={Yup.object().shape({
             email: Yup.string()
               .email("A valid email address is required!")
-              .required("Email address is required!")
-              .nullable(),
+              .required("Email address is required!"),
           })}
           onSubmit={(values) => {
             console.log(values);
           }}
         >
-          {({ errors, touched, handleChange }) => (
+          {() => (
             <Form>
-              <NestedInput
+              <Field
                 id="email"
                 name="email"
-                buttonText="Sign up"
+                buttonText="Sign Up"
                 placeholder="email@example.com"
-                errors={errors}
-                touched={touched}
-                handleChange={handleChange}
+                component={NestedInput}
               />
             </Form>
           )}
@@ -199,54 +194,41 @@ const App: React.FC = () => {
         style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
       >
         <Formik
-          initialValues={{ firstName: null, excerpt: "", leagues: "" }}
+          initialValues={{
+            firstName: "Eric",
+            excerpt: "Initial Excerpt!",
+            leagues: "nfl",
+          }}
           validationSchema={Yup.object().shape({
-            firstName: Yup.string()
-              .required("First Name is required!")
-              .nullable(),
-            excerpt: Yup.string().required("Excerpt is required!"),
-            leagues: Yup.string().required("Leagues are required"),
+            firstName: Yup.string().required("First Name is required!"),
+            excerpt: Yup.string(),
+            leagues: Yup.string(),
           })}
           onSubmit={(values) => {
             console.log(values);
           }}
         >
-          {({
-            errors,
-            touched,
-            handleChange,
-            handleSubmit,
-            setFieldValue,
-            values,
-          }) => (
+          {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
-              <Label htmlFor="firstName">First Name</Label>
-              <TextInput
+              <Field
                 id="firstName"
                 name="firstName"
-                handleChange={handleChange}
+                component={TextInput}
                 placeholder="John"
-                errors={errors}
-                touched={touched}
+                label="First Name"
               />
-              <Label htmlFor="excerpt">Excerpt</Label>
-              <TextArea
+              <Field
                 id="excerpt"
                 name="excerpt"
-                handleChange={handleChange}
-                errors={errors}
-                touched={touched}
-              >
-                {values.excerpt}
-              </TextArea>
-              <Select
+                label="Excerpt"
+                component={TextArea}
+              />
+              <Field
                 id="leagues"
                 name="leagues"
                 items={leagues}
                 label="League"
-                errors={errors}
-                touched={touched}
-                setFieldValue={setFieldValue}
+                component={Select}
               />
               <button type="submit">Submit</button>
             </Form>
@@ -256,12 +238,29 @@ const App: React.FC = () => {
       <div
         style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
       >
-        <MultiSelect
-          id="league2"
-          name="league2"
-          items={leagues}
-          setFieldValue={() => null}
-        />
+        <Formik
+          initialValues={{ leagueTwo: "" }}
+          validationSchema={Yup.object().shape({
+            leagueTwo: Yup.string().required("Leagues are required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ handleSubmit }) => (
+            <Form onSubmit={handleSubmit}>
+              <Field
+                id="leagueTwo"
+                name="leagueTwo"
+                items={leagues}
+                label="Leagues"
+                component={MultiSelect}
+              />
+
+              <button type="submit">Submit</button>
+            </Form>
+          )}
+        </Formik>
       </div>
     </ThemeProvider>
   );

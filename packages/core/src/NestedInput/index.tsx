@@ -50,12 +50,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 
 const NestedInput: React.FC<NestedInputProps> = ({
   buttonText,
-  errors,
-  handleChange,
-  id,
-  name,
   placeholder,
-  touched,
+  ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
   const classes = useStyles({ inputFocus });
@@ -69,20 +65,24 @@ const NestedInput: React.FC<NestedInputProps> = ({
           <input
             data-testid="nested-input"
             className={classes.input}
-            id={id}
-            name={name}
-            onBlur={toggleFocus}
-            onFocus={toggleFocus}
             placeholder={placeholder}
-            onChange={handleChange}
-            type="text"
+            onFocus={toggleFocus}
+            onBlur={(e) => {
+              toggleFocus();
+              props.field.onBlur(e);
+            }}
+            {...props.field}
           />
         </div>
         <div>
           <Button useSubmit submitText={buttonText} />
         </div>
       </div>
-      <FormError errors={errors} touched={touched} name={name} />
+      <FormError
+        errors={props.form.errors}
+        touched={props.form.touched}
+        name={props.field.name}
+      />
     </>
   );
 };

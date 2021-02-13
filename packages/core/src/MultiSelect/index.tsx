@@ -8,6 +8,7 @@ import Icon from "../Icon";
 import { getItems } from "./helpers";
 import { DefaultTheme, MultiSelectProps, SelectItem } from "../types";
 import Label from "../Label";
+import FormError from "../FormError";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
@@ -128,160 +129,147 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 }));
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
-  setFieldValue,
   items,
-  name,
-  id,
+  label,
+  ...props
 }) => {
   const classes = useStyles();
   const theme: DefaultTheme = useTheme();
   const input = useRef(null);
   return (
-    <MultiDownshift
-      onChange={setFieldValue}
-      itemToString={(item: SelectItem) => (item ? item.label : "")}
-    >
-      {({
-        getInputProps,
-        getToggleButtonProps,
-        getMenuProps,
-        // note that the getRemoveButtonProps prop getter and the removeItem
-        // action are coming from MultiDownshift composibility for the win!
-        getRemoveButtonProps,
-        removeItem,
+    <>
+      <MultiDownshift
+        onChange={props.form.setFieldValue}
+        itemToString={(item: SelectItem) => (item ? item.label : "")}
+        field={props.field}
+      >
+        {({
+          getInputProps,
+          getToggleButtonProps,
+          getMenuProps,
+          // note that the getRemoveButtonProps prop getter and the removeItem
+          // action are coming from MultiDownshift composibility for the win!
+          getRemoveButtonProps,
+          removeItem,
 
-        isOpen,
-        inputValue,
-        selectedItems,
-        getItemProps,
-        highlightedIndex,
-        toggleMenu,
-      }) => (
-        <div className={classes.root}>
-          <Label htmlFor={name}>Multi-League</Label>
-          <div
-            onClick={() => {
-              toggleMenu();
-              !isOpen && input.current.focus();
-            }}
-            style={{ position: "relative" }}
-          >
+          isOpen,
+          inputValue,
+          selectedItems,
+          getItemProps,
+          highlightedIndex,
+          toggleMenu,
+        }) => (
+          <div className={classes.root}>
+            <Label htmlFor={props.field.name}>{label}</Label>
             <div
-              className={classes.inputWrapper}
+              onClick={() => {
+                toggleMenu();
+                !isOpen && input.current.focus();
+              }}
               style={{ position: "relative" }}
             >
-              {selectedItems.length > 0 ? (
-                <div className={classes.tagWrapper}>
-                  {selectedItems.map((item: SelectItem, i: number) => (
-                    <div key={`${item.value}${i}`} className={classes.tag}>
-                      <span>{item.label}</span>
-                      <button
-                        {...getRemoveButtonProps({
+              <div
+                className={classes.inputWrapper}
+                style={{ position: "relative" }}
+              >
+                {selectedItems.length > 0 ? (
+                  <div className={classes.tagWrapper}>
+                    {selectedItems.map((item: SelectItem, i: number) => (
+                      <div key={`${item.value}${i}`} className={classes.tag}>
+                        <span>{item.label}</span>
+                        <button
+                          {...getRemoveButtonProps({
+                            item,
+                          })}
+                        >
+                          <Icon
+                            className={classes.subtractIcon}
+                            size={12}
+                            color={theme.colors.purple.dark}
+                          >
+                            <SubtractCircle />
+                          </Icon>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+                <input
+                  {...getInputProps({
+                    ref: input,
+                    placeholder: "Select items...",
+                    className: classes.input,
+                    onKeyDown(event: KeyboardEvent) {
+                      if (event.key === "Backspace" && !inputValue) {
+                        removeItem(selectedItems[selectedItems.length - 1]);
+                      }
+                    },
+                    ...props.field,
+                  })}
+                />
+                <button
+                  {...getToggleButtonProps({
+                    // prevents the menu from immediately toggling
+                    // closed (due to our custom click handler above).
+                    onClick(event: MouseEvent) {
+                      event.stopPropagation();
+                    },
+                    className: classes.iconButton,
+                  })}
+                >
+                  <Icon
+                    className={classNames({
+                      [classes.icon]: true,
+                      [classes.iconOpen]: isOpen,
+                    })}
+                    color={theme.colors.grey.base}
+                  >
+                    <ChevronDown />
+                  </Icon>
+                </button>
+              </div>
+            </div>
+            <ul
+              {...getMenuProps({
+                className: classes.dropdown,
+                style: { display: isOpen ? "block" : "none" },
+              })}
+            >
+              {isOpen
+                ? getItems(items, inputValue).map(
+                    (item: SelectItem, index: number) => (
+                      <li
+                        key={`${item.value}${index}`}
+                        {...getItemProps({
                           item,
+                          index,
+                          className: classes.dropdownItem,
+                          style: {
+                            backgroundColor:
+                              highlightedIndex === index
+                                ? theme.colors.purple.light
+                                : theme.colors.white,
+                            fontWeight: selectedItems.includes(item)
+                              ? "bold"
+                              : "normal",
+                          },
                         })}
                       >
-                        <Icon
-                          className={classes.subtractIcon}
-                          size={12}
-                          color={theme.colors.purple.dark}
-                        >
-                          <SubtractCircle />
-                        </Icon>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-              {/* {selectedItems.length > 0
-? selectedItems.map((item: SelectItem, i: number) => (
-<div key={`${item.value}${i}`}>
-<div
-style={{
-display: "grid",
-gridGap: 6,
-gridAutoFlow: "column",
-alignItems: "center",
-position: "relative",
-}}
->
-<span>{item.label}</span>
-<button {...getRemoveButtonProps({ item })}>𝘅</button>
-</div>
-</div>
-))
-: null} */}
-              <input
-                {...getInputProps({
-                  id,
-                  name,
-                  ref: input,
-                  placeholder: "Select items...",
-                  className: classes.input,
-                  onKeyDown(event: KeyboardEvent) {
-                    if (event.key === "Backspace" && !inputValue) {
-                      removeItem(selectedItems[selectedItems.length - 1]);
-                    }
-                  },
-                })}
-              />
-              <button
-                {...getToggleButtonProps({
-                  // prevents the menu from immediately toggling
-                  // closed (due to our custom click handler above).
-                  onClick(event: MouseEvent) {
-                    event.stopPropagation();
-                  },
-                  className: classes.iconButton,
-                })}
-              >
-                <Icon
-                  className={classNames({
-                    [classes.icon]: true,
-                    [classes.iconOpen]: isOpen,
-                  })}
-                  color={theme.colors.grey.base}
-                >
-                  <ChevronDown />
-                </Icon>
-              </button>
-            </div>
-          </div>
-          <ul
-            className={classes.dropdown}
-            style={{ display: isOpen ? "block" : "none" }}
-            {...getMenuProps({ isOpen })}
-          >
-            {isOpen
-              ? getItems(items, inputValue).map(
-                  (item: SelectItem, index: number) => (
-                    <li
-                      className={classes.dropdownItem}
-                      key={`${item.value}${index}`}
-                      {...getItemProps({
-                        item,
-                        index,
-                        isActive: highlightedIndex === index,
-                        isSelected: selectedItems.includes(item),
-                        style: {
-                          backgroundColor:
-                            highlightedIndex === index
-                              ? theme.colors.purple.light
-                              : theme.colors.white,
-                          fontWeight: selectedItems.includes(item)
-                            ? "bold"
-                            : "normal",
-                        },
-                      })}
-                    >
-                      {item.label}
-                    </li>
+                        {item.label}
+                      </li>
+                    )
                   )
-                )
-              : null}
-          </ul>
-        </div>
-      )}
-    </MultiDownshift>
+                : null}
+            </ul>
+          </div>
+        )}
+      </MultiDownshift>
+      <FormError
+        errors={props.form.errors}
+        touched={props.form.touched}
+        name={props.field.name}
+      />
+    </>
   );
 };
 
