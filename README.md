@@ -8,6 +8,8 @@
 
 A collection of packages that make up the PickUp component universe.
 
+> ## Important note: [Documentation](https://ui.playpickup.com) and jest tests are currently inacurrate/disabled/and or not fully implemented
+
 ## 💾 Installation
 
 ```sh
