@@ -2,8 +2,8 @@ import React, { KeyboardEvent, MouseEvent, useRef } from "react";
 import MultiDownshift from "./MultiDownshift";
 import classNames from "classnames";
 import { createUseStyles, useTheme } from "react-jss";
-import ChevronDown from '../../../icons/src/icon/ChevronDown';
-import SubtractCircle from '../../../icons/src/icon/SubtractCircle';
+import ChevronDown from "../Icon/icons//ChevronDown";
+import SubtractCircle from "../Icon/icons/SubtractCircle";
 
 import Icon from "../Icon";
 import { getItems } from "./helpers";

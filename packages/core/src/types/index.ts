@@ -357,3 +357,14 @@ export interface MultiSelectProps extends BaseFormikFields {
   items: SelectItem[];
   label: string;
 }
+
+/**
+ *
+ * Individual Icon Component
+ *
+ */
+export interface IconProps {
+  color?: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
