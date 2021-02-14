@@ -146,6 +146,7 @@ const DataTable: React.FC<DataTableProps> = ({
         selected.slice(selectedIndex + 1)
       );
     }
+    console.log(name);
 
     setSelected(newSelected);
   };
@@ -171,6 +172,7 @@ const DataTable: React.FC<DataTableProps> = ({
             tableTitle={tableTitle}
             numSelected={selected.length}
             actionToolbar={actionToolbar}
+            selected={selected}
           />
           <TableContainer>
             <Table
@@ -199,7 +201,7 @@ const DataTable: React.FC<DataTableProps> = ({
                     return (
                       <TableRow
                         hover
-                        onClick={(event) => handleClick(event, row.name)}
+                        onClick={(event) => handleClick(event, row.id)}
                         role="checkbox"
                         aria-checked={isItemSelected}
                         tabIndex={-1}

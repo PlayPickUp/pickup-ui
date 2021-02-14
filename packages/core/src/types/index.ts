@@ -244,6 +244,7 @@ export interface EnhancedTableToolbarProps {
   numSelected: number;
   tableTitle: string;
   actionToolbar: () => ReactElement;
+  selected: string[];
 }
 
 /**
