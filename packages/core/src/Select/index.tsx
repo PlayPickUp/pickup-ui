@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Downshift from "downshift";
 import Label from "../Label";
 import Icon from "../Icon";
-import { ChevronDown } from "../../../icons";
+import ChevronDown from '../../../icons/src/icon/ChevronDown';
 
 import { DefaultTheme, SelectItem, SelectProps } from "../types";
 import FormError from "../FormError";
