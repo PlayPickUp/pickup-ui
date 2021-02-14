@@ -101,6 +101,7 @@ const DataTable: React.FC<DataTableProps> = ({
   rows,
   defaultSortColumn = "id",
   tableTitle,
+  actionToolbar,
 }) => {
   const classes = useStyles();
   const [order, setOrder] = React.useState<TableOrder>("asc");
@@ -169,6 +170,7 @@ const DataTable: React.FC<DataTableProps> = ({
           <EnhancedTableToolbar
             tableTitle={tableTitle}
             numSelected={selected.length}
+            actionToolbar={actionToolbar}
           />
           <TableContainer>
             <Table

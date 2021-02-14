@@ -115,6 +115,10 @@ const leagues = [
   },
 ];
 
+const ActionToolbar = () => {
+  return <div>Edit</div>;
+};
+
 const App: React.FC = () => {
   return (
     <ThemeProvider>
@@ -185,6 +189,7 @@ const App: React.FC = () => {
           rows={rows}
           defaultSortColumn="id"
           tableTitle="Homebase Posts"
+          actionToolbar={ActionToolbar}
         />
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
