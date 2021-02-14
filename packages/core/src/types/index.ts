@@ -226,6 +226,7 @@ export interface DataTableProps {
   rows: Array<Record<string | number, any>>;
   defaultSortColumn: string;
   tableTitle: string;
+  actionToolbar: () => ReactElement;
 }
 
 export interface EnhancedTableProps {
@@ -242,6 +243,7 @@ export interface EnhancedTableProps {
 export interface EnhancedTableToolbarProps {
   numSelected: number;
   tableTitle: string;
+  actionToolbar: () => ReactElement;
 }
 
 /**

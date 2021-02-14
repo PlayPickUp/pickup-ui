@@ -8,9 +8,6 @@ import {
 } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import Tooltip from "@material-ui/core/Tooltip";
-import DeleteIcon from "@material-ui/icons/Delete";
 
 import { EnhancedTableToolbarProps } from "../types";
 
@@ -39,6 +36,7 @@ const useToolbarStyles = makeStyles((theme: MUITheme) =>
 const EnhancedTableToolbar: React.FC<EnhancedTableToolbarProps> = ({
   numSelected,
   tableTitle,
+  actionToolbar,
 }) => {
   const classes = useToolbarStyles();
 
@@ -67,13 +65,7 @@ const EnhancedTableToolbar: React.FC<EnhancedTableToolbarProps> = ({
           {tableTitle}
         </Typography>
       )}
-      {numSelected > 0 ? (
-        <Tooltip title="Delete">
-          <IconButton aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
-      ) : null}
+      {numSelected > 0 ? actionToolbar() : null}
     </Toolbar>
   );
 };
