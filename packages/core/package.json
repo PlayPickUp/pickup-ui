@@ -23,8 +23,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@playpickup/icons": "^0.3.0"
+    "@material-ui/icons": "^4.11.2"
   },
   "jest": {
     "setupFilesAfterEnv": [

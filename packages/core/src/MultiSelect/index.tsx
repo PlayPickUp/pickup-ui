@@ -2,7 +2,7 @@ import React, { KeyboardEvent, MouseEvent, useRef } from "react";
 import MultiDownshift from "./MultiDownshift";
 import classNames from "classnames";
 import { createUseStyles, useTheme } from "react-jss";
-import { ChevronDown, SubtractCircle } from "@playpickup/icons";
+import { ChevronDown, SubtractCircle } from "../../../icons";
 
 import Icon from "../Icon";
 import { getItems } from "./helpers";
