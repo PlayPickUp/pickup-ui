@@ -123,19 +123,19 @@ const DataTable: React.FC<DataTableProps> = ({
 
   const handleSelectAllClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
-      const newSelecteds = rows.map((n) => n.name);
+      const newSelecteds = rows.map((n) => n.id);
       setSelected(newSelecteds);
       return;
     }
     setSelected([]);
   };
 
-  const handleClick = (event: React.MouseEvent<unknown>, name: string) => {
-    const selectedIndex = selected.indexOf(name);
+  const handleClick = (event: React.MouseEvent<unknown>, id: string) => {
+    const selectedIndex = selected.indexOf(id);
     let newSelected: string[] = [];
 
     if (selectedIndex === -1) {
-      newSelected = newSelected.concat(selected, name);
+      newSelected = newSelected.concat(selected, id);
     } else if (selectedIndex === 0) {
       newSelected = newSelected.concat(selected.slice(1));
     } else if (selectedIndex === selected.length - 1) {
@@ -146,7 +146,6 @@ const DataTable: React.FC<DataTableProps> = ({
         selected.slice(selectedIndex + 1)
       );
     }
-    console.log(name);
 
     setSelected(newSelected);
   };
@@ -162,7 +161,7 @@ const DataTable: React.FC<DataTableProps> = ({
     setPage(0);
   };
 
-  const isSelected = (name: string) => selected.indexOf(name) !== -1;
+  const isSelected = (id: string) => selected.indexOf(id) !== -1;
 
   return (
     <MUIThemeProvider theme={theme}>
@@ -195,7 +194,7 @@ const DataTable: React.FC<DataTableProps> = ({
                 {stableSort(rows, getComparator(order, orderBy))
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row, index) => {
-                    const isItemSelected = isSelected(row.name);
+                    const isItemSelected = isSelected(row.id);
                     const labelId = `enhanced-table-checkbox-${index}`;
 
                     return (
