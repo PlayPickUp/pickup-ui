@@ -11,9 +11,6 @@
     "packages": [
       "packages/*",
       "playground/*"
-    ],
-    "nohoist": [
-      "packages/*"
     ]
   },
   "storybook-deployer": {
