@@ -80,7 +80,6 @@ const Fab: React.FC<FabProps> = ({
   size = "small",
   style,
   title,
-  ...rest
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const classes = useStyles({ size, color });
@@ -111,7 +110,6 @@ const Fab: React.FC<FabProps> = ({
         disabled={disabled}
         onMouseEnter={toggleHovered}
         onMouseLeave={toggleHovered}
-        {...rest}
       >
         <Icon style={{ borderRadius: "50%" }}>
           {React.createElement(IconName, { color: iconColor })}

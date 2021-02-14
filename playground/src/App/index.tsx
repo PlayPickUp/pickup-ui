@@ -19,6 +19,10 @@ import { Create } from "@playpickup/icons";
 
 import "./index.css";
 
+const handleEditClick = () => {
+  console.log("handledEditCLick");
+};
+
 const rows = [
   {
     id: 23,
@@ -169,11 +173,7 @@ const App: React.FC = () => {
         </Icon>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-        <Fab
-          icon={Create}
-          title="Create post"
-          onClick={() => console.log("Clicked")}
-        />
+        <Fab icon={Create} title="Create post" onClick={handleEditClick} />
       </div>
       <div
         style={{
