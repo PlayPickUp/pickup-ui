@@ -226,7 +226,7 @@ export interface DataTableProps {
   rows: Array<Record<string | number, any>>;
   defaultSortColumn: string;
   tableTitle: string;
-  actionToolbar: () => ReactElement;
+  actionToolbar: (props: any) => ReactElement;
 }
 
 export interface EnhancedTableProps {
