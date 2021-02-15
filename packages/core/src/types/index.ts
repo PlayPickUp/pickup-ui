@@ -243,7 +243,7 @@ export interface EnhancedTableProps {
 export interface EnhancedTableToolbarProps {
   numSelected: number;
   tableTitle: string;
-  actionToolbar: () => ReactElement;
+  actionToolbar: (props: any) => ReactElement;
   selected: string[];
 }
 
