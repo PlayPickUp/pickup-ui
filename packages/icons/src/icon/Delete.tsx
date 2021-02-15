@@ -36,7 +36,7 @@ const Delete: React.FC<IconProps> = ({ className, color, style }) => {
 					fill="none"
 					stroke={color}
 					strokeLinecap="round"
-					strokLinejoin="round"
+					strokeLinejoin="round"
 					strokeWidth="1.5"
 				></path>
 				<path
