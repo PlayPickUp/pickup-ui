@@ -38,6 +38,7 @@ const EnhancedTableToolbar: React.FC<EnhancedTableToolbarProps> = ({
   tableTitle,
   actionToolbar,
   selected,
+  setSelected,
 }) => {
   const classes = useToolbarStyles();
 
@@ -67,7 +68,7 @@ const EnhancedTableToolbar: React.FC<EnhancedTableToolbarProps> = ({
         </Typography>
       )}
       {numSelected > 0
-        ? React.createElement(actionToolbar, { selected })
+        ? React.createElement(actionToolbar, { selected, setSelected })
         : null}
     </Toolbar>
   );

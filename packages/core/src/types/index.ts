@@ -5,6 +5,8 @@ import {
   MouseEvent,
   ReactElement,
   ReactNode,
+  SetStateAction,
+  Dispatch,
 } from "react";
 
 /**
@@ -245,6 +247,7 @@ export interface EnhancedTableToolbarProps {
   tableTitle: string;
   actionToolbar: (props: any) => ReactElement;
   selected: string[];
+  setSelected: Dispatch<SetStateAction<string[]>>;
 }
 
 /**

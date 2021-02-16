@@ -172,6 +172,7 @@ const DataTable: React.FC<DataTableProps> = ({
             numSelected={selected.length}
             actionToolbar={actionToolbar}
             selected={selected}
+            setSelected={setSelected}
           />
           <TableContainer>
             <Table
