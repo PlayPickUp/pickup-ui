@@ -1,5 +1,5 @@
 import Button from "./Button";
-import DataTable from "./Table";
+import DataTable from "./DataTable";
 import Fab from "./Fab";
 import Icon from "./Icon";
 import Label from "./Label";

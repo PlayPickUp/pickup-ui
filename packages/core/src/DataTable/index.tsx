@@ -104,7 +104,7 @@ const DataTable: React.FC<DataTableProps> = ({
   actionToolbar,
 }) => {
   const classes = useStyles();
-  const [order, setOrder] = React.useState<TableOrder>("asc");
+  const [order, setOrder] = React.useState<TableOrder>("desc");
   const [orderBy, setOrderBy] = React.useState<keyof TableData>(
     defaultSortColumn
   );
