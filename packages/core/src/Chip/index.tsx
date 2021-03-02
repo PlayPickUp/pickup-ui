@@ -21,11 +21,11 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     letterSpacing: "0.1px",
     backgroundColor: theme.colors.grey.light,
     border: `1px solid ${theme.colors.grey.light}`,
-    borderRadius: theme.borderRadius,
+    borderRadius: theme.borderRadius * 2,
     appearance: "none",
     transition: "all 150ms ease-out",
     "&:hover, &:focus, &:active": {
-      extend: "defaultActgive",
+      extend: "defaultActive",
     },
   },
   primaryActive: {
