@@ -14,6 +14,7 @@ import {
   ThemeProvider,
   Typography,
   MultiSelect,
+  Chip,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -266,6 +267,16 @@ const App: React.FC = () => {
             </Form>
           )}
         </Formik>
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <Chip
+          color="primary"
+          label="All Sports"
+          onClick={(e) => console.log(e)}
+          isActive
+        />
       </div>
     </ThemeProvider>
   );

@@ -374,3 +374,18 @@ export interface IconProps {
   className?: string;
   style?: React.CSSProperties;
 }
+
+/**
+ *
+ * Chip Component
+ *
+ */
+export interface ChipProps {
+  disabled?: boolean;
+  onClick: (e: React.MouseEvent) => unknown;
+  color?: "default" | "primary" | "secondary";
+  className?: string;
+  style?: React.CSSProperties;
+  isActive?: boolean;
+  label: string;
+}
