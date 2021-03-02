@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Chip from "./Chip";
 import DataTable from "./DataTable";
 import Fab from "./Fab";
 import Icon from "./Icon";
@@ -16,6 +17,8 @@ import { defaultTheme } from "./ThemeProvider/defaultTheme";
 export * from "./types";
 
 export {
+  Chip,
+  defaultTheme,
   Button,
   DataTable,
   Fab,
@@ -29,5 +32,4 @@ export {
   TextInput,
   ThemeProvider,
   Typography,
-  defaultTheme,
 };
