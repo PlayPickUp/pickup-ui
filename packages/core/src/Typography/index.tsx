@@ -1,6 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
+import unescape from "lodash/unescape";
+
 import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 
 // TODO: Find solution to template literals in typescript to use theme.mediaQuery + theme.breakpoints
@@ -61,6 +63,7 @@ const Typography: React.FC<
   element,
   variant = "p",
   color,
+  useUnescape = false,
   ...rest
 }) => {
   const classes = useStyles({ color });
@@ -81,7 +84,7 @@ const Typography: React.FC<
       style={style}
       {...rest}
     >
-      {children}
+      {useUnescape ? unescape(children) : children}
     </Element>
   );
 };
