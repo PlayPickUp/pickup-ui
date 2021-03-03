@@ -158,6 +158,7 @@ export interface ButtonProps {
   className?: string;
   useSubmit?: boolean;
   submitText?: string;
+  color?: "primary" | "secondary" | "light";
 }
 
 /**
