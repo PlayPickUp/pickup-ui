@@ -23,7 +23,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     fontFamily: theme.typography.fontFamilies.headline,
     fontSize: 18,
     lineHeight: "24px",
-    letterSpcing: "0.3px",
+    letterSpacing: "0.3px",
     color: theme.colors.white,
     textTransform: "uppercase",
     transition: "opacity 200ms ease-in-out",
@@ -35,11 +35,20 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       opacity: 0.85,
     },
   },
+  secondary: {
+    background: theme.colors.secondary.base,
+    color: theme.colors.black,
+  },
+  light: {
+    background: theme.colors.primary.light,
+    color: theme.colors.primary.dark,
+  },
 }));
 
 const Button: React.FC<
   ButtonProps & React.HTMLAttributes<HTMLOrSVGElement | HTMLInputElement>
 > = ({
+  color = "primary",
   className,
   children,
   disabled,
@@ -55,12 +64,19 @@ const Button: React.FC<
 }) => {
   const classes = useStyles({ variant });
 
+  const coreClassNames = {
+    [classes.root]: true,
+    [classes.secondary]: color === "secondary",
+    [classes.light]: color === "light",
+    className,
+  };
+
   if (to) {
     return (
       <Link
         data-testid="pickup-button"
         to={to}
-        className={classNames(classes.root, className)}
+        className={classNames(coreClassNames)}
         style={style}
         onClick={onClick}
         {...rest}
@@ -77,7 +93,7 @@ const Button: React.FC<
     return (
       <input
         data-testid="pickup-button"
-        className={classNames(classes.root, className)}
+        className={classNames(coreClassNames)}
         type="submit"
         value={submitText || "Submit"}
         onClick={onClick}
@@ -91,7 +107,7 @@ const Button: React.FC<
   return (
     <Element
       data-testid="pickup-button"
-      className={classNames(classes.root, className)}
+      className={classNames(coreClassNames)}
       disabled={disabled}
       style={style}
       onClick={onClick}

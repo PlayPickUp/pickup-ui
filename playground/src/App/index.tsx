@@ -15,6 +15,7 @@ import {
   Typography,
   MultiSelect,
   Chip,
+  Button,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -277,6 +278,16 @@ const App: React.FC = () => {
           onClick={(e) => console.log(e)}
           isActive
         />
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <Button variant="fit" color="secondary">
+          Make Your Pick
+        </Button>
+        <Button variant="fit" color="light">
+          Make Your Pick
+        </Button>
       </div>
     </ThemeProvider>
   );
