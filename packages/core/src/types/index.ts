@@ -7,6 +7,7 @@ import {
   ReactNode,
   SetStateAction,
   Dispatch,
+  ReactHTMLElement,
 } from "react";
 
 /**
@@ -384,10 +385,12 @@ export interface IconProps {
  */
 export interface ChipProps {
   disabled?: boolean;
-  onClick: (e: React.MouseEvent) => unknown;
+  onClick?: (e: React.MouseEvent) => unknown;
   color?: "default" | "primary" | "secondary";
   className?: string;
   style?: React.CSSProperties;
   isActive?: boolean;
   label: string;
+  element?: keyof JSX.IntrinsicElements;
+  href?: string;
 }

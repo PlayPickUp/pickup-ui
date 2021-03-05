@@ -10,7 +10,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     outline: "none",
   },
   root: {
-    display: "flex",
+    display: "inline-flex",
     position: "relative",
     height: 36,
     width: "auto",
@@ -24,6 +24,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     borderRadius: theme.borderRadius * 2,
     appearance: "none",
     transition: "all 150ms ease-out",
+    textDecoration: "none",
     "&:hover, &:focus, &:active": {
       extend: "defaultActive",
     },
@@ -101,11 +102,13 @@ const Chip: React.FC<ChipProps> = ({
   disabled,
   label,
   onClick,
+  element,
+  href,
 }) => {
   const classes = useStyles({ color, disabled });
-
+  const Element: keyof JSX.IntrinsicElements = element ? element : "button";
   return (
-    <button
+    <Element
       disabled={disabled}
       className={classNames({
         [classes.root]: true,
@@ -117,9 +120,10 @@ const Chip: React.FC<ChipProps> = ({
       })}
       onClick={onClick}
       style={style}
+      href={href}
     >
       <span>{label}</span>
-    </button>
+    </Element>
   );
 };
 
