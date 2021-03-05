@@ -290,7 +290,14 @@ const App: React.FC = () => {
         <Button variant="fit" color="light">
           Make Your Pick
         </Button>
-      </div>
+			</div>
+			      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+			>
+				<Typography useUnescape>
+					Oakland A&#8217;s Eye a New Home
+				</Typography>
+			</div>
     </ThemeProvider>
   );
 };
