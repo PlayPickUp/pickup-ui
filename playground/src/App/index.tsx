@@ -275,7 +275,9 @@ const App: React.FC = () => {
         <Chip
           color="primary"
           label="All Sports"
-          onClick={(e) => console.log(e)}
+          // onClick={(e) => console.log(e)}
+          href="http://google.com"
+          element="a"
           isActive
         />
       </div>
