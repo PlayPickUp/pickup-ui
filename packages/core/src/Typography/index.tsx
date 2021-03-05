@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
-import unescape from "lodash/unescape";
+import he from 'he';
 
 import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 
@@ -84,7 +84,7 @@ const Typography: React.FC<
       style={style}
       {...rest}
     >
-      {useUnescape ? unescape(children) : children}
+      {useUnescape ? he.decode(children as string) : children}
     </Element>
   );
 };
