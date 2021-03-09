@@ -102,7 +102,7 @@ const Fab: React.FC<FabProps> = ({
         data-testid="fab-target"
         className={classNames({
           [classes.button]: true,
-          innerClassName,
+          [innerClassName]: innerClassName,
           [classes.disabled]: disabled,
         })}
         style={innerStyle}
