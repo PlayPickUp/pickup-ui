@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
-import he from 'he';
+import he from "he";
 
 import { DefaultTheme, TypographyElementMap, TypographyProps } from "../types";
 
@@ -79,7 +79,7 @@ const Typography: React.FC<
         [classes.body2]: variant === "body2",
         [classes.heading2]: variant === "heading2",
         [classes.heading3]: variant === "heading3",
-        className,
+        [className]: className,
       })}
       style={style}
       {...rest}

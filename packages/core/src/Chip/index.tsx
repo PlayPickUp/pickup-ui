@@ -116,7 +116,7 @@ const Chip: React.FC<ChipProps> = ({
         [classes.secondary]: color && color === "secondary",
         [classes.disabled]: disabled,
         [classes.isActive]: isActive,
-        className,
+        [className]: className,
       })}
       onClick={onClick}
       style={style}
