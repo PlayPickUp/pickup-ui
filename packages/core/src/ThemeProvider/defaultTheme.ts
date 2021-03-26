@@ -64,7 +64,6 @@ const fontStyles: ResponsiveFonts = {
     title: {
       fontFamily: fontFamilies.headline,
       fontWeight: 600,
-      fontStyle: "italic",
       fontSize: 48,
       lineHeight: "54px",
       letterSpacing: "0.1px",
@@ -74,7 +73,6 @@ const fontStyles: ResponsiveFonts = {
     heading2: {
       fontFamily: fontFamilies.headline,
       fontWeight: 600,
-      fontStyle: "italic",
       fontSize: 36,
       lineHeight: "40px",
       letterSpacing: "0.1px",
@@ -83,7 +81,6 @@ const fontStyles: ResponsiveFonts = {
     },
     heading3: {
       fontFamily: fontFamilies.headline,
-      fontStyle: "italic",
       fontWeight: 600,
       fontSize: 28,
       lineHeight: "34px",
@@ -113,7 +110,6 @@ const fontStyles: ResponsiveFonts = {
     title: {
       fontFamily: fontFamilies.headline,
       fontWeight: 600,
-      fontStyle: "italic",
       fontSize: 34,
       lineHeight: "38px",
       letterSpacing: "0.1px",
@@ -123,7 +119,6 @@ const fontStyles: ResponsiveFonts = {
     heading2: {
       fontFamily: fontFamilies.headline,
       fontWeight: 600,
-      fontStyle: "italic",
       fontSize: 28,
       lineHeight: "34px",
       letterSpacing: "0.1px",
@@ -132,7 +127,6 @@ const fontStyles: ResponsiveFonts = {
     },
     heading3: {
       fontFamily: fontFamilies.headline,
-      fontStyle: "italic",
       fontWeight: 600,
       fontSize: 22,
       lineHeight: "26px",
