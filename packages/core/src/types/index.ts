@@ -63,7 +63,7 @@ export interface FontFamilies {
 interface FontProperties {
   fontFamily: string;
   fontWeight: number | string;
-  fontStyle: string;
+  fontStyle?: string;
   fontSize: number | string;
   lineHeight: string;
   letterSpacing: string;
