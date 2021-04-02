@@ -43,6 +43,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     background: theme.colors.primary.light,
     color: theme.colors.primary.dark,
   },
+  disabled: {
+    background: theme.colors.grey.light,
+    color: theme.colors.grey.base,
+  },
 }));
 
 const Button: React.FC<
@@ -68,6 +72,7 @@ const Button: React.FC<
     [classes.root]: true,
     [classes.secondary]: color === "secondary",
     [classes.light]: color === "light",
+    [classes.disabled]: disabled,
     className,
   };
 
