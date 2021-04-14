@@ -7,6 +7,7 @@ import Label from "./Label";
 import Loader from "./Loader";
 import MultiSelect from "./MultiSelect";
 import NestedInput from "./NestedInput";
+import Paper from "./Paper";
 import Select from "./Select";
 import TextArea from "./TextArea";
 import TextInput from "./TextInput";
@@ -17,9 +18,8 @@ import { defaultTheme } from "./ThemeProvider/defaultTheme";
 export * from "./types";
 
 export {
-  Chip,
-  defaultTheme,
   Button,
+  Chip,
   DataTable,
   Fab,
   Icon,
@@ -27,9 +27,11 @@ export {
   Loader,
   MultiSelect,
   NestedInput,
+  Paper,
   Select,
   TextArea,
   TextInput,
   ThemeProvider,
   Typography,
+  defaultTheme,
 };
