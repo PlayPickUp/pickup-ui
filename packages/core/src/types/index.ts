@@ -1,5 +1,5 @@
 import { FieldInputProps } from "formik";
-import {
+import React, {
   ChangeEvent,
   CSSProperties,
   MouseEvent,
@@ -392,4 +392,16 @@ export interface ChipProps {
   label: string;
   element?: keyof JSX.IntrinsicElements;
   href?: string;
+}
+
+/**
+ *
+ * Paper Component
+ *
+ */
+export interface PaperProps {
+  padding?: number;
+  children: unknown;
+  style?: React.CSSProperties;
+  className?: string;
 }

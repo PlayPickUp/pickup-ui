@@ -16,6 +16,7 @@ import {
   MultiSelect,
   Chip,
   Button,
+  Paper,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -128,6 +129,11 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <div style={{ padding: 40, width: 450 }}>
+        <Paper>
+          <Typography variant="title">Hello, PickUp!</Typography>
+        </Paper>
+      </div>
       <div style={{ padding: 40 }}>
         <Typography variant="title">Hello, PickUp!</Typography>
         <Typography
