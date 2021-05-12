@@ -15,6 +15,9 @@ export default {
     className: {
       defaultValue: null,
       description: "Allows for className additions or overrides",
+      table: {
+        category: "Styling",
+      },
     },
     color: {
       defaultValue: "primary",
@@ -22,6 +25,9 @@ export default {
       control: {
         type: "select",
         options: ["primary", "secondary", "light"],
+      },
+      table: {
+        category: "Styling",
       },
     },
     disabled: {
@@ -46,6 +52,9 @@ export default {
     style: {
       defaultValue: null,
       description: "CSS style object to pass to component",
+      table: {
+        category: "Styling",
+      },
     },
     to: {
       defaultValue: null,
@@ -58,6 +67,9 @@ export default {
       control: {
         type: "select",
         options: ["fit", "full"],
+      },
+      table: {
+        category: "Styling",
       },
     },
     useSubmit: {
