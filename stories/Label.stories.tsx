@@ -8,12 +8,14 @@ export default {
   component: Label,
   argTypes: {
     htmlFor: {
+      type: { required: true },
       control: "text",
       defaultValue: null,
       description:
         "Allows the assignment of the `for` (`htmlFor` in React) property to attach the label to an input",
     },
     children: {
+      type: { required: true },
       control: "text",
       defaultValue: null,
       description: "Text to render as the label",

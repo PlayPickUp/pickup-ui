@@ -14,21 +14,34 @@ export default {
       control: "color",
       defaultValue: PickUpTheme.colors.black,
       description: "Color of the icon",
+      table: {
+        category: "Styling",
+      },
     },
     className: {
       defaultValue: "",
       description: "Additional className to be applied to the icon container",
       control: "text",
+      table: {
+        category: "Styling",
+      },
     },
+
     size: {
       defaultValue: 20,
       description: "Size of the icon, converts to pixels.",
       control: "number",
+      table: {
+        category: "Styling",
+      },
     },
     style: {
       defaultValue: null,
       description: "Style object to apply to the icon container",
       control: "object",
+      table: {
+        category: "Styling",
+      },
     },
     children: {
       defaultValue: null,

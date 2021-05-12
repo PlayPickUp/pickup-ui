@@ -2,6 +2,7 @@ import Button from "./Button";
 import Chip from "./Chip";
 import DataTable from "./DataTable";
 import Fab from "./Fab";
+import FormError from "./FormError";
 import Icon from "./Icon";
 import Label from "./Label";
 import Loader from "./Loader";
@@ -22,6 +23,7 @@ export {
   Chip,
   DataTable,
   Fab,
+  FormError,
   Icon,
   Label,
   Loader,

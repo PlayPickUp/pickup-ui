@@ -17,11 +17,13 @@ export default {
       defaultValue: null,
       description: "Additional className to be applied to the Loader container",
       control: "text",
+      table: { category: "Styling" },
     },
     style: {
       defaultValue: null,
       description: "Style object to apply to the Loader container",
       control: "object",
+      table: { category: "Styling" },
     },
     delay: {
       defaultValue: 500,

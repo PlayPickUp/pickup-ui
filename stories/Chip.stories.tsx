@@ -60,18 +60,6 @@ export default {
     disabled: false,
     label: "All Sports",
   },
-  // parameters: {
-  //   variant: [
-  //     "title",
-  //     "body",
-  //     "heading2",
-  //     "heading3",
-  //     "heading4",
-  //     "heading5",
-  //     "heading6",
-  //     "span",
-  //   ],
-  // },
 } as Meta;
 
 const Template: Story<ChipProps> = (args) => <Chip {...args} />;

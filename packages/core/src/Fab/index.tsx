@@ -35,7 +35,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     "&:hover, &:focus, &:active": {
       backgroundColor: (props) =>
         props.color
-          ? Color(props.color).lighten(0.5)
+          ? Color(props.color).lighten(0.5).toString()
           : theme.colors.purple.light,
     },
   },

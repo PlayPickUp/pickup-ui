@@ -1,15 +1,8 @@
 import React from "react";
-import { FormikErrors, FormikTouched } from "formik";
 import { useTheme } from "react-jss";
 
 import Typography from "../Typography";
-import { DefaultTheme } from "../types";
-
-export interface FormErrorProps {
-  errors: FormikErrors<unknown>;
-  touched: FormikTouched<unknown>;
-  name: string;
-}
+import { DefaultTheme, FormErrorProps } from "../types";
 
 const FormError: React.FC<FormErrorProps> = ({ errors, name, touched }) => {
   const theme: DefaultTheme = useTheme();
