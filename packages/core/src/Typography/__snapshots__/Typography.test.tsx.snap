@@ -2,11 +2,11 @@
 
 exports[`Color prop is passed successfully 1`] = `
 <div>
-  <span
-    class="root-0-2-1 root-d4-0-2-8"
+  <p
+    class="root-0-2-1 root-d4-0-2-8 body-0-2-5"
   >
     I am red text!
-  </span>
+  </p>
 </div>
 `;
 

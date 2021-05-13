@@ -181,7 +181,12 @@ const App: React.FC = () => {
         </Icon>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-        <Fab icon={Create} title="Create post" onClick={handleEditClick} />
+        <Fab
+          icon={Create}
+          title="Create post"
+          onClick={handleEditClick}
+          iconColor="#ff0"
+        />
       </div>
       <div
         style={{

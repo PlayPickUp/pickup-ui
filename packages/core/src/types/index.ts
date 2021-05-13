@@ -1,4 +1,4 @@
-import { FieldInputProps } from "formik";
+import { FieldInputProps, FormikErrors, FormikTouched } from "formik";
 import React, {
   ChangeEvent,
   CSSProperties,
@@ -172,6 +172,7 @@ export interface TypographyProps {
   variant?:
     | "title"
     | "body"
+    | "body2"
     | "heading2"
     | "heading3"
     | "heading4"
@@ -206,7 +207,6 @@ export interface FabProps {
   disablePopOver?: boolean;
   color?: string;
   iconColor?: string;
-  iconHoverColor?: string;
 }
 
 /**
@@ -404,4 +404,27 @@ export interface PaperProps {
   children: unknown;
   style?: React.CSSProperties;
   className?: string;
+}
+
+/**
+ *
+ * FormError Component
+ *
+ */
+export interface FormErrorProps {
+  errors: FormikErrors<unknown>;
+  touched: FormikTouched<unknown>;
+  name: string;
+}
+
+/**
+ *
+ * Loader Component
+ *
+ */
+export interface LoaderProps {
+  className?: string;
+  style?: React.CSSProperties;
+  delay?: number;
+  text?: string;
 }

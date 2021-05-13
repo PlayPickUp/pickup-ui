@@ -10,11 +10,25 @@ export default {
   argTypes: {
     children: {
       defaultValue: null,
-      description: "Text to be displayed",
+      description: "Text or elements to be rendered as children of the button",
     },
     className: {
       defaultValue: null,
-      description: "Allows for className additions",
+      description: "Allows for className additions or overrides",
+      table: {
+        category: "Styling",
+      },
+    },
+    color: {
+      defaultValue: "primary",
+      description: "Color of the button",
+      control: {
+        type: "select",
+        options: ["primary", "secondary", "light"],
+      },
+      table: {
+        category: "Styling",
+      },
     },
     disabled: {
       defaultValue: false,
@@ -31,19 +45,32 @@ export default {
     onClick: {
       defaultValue: null,
       description: "Function to fire when clicked",
+      control: {
+        type: "none",
+      },
     },
     style: {
       defaultValue: null,
       description: "CSS style object to pass to component",
+      table: {
+        category: "Styling",
+      },
     },
     to: {
       defaultValue: null,
       description:
-        "Allows the button to use React Router Link component under the hood and uses value as link",
+        "Allows the button to use React Router Link component under the hood and uses `to` value as link",
     },
     variant: {
       defaultValue: "fit",
       description: "Button style variant",
+      control: {
+        type: "select",
+        options: ["fit", "full"],
+      },
+      table: {
+        category: "Styling",
+      },
     },
     useSubmit: {
       defaultValue: false,
@@ -57,15 +84,16 @@ export default {
   args: {
     children: "Make your pick",
     className: "",
+    color: "primary",
     disabled: false,
     element: "button",
     href: "",
     onClick: null,
     style: null,
-    to: "",
-    variant: "fit",
-    useSubmit: false,
     submitText: "",
+    to: "",
+    useSubmit: false,
+    variant: "fit",
   },
 } as Meta;
 

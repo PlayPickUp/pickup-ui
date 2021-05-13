@@ -46,6 +46,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 const elementMap: TypographyElementMap = {
   title: "h1",
   body: "p",
+  body2: "p",
   heading2: "h2",
   heading3: "h3",
   heading4: "h4",
@@ -61,7 +62,7 @@ const Typography: React.FC<
   className,
   style,
   element,
-  variant = "p",
+  variant = "body",
   color,
   useUnescape = false,
   ...rest

@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
-import { DefaultTheme } from "../types";
+import { DefaultTheme, LoaderProps } from "../types";
 import Typography from "../Typography";
-
-export interface LoaderProps {
-  className?: string;
-  style?: React.CSSProperties;
-  delay?: number;
-  text?: string;
-}
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   "@keyframes pulse": {

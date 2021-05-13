@@ -52,18 +52,18 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 const Button: React.FC<
   ButtonProps & React.HTMLAttributes<HTMLOrSVGElement | HTMLInputElement>
 > = ({
-  color = "primary",
-  className,
   children,
+  className,
+  color = "primary",
   disabled,
   element: Element = "button",
   href,
   onClick,
   style,
-  to,
-  variant = "fit",
-  useSubmit,
   submitText,
+  to,
+  useSubmit,
+  variant = "fit",
   ...rest
 }) => {
   const classes = useStyles({ variant });
