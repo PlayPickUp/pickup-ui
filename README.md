@@ -1,4 +1,4 @@
-# PickUp UI
+# **_PICKUP UI_** // [ui.playpickup.com](https://ui.playpickup.com)
 
 ![Test and Build](https://github.com/PlayPickUp/pickup-ui/workflows/Test%20and%20Build/badge.svg)
 ![GitHub issues](https://img.shields.io/github/issues/playpickup/pickup-ui)
@@ -7,8 +7,6 @@
 ![npm](https://img.shields.io/npm/v/@playpickup/icons?label=%40playpickup%2Ficons%20npm)
 
 A collection of packages that make up the PickUp component universe.
-
-> ## Important note: [Documentation](https://ui.playpickup.com) and jest tests are currently inacurrate/disabled/and or not fully implemented
 
 ## 💾 Installation
 
