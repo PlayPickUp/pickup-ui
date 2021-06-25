@@ -1,1 +1,6 @@
 scripts
+src
+.browserslistrc
+.eslintignore
+*.json
+.*.json
