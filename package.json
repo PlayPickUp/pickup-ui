@@ -9,7 +9,8 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/*",
+      "packages/core",
+      "packages/icons",
       "playground/*"
     ],
     "nohoist": [
