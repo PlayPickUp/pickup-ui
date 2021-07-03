@@ -42,6 +42,44 @@ ReactDOM.render(<App />, el);
 
 > Be sure to include `ThemeProvider` in your application. ThemeProvider should be included as far up the component tree as possible.
 
+## 👨🏾‍🎨 Using @playpickup/core to style your App
+
+`@playpickup/core` uses [react-jss](https://cssinjs.org/react-jss/?v=v10.7.1) under the hood to style the components. We include these core methods in our package so you don't have to also include `react-jss` in your project. Below is an example of how you would use `core` to style a component. In this example, `<ThemeProvider>` is used at the top level of the application.
+
+```tsx
+import React from "react";
+import { ThemeProvider, createUseStyles, DefaultTheme } from "@playpickup/core";
+
+const useStyles = createUseStyles((theme: DefaultTheme) => ({
+  root: {
+    display: "flex",
+    position: "relative",
+    backgroundColor: "red",
+    color: theme.colors.primary,  // you can access default theme styles like so
+    fontSize: 46,
+    borderRadius: theme.borderRadius,
+    padding: theme.spacing.base * 2, // double the base spacing size FANCY EYYY?
+  },
+}));
+
+const SuperStyledDiv: React.FC = ({ children }) => {
+  const classes = useStyles();
+  return(
+    <div className={classes.root}>{children}</div>;
+  )
+};
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <SuperStyledDiv>
+        I'm super styled!
+      </SuperStyledDiv>
+    </ThemeProvider>
+  );
+};
+```
+
 ### ⚠ Project Status
 
 This library is still under active development and we cannot garauntee breaking changes won't be introduced. It is reccomended not to use this library in production outside of the PickUp ecosystem.
