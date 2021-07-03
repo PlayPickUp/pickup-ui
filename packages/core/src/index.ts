@@ -16,6 +16,9 @@ import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
+// react-jss
+import { createUseStyles, useTheme } from "react-jss";
+
 export * from "./types";
 
 export {
@@ -35,5 +38,8 @@ export {
   TextInput,
   ThemeProvider,
   Typography,
+  createUseStyles,
+  defaultTheme as PickUpTheme,
   defaultTheme,
+  useTheme,
 };
