@@ -9,6 +9,7 @@ import Loader from "./Loader";
 import MultiSelect from "./MultiSelect";
 import NestedInput from "./NestedInput";
 import Paper from "./Paper";
+import PickerButton from "./PickerButton";
 import Select from "./Select";
 import TextArea from "./TextArea";
 import TextInput from "./TextInput";
@@ -33,6 +34,7 @@ export {
   MultiSelect,
   NestedInput,
   Paper,
+  PickerButton,
   Select,
   TextArea,
   TextInput,
