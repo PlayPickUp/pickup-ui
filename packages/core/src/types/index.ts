@@ -439,4 +439,7 @@ export interface PickerButtonProps {
   displayText: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   style?: React.CSSProperties;
+  showResult?: boolean;
+  result: number | null;
+  isPick: boolean;
 }
