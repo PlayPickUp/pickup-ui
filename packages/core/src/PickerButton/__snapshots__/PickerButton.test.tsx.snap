@@ -3,10 +3,19 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <button
-    class="root-0-2-1"
+    class="root-0-2-2"
     data-testid="picker-button"
   >
-    Absolutely
+    <div
+      class="bar-0-2-9"
+    >
+      <div />
+    </div>
+    <div
+      style="z-index: 2; position: relative;"
+    >
+      Absolutely
+    </div>
   </button>
 </div>
 `;

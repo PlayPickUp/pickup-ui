@@ -134,6 +134,25 @@ const App: React.FC = () => {
         <PickerButton
           onClick={(e: any) => console.log(e)}
           displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          result={33.33}
+          isPick={false}
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          showResult={true}
+          result={33.33}
+          isPick={false}
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          showResult={true}
+          result={56}
+          isPick={true}
         />
       </div>
       <div style={{ padding: 40, width: 450 }}>
