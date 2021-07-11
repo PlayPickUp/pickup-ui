@@ -117,7 +117,7 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         [classes.root]: true,
         [classes.result]: showResult,
         [classes.resultPicked]: isPick,
-        className: className,
+        [className]: className,
       })}
       onClick={onClick}
       style={style}
