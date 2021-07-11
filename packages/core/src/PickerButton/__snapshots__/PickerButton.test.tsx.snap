@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <button
+    class="root-0-2-2"
+    data-testid="picker-button"
+  >
+    <div
+      class="bar-0-2-9"
+    >
+      <div />
+    </div>
+    <div
+      style="z-index: 2; position: relative;"
+    >
+      Absolutely
+    </div>
+  </button>
+</div>
+`;

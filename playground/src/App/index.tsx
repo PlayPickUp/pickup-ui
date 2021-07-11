@@ -17,6 +17,7 @@ import {
   Chip,
   Button,
   Paper,
+  PickerButton,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -129,6 +130,31 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <div style={{ padding: 40, width: 340 }}>
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          result={33.33}
+          isPick={false}
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          showResult={true}
+          result={33.33}
+          isPick={false}
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          showResult={true}
+          result={56}
+          isPick={true}
+        />
+      </div>
       <div style={{ padding: 40, width: 450 }}>
         <Paper>
           <Typography variant="title">Hello, PickUp!</Typography>

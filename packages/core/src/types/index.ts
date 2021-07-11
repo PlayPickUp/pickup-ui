@@ -428,3 +428,18 @@ export interface LoaderProps {
   delay?: number;
   text?: string;
 }
+
+/**
+ *
+ * Picker Button
+ *
+ */
+export interface PickerButtonProps {
+  className?: string;
+  displayText: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  style?: React.CSSProperties;
+  showResult?: boolean;
+  result: number | null;
+  isPick: boolean;
+}
