@@ -1,13 +1,13 @@
-import { FieldInputProps, FormikErrors, FormikTouched } from 'formik';
+import { FieldInputProps, FormikErrors, FormikTouched } from "formik";
 import React, {
-    ChangeEvent,
-    CSSProperties,
-    MouseEvent,
-    ReactElement,
-    ReactNode,
-    SetStateAction,
-    Dispatch,
-} from 'react';
+  ChangeEvent,
+  CSSProperties,
+  MouseEvent,
+  ReactElement,
+  ReactNode,
+  SetStateAction,
+  Dispatch,
+} from "react";
 
 /**
  *
@@ -144,7 +144,7 @@ export type DefaultTheme = {
  *
  */
 
-export type ButtonVariant = 'fit' | 'full';
+export type ButtonVariant = "fit" | "full";
 
 export interface ButtonProps {
   children?: ReactNode;
@@ -158,7 +158,7 @@ export interface ButtonProps {
   className?: string;
   useSubmit?: boolean;
   submitText?: string;
-  color?: 'primary' | 'secondary' | 'light';
+  color?: "primary" | "secondary" | "light";
 }
 
 /**
@@ -170,17 +170,17 @@ export interface ButtonProps {
 export interface TypographyProps {
   children: ReactNode;
   variant?:
-    | 'title'
-    | 'body'
-    | 'body2'
-    | 'heading2'
-    | 'heading3'
-    | 'heading4'
-    | 'heading5'
-    | 'heading6'
-    | 'span';
+    | "title"
+    | "body"
+    | "body2"
+    | "heading2"
+    | "heading3"
+    | "heading4"
+    | "heading5"
+    | "heading6"
+    | "span";
   className?: string;
-  element?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  element?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   style?: CSSProperties;
   color?: string;
   useUnescape?: boolean;
@@ -201,7 +201,7 @@ export interface FabProps {
   style?: React.CSSProperties;
   icon: any;
   title: string;
-  size?: 'small' | 'large';
+  size?: "small" | "large";
   onClick: (e: MouseEvent) => unknown;
   disabled?: boolean;
   disablePopOver?: boolean;
@@ -224,7 +224,7 @@ export interface HeadCell {
 
 export type TableData = Record<any, any>;
 
-export type TableOrder = 'asc' | 'desc';
+export type TableOrder = "asc" | "desc";
 export interface DataTableProps {
   headCells: HeadCell[];
   rows: Array<Record<string | number, any>>;
@@ -385,7 +385,7 @@ export interface IconProps {
 export interface ChipProps {
   disabled?: boolean;
   onClick?: (e: React.MouseEvent) => unknown;
-  color?: 'default' | 'primary' | 'secondary';
+  color?: "default" | "primary" | "secondary";
   className?: string;
   style?: React.CSSProperties;
   isActive?: boolean;
