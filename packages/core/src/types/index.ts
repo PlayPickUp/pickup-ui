@@ -151,7 +151,7 @@ export interface ButtonProps {
   disabled?: boolean;
   style?: React.CSSProperties;
   variant?: ButtonVariant;
-  onClick?: () => unknown;
+  onClick?: (e?: React.MouseEvent) => unknown;
   element?: keyof JSX.IntrinsicElements;
   to?: string;
   href?: string;
