@@ -1,5 +1,5 @@
 import Button from "./Button";
- from "./Chip";
+import Chip from "./Chip";
 import DataTable from "./DataTable";
 import Fab from "./Fab";
 import FormError from "./FormError";
