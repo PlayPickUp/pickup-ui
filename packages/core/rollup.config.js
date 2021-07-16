@@ -42,5 +42,5 @@ export default {
       tsconfig: "./tsconfig.json",
     }),
   ],
-  external: ["react", "react-dom", "prop-types"],
+  external: ["react", "react-dom", "prop-types", "react-router-dom"],
 };
