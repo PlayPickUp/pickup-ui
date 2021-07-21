@@ -152,7 +152,6 @@ export interface ButtonProps {
   style?: React.CSSProperties;
   variant?: ButtonVariant;
   onClick?: (e?: React.MouseEvent) => unknown;
-  preventDefault?: boolean;
   element?: keyof JSX.IntrinsicElements;
   to?: string;
   href?: string;
@@ -355,8 +354,9 @@ export interface DropdownStyleProps {
 export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   buttonText: string;
   placeholder: string;
-  preventDefault: boolean;
-  handleClick: React.MouseEventHandler<HTMLButtonElement>;
+  preventDefault?: boolean;
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 /**

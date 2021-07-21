@@ -17,11 +17,9 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       />
     </div>
     <div>
-      <input
+      <button
         class="root-0-2-5 root-d0-0-2-9"
         data-testid="pickup-button"
-        type="submit"
-        value="Sign Up"
       />
     </div>
   </div>

@@ -51,7 +51,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 const NestedInput: React.FC<NestedInputProps> = ({
   buttonText,
   placeholder,
-  handleClick,
+  preventDefault,
+  onClick,
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
@@ -75,8 +76,15 @@ const NestedInput: React.FC<NestedInputProps> = ({
             {...props.field}
           />
         </div>
+
         <div>
-          <Button submitText={buttonText} onClick={handleClick} />
+          <Button
+            submitText={buttonText}
+            onClick={(e) => {
+              preventDefault && e.preventDefault();
+              onClick;
+            }}
+          />
         </div>
       </div>
       <FormError

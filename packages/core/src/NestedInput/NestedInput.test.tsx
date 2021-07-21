@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
+import Button from "../Button/index";
 
 test("Renders without crashing, matches snapshot", () => {
   const handleChange = jest.fn();
@@ -21,10 +22,26 @@ test("Renders without crashing, matches snapshot", () => {
           onChange: jest.fn(),
         }}
         form={{}}
-      />
+      /> 
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();
+});
+
+
+
+test("On click fires correctly", () => {
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <Button
+            onClick={(e) => {
+              preventDefault && e.preventDefault();
+              onClick;
+            }}
+          />
+    </ThemeProvider>
+  );
+  expect(getByTestId("pickup-button").hasAttribute("disabled"));
 });
 
 // test("Props render correctly", () => {
