@@ -41,7 +41,7 @@ test("On click fires correctly", () => {
           />
     </ThemeProvider>
   );
-  expect(getByTestId("pickup-button").hasAttribute("disabled"));
+  expect(getByTestId("pickup-button").hasAttribute("onClick"));
 });
 
 // test("Props render correctly", () => {
