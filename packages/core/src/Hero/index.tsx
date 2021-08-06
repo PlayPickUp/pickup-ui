@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
-import { DefaultTheme, HeroProps } from "../types";
+import { DefaultTheme, HeroProps, HeroStyleState } from "../types";
 import Typography from "../Typography";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
@@ -32,7 +32,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    "& > *": {
+    "& > div, & > h2, & > h3, & > p": {
       paddingTop: theme.spacing.base * 2,
       paddingBottom: theme.spacing.base * 2,
     },
@@ -75,7 +75,7 @@ const Hero: React.FC<HeroProps> = ({
   children,
 }) => {
   const classes = useStyles();
-  const [heroStyle, setHeroStyle] = useState({
+  const [heroStyle, setHeroStyle] = useState<HeroStyleState>({
     titleVariant: "heading3",
     descriptionVariant: "body",
   });

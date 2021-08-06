@@ -178,8 +178,7 @@ export interface TypographyProps {
     | "heading4"
     | "heading5"
     | "heading6"
-    | "span"
-    | string;
+    | "span";
   className?: string;
   element?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   style?: CSSProperties;
@@ -459,4 +458,9 @@ export interface HeroProps {
   title: React.ReactText;
   description: React.ReactText;
   children: React.ReactNode;
+}
+
+export interface HeroStyleState {
+  titleVariant: TypographyProps["variant"];
+  descriptionVariant: TypographyProps["variant"];
 }
