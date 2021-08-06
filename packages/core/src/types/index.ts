@@ -178,7 +178,8 @@ export interface TypographyProps {
     | "heading4"
     | "heading5"
     | "heading6"
-    | "span";
+    | "span"
+    | string;
   className?: string;
   element?: "p" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   style?: CSSProperties;
@@ -442,4 +443,20 @@ export interface PickerButtonProps {
   showResult?: boolean;
   result: number | null;
   isPick: boolean;
+}
+
+/**
+ *
+ * Hero Component
+ *
+ */
+export interface Eyebrow {
+  name: string;
+  description: string;
+}
+export interface HeroProps {
+  eyebrow?: Eyebrow;
+  title: React.ReactText;
+  description: React.ReactText;
+  children: React.ReactNode;
 }

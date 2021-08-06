@@ -15,6 +15,7 @@ import TextArea from "./TextArea";
 import TextInput from "./TextInput";
 import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
+import Hero from "./Hero";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
 // react-jss
@@ -44,4 +45,5 @@ export {
   defaultTheme as PickUpTheme,
   defaultTheme,
   useTheme,
+  Hero,
 };

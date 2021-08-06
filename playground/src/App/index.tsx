@@ -18,6 +18,7 @@ import {
   Button,
   Paper,
   PickerButton,
+  Hero,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -130,6 +131,26 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <div style={{ margin: 0, maxWidth: 856 }}>
+        <Hero
+          title="The State of Sports Betting"
+          description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
+          eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
+        >
+          <div>
+            <img
+              src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/fanatics_white.png"
+              alt="image"
+              style={{
+                maxWidth: 300,
+                width: "100%",
+                height: "auto",
+                borderRadius: 15,
+              }}
+            />
+          </div>
+        </Hero>
+      </div>
       <div style={{ padding: 40, width: 340 }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
