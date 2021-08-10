@@ -457,7 +457,8 @@ export interface HeroProps {
   eyebrow?: Eyebrow;
   title: React.ReactText;
   description: React.ReactText;
-  children: React.ReactNode;
+  image_src: string;
+  image_alt: string;
 }
 
 export interface HeroStyleState {

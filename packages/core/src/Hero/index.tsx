@@ -28,16 +28,27 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   column: {
     display: "flex",
-    flexWrap: "wrap",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    "& > div, & > h2, & > h3, & > p": {
+    "& > div, & > h2, & > h3, & > p, & > img": {
       paddingTop: theme.spacing.base * 2,
       paddingBottom: theme.spacing.base * 2,
     },
     [theme.mediaQuery(theme.breakpoints.small)]: {
       padding: 0,
+      justifyContent: "left",
+    },
+  },
+  imageColumn: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    paddingBottom: theme.spacing.base * 2,
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      paddingBottom: 0,
     },
   },
   eyebrow: {
@@ -53,6 +64,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   title: {
     fontWeight: "normal",
+    width: "100%",
     [theme.mediaQuery(theme.breakpoints.small)]: {
       fontSize: 34,
       lineHeight: `${theme.spacing.base * 10}px`,
@@ -60,19 +72,27 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   description: {
     fontSize: 13,
+    width: "100%",
     lineHeight: `${theme.spacing.base * 5}px`,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       fontSize: 18,
       lineHeight: `${theme.spacing.base * 7}px`,
     },
   },
+  image: {
+    maxWidth: 300,
+    width: "100%",
+    height: "auto",
+    borderRadius: 15,
+  },
 }));
 
 const Hero: React.FC<HeroProps> = ({
   title,
   description,
+  image_src,
+  image_alt,
   eyebrow,
-  children,
 }) => {
   const classes = useStyles();
   const [heroStyle, setHeroStyle] = useState<HeroStyleState>({
@@ -93,7 +113,9 @@ const Hero: React.FC<HeroProps> = ({
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.row}>
-          <div className={classes.column}>{children}</div>
+          <div className={classes.imageColumn}>
+            <img className={classes.image} src={image_src} alt={image_alt} />
+          </div>
           <div className={classes.column}>
             {eyebrow ? (
               <div className={classes.eyebrow}>
@@ -102,12 +124,14 @@ const Hero: React.FC<HeroProps> = ({
               </div>
             ) : null}
             <Typography
+              data-testid="hero-title"
               className={classes.title}
               variant={heroStyle.titleVariant}
             >
               {title}
             </Typography>
             <Typography
+              data-testid="hero-description"
               className={classes.description}
               variant={heroStyle.descriptionVariant}
             >
