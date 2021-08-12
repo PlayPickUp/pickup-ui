@@ -22,6 +22,20 @@ test("Renders without crashing, matches snapshot", () => {
         }}
         form={{}}
       />
+      <NestedInput
+        id="phone"
+        name="phone"
+        placeholder="(123) 293-5555"
+        buttonText="Verify"
+        handleChange={handleChange}
+        field={{
+          value: "",
+          name: "phone",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();
