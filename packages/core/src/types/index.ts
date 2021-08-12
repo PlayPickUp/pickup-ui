@@ -446,3 +446,25 @@ export interface PickerButtonProps {
   result: number | null;
   isPick: boolean;
 }
+
+/**
+ *
+ * Hero Component
+ *
+ */
+export interface Eyebrow {
+  name: string;
+  description: string;
+}
+export interface HeroProps {
+  eyebrow?: Eyebrow;
+  title: React.ReactText;
+  description: React.ReactText;
+  image_src: string;
+  image_alt: string;
+}
+
+export interface HeroStyleState {
+  titleVariant: TypographyProps["variant"];
+  descriptionVariant: TypographyProps["variant"];
+}
