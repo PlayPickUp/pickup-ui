@@ -72,6 +72,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     top: -3,
     left: 5,
   },
+  phoneButtonSmall: {
+    fontSize: 14,
+    padding: "0 14px",
+  },
 }));
 
 const NestedInput: React.FC<NestedInputProps> = ({
@@ -135,7 +139,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
           )}
         </div>
         <div>
-          <Button useSubmit submitText={buttonText} />
+          <Button
+            className={usePhoneNumber ? classes.phoneButtonSmall : null}
+            useSubmit
+            submitText={buttonText}
+          />
         </div>
       </div>
       <FormError
