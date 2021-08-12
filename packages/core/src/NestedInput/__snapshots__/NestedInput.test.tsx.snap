@@ -3,14 +3,13 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1 root-d0-0-2-4"
+    class="root-0-2-1 root-d0-0-2-7"
   >
     <div
       class="inputContainer-0-2-2"
     >
       <input
-        class="input-0-2-3"
-        data-testid="nested-input"
+        class="input-0-2-3 input-d1-0-2-8"
         name="email"
         placeholder="you@example.com"
         value="eric@playpickup.com"
@@ -18,10 +17,32 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     </div>
     <div>
       <input
-        class="root-0-2-5 root-d0-0-2-9"
+        class="root-0-2-9 root-d0-0-2-13"
         data-testid="pickup-button"
         type="submit"
         value="Sign Up"
+      />
+    </div>
+  </div>
+  <div
+    class="root-0-2-1 root-d2-0-2-14"
+  >
+    <div
+      class="inputContainer-0-2-2"
+    >
+      <input
+        class="input-0-2-3 input-d3-0-2-15"
+        name="phone"
+        placeholder="(123) 293-5555"
+        value=""
+      />
+    </div>
+    <div>
+      <input
+        class="root-0-2-9 root-d1-0-2-16"
+        data-testid="pickup-button"
+        type="submit"
+        value="Verify"
       />
     </div>
   </div>
