@@ -22,6 +22,7 @@ export interface ThemeProviderProps {
 
 export interface PurpleMap {
   light: string;
+  lightBase: string;
   base: string;
   dark: string;
 }
@@ -33,6 +34,7 @@ export interface GreenMap {
 
 export interface GreyMap {
   light: string;
+  lightBase: string;
   base: string;
   dark: string;
 }
@@ -442,4 +444,22 @@ export interface PickerButtonProps {
   showResult?: boolean;
   result: number | null;
   isPick: boolean;
+}
+
+/**
+ *
+ * Progress Button
+ *
+ */
+export interface ProgressButtonProps {
+  status:
+    | "Available Now"
+    | "Not Enough Points"
+    | "Already Redeemed"
+    | "Ready to Redeem";
+  prizeEnv?: boolean;
+  cost: number;
+  fanPoints: number;
+  href?: string;
+  onClick?: (e?: React.MouseEvent) => unknown;
 }

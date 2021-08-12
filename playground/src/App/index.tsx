@@ -18,6 +18,7 @@ import {
   Button,
   Paper,
   PickerButton,
+  ProgressButton,
 } from "@playpickup/core";
 import { Create } from "@playpickup/icons";
 
@@ -130,6 +131,15 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <div style={{ padding: 40, width: 400 }}>
+        <ProgressButton
+          status="Ready to Redeem" // comes from the Node API
+          prizeEnv={true}
+          cost={250}
+          fanPoints={125}
+          href="https://www.google.com"
+        />
+      </div>
       <div style={{ padding: 40, width: 340 }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}

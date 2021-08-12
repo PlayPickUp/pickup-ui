@@ -20,6 +20,7 @@ import {
 // Color me PickUp ⚡
 const purple: PurpleMap = {
   light: "#F5F0FF",
+  lightBase: "#AFA0FF",
   base: "#7A60FF",
   dark: "#6F5AD8",
 };
@@ -31,6 +32,7 @@ const green: GreenMap = {
 
 const grey: GreyMap = {
   light: "#F3F2F5",
+  lightBase: "#DDDDDD",
   base: "#9D9D9E",
   dark: "#615E66",
 };
