@@ -19,6 +19,7 @@ import {
   Paper,
   PickerButton,
 } from "@playpickup/core";
+import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
 
 import "./index.css";
@@ -188,13 +189,39 @@ const App: React.FC = () => {
             console.log(values);
           }}
         >
-          {() => (
+          {({ setFieldValue }) => (
             <Form>
               <Field
                 id="email"
                 name="email"
                 buttonText="Sign Up"
                 placeholder="email@example.com"
+                component={NestedInput}
+              />
+            </Form>
+          )}
+        </Formik>
+        <Formik
+          initialValues={{ phoneNumber: "" }}
+          validationSchema={Yup.object().shape({
+            phoneNumber: Yup.number().required(
+              "A 10 digit phone number is required"
+            ),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ setFieldValue }) => (
+            <Form>
+              <div style={{ height: 40 }} />
+              <Field
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="(123) 555-2343"
+                usePhoneNumber
+                label="Mobile Phone Number"
+                buttonText="Verify"
                 component={NestedInput}
               />
             </Form>

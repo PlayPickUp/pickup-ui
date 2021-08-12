@@ -24,7 +24,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2"
+    "@material-ui/icons": "^4.11.2",
+    "@types/react-phone-number-input": "^3.0.10",
+    "react-phone-number-input": "^3.1.25"
   },
   "jest": {
     "setupFilesAfterEnv": [

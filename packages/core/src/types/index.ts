@@ -354,6 +354,8 @@ export interface DropdownStyleProps {
 export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   buttonText: string;
   placeholder: string;
+  label?: string;
+  usePhoneNumber?: boolean;
 }
 
 /**
