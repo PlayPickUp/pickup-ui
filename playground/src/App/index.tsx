@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -19,7 +19,9 @@ import {
   Paper,
   PickerButton,
   ProgressButton,
+  Hero,
 } from "@playpickup/core";
+import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
 
 import "./index.css";
@@ -140,6 +142,15 @@ const App: React.FC = () => {
           href="https://www.google.com"
         />
       </div>
+      <div style={{ margin: 40, maxWidth: 856 }}>
+        <Hero
+          title="The State of Sports Betting"
+          description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
+          image_src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
+          image_alt="bowlero"
+          eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
+        />
+      </div>
       <div style={{ padding: 40, width: 340 }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
@@ -198,13 +209,39 @@ const App: React.FC = () => {
             console.log(values);
           }}
         >
-          {() => (
+          {({ setFieldValue }) => (
             <Form>
               <Field
                 id="email"
                 name="email"
                 buttonText="Sign Up"
                 placeholder="email@example.com"
+                component={NestedInput}
+              />
+            </Form>
+          )}
+        </Formik>
+        <Formik
+          initialValues={{ phoneNumber: "" }}
+          validationSchema={Yup.object().shape({
+            phoneNumber: Yup.number().required(
+              "A 10 digit phone number is required"
+            ),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ setFieldValue }) => (
+            <Form>
+              <div style={{ height: 40 }} />
+              <Field
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="(123) 555-2343"
+                usePhoneNumber
+                label="Mobile Phone Number"
+                buttonText="Verify"
                 component={NestedInput}
               />
             </Form>

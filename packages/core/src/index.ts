@@ -3,6 +3,7 @@ import Chip from "./Chip";
 import DataTable from "./DataTable";
 import Fab from "./Fab";
 import FormError from "./FormError";
+import Hero from "./Hero";
 import Icon from "./Icon";
 import Label from "./Label";
 import Loader from "./Loader";
@@ -29,6 +30,7 @@ export {
   DataTable,
   Fab,
   FormError,
+  Hero,
   Icon,
   Label,
   Loader,

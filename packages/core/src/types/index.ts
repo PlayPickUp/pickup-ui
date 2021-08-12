@@ -356,6 +356,9 @@ export interface DropdownStyleProps {
 export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   buttonText: string;
   placeholder: string;
+  label?: string;
+  usePhoneNumber?: boolean;
+  disabled?: boolean;
 }
 
 /**
@@ -462,4 +465,25 @@ export interface ProgressButtonProps {
   fanPoints: number;
   href?: string;
   onClick?: (e?: React.MouseEvent) => unknown;
+}
+
+/**
+ * Hero Component
+ *
+ */
+export interface Eyebrow {
+  name: string;
+  description: string;
+}
+export interface HeroProps {
+  eyebrow?: Eyebrow;
+  title: React.ReactText;
+  description: React.ReactText;
+  image_src: string;
+  image_alt: string;
+}
+
+export interface HeroStyleState {
+  titleVariant: TypographyProps["variant"];
+  descriptionVariant: TypographyProps["variant"];
 }

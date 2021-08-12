@@ -1,6 +1,6 @@
 {
   "name": "@playpickup/core",
-  "version": "0.14.3",
+  "version": "0.16.0",
   "description": "Core PickUp components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -19,18 +19,23 @@
   },
   "peerDependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "optionalDependencies": {
     "react-router-dom": "^5.2.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2"
+    "@material-ui/icons": "^4.11.2",
+    "@types/react-phone-number-input": "^3.0.10",
+    "react-phone-number-input": "^3.1.25"
   },
   "jest": {
     "setupFilesAfterEnv": [
       "./scripts/setupTests.js"
     ],
     "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
   }
