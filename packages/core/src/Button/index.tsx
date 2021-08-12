@@ -73,7 +73,7 @@ const Button: React.FC<
     [classes.secondary]: color === "secondary",
     [classes.light]: color === "light",
     [classes.disabled]: disabled,
-    className,
+    [className]: className,
   };
 
   if (to) {
