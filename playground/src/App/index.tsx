@@ -133,13 +133,13 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div style={{ padding: 40, width: 400 }}>
+      <div style={{ padding: 40 }}>
         <ProgressButton
-          status="Ready to Redeem" // comes from the Node API
+          status="Not Enough Points" // comes from the Node API
           prizeEnv={true}
           cost={250}
           fanPoints={125}
-          href="https://www.google.com"
+          href="https://www.playpickup.com"
         />
       </div>
       <div style={{ margin: 40, maxWidth: 856 }}>
