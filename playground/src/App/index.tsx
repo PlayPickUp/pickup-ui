@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -18,6 +18,7 @@ import {
   Button,
   Paper,
   PickerButton,
+  ProgressButton,
   Hero,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
@@ -132,7 +133,16 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <div style={{ margin: 0, maxWidth: 856 }}>
+      <div style={{ padding: 40 }}>
+        <ProgressButton
+          status="Not Enough Points" // comes from the Node API
+          prizeEnv={true}
+          cost={250}
+          fanPoints={125}
+          href="https://www.playpickup.com"
+        />
+      </div>
+      <div style={{ margin: 40, maxWidth: 856 }}>
         <Hero
           title="The State of Sports Betting"
           description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
