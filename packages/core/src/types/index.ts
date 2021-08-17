@@ -468,3 +468,14 @@ export interface HeroStyleState {
   titleVariant: TypographyProps["variant"];
   descriptionVariant: TypographyProps["variant"];
 }
+
+/**
+ *
+ * Common Hero Component
+ *
+ */
+export interface CommonHeroProps {
+  eyebrow: string;
+  title: string;
+  text: string;
+}

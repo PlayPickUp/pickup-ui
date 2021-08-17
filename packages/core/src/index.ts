@@ -16,6 +16,7 @@ import TextInput from "./TextInput";
 import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import Hero from "./Hero";
+import CommonHero from "./CommonHero";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
 // react-jss
@@ -46,4 +47,5 @@ export {
   defaultTheme,
   useTheme,
   Hero,
+  CommonHero,
 };

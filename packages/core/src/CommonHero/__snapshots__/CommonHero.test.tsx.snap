@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="root-0-2-1"
+    data-testid="common-hero"
+  >
+    <p
+      class="root-0-2-5 root-d3-0-2-11 body2-0-2-10 eyebrow-0-2-2"
+    >
+      Eyebrow
+    </p>
+    <h2
+      class="root-0-2-5 root-d4-0-2-12 heading2-0-2-7 title-0-2-3"
+    >
+      Title
+    </h2>
+    <p
+      class="root-0-2-5 root-d5-0-2-13 body-0-2-9 text-0-2-4"
+    >
+      Text
+    </p>
+  </div>
+</div>
+`;

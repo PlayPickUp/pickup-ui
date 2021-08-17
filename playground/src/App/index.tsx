@@ -19,6 +19,7 @@ import {
   Paper,
   PickerButton,
   Hero,
+  CommonHero,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
@@ -132,6 +133,13 @@ const ActionToolbar = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <div>
+        <CommonHero
+          eyebrow="Marketplace"
+          title="Turn Your Hottest Takes into Fire Swag"
+          text="Play PickUp to get rewarded for pretending you're actually right about everything"
+        />
+      </div>
       <div style={{ margin: 0, maxWidth: 856 }}>
         <Hero
           title="The State of Sports Betting"
