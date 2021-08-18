@@ -487,3 +487,15 @@ export interface HeroStyleState {
   titleVariant: TypographyProps["variant"];
   descriptionVariant: TypographyProps["variant"];
 }
+
+/**
+ * Card Component
+ *
+ */
+export interface CardProps {
+  image: string;
+  eyebrow: Eyebrow;
+  heading: string;
+  description: string;
+  buttonProps: ProgressButtonProps;
+}

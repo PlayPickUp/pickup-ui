@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { DefaultTheme } from "../types";
+import { CardProps, DefaultTheme } from "../types";
 import ProgressButton from "../ProgressButton";
 import Typography from "../Typography";
 import { defaultTheme } from "../ThemeProvider/defaultTheme";
@@ -12,7 +12,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     background: theme.colors.white,
     color: theme.colors.black,
     width: "100%",
-    maxWidth: 400,
+    maxWidth: 410,
     border: {
       color: theme.colors.grey.light,
       width: 1,
@@ -22,8 +22,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     boxShadow: {
       x: 0,
       y: 0,
-      blur: 5,
-      spread: 5,
+      blur: 10,
+      spread: 3,
       color: theme.colors.grey.light,
     },
     padding: 10,
@@ -50,6 +50,21 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       left: 0,
       right: 0,
     },
+    padding: {
+      top: 0,
+      bottom: 0,
+      left: 5,
+      right: 5,
+    },
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      height: 175,
+      margin: {
+        top: 20,
+        bottom: 10,
+        left: 0,
+        right: 0,
+      },
+    },
   },
   eyebrow: {
     display: "flex",
@@ -59,15 +74,17 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
   },
   heading: {
-    fontWeight: "normal",
+    fontWeight: 600,
+    lineHeight: 1.35,
   },
   description: {
     color: theme.colors.grey.dark,
+    lineHeight: 1.35,
+    marginBottom: 10,
   },
-  button: {},
 }));
 
-const Card: React.FC<any> = ({
+const Card: React.FC<CardProps> = ({
   image,
   eyebrow,
   heading,
@@ -81,7 +98,7 @@ const Card: React.FC<any> = ({
       <div className={classes.image}>
         <img
           src={image}
-          alt={eyebrow.title}
+          alt={eyebrow.name}
           style={{ width: "100%", height: "auto" }}
         />
       </div>
@@ -106,7 +123,7 @@ const Card: React.FC<any> = ({
         <Typography className={classes.description} variant="body">
           {description}
         </Typography>
-        <ProgressButton className={classes.button} {...buttonProps} />
+        <ProgressButton {...buttonProps} />
       </div>
     </div>
   );
