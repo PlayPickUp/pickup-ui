@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Card from "./Card";
 import Chip from "./Chip";
 import DataTable from "./DataTable";
 import Fab from "./Fab";
@@ -26,6 +27,7 @@ export * from "./types";
 
 export {
   Button,
+  Card,
   Chip,
   DataTable,
   Fab,
