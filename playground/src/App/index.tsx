@@ -252,6 +252,8 @@ const App: React.FC = () => {
                 buttonText="Sign Up"
                 placeholder="email@example.com"
                 component={NestedInput}
+                useSubmit={false}
+                onClick={() => console.log("clicked")}
               />
             </Form>
           )}
