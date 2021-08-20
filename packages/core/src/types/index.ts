@@ -22,6 +22,7 @@ export interface ThemeProviderProps {
 
 export interface PurpleMap {
   light: string;
+  lightBase: string;
   base: string;
   dark: string;
 }
@@ -33,6 +34,7 @@ export interface GreenMap {
 
 export interface GreyMap {
   light: string;
+  lightBase: string;
   base: string;
   dark: string;
 }
@@ -356,6 +358,7 @@ export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   placeholder: string;
   label?: string;
   usePhoneNumber?: boolean;
+  disabled?: boolean;
 }
 
 /**
@@ -444,4 +447,55 @@ export interface PickerButtonProps {
   showResult?: boolean;
   result: number | null;
   isPick: boolean;
+}
+
+/**
+ *
+ * Progress Button
+ *
+ */
+export interface ProgressButtonProps {
+  status:
+    | "Available Now"
+    | "Not Enough Points"
+    | "Already Redeemed"
+    | "Ready to Redeem";
+  prizeEnv?: boolean;
+  cost: number;
+  fanPoints: number;
+  href?: string;
+  onClick?: (e?: React.MouseEvent) => unknown;
+}
+
+/**
+ * Hero Component
+ *
+ */
+export interface Eyebrow {
+  name: string;
+  description: string;
+}
+export interface HeroProps {
+  eyebrow?: Eyebrow;
+  title: React.ReactText;
+  description: React.ReactText;
+  image_src: string;
+  image_alt: string;
+}
+
+export interface HeroStyleState {
+  titleVariant: TypographyProps["variant"];
+  descriptionVariant: TypographyProps["variant"];
+}
+
+/**
+ * Card Component
+ *
+ */
+export interface CardProps {
+  image: string;
+  eyebrow: Eyebrow;
+  heading: string;
+  description: string;
+  buttonProps: ProgressButtonProps;
 }

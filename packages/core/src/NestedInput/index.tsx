@@ -48,6 +48,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
         borderColor: theme.colors.grey.dark,
       },
     },
+    "&:disabled": {
+      backgroundColor: "transparent",
+    },
   },
   phoneContainer: {
     display: "flex",
@@ -72,6 +75,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     top: -3,
     left: 5,
   },
+  phoneButtonSmall: {
+    fontSize: 14,
+    padding: "0 14px",
+  },
 }));
 
 const NestedInput: React.FC<NestedInputProps> = ({
@@ -79,6 +86,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
   placeholder,
   label,
   usePhoneNumber,
+  disabled,
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
@@ -118,6 +126,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
                 country="US"
                 placeholder="(345) 555-2343"
                 smartCaret={false}
+                disabled={disabled}
                 onChange={(e) => props.form.setFieldValue(props.field.name, e)}
               />
             </div>
@@ -135,7 +144,12 @@ const NestedInput: React.FC<NestedInputProps> = ({
           )}
         </div>
         <div>
-          <Button useSubmit submitText={buttonText} />
+          <Button
+            className={usePhoneNumber ? classes.phoneButtonSmall : null}
+            useSubmit
+            submitText={buttonText}
+            disabled={disabled}
+          />
         </div>
       </div>
       <FormError

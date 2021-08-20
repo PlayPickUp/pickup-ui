@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="root-0-2-1"
+    data-testid="card"
+  >
+    <div
+      class="image-0-2-2"
+    >
+      <img
+        alt="CROSSNET"
+        src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+        style="width: 100%; height: auto;"
+      />
+    </div>
+    <div
+      class="container-0-2-3"
+    >
+      <div
+        class="eyebrow-0-2-4"
+      >
+        <p
+          class="root-0-2-7 root-d3-0-2-13 body2-0-2-12"
+          style="color: rgb(122, 96, 255);"
+        >
+          CROSSNET
+        </p>
+        <p
+          class="root-0-2-7 root-d4-0-2-14 body2-0-2-12"
+          style="color: rgb(97, 94, 102);"
+        >
+          $20 Value
+        </p>
+      </div>
+      <h4
+        class="root-0-2-7 root-d5-0-2-15 heading-0-2-5"
+      >
+        CROSSNET Four-Way Volleyball
+      </h4>
+      <p
+        class="root-0-2-7 root-d6-0-2-16 body-0-2-11 description-0-2-6"
+      >
+        The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors.
+      </p>
+      <a
+        class="root-0-2-18"
+        data-testid="progess-button"
+        href="https://www.playpickup.com"
+      >
+        <div
+          class="progressBar-0-2-19 progressBar-d1-0-2-25"
+        />
+        <div
+          class="textContainer-0-2-23"
+        >
+          150 / 250 points
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
