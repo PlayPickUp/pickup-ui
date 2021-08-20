@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <a
+    class="root-0-2-2"
+    data-testid="progess-button"
+  >
+    <div
+      class="progressBar-0-2-3 progressBar-d1-0-2-9"
+    />
+    <div
+      class="textContainer-0-2-7"
+    >
+      125 / 250 points
+    </div>
+  </a>
+</div>
+`;
