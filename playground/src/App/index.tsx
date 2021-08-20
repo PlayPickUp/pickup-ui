@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -26,6 +26,7 @@ import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
 
 import "./index.css";
+import { values } from "lodash";
 
 const handleEditClick = () => {
   console.log("handledEditCLick");
@@ -132,6 +133,8 @@ const ActionToolbar = () => {
 };
 
 const App: React.FC = () => {
+  const [twoStep, setTwoStep] = useState<boolean>(false);
+
   return (
     <ThemeProvider>
       <div
@@ -234,25 +237,84 @@ const App: React.FC = () => {
 
         {/* NestedInput component w/ Formik as wrapper */}
         <Formik
-          initialValues={{ email: "" }}
+          initialValues={{ email: "", publicationName: "", url: "" }}
           validationSchema={Yup.object().shape({
             email: Yup.string()
               .email("A valid email address is required!")
               .required("Email address is required!"),
+            publicationName: Yup.string()
+              .required("Publication name is required!")
+              .nullable(),
+            url: Yup.string().required("url is required!").nullable(),
           })}
           onSubmit={(values) => {
             console.log(values);
           }}
         >
-          {({ setFieldValue }) => (
+          {({
+            setFieldValue,
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting,
+          }) => (
             <Form>
-              <Field
-                id="email"
-                name="email"
-                buttonText="Sign Up"
-                placeholder="email@example.com"
-                component={NestedInput}
-              />
+              {!twoStep ? (
+                <Field
+                  id="email"
+                  name="email"
+                  buttonText="join"
+                  placeholder="example@email.com"
+                  useSubmit={false}
+                  onClick={() => {
+                    console.log("clickd");
+                    if (values.email.trim() != "") {
+                      setTwoStep(true);
+                    }
+                  }}
+                  component={NestedInput}
+                />
+              ) : (
+                <div>
+                  <Field
+                    id="publicationName"
+                    name="publicationName"
+                    placeholder="publication name"
+                    label="Publication Name"
+                    component={TextInput}
+                  />
+                  <br />
+                  <Field
+                    id="url"
+                    name="url"
+                    placeholder="url"
+                    label="Url"
+                    component={TextInput}
+                  />
+                  <br />
+                  <div style={{ float: "left" }}>
+                    <Button
+                      color="light"
+                      onClick={() => {
+                        setTwoStep(false);
+                      }}
+                    >
+                      back
+                    </Button>
+                  </div>
+                  <div style={{ float: "right" }}>
+                    <Button
+                      color="light"
+                      style={{ cursor: "pointer" }}
+                      useSubmit
+                      submitText="Submit"
+                    />
+                  </div>
+                </div>
+              )}
             </Form>
           )}
         </Formik>
@@ -277,6 +339,7 @@ const App: React.FC = () => {
                 usePhoneNumber
                 label="Mobile Phone Number"
                 buttonText="Verify"
+                useSubmit
                 component={NestedInput}
               />
             </Form>
