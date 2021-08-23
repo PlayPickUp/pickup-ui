@@ -30,10 +30,21 @@ export default {
       description: "Switches the input to phone number mode",
       control: "boolean",
     },
+    useSubmit: {
+      defaultValue: true,
+      description: "Allows toggle of nested Button as submit form",
+      control: "boolean",
+    },
+    onClick: {
+      defaultValue: null,
+      description: "Place holder for passing onClick function",
+      control: "function",
+    },
   },
   args: {
     placeholder: "first.last@example.com",
     label: "Mobile Phone Number",
+    useSubmit: false,
   },
 } as Meta;
 
@@ -52,6 +63,10 @@ const Template: Story<NestedInputProps> = (args) => (
           id={args.usePhoneNumber ? "phone" : "email"}
           name={args.usePhoneNumber ? "phone" : "email"}
           submitText="Sign Up"
+          useSubmit={args.useSubmit}
+          onClick={() => {
+            console.log("just clicked not submitted");
+          }}
           component={NestedInput}
         />
       </Form>
@@ -72,6 +87,8 @@ Default.parameters = {
   submitText="Sign Up"
   component={NestedInput}
   usePhoneNumber={false}
+  useSubmit={false}
+  onClick={()=>console.log("do something")}
 />
       `,
     },

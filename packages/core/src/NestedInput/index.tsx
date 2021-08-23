@@ -87,6 +87,8 @@ const NestedInput: React.FC<NestedInputProps> = ({
   label,
   usePhoneNumber,
   disabled,
+  useSubmit = true,
+  onClick,
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
@@ -144,12 +146,27 @@ const NestedInput: React.FC<NestedInputProps> = ({
           )}
         </div>
         <div>
-          <Button
-            className={usePhoneNumber ? classes.phoneButtonSmall : null}
-            useSubmit
-            submitText={buttonText}
-            disabled={disabled}
-          />
+          {useSubmit ? (
+            <Button
+              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              useSubmit
+              submitText={buttonText}
+              disabled={disabled}
+            />
+          ) : (
+            <Button
+              data-testid="pickup-nested-button"
+              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              disabled={disabled}
+              submitText={buttonText}
+              onClick={(e) => {
+                e.preventDefault();
+                onClick();
+              }}
+            >
+              {buttonText}
+            </Button>
+          )}
         </div>
       </div>
       <FormError
