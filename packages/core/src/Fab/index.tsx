@@ -111,8 +111,8 @@ const Fab: React.FC<FabProps> = ({
         onMouseEnter={toggleHovered}
         onMouseLeave={toggleHovered}
       >
-        <Icon style={{ borderRadius: "50%" }}>
-          {React.createElement(IconName, { color: iconColor })}
+        <Icon style={{ borderRadius: "50%" }} color={iconColor}>
+          {React.createElement(IconName)}
         </Icon>
       </button>
     </div>
