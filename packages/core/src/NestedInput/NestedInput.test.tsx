@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
@@ -39,6 +39,57 @@ test("Renders without crashing, matches snapshot", () => {
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();
+});
+
+test("useSubmit is false", () => {
+  const handleChange = jest.fn();
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <NestedInput
+        buttonText="test submit"
+        placeholder="test placeholder"
+        id="test"
+        name="test"
+        handleChange={handleChange}
+        useSubmit={false}
+        field={{
+          value: "",
+          name: "phone",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
+    </ThemeProvider>
+  );
+  expect(getByTestId("pickup-nested-button")).toBeTruthy;
+});
+
+test("onClick function is passed", () => {
+  const handleChange = jest.fn();
+  const handleClick = jest.fn();
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <NestedInput
+        buttonText="test submit"
+        placeholder="test placeholder"
+        id="test"
+        name="test"
+        handleChange={handleChange}
+        useSubmit={false}
+        onClick={handleClick}
+        field={{
+          value: "",
+          name: "phone",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
+    </ThemeProvider>
+  );
+  fireEvent.click(getByTestId("pickup-nested-button"));
+  expect(getByTestId("pickup-nested-button")).toBeCalled;
 });
 
 // test("Props render correctly", () => {
