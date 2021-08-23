@@ -155,6 +155,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
             />
           ) : (
             <Button
+              data-testid="pickup-nested-button"
               className={usePhoneNumber ? classes.phoneButtonSmall : null}
               disabled={disabled}
               submitText={buttonText}

@@ -41,6 +41,54 @@ test("Renders without crashing, matches snapshot", () => {
   expect(container).toMatchSnapshot();
 });
 
+test("Submit is disabled when prop useSubmit is false", () => {
+  const handleChange = jest.fn();
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <NestedInput
+        buttonText="test submit"
+        placeholder="test placeholder"
+        id="test"
+        name="test"
+        handleChange={handleChange}
+        useSubmit={false}
+        field={{
+          value: "",
+          name: "phone",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
+    </ThemeProvider>
+  );
+  expect(getByTestId("pickup-nested-button").hasAttribute("useSubmit"));
+});
+
+test("onClick function is passed", () => {
+  const handleChange = jest.fn();
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <NestedInput
+        buttonText="test submit"
+        placeholder="test placeholder"
+        id="test"
+        name="test"
+        handleChange={handleChange}
+        useSubmit={false}
+        field={{
+          value: "",
+          name: "phone",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
+    </ThemeProvider>
+  );
+  expect(getByTestId("pickup-nested-button").hasAttribute("onClick"));
+});
+
 // test("Props render correctly", () => {
 //   const handleChange = jest.fn();
 //   const { getByPlaceholderText, getByTestId } = render(
