@@ -44,6 +44,7 @@ export default {
   args: {
     placeholder: "first.last@example.com",
     label: "Mobile Phone Number",
+    useSubmit: false,
   },
 } as Meta;
 
@@ -62,10 +63,9 @@ const Template: Story<NestedInputProps> = (args) => (
           id={args.usePhoneNumber ? "phone" : "email"}
           name={args.usePhoneNumber ? "phone" : "email"}
           submitText="Sign Up"
-          useSubmit={false}
+          useSubmit={args.useSubmit}
           onClick={() => {
             console.log("just clicked not submitted");
-            //some logic
           }}
           component={NestedInput}
         />
