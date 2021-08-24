@@ -501,3 +501,15 @@ export interface CardProps {
   description: string;
   buttonProps: ProgressButtonProps;
 }
+
+/**
+ * Dropdown Component
+ *
+ */
+export interface DropdownProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  children: React.ReactElement | Array<React.ReactElement>;
+  className?: string;
+  color?: "default" | "primary" | "secondary";
+  disabled?: boolean;
+}

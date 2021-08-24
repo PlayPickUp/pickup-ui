@@ -3,6 +3,7 @@ import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   DataTable,
+  Dropdown,
   Fab,
   Icon,
   Label,
@@ -132,11 +133,21 @@ const ActionToolbar = () => {
   return <div>Edit</div>;
 };
 
+const handleChange = () => {
+  console.log("change!");
+};
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
     <ThemeProvider>
+      <div style={{ margin: 40 }}>
+        <Dropdown value={1} onChange={handleChange}>
+          <option value={1}>A - Z</option>
+          <option value={-1}>Z - A</option>
+        </Dropdown>
+      </div>
       <div
         style={{
           maxWidth: 840,
