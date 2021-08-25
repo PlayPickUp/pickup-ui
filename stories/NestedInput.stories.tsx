@@ -48,7 +48,7 @@ export default {
   },
   args: {
     placeholder: "first.last@example.com",
-    label: "Mobile Phone Number",
+    label: "Phone or Verification Code",
     useSubmit: false,
   },
 } as Meta;

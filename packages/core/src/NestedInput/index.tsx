@@ -32,11 +32,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     paddingRight: 8,
   },
   input: {
-    height: (props) => (props.usePhoneNumber ? 22 : 48),
+    height: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? 22 : 48,
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
-    fontSize: (props) => (props.usePhoneNumber ? 15 : 16),
-    lineHeight: (props) => (props.usePhoneNumber ? "22px" : "24px"),
+    fontSize: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? 15 : 16,
+    lineHeight: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? "22px" : "24px",
     letterSpacing: "0.1px",
     color: theme.colors.grey.dark,
     appearance: "none",
@@ -109,54 +112,6 @@ const NestedInput: React.FC<NestedInputProps> = ({
     toggleFocus();
   };
 
-  const determineInput = () => {
-    let inputType;
-    if (useVerificationCode) {
-      inputType = (
-        <input
-          {...props.field}
-          className={classes.input}
-          placeholder={placeholder}
-          onFocus={toggleFocus}
-          onBlur={(e) => {
-            toggleFocus();
-            props.field.onBlur(e);
-          }}
-        />
-      );
-    } else if (usePhoneNumber) {
-      inputType = (
-        <div className={classes.phoneContainer}>
-          <PhoneInput
-            {...props.field}
-            // @ts-ignore
-            ref={inputRef}
-            className={classes.input}
-            country="US"
-            placeholder="(345) 555-2343"
-            smartCaret={false}
-            disabled={disabled}
-            onChange={(e) => props.form.setFieldValue(props.field.name, e)}
-          />
-        </div>
-      );
-    } else {
-      inputType = (
-        <input
-          {...props.field}
-          className={classes.input}
-          placeholder={placeholder}
-          onFocus={toggleFocus}
-          onBlur={(e) => {
-            toggleFocus();
-            props.field.onBlur(e);
-          }}
-        />
-      );
-    }
-    return inputType;
-  };
-
   return (
     <>
       <div className={classes.root}>
@@ -170,12 +125,42 @@ const NestedInput: React.FC<NestedInputProps> = ({
               {label}
             </label>
           ) : null}
-          {determineInput()}
+          {usePhoneNumber ? (
+            <div className={classes.phoneContainer}>
+              <div className={classes.phonePrefix}>+1</div>
+              <PhoneInput
+                {...props.field}
+                // @ts-ignore
+                ref={inputRef}
+                className={classes.input}
+                country="US"
+                placeholder="(345) 555-2343"
+                smartCaret={false}
+                disabled={disabled}
+                onChange={(e) => props.form.setFieldValue(props.field.name, e)}
+              />
+            </div>
+          ) : (
+            <input
+              {...props.field}
+              className={classes.input}
+              placeholder={placeholder}
+              onFocus={toggleFocus}
+              onBlur={(e) => {
+                toggleFocus();
+                props.field.onBlur(e);
+              }}
+            />
+          )}
         </div>
         <div>
           {useSubmit ? (
             <Button
-              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
               useSubmit
               submitText={buttonText}
               disabled={disabled}
@@ -183,7 +168,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
           ) : (
             <Button
               data-testid="pickup-nested-button"
-              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
               disabled={disabled}
               submitText={buttonText}
               onClick={(e) => {
