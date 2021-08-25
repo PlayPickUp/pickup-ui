@@ -30,6 +30,11 @@ export default {
       description: "Switches the input to phone number mode",
       control: "boolean",
     },
+    useVerificationCode: {
+      defaultValue: false,
+      description: "Switches the input to verification code mode",
+      control: "boolean",
+    },
     useSubmit: {
       defaultValue: true,
       description: "Allows toggle of nested Button as submit form",
@@ -87,6 +92,7 @@ Default.parameters = {
   submitText="Sign Up"
   component={NestedInput}
   usePhoneNumber={false}
+  useVerificationCode={false}
   useSubmit={false}
   onClick={()=>console.log("do something")}
 />

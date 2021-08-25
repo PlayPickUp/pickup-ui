@@ -358,6 +358,7 @@ export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   placeholder: string;
   label?: string;
   usePhoneNumber?: boolean;
+  useVerificationCode?: boolean;
   disabled?: boolean;
   useSubmit?: boolean;
   onClick?: () => void;

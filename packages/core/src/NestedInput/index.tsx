@@ -86,13 +86,18 @@ const NestedInput: React.FC<NestedInputProps> = ({
   placeholder,
   label,
   usePhoneNumber,
+  useVerificationCode,
   disabled,
   useSubmit = true,
   onClick,
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
-  const classes = useStyles({ inputFocus, usePhoneNumber });
+  const classes = useStyles({
+    inputFocus,
+    usePhoneNumber,
+    useVerificationCode,
+  });
   const inputRef = useRef();
 
   const toggleFocus = () => setInputFocus(!inputFocus);
@@ -104,11 +109,59 @@ const NestedInput: React.FC<NestedInputProps> = ({
     toggleFocus();
   };
 
+  const determineInput = () => {
+    let inputType;
+    if (useVerificationCode) {
+      inputType = (
+        <input
+          {...props.field}
+          className={classes.input}
+          placeholder={placeholder}
+          onFocus={toggleFocus}
+          onBlur={(e) => {
+            toggleFocus();
+            props.field.onBlur(e);
+          }}
+        />
+      );
+    } else if (usePhoneNumber) {
+      inputType = (
+        <div className={classes.phoneContainer}>
+          <PhoneInput
+            {...props.field}
+            // @ts-ignore
+            ref={inputRef}
+            className={classes.input}
+            country="US"
+            placeholder="(345) 555-2343"
+            smartCaret={false}
+            disabled={disabled}
+            onChange={(e) => props.form.setFieldValue(props.field.name, e)}
+          />
+        </div>
+      );
+    } else {
+      inputType = (
+        <input
+          {...props.field}
+          className={classes.input}
+          placeholder={placeholder}
+          onFocus={toggleFocus}
+          onBlur={(e) => {
+            toggleFocus();
+            props.field.onBlur(e);
+          }}
+        />
+      );
+    }
+    return inputType;
+  };
+
   return (
     <>
       <div className={classes.root}>
         <div className={classes.inputContainer}>
-          {usePhoneNumber && label ? (
+          {(usePhoneNumber || useVerificationCode) && label ? (
             <label
               className={classes.phoneLabel}
               htmlFor={props.field.name}
@@ -117,33 +170,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
               {label}
             </label>
           ) : null}
-          {usePhoneNumber ? (
-            <div className={classes.phoneContainer}>
-              <div className={classes.phonePrefix}>+1</div>
-              <PhoneInput
-                {...props.field}
-                // @ts-ignore
-                ref={inputRef}
-                className={classes.input}
-                country="US"
-                placeholder="(345) 555-2343"
-                smartCaret={false}
-                disabled={disabled}
-                onChange={(e) => props.form.setFieldValue(props.field.name, e)}
-              />
-            </div>
-          ) : (
-            <input
-              {...props.field}
-              className={classes.input}
-              placeholder={placeholder}
-              onFocus={toggleFocus}
-              onBlur={(e) => {
-                toggleFocus();
-                props.field.onBlur(e);
-              }}
-            />
-          )}
+          {determineInput()}
         </div>
         <div>
           {useSubmit ? (
