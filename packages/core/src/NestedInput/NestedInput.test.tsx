@@ -36,6 +36,20 @@ test("Renders without crashing, matches snapshot", () => {
         }}
         form={{}}
       />
+      <NestedInput
+        id="otp"
+        name="otp"
+        placeholder="123456"
+        buttonText="Verify Pick"
+        handleChange={handleChange}
+        field={{
+          value: "",
+          name: "otp",
+          onBlur: jest.fn(),
+          onChange: jest.fn(),
+        }}
+        form={{}}
+      />
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();

@@ -46,5 +46,27 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       />
     </div>
   </div>
+  <div
+    class="root-0-2-1 root-d4-0-2-18"
+  >
+    <div
+      class="inputContainer-0-2-2"
+    >
+      <input
+        class="input-0-2-3 input-d5-0-2-19"
+        name="otp"
+        placeholder="123456"
+        value=""
+      />
+    </div>
+    <div>
+      <input
+        class="root-0-2-10 root-d2-0-2-20"
+        data-testid="pickup-button"
+        type="submit"
+        value="Verify Pick"
+      />
+    </div>
+  </div>
 </div>
 `;

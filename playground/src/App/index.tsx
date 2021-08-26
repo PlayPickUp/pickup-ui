@@ -3,6 +3,7 @@ import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   DataTable,
+  Dropdown,
   Fab,
   Icon,
   Label,
@@ -132,11 +133,21 @@ const ActionToolbar = () => {
   return <div>Edit</div>;
 };
 
+const handleChange = () => {
+  console.log("change!");
+};
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
     <ThemeProvider>
+      <div style={{ margin: 40 }}>
+        <Dropdown value={1} onChange={handleChange}>
+          <option value={1}>A - Z</option>
+          <option value={-1}>Z - A</option>
+        </Dropdown>
+      </div>
       <div
         style={{
           maxWidth: 840,
@@ -338,6 +349,35 @@ const App: React.FC = () => {
                 placeholder="(123) 555-2343"
                 usePhoneNumber
                 label="Mobile Phone Number"
+                buttonText="Verify"
+                useSubmit
+                component={NestedInput}
+              />
+            </Form>
+          )}
+        </Formik>
+        <Formik
+          initialValues={{ otp: "" }}
+          validationSchema={Yup.object().shape({
+            otp: Yup.string()
+              .max(6, "Verification Code requires 6 digits")
+              .min(6, "Verification Code requires 6 digits")
+              .required("Please enter your Verification Code")
+              .typeError("A number is required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ setFieldValue }) => (
+            <Form>
+              <div style={{ height: 40 }} />
+              <Field
+                id="otp"
+                name="otp"
+                placeholder="123456"
+                useVerificationCode
+                label="Verification Code"
                 buttonText="Verify"
                 useSubmit
                 component={NestedInput}
