@@ -30,6 +30,11 @@ export default {
       description: "Switches the input to phone number mode",
       control: "boolean",
     },
+    useVerificationCode: {
+      defaultValue: false,
+      description: "Switches the input to verification code mode",
+      control: "boolean",
+    },
     useSubmit: {
       defaultValue: true,
       description: "Allows toggle of nested Button as submit form",
@@ -43,7 +48,7 @@ export default {
   },
   args: {
     placeholder: "first.last@example.com",
-    label: "Mobile Phone Number",
+    label: "Phone or Verification Code",
     useSubmit: false,
   },
 } as Meta;
@@ -68,6 +73,9 @@ const Template: Story<NestedInputProps> = (args) => (
             console.log("just clicked not submitted");
           }}
           component={NestedInput}
+          placeholder={
+            args.useVerificationCode ? "123456" : "first.last@example.com"
+          }
         />
       </Form>
     )}
@@ -87,6 +95,7 @@ Default.parameters = {
   submitText="Sign Up"
   component={NestedInput}
   usePhoneNumber={false}
+  useVerificationCode={false}
   useSubmit={false}
   onClick={()=>console.log("do something")}
 />

@@ -356,6 +356,35 @@ const App: React.FC = () => {
             </Form>
           )}
         </Formik>
+        <Formik
+          initialValues={{ otp: "" }}
+          validationSchema={Yup.object().shape({
+            otp: Yup.string()
+              .max(6, "Verification Code requires 6 digits")
+              .min(6, "Verification Code requires 6 digits")
+              .required("Please enter your Verification Code")
+              .typeError("A number is required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+        >
+          {({ setFieldValue }) => (
+            <Form>
+              <div style={{ height: 40 }} />
+              <Field
+                id="otp"
+                name="otp"
+                placeholder="123456"
+                useVerificationCode
+                label="Verification Code"
+                buttonText="Verify"
+                useSubmit
+                component={NestedInput}
+              />
+            </Form>
+          )}
+        </Formik>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         <Icon>

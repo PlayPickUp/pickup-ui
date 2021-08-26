@@ -32,11 +32,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     paddingRight: 8,
   },
   input: {
-    height: (props) => (props.usePhoneNumber ? 22 : 48),
+    height: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? 22 : 48,
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
-    fontSize: (props) => (props.usePhoneNumber ? 15 : 16),
-    lineHeight: (props) => (props.usePhoneNumber ? "22px" : "24px"),
+    fontSize: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? 15 : 16,
+    lineHeight: (props) =>
+      props.usePhoneNumber || props.useVerificationCode ? "22px" : "24px",
     letterSpacing: "0.1px",
     color: theme.colors.grey.dark,
     appearance: "none",
@@ -86,13 +89,18 @@ const NestedInput: React.FC<NestedInputProps> = ({
   placeholder,
   label,
   usePhoneNumber,
+  useVerificationCode,
   disabled,
   useSubmit = true,
   onClick,
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
-  const classes = useStyles({ inputFocus, usePhoneNumber });
+  const classes = useStyles({
+    inputFocus,
+    usePhoneNumber,
+    useVerificationCode,
+  });
   const inputRef = useRef();
 
   const toggleFocus = () => setInputFocus(!inputFocus);
@@ -108,7 +116,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
     <>
       <div className={classes.root}>
         <div className={classes.inputContainer}>
-          {usePhoneNumber && label ? (
+          {(usePhoneNumber || useVerificationCode) && label ? (
             <label
               className={classes.phoneLabel}
               htmlFor={props.field.name}
@@ -148,7 +156,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
         <div>
           {useSubmit ? (
             <Button
-              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
               useSubmit
               submitText={buttonText}
               disabled={disabled}
@@ -156,7 +168,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
           ) : (
             <Button
               data-testid="pickup-nested-button"
-              className={usePhoneNumber ? classes.phoneButtonSmall : null}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
               disabled={disabled}
               submitText={buttonText}
               onClick={(e) => {
