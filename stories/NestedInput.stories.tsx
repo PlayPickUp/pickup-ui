@@ -73,6 +73,9 @@ const Template: Story<NestedInputProps> = (args) => (
             console.log("just clicked not submitted");
           }}
           component={NestedInput}
+          placeholder={
+            args.useVerificationCode ? "123456" : "first.last@example.com"
+          }
         />
       </Form>
     )}
