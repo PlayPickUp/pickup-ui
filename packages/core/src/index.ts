@@ -2,6 +2,7 @@ import Button from "./Button";
 import Card from "./Card";
 import Chip from "./Chip";
 import DataTable from "./DataTable";
+import Dropdown from "./Dropdown";
 import Fab from "./Fab";
 import FormError from "./FormError";
 import Hero from "./Hero";
@@ -30,6 +31,7 @@ export {
   Card,
   Chip,
   DataTable,
+  Dropdown,
   Fab,
   FormError,
   Hero,

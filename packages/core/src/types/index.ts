@@ -358,6 +358,7 @@ export interface NestedInputProps extends BaseFormikFieldsWithHandleChange {
   placeholder: string;
   label?: string;
   usePhoneNumber?: boolean;
+  useVerificationCode?: boolean;
   disabled?: boolean;
   useSubmit?: boolean;
   onClick?: () => void;
@@ -500,4 +501,16 @@ export interface CardProps {
   heading: string;
   description: string;
   buttonProps: ProgressButtonProps;
+}
+
+/**
+ * Dropdown Component
+ *
+ */
+export interface DropdownProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  children: React.ReactElement | Array<React.ReactElement>;
+  className?: string;
+  color?: "default" | "primary" | "secondary";
+  disabled?: boolean;
 }
