@@ -1,5 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
+import { Formik, Field, Form } from "formik";
 
 import { TextArea, TextAreaProps } from "@playpickup/core";
 
@@ -56,6 +57,24 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TextAreaProps> = (args) => <TextArea {...args} />;
+const Template: Story<TextAreaProps> = (args) => (
+  <div style={{ width: "100%", maxWidth: 350 }}>
+    <Formik
+      initialValues={{
+        excerpt:
+          "Following a strong offseason, the Mets are poised to bring the heat in 2021 - only one question remains... Where will they end up in the NL race?",
+      }}
+      onSubmit={(values) => {
+        console.log(values);
+      }}
+    >
+      {({ handleSubmit }) => (
+        <Form onSubmit={handleSubmit}>
+          <Field component={TextArea} {...args} />
+        </Form>
+      )}
+    </Formik>
+  </div>
+);
 
 export const Default = Template.bind({});
