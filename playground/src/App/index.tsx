@@ -24,7 +24,13 @@ import {
   Card,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
-import { Create } from "@playpickup/icons";
+import {
+  Create,
+  CorrectDiamond,
+  IncorrectDiamond,
+  DisqualifiedDiamond,
+  LiveDiamond,
+} from "@playpickup/icons";
 
 import "./index.css";
 import { values } from "lodash";
@@ -389,6 +395,18 @@ const App: React.FC = () => {
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         <Icon>
           <Create />
+        </Icon>
+        <Icon>
+          <CorrectDiamond />
+        </Icon>
+        <Icon>
+          <IncorrectDiamond />
+        </Icon>
+        <Icon>
+          <DisqualifiedDiamond />
+        </Icon>
+        <Icon>
+          <LiveDiamond />
         </Icon>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
