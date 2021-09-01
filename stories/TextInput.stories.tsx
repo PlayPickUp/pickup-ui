@@ -1,5 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
+import { Formik, Field, Form } from "formik";
 
 import { TextInput, TextInputProps } from "@playpickup/core";
 
@@ -53,9 +54,9 @@ export default {
     },
   },
   args: {
-    id: "firstName",
-    name: "firstName",
-    placeholder: "Eric",
+    id: "name",
+    name: "name",
+    placeholder: "Mr. Pickup",
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) =>
       console.log(e.target.value),
   },
@@ -63,7 +64,20 @@ export default {
 
 const Template: Story<TextInputProps> = (args) => (
   <div style={{ width: "100%", maxWidth: 350 }}>
-    <TextInput {...args} />
+    <Formik
+      initialValues={{
+        name: "Mr. Pickup",
+      }}
+      onSubmit={(values) => {
+        console.log(values);
+      }}
+    >
+      {({ handleSubmit }) => (
+        <Form onSubmit={handleSubmit}>
+          <Field component={TextInput} {...args} />
+        </Form>
+      )}
+    </Formik>
   </div>
 );
 
