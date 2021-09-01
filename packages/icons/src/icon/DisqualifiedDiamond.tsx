@@ -4,7 +4,7 @@ import { IconProps } from "../types";
 
 const DisqualifiedDiamond: React.FC<IconProps> = ({
 	className,
-	color = "#AFAFB1",
+	color,
 	style,
 }) => {
 	return (

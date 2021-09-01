@@ -2,11 +2,7 @@ import React from "react";
 
 import { IconProps } from "../types";
 
-const CorrectDiamond: React.FC<IconProps> = ({
-	className,
-	color = "#25DA95",
-	style,
-}) => {
+const CorrectDiamond: React.FC<IconProps> = ({ className, color, style }) => {
 	return (
 		<svg
 			width="48"

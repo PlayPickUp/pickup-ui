@@ -2,11 +2,7 @@ import React from "react";
 
 import { IconProps } from "../types";
 
-const LiveDiamond: React.FC<IconProps> = ({
-	className,
-	color = "#7A60FF",
-	style,
-}) => {
+const LiveDiamond: React.FC<IconProps> = ({ className, color, style }) => {
 	return (
 		<svg
 			width="48"
