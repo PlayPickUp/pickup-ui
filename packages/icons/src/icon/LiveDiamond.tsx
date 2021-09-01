@@ -20,8 +20,8 @@ const LiveDiamond: React.FC<IconProps> = ({ className, color, style }) => {
 			/>
 			<circle cx="24" cy="24" r="13" fill="white" />
 			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
+				fillRule="evenodd"
+				clipRule="evenodd"
 				d="M25.5388 16L25.1327 21.9933H30.4L22.8612 31.5L23.2673 25.5067H18L25.5388 16Z"
 				fill={color}
 			/>

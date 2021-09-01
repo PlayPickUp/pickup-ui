@@ -23,8 +23,8 @@ const CorrectDiamond: React.FC<IconProps> = ({ className, color, style }) => {
 			<path
 				d="M18 24.2857l3.9866 3.4286L30 20"
 				stroke={color}
-				stroke-width="3"
-				stroke-linejoin="round"
+				strokeWidth="3"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

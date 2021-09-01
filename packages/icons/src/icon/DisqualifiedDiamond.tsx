@@ -26,8 +26,8 @@ const DisqualifiedDiamond: React.FC<IconProps> = ({
 			<path
 				d="M31.0711 24L16.9289 24"
 				stroke={color}
-				stroke-width="3"
-				stroke-linejoin="round"
+				strokeWidth="3"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);
