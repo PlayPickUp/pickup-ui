@@ -396,18 +396,6 @@ const App: React.FC = () => {
         <Icon>
           <Create />
         </Icon>
-        <Icon>
-          <CorrectDiamond />
-        </Icon>
-        <Icon>
-          <IncorrectDiamond />
-        </Icon>
-        <Icon>
-          <DisqualifiedDiamond />
-        </Icon>
-        <Icon>
-          <LiveDiamond />
-        </Icon>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         <Fab
