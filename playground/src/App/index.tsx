@@ -24,13 +24,7 @@ import {
   Card,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
-import {
-  Create,
-  CorrectDiamond,
-  IncorrectDiamond,
-  DisqualifiedDiamond,
-  LiveDiamond,
-} from "@playpickup/icons";
+import { Create } from "@playpickup/icons";
 
 import "./index.css";
 import { values } from "lodash";

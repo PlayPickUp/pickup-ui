@@ -3,7 +3,6 @@ import React from "react";
 import { IconProps } from "../types";
 
 const CorrectDiamond: React.FC<IconProps> = ({ className, color, style }) => {
-	console.log({ color });
 	return (
 		<svg
 			width="48"

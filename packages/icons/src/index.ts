@@ -1,4 +1,5 @@
 import Bolt from "./icon/Bolt";
+import ChatBubble from "./icon/ChatBubble";
 import ChevronDown from "./icon/ChevronDown";
 import CorrectDiamond from "./icon/CorrectDiamond";
 import Create from "./icon/Create";
@@ -12,15 +13,17 @@ import AddCircle from "./icon/AddCircle";
 import Dailypicks from "./icon/Dailypicks";
 import Marketplace from "./icon/Marketplace";
 import Sportsbooks from "./icon/Sportsbooks";
+import Twitter from "./icon/Twitter";
 
 export * from "./types";
 
 export {
 	AddCircle,
 	Bolt,
-	Create,
+	ChatBubble,
 	ChevronDown,
 	CorrectDiamond,
+	Create,
 	Delete,
 	DisqualifiedDiamond,
 	IncorrectDiamond,
@@ -30,4 +33,5 @@ export {
 	Dailypicks,
 	Marketplace,
 	Sportsbooks,
+	Twitter,
 };
