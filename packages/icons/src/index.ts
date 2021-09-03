@@ -1,25 +1,27 @@
+import AddCircle from "./icon/AddCircle";
 import Bolt from "./icon/Bolt";
 import ChevronDown from "./icon/ChevronDown";
 import Create from "./icon/Create";
+import Dailypicks from "./icon/Dailypicks";
 import Delete from "./icon/Delete";
 import List from "./icon/List";
-import SubtractCircle from "./icon/SubtractCircle";
-import AddCircle from "./icon/AddCircle";
-import Dailypicks from "./icon/Dailypicks";
 import Marketplace from "./icon/Marketplace";
+import Search from "./icon/Search";
 import Sportsbooks from "./icon/Sportsbooks";
+import SubtractCircle from "./icon/SubtractCircle";
 
 export * from "./types";
 
 export {
 	AddCircle,
 	Bolt,
-	Create,
 	ChevronDown,
+	Create,
+	Dailypicks,
 	Delete,
 	List,
-	SubtractCircle,
-	Dailypicks,
 	Marketplace,
+	Search,
 	Sportsbooks,
+	SubtractCircle,
 };
