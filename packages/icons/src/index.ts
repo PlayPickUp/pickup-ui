@@ -1,18 +1,21 @@
+import AddCircle from "./icon/AddCircle";
 import Bolt from "./icon/Bolt";
 import ChatBubble from "./icon/ChatBubble";
 import ChevronDown from "./icon/ChevronDown";
 import CorrectDiamond from "./icon/CorrectDiamond";
 import Create from "./icon/Create";
+import Dailypicks from "./icon/Dailypicks";
 import Delete from "./icon/Delete";
 import DisqualifiedDiamond from "./icon/DisqualifiedDiamond";
 import IncorrectDiamond from "./icon/IncorrectDiamond";
+import Integrations from "./icon/Integrations";
 import List from "./icon/List";
 import LiveDiamond from "./icon/LiveDiamond";
-import SubtractCircle from "./icon/SubtractCircle";
-import AddCircle from "./icon/AddCircle";
-import Dailypicks from "./icon/Dailypicks";
 import Marketplace from "./icon/Marketplace";
+import Profile from "./icon/Profile";
+import Search from "./icon/Search";
 import Sportsbooks from "./icon/Sportsbooks";
+import SubtractCircle from "./icon/SubtractCircle";
 import Twitter from "./icon/Twitter";
 
 export * from "./types";
@@ -24,14 +27,17 @@ export {
 	ChevronDown,
 	CorrectDiamond,
 	Create,
-	Delete,
+	Dailypicks,
+  Delete,
 	DisqualifiedDiamond,
 	IncorrectDiamond,
+	Integrations,
 	List,
-	LiveDiamond,
-	SubtractCircle,
-	Dailypicks,
+  LiveDiamond,
 	Marketplace,
+	Profile,
+	Search,
 	Sportsbooks,
+  SubtractCircle,
 	Twitter,
 };
