@@ -6,6 +6,7 @@ import Dropdown from "./Dropdown";
 import Fab from "./Fab";
 import FormError from "./FormError";
 import Hero from "./Hero";
+import HorizontalRule from "./HorizontalRule";
 import Icon from "./Icon";
 import Label from "./Label";
 import Loader from "./Loader";
@@ -35,6 +36,7 @@ export {
   Fab,
   FormError,
   Hero,
+  HorizontalRule,
   Icon,
   Label,
   Loader,
