@@ -29,6 +29,14 @@ export default {
         category: "Styling",
       },
     },
+    withLogo: {
+      defaultValue: false,
+      description: "Adds a logo heading to the component",
+      control: "boolean",
+      table: {
+        category: "Styling",
+      },
+    },
     children: {
       type: { required: true },
       defaultValue: null,
