@@ -22,6 +22,7 @@ import {
   ProgressButton,
   Hero,
   Card,
+  HorizontalRule,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
@@ -142,6 +143,12 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider>
+      <div style={{ margin: 40 }}>
+        <HorizontalRule showBolt />
+      </div>
+      <div style={{ margin: 40 }}>
+        <HorizontalRule />
+      </div>
       <div style={{ margin: 40 }}>
         <Dropdown value={1} onChange={handleChange}>
           <option value={1}>A - Z</option>

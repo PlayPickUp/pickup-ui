@@ -515,3 +515,13 @@ export interface DropdownProps
   color?: "default" | "primary" | "secondary";
   disabled?: boolean;
 }
+
+/**
+ * HorizontalRule Component
+ *
+ */
+export interface HorizontalRuleProps {
+  showBolt?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+}
