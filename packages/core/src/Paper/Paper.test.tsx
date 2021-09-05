@@ -12,3 +12,12 @@ test("Paper renders without crashing, matches snapshot", () => {
   );
   expect(container).toMatchSnapshot();
 });
+
+test("Paper with logo heading renders without crashing, matches snapshot", () => {
+  const { container } = render(
+    <ThemeProvider>
+      <Paper withLogo>Hello, World</Paper>
+    </ThemeProvider>
+  );
+  expect(container).toMatchSnapshot();
+});

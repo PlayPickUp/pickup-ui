@@ -226,8 +226,13 @@ const App: React.FC = () => {
         />
       </div>
       <div style={{ padding: 40, width: 450 }}>
-        <Paper>
-          <Typography variant="title">Hello, PickUp!</Typography>
+        <Paper withLogo style={{ minHeight: 200 }}>
+          <Typography variant="body">Hello, PickUp!</Typography>
+        </Paper>
+      </div>
+      <div style={{ padding: 40, width: 450 }}>
+        <Paper style={{ minHeight: 200 }}>
+          <Typography variant="body">Hello, PickUp!</Typography>
         </Paper>
       </div>
       <div style={{ padding: 40 }}>
