@@ -369,13 +369,14 @@ const App: React.FC = () => {
           )}
         </Formik>
         <Formik
-          initialValues={{ otp: "" }}
+          initialValues={{ otp: "", password: "" }}
           validationSchema={Yup.object().shape({
             otp: Yup.string()
               .max(6, "Verification Code requires 6 digits")
               .min(6, "Verification Code requires 6 digits")
               .required("Please enter your Verification Code")
               .typeError("A number is required"),
+            password: Yup.string().required("Password is Required!"),
           })}
           onSubmit={(values) => {
             console.log(values);
@@ -393,6 +394,13 @@ const App: React.FC = () => {
                 buttonText="Verify"
                 useSubmit
                 component={NestedInput}
+              />
+              <Field
+                id="password"
+                name="password"
+                type="password"
+                component={TextInput}
+                label="Password"
               />
             </Form>
           )}
