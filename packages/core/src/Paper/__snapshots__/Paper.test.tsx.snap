@@ -3,8 +3,29 @@
 exports[`Paper renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1 root-d0-0-2-2"
+    class="root-0-2-1 root-d0-0-2-3"
   >
+    Hello, World
+  </div>
+</div>
+`;
+
+exports[`Paper with logo heading renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    class="root-0-2-1 root-d1-0-2-4"
+  >
+    <div
+      class="logoHeading-0-2-2"
+    >
+      <div>
+        <img
+          alt="PickUp"
+          role="presentation"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
     Hello, World
   </div>
 </div>

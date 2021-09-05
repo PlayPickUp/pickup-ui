@@ -412,6 +412,7 @@ export interface PaperProps {
   children: unknown;
   style?: React.CSSProperties;
   className?: string;
+  withLogo?: boolean;
 }
 
 /**
