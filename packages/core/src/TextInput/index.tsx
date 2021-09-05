@@ -37,6 +37,7 @@ const TextInput: React.FC<TextInputProps> = ({
   innerClassName,
   innerStyle,
   label,
+  type = "text",
   ...props
 }) => {
   const classes = useStyles();
@@ -49,6 +50,7 @@ const TextInput: React.FC<TextInputProps> = ({
           className={classNames(classes.input, innerClassName)}
           style={innerStyle}
           {...props.field}
+          type={type}
         />
       </div>
       <FormError
