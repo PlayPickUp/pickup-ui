@@ -494,6 +494,8 @@ export interface ProgressButtonProps {
   fanPoints: number;
   href?: string;
   onClick?: (e?: React.MouseEvent) => unknown;
+  to?: string;
+  useSubmit?: boolean;
 }
 
 /**
