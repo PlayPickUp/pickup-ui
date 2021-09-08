@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -22,7 +23,7 @@ import {
   ProgressButton,
   Hero,
   Card,
-  HorizontalRule,
+  // HorizontalRule,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
 import { Create } from "@playpickup/icons";
@@ -143,12 +144,12 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <div style={{ margin: 40 }}>
+      {/* <div style={{ margin: 40 }}>
         <HorizontalRule showBolt />
       </div>
       <div style={{ margin: 40 }}>
         <HorizontalRule />
-      </div>
+      </div> */}
       <div style={{ margin: 40 }}>
         <Dropdown value={1} onChange={handleChange}>
           <option value={1}>A - Z</option>
@@ -164,18 +165,20 @@ const App: React.FC = () => {
           margin: 40,
         }}
       >
-        <Card
-          image="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
-          eyebrow={{ name: "CROSSNET", description: "$20 Value" }}
-          heading="CROSSNET Four-Way Volleyball"
-          description="The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors."
-          buttonProps={{
-            status: "Not Enough Points",
-            cost: 250,
-            fanPoints: 150,
-            href: "https://www.playpickup.com",
-          }}
-        />
+        <Router>
+          <Card
+            image="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+            eyebrow={{ name: "CROSSNET", description: "$20 Value" }}
+            heading="CROSSNET Four-Way Volleyball"
+            description="The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors."
+            buttonProps={{
+              status: "Ready to Redeem",
+              cost: 250,
+              fanPoints: 150,
+              to: "/marketplace/bowlero",
+            }}
+          />
+        </Router>
         <Card
           image="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
           eyebrow={{ name: "CROSSNET", description: "$20 Value" }}
@@ -195,10 +198,13 @@ const App: React.FC = () => {
           prizeEnv={true}
           cost={250}
           fanPoints={125}
-          href="https://www.playpickup.com"
+          useSubmit
+          onClick={() => {
+            console.log("submit!");
+          }}
         />
       </div>
-      <div style={{ margin: 40, maxWidth: 856 }}>
+      <div style={{ margin: 40 }}>
         <Hero
           title="The State of Sports Betting"
           description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
