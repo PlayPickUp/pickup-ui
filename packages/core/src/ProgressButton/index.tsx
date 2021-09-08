@@ -66,7 +66,6 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
   onClick,
   to,
   useSubmit,
-  submitText,
 }) => {
   const classes = useStyles({ cost, fanPoints });
   const [active, setActive] = useState<boolean>(true);
@@ -98,6 +97,32 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
       }
     }
   }, [disabled]);
+
+  if (useSubmit) {
+    return (
+      <button
+        data-testid="progess-button"
+        className={classNames({
+          [classes.root]: true,
+          [classes.active]: active,
+          [classes.disabled]: disabled,
+        })}
+        disabled={disabled}
+        type="submit"
+        onClick={onClick}
+      >
+        {!active && !redeemed ? (
+          <div
+            className={classNames({
+              [classes.progressBar]: true,
+              [classes.disabledBar]: disabled,
+            })}
+          />
+        ) : null}
+        <div className={classes.textContainer}>{buttonText}</div>
+      </button>
+    );
+  }
 
   if (to) {
     return (

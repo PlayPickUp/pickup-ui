@@ -198,10 +198,13 @@ const App: React.FC = () => {
           prizeEnv={true}
           cost={250}
           fanPoints={125}
-          href="https://www.playpickup.com"
+          useSubmit
+          onClick={() => {
+            console.log("submit!");
+          }}
         />
       </div>
-      <div style={{ margin: 40, maxWidth: 856 }}>
+      <div style={{ margin: 40 }}>
         <Hero
           title="The State of Sports Betting"
           description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
