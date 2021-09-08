@@ -45,6 +45,10 @@ export default {
       defaultValue: null,
       description: "Optional/alternate function to execute when clicked",
     },
+    to: {
+      defaultValue: null,
+      description: "Optional route for Link in React Router",
+    },
   },
   args: {
     status: "Available Now",
@@ -53,6 +57,7 @@ export default {
     fanPoints: 150,
     href: "https://www.playpickup.com",
     onClick: null,
+    to: null,
   },
 } as Meta;
 

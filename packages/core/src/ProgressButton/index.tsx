@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
+import { Link } from "react-router-dom";
 import { DefaultTheme, ProgressButtonProps } from "../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
@@ -63,6 +64,9 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
   fanPoints,
   href,
   onClick,
+  to,
+  useSubmit,
+  submitText,
 }) => {
   const classes = useStyles({ cost, fanPoints });
   const [active, setActive] = useState<boolean>(true);
@@ -94,6 +98,30 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
       }
     }
   }, [disabled]);
+
+  if (to) {
+    return (
+      <Link
+        data-testid="progess-button"
+        className={classNames({
+          [classes.root]: true,
+          [classes.active]: active,
+        })}
+        to={to}
+        onClick={onClick}
+      >
+        {!active && !redeemed ? (
+          <div
+            className={classNames({
+              [classes.progressBar]: true,
+              [classes.disabledBar]: disabled,
+            })}
+          />
+        ) : null}
+        <div className={classes.textContainer}>{buttonText}</div>
+      </Link>
+    );
+  }
 
   return (
     <Element
