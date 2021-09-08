@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextInput as password renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    class="root-0-2-1"
+  >
+    <input
+      class="input-0-2-2"
+      data-testid="text-input"
+      name="firstName"
+      type="password"
+      value=""
+    />
+  </div>
+</div>
+`;
+
 exports[`TextInput renders without crashing, matches snapshot 1`] = `
 <div>
   <div
@@ -9,6 +25,7 @@ exports[`TextInput renders without crashing, matches snapshot 1`] = `
       class="input-0-2-2"
       data-testid="text-input"
       name="firstName"
+      type="text"
       value=""
     />
   </div>

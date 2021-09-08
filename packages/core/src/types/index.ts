@@ -285,6 +285,30 @@ export interface BaseFormikFieldsWithHandleChange extends BaseFormikFields {
  * TextInput Component
  *
  */
+export type InputType =
+  | "button"
+  | "checkbox"
+  | "color"
+  | "date"
+  | "datetime-local"
+  | "email"
+  | "file"
+  | "hidden"
+  | "image"
+  | "month"
+  | "number"
+  | "password"
+  | "radio"
+  | "range"
+  | "reset"
+  | "search"
+  | "submit"
+  | "tel"
+  | "text"
+  | "time"
+  | "url"
+  | "week";
+
 export interface TextInputProps extends BaseFormikFieldsWithHandleChange {
   className?: string;
   innerClassName?: string;
@@ -292,6 +316,7 @@ export interface TextInputProps extends BaseFormikFieldsWithHandleChange {
   style?: React.CSSProperties;
   placeholder?: string;
   label?: string;
+  type?: InputType;
 }
 
 /**
@@ -469,6 +494,8 @@ export interface ProgressButtonProps {
   fanPoints: number;
   href?: string;
   onClick?: (e?: React.MouseEvent) => unknown;
+  to?: string;
+  useSubmit?: boolean;
 }
 
 /**
