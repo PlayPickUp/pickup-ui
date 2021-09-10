@@ -44,3 +44,30 @@ test("Element <a> and href render link correctly", () => {
     "https://www.playpickup.com"
   );
 });
+
+test("Chip is disabled when prop disabled is true", () => {
+  const { getByText } = render(
+    <ThemeProvider>
+      <Chip disabled label="Definitely Not" />
+    </ThemeProvider>
+  );
+  expect(getByText("Definitely Not").hasAttribute("disabled"));
+});
+
+test("IsActive prop renders isActive class", () => {
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <Chip isActive label="Absolutely" />
+    </ThemeProvider>
+  );
+  expect(getByTestId("chip").getAttribute("class")).toContain("isActive");
+});
+
+test("Style object is passed and rendered correctly", () => {
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <Chip style={{ position: "absolute" }} label="Absolutely" />
+    </ThemeProvider>
+  );
+  expect(getByTestId("chip").hasAttribute("style")).toBeTruthy();
+});
