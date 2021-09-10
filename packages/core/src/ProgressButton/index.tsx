@@ -81,7 +81,11 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
     }
     if (status === "Not Enough Points") {
       setActive(false);
-      setButtonText(`${fanPoints} / ${cost} points`);
+      setButtonText(
+        `${
+          fanPoints % 1 === 0 ? Math.round(fanPoints) : fanPoints
+        } / ${cost} points`
+      );
       if (prizeEnv) {
         setDisabled(true);
         setElement("button");
