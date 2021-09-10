@@ -30,7 +30,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     backgroundColor: theme.colors.purple.base,
     animation: "$growRight 1s cubic-bezier(0.280, 0.520, 0.630, 0.990) 1",
     width: (props) => `${(props.fanPoints / props.cost) * 100}%`,
-    zIndex: -11,
+    zIndex: 1,
   },
   disabledBar: {
     backgroundColor: theme.colors.grey.lightBase,
@@ -53,7 +53,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     lineHeight: "24px",
     letterSpacing: "0.3px",
     textTransform: "uppercase",
-    zIndex: -10,
+    zIndex: 2,
   },
 }));
 
