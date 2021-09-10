@@ -502,6 +502,7 @@ export interface ProgressButtonProps {
   onClick?: (e?: React.MouseEvent) => unknown;
   to?: LinkObject | string;
   useSubmit?: boolean;
+  className?: string;
 }
 
 /**
