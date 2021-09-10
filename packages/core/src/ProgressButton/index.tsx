@@ -66,6 +66,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
   onClick,
   to,
   useSubmit,
+  className,
 }) => {
   const classes = useStyles({ cost, fanPoints });
   const [active, setActive] = useState<boolean>(true);
@@ -80,7 +81,11 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
     }
     if (status === "Not Enough Points") {
       setActive(false);
-      setButtonText(`${fanPoints} / ${cost} points`);
+      setButtonText(
+        `${
+          fanPoints % 1 === 0 ? Math.round(fanPoints) : fanPoints
+        } / ${cost} points`
+      );
       if (prizeEnv) {
         setDisabled(true);
         setElement("button");
@@ -106,6 +111,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
           [classes.root]: true,
           [classes.active]: active,
           [classes.disabled]: disabled,
+          [className]: className,
         })}
         disabled={disabled}
         type="submit"
@@ -131,6 +137,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
         className={classNames({
           [classes.root]: true,
           [classes.active]: active,
+          [className]: className,
         })}
         to={to}
         onClick={onClick}
@@ -155,6 +162,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
         [classes.root]: true,
         [classes.active]: active,
         [classes.disabled]: disabled,
+        [className]: className,
       })}
       disabled={disabled}
       href={href}
