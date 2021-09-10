@@ -175,7 +175,12 @@ const App: React.FC = () => {
               status: "Ready to Redeem",
               cost: 250,
               fanPoints: 150,
-              to: "/marketplace/bowlero",
+              to: {
+                pathname: `/marketplace`,
+                state: {
+                  prize: "prize",
+                },
+              },
             }}
           />
         </Router>
