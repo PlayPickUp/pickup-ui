@@ -109,6 +109,7 @@ const Chip: React.FC<ChipProps> = ({
   const Element: keyof JSX.IntrinsicElements = element ? element : "button";
   return (
     <Element
+      data-testid="chip"
       disabled={disabled}
       className={classNames({
         [classes.root]: true,
