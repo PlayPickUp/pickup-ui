@@ -483,6 +483,12 @@ export interface PickerButtonProps {
  * Progress Button
  *
  */
+
+export interface LinkObject {
+  pathname: string;
+  state: Record<string, unknown>;
+}
+
 export interface ProgressButtonProps {
   status:
     | "Available Now"
@@ -494,8 +500,9 @@ export interface ProgressButtonProps {
   fanPoints: number;
   href?: string;
   onClick?: (e?: React.MouseEvent) => unknown;
-  to?: string;
+  to?: LinkObject | string;
   useSubmit?: boolean;
+  className?: string;
 }
 
 /**

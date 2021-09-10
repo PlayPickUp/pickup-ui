@@ -1,6 +1,6 @@
 {
   "name": "@playpickup/core",
-  "version": "0.20.1",
+  "version": "0.20.2",
   "description": "Core PickUp components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -28,6 +28,7 @@
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@types/react-phone-number-input": "^3.0.10",
+    "@types/react-router-dom": "^5.1.8",
     "react-phone-number-input": "^3.1.25"
   },
   "jest": {
