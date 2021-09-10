@@ -71,3 +71,13 @@ test("Style object is passed and rendered correctly", () => {
   );
   expect(getByTestId("chip").hasAttribute("style")).toBeTruthy();
 });
+
+test("ClassName is passed and rendered correctly", () => {
+  const testClass = "test-1-2-3";
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <Chip className={testClass} label="Absolutely" />
+    </ThemeProvider>
+  );
+  expect(getByTestId("chip").getAttribute("class")).toContain("test");
+});
