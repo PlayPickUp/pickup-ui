@@ -174,8 +174,13 @@ const App: React.FC = () => {
             buttonProps={{
               status: "Ready to Redeem",
               cost: 250,
-              fanPoints: 150,
-              to: "/marketplace/bowlero",
+              fanPoints: 151.0,
+              to: {
+                pathname: `/marketplace`,
+                state: {
+                  prize: "prize",
+                },
+              },
             }}
           />
         </Router>
@@ -187,7 +192,7 @@ const App: React.FC = () => {
           buttonProps={{
             status: "Not Enough Points",
             cost: 250,
-            fanPoints: 150,
+            fanPoints: 151.5,
             href: "https://www.playpickup.com",
           }}
         />

@@ -53,6 +53,10 @@ export default {
       defaultValue: false,
       description: "Set to true to create a button that can submit a form",
     },
+    className: {
+      defaultValue: null,
+      description: "Accepts a classname for styling component",
+    },
   },
   args: {
     status: "Available Now",
@@ -63,6 +67,7 @@ export default {
     onClick: null,
     to: null,
     useSubmit: false,
+    className: null,
   },
 } as Meta;
 
