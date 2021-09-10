@@ -79,5 +79,5 @@ test("ClassName is passed and rendered correctly", () => {
       <Chip className={testClass} label="Absolutely" />
     </ThemeProvider>
   );
-  expect(getByTestId("chip").getAttribute("class")).toContain("test");
+  expect(getByTestId("chip").getAttribute("class")).toContain("test-1-2-3");
 });
