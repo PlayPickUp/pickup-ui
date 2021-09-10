@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <button
+    class="root-0-2-2 isActive-0-2-8 isActive-d0-0-2-9"
+  >
+    <span>
+      All Sports
+    </span>
+  </button>
+</div>
+`;
