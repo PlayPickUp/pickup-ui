@@ -267,6 +267,26 @@ export interface IconBaseProps {
   style?: React.CSSProperties;
 }
 
+/**
+ *
+ * StatusIcon Component
+ *
+ */
+
+export type PickStatus =
+  | "graded_true"
+  | "graded_false"
+  | "disqualified"
+  | "closed"
+  | "pending";
+
+export interface StatusIconProps {
+  status: PickStatus;
+  className?: string;
+  size?: number;
+  style?: React.CSSProperties;
+}
+
 export interface BaseFormikFields {
   id: string;
   name: string;
