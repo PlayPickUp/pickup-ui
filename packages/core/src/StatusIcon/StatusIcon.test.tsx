@@ -29,7 +29,6 @@ test("ClassName is passed and rendered correctly", () => {
       <StatusIcon status="pending" className={testClass} />
     </ThemeProvider>
   );
-  //console.log({ getByTestId("statusIcon") });
   expect(getByTestId("statusIcon").getAttribute("class")).toContain(
     "test-1-2-3"
   );
