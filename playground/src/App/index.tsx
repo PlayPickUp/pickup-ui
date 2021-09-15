@@ -21,6 +21,7 @@ import {
   Paper,
   PickerButton,
   ProgressButton,
+  StatusIcon,
   Hero,
   Card,
   // HorizontalRule,
@@ -421,6 +422,9 @@ const App: React.FC = () => {
         <Icon>
           <Create />
         </Icon>
+      </div>
+      <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
+        <StatusIcon status={"pending"} />
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         <Fab
