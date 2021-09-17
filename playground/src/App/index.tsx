@@ -6,6 +6,7 @@ import {
   DataTable,
   Dropdown,
   Fab,
+  FormError,
   Icon,
   Label,
   Loader,
@@ -554,6 +555,18 @@ const App: React.FC = () => {
         <Typography className="hello-world" useUnescape>
           Oakland A&#8217;s Eye a New Home
         </Typography>
+      </div>
+      <div
+        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+      >
+        <FormError
+          errors={{
+            formError: "This error should render",
+            noError: null,
+          }}
+          touched={{ formError: true }}
+          name={"formError"}
+        />
       </div>
     </ThemeProvider>
   );
