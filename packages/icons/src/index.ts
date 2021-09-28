@@ -17,6 +17,7 @@ import Search from "./icon/Search";
 import Sportsbooks from "./icon/Sportsbooks";
 import SubtractCircle from "./icon/SubtractCircle";
 import Twitter from "./icon/Twitter";
+import VerticalMenu from "./icon/VerticalMenu";
 
 export * from "./types";
 
@@ -28,16 +29,17 @@ export {
 	CorrectDiamond,
 	Create,
 	Dailypicks,
-  Delete,
+	Delete,
 	DisqualifiedDiamond,
 	IncorrectDiamond,
 	Integrations,
 	List,
-  LiveDiamond,
+	LiveDiamond,
 	Marketplace,
 	Profile,
 	Search,
 	Sportsbooks,
-  SubtractCircle,
+	SubtractCircle,
 	Twitter,
+	VerticalMenu,
 };
