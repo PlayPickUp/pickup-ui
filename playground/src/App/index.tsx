@@ -20,6 +20,7 @@ import {
   Button,
   Paper,
   PickerButton,
+  PickerButtonGraded,
   ProgressButton,
   StatusIcon,
   Hero,
@@ -242,6 +243,28 @@ const App: React.FC = () => {
           showResult={true}
           result={56}
           isPick={true}
+        />
+      </div>
+      <div style={{ padding: 40, width: 340 }}>
+        <PickerButtonGraded
+          onClick={(e: any) => console.log(e)}
+          displayText="Definitely Not"
+          style={{ marginBottom: 10 }}
+          result={33.33}
+          isIncorrect
+        />
+        <PickerButtonGraded
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          result={56}
+          isCorrect
+        />
+        <PickerButtonGraded
+          onClick={(e: any) => console.log(e)}
+          displayText="Maybe?"
+          style={{ marginBottom: 10 }}
+          result={33.33}
         />
       </div>
       <div style={{ padding: 40, width: 450 }}>

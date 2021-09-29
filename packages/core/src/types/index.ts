@@ -498,6 +498,16 @@ export interface PickerButtonProps {
   isPick: boolean;
 }
 
+export interface PickerButtonGradedProps {
+  className?: string;
+  displayText: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  style?: React.CSSProperties;
+  result: number | null;
+  isCorrect?: boolean;
+  isIncorrect?: boolean;
+}
+
 /**
  *
  * Progress Button
