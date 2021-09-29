@@ -245,6 +245,31 @@ const App: React.FC = () => {
           isPick={true}
         />
       </div>
+      <div style={{ padding: 40, width: 340 }}>
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Definitely Not"
+          style={{ marginBottom: 10 }}
+          showResult={true}
+          result={33.33}
+          isIncorrect
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Absolutely"
+          style={{ marginBottom: 10 }}
+          result={56}
+          showResult={true}
+          isCorrect
+        />
+        <PickerButton
+          onClick={(e: any) => console.log(e)}
+          displayText="Maybe?"
+          style={{ marginBottom: 10 }}
+          result={33.33}
+          showResult={true}
+        />
+      </div>
       <div style={{ padding: 40, width: 450 }}>
         <Paper withLogo style={{ minHeight: 200 }}>
           <Typography variant="body">Hello, PickUp!</Typography>

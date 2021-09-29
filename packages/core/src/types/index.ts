@@ -495,7 +495,9 @@ export interface PickerButtonProps {
   style?: React.CSSProperties;
   showResult?: boolean;
   result: number | null;
-  isPick: boolean;
+  isPick?: boolean;
+  isCorrect?: boolean;
+  isIncorrect?: boolean;
 }
 
 /**
