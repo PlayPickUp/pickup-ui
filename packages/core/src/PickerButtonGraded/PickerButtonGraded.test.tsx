@@ -13,20 +13,17 @@ test("Renders and matches snapshot", () => {
         result={66.66}
         displayText="Absolutely"
         isCorrect
-        showResult={true}
       />
       <PickerButtonGraded
         onClick={handleClick}
         result={33.33}
         displayText="Definitely Not"
         isIncorrect
-        showResult={true}
       />
       <PickerButtonGraded
         onClick={handleClick}
         result={0}
         displayText="Undecided"
-        showResult={true}
       />
     </ThemeProvider>
   );
