@@ -28,7 +28,7 @@ import {
   // HorizontalRule,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
-import { Create } from "@playpickup/icons";
+import { Create, Countdown, Pick } from "@playpickup/icons";
 
 import "./index.css";
 import { values } from "lodash";
@@ -592,6 +592,10 @@ const App: React.FC = () => {
           touched={{ formError: true }}
           name={"formError"}
         />
+      </div>
+      <div>
+        <Countdown color="red" />
+        countdown <Pick color="red" /> Pick
       </div>
     </ThemeProvider>
   );
