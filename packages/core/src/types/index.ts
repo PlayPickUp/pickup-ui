@@ -495,15 +495,7 @@ export interface PickerButtonProps {
   style?: React.CSSProperties;
   showResult?: boolean;
   result: number | null;
-  isPick: boolean;
-}
-
-export interface PickerButtonGradedProps {
-  className?: string;
-  displayText: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
-  style?: React.CSSProperties;
-  result: number | null;
+  isPick?: boolean;
   isCorrect?: boolean;
   isIncorrect?: boolean;
 }

@@ -14,7 +14,6 @@ import MultiSelect from "./MultiSelect";
 import NestedInput from "./NestedInput";
 import Paper from "./Paper";
 import PickerButton from "./PickerButton";
-import PickerButtonGraded from "./PickerButtonGraded";
 import ProgressButton from "./ProgressButton";
 import Select from "./Select";
 import StatusIcon from "./StatusIcon";
@@ -46,7 +45,6 @@ export {
   NestedInput,
   Paper,
   PickerButton,
-  PickerButtonGraded,
   ProgressButton,
   Select,
   StatusIcon,

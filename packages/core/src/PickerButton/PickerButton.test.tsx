@@ -15,6 +15,29 @@ test("Renders and matches snapshot", () => {
         isPick={false}
         onClick={handleClick}
       />
+      <PickerButton
+        onClick={handleClick}
+        displayText="Definitely Not"
+        style={{ marginBottom: 10 }}
+        showResult={true}
+        result={33.33}
+        isIncorrect
+      />
+      <PickerButton
+        onClick={handleClick}
+        displayText="Absolutely"
+        style={{ marginBottom: 10 }}
+        result={56}
+        showResult={true}
+        isCorrect
+      />
+      <PickerButton
+        onClick={handleClick}
+        displayText="Maybe?"
+        style={{ marginBottom: 10 }}
+        result={33.33}
+        showResult={true}
+      />
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();

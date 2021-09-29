@@ -7,7 +7,7 @@ exports[`Renders and matches snapshot 1`] = `
     data-testid="picker-button"
   >
     <div
-      class="bar-0-2-9"
+      class="nonPickedBar-0-2-10"
     >
       <div />
     </div>
@@ -15,6 +15,110 @@ exports[`Renders and matches snapshot 1`] = `
       style="z-index: 2; position: relative;"
     >
       Absolutely
+    </div>
+  </button>
+  <button
+    class="root-0-2-2 result-0-2-3 isIncorrect-0-2-12"
+    data-testid="picker-button"
+    style="margin-bottom: 10px;"
+  >
+    <div
+      class="nonPickedBar-0-2-10 barActive-0-2-15 barActive-d3-0-2-19 barIncorrect-0-2-14"
+    >
+      <div />
+    </div>
+    <div
+      class="textContainer-0-2-5"
+    >
+      <div>
+        Definitely Not
+      </div>
+      <div
+        class="resultContainer-0-2-6"
+      >
+        <div
+          class="bolt-0-2-7 hasIcon-0-2-8"
+        >
+          <img
+            aria-hidden="true"
+            role="presentation"
+            src="test-file-stub"
+          />
+        </div>
+        <div>
+          33.33
+          %
+        </div>
+      </div>
+    </div>
+  </button>
+  <button
+    class="root-0-2-2 result-0-2-3 isCorrect-0-2-11"
+    data-testid="picker-button"
+    style="margin-bottom: 10px;"
+  >
+    <div
+      class="nonPickedBar-0-2-10 barActive-0-2-15 barActive-d5-0-2-21 barCorrect-0-2-13"
+    >
+      <div />
+    </div>
+    <div
+      class="textContainer-0-2-5"
+    >
+      <div>
+        Absolutely
+      </div>
+      <div
+        class="resultContainer-0-2-6"
+      >
+        <div
+          class="bolt-0-2-7 hasIcon-0-2-8"
+        >
+          <img
+            aria-hidden="true"
+            role="presentation"
+            src="test-file-stub"
+          />
+        </div>
+        <div>
+          56
+          %
+        </div>
+      </div>
+    </div>
+  </button>
+  <button
+    class="root-0-2-2 result-0-2-3"
+    data-testid="picker-button"
+    style="margin-bottom: 10px;"
+  >
+    <div
+      class="nonPickedBar-0-2-10 barActive-0-2-15 barActive-d7-0-2-23"
+    >
+      <div />
+    </div>
+    <div
+      class="textContainer-0-2-5"
+    >
+      <div>
+        Maybe?
+      </div>
+      <div
+        class="resultContainer-0-2-6"
+      >
+        <div
+          class="bolt-0-2-7"
+        >
+          <img
+            aria-hidden="true"
+            role="presentation"
+          />
+        </div>
+        <div>
+          33.33
+          %
+        </div>
+      </div>
     </div>
   </button>
 </div>
