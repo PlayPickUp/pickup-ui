@@ -26,7 +26,7 @@ const purple: PurpleMap = {
 };
 
 const green: GreenMap = {
-  light: "##EAFDF7",
+  light: "#EAFDF7",
   base: "#25DA95",
 };
 
