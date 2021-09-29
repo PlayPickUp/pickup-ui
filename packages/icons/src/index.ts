@@ -18,6 +18,8 @@ import Sportsbooks from "./icon/Sportsbooks";
 import SubtractCircle from "./icon/SubtractCircle";
 import Twitter from "./icon/Twitter";
 import VerticalMenu from "./icon/VerticalMenu";
+import Countdown from "./icon/Countdown";
+import Pick from "./icon/Pick";
 
 export * from "./types";
 
@@ -42,4 +44,6 @@ export {
 	SubtractCircle,
 	Twitter,
 	VerticalMenu,
+	Countdown,
+	Pick,
 };
