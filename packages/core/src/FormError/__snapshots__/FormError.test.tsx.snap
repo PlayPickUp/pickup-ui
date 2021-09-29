@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    data-testid="formError"
+    style="margin-top: 4px;"
+  >
+    <p
+      class="root-0-2-1 root-d3-0-2-7 body-0-2-5"
+    >
+      This error should render
+    </p>
+  </div>
+</div>
+`;
