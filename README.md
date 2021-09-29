@@ -85,3 +85,7 @@ View it in action on [Codesandbox](https://codesandbox.io/s/pickup-ui-styling-ww
 ### ⚠ Project Status
 
 This library is still under active development and we cannot garauntee breaking changes won't be introduced. It is reccomended not to use this library in production outside of the PickUp ecosystem.
+
+### Testing
+
+When updating snapshots use `yarn test -u` instead of directly using Jest to update
