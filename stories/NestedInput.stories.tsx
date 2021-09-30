@@ -40,6 +40,10 @@ export default {
       description: "Allows toggle of nested Button as submit form",
       control: "boolean",
     },
+    disabled: {
+      defaultValue: false,
+      description: "Toggles disabled state",
+    },
     onClick: {
       defaultValue: null,
       description: "Place holder for passing onClick function",
@@ -50,6 +54,7 @@ export default {
     placeholder: "first.last@example.com",
     label: "Phone or Verification Code",
     useSubmit: false,
+    disabled:false,
   },
 } as Meta;
 
