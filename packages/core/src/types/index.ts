@@ -581,3 +581,34 @@ export interface HorizontalRuleProps {
   className?: string;
   style?: React.CSSProperties;
 }
+
+/**
+ * FeedCard Component
+ */
+ export interface PublisherIconProps {
+  publisher_logo_url: string | null;
+  size?: "small" | "large";
+}
+export interface Picks{
+  label:string;
+}
+export interface FeedCardProps{
+  image: string;
+  publisherIcon:string;
+  publisherName: string;
+  publishedAt:string;
+  title:string;
+  timeLeft:Date;
+  pickCount:number;
+  picks?:Picks[];
+  buttonProps?: ButtonProps;
+}
+
+/**
+ * Countdown Props
+ */
+ export interface CountdownProps {
+  close_at: Date;
+  has_fan_pick: number;
+}
+

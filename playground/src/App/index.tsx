@@ -24,7 +24,7 @@ import {
   ProgressButton,
   StatusIcon,
   Hero,
-  Card,
+  Card
   // HorizontalRule,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";

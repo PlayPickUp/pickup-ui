@@ -1,9 +1,11 @@
 import Button from "./Button";
 import Card from "./Card";
 import Chip from "./Chip";
+import Countdown from "./FeedCard/Countdown";
 import DataTable from "./DataTable";
 import Dropdown from "./Dropdown";
 import Fab from "./Fab";
+import FeedCard from "./FeedCard";
 import FormError from "./FormError";
 import Hero from "./Hero";
 import HorizontalRule from "./HorizontalRule";
@@ -23,6 +25,7 @@ import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
+
 // react-jss
 import { createUseStyles, useTheme } from "react-jss";
 
@@ -32,9 +35,11 @@ export {
   Button,
   Card,
   Chip,
+  Countdown,
   DataTable,
   Dropdown,
   Fab,
+  FeedCard,
   FormError,
   Hero,
   HorizontalRule,
@@ -55,5 +60,5 @@ export {
   createUseStyles,
   defaultTheme as PickUpTheme,
   defaultTheme,
-  useTheme,
+  useTheme
 };
