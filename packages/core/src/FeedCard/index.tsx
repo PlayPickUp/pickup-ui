@@ -5,8 +5,7 @@ import { createUseStyles } from "react-jss";
 import { FeedCardProps, DefaultTheme } from "../types";
 import Countdown from "./Countdown"
 import Button from "../Button";
-import { light } from "@material-ui/core/styles/createPalette";
-//import NewsImage from "./news.png";
+import NewsImage from "./news.png";
 
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
@@ -86,9 +85,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 const renderFeaturedImage = (featured_img: string) => {
     if (!featured_img || featured_img !== "false") {
         return { backgroundImage: `url(${featured_img})` };
-        // } else {
-        //     return { backgroundImage: `url(${NewsImage})` };
-        // }
+        } else {
+            return { backgroundImage: `url(${NewsImage})` };
+        }
     };
 }
 

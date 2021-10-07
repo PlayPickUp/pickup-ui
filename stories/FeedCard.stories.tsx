@@ -41,10 +41,10 @@ export default {
     publisherIcon: "https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg",
     publisherName: 'Prime Time Sports',
     publishedAt: '23m',
-    title: 'Cheifs vs. Ravens Who wins?',
+    title: 'Chiefs vs. Ravens Who wins?',
     timeLeft: new Date(),
     pickCount: 2,
-    picks:["Ravens", "Cheifs"],
+    picks:["Ravens", "Chiefs"],
     },
 } as Meta;
 
