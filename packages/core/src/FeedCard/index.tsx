@@ -165,10 +165,10 @@ const FeedCard: React.FC<FeedCardProps> = ({
           padding: "8px",
         }}
       >
-        {picks.map((pick) => {
+        {picks.map((pick,i) => {
           return (
             <Button
-              children={pick}
+              key={i}
               color="light"
               style={{
                 fontSize: 11,
@@ -178,7 +178,8 @@ const FeedCard: React.FC<FeedCardProps> = ({
                 marginRight: "10px",
                 paddingBottom: "2px",
               }}
-            />
+            >              {pick}
+            </Button>
           );
         })}
       </div>
