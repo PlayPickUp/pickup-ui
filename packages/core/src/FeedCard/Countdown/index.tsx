@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { createUseStyles, useTheme } from "react-jss";
-import { Countdown as Timer, Pick } from "@playpickup/icons";
+import  Pick  from "../icons/Pick";
+import Timer from "../icons/Timer";
 import { DefaultTheme, CountdownProps } from "../../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   timer: {
-    minWidth: 140,
+    minWidth: 120,
     fontSize: "11px",
     fontColor: theme.colors.grey.dark,
     lineHeight: "18px",
