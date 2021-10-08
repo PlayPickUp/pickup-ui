@@ -6,7 +6,7 @@ import { DefaultTheme, CountdownProps } from "../../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   timer: {
-    width: 110,
+    minWidth: 120,
     fontSize: "11px",
     fontColor: theme.colors.grey.dark,
     lineHeight: "18px",
