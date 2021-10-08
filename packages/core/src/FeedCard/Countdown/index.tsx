@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { createUseStyles, useTheme } from "react-jss";
-import { Countdown as Timer, Pick } from "@playpickup/icons";
+import { Countdown as Timer, Pick } from "../../../../icons/src/icon/Countdown";
 import { DefaultTheme, CountdownProps } from "../../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
