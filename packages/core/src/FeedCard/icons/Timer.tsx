@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IconProps } from "../types";
+import { IconProps } from "../../types";
 
-const Countdown: React.FC<IconProps> = ({ className, color, style }) => {
+const Timer: React.FC<IconProps> = ({ className, color, style }) => {
 	return (
 		<svg
 			width="24"
@@ -21,4 +21,4 @@ const Countdown: React.FC<IconProps> = ({ className, color, style }) => {
 	);
 };
 
-export default Countdown;
+export default Timer;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconProps } from "../types";
+import { IconProps } from "../../types";
 
 const Pick: React.FC<IconProps> = ({ className, color, style }) => {
 	return (
