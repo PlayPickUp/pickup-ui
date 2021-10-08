@@ -165,7 +165,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           padding: "8px",
         }}
       >
-        {picks.map((pick, i) => {
+        {picks.map((pick) => {
           return (
             <Button
               children={pick}
