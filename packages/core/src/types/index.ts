@@ -585,30 +585,31 @@ export interface HorizontalRuleProps {
 /**
  * FeedCard Component
  */
- export interface PublisherIconProps {
+export interface PublisherIconProps {
   publisher_logo_url: string | null;
   size?: "small" | "large";
 }
-export interface Picks{
-  label:string;
+export interface Picks {
+  label: string;
+  value: string;
 }
-export interface FeedCardProps{
+export interface FeedCardProps {
   image: string;
-  publisherIcon:string;
+  publisherIcon: string;
   publisherName: string;
-  publishedAt:string;
-  title:string;
-  timeLeft:Date;
-  pickCount:number;
-  picks?:Picks[];
+  publishedAt: string;
+  title: string;
+  timeLeft: Date;
+  pickCount: number;
+  picks?: Picks[];
   buttonProps?: ButtonProps;
+  expanded?: boolean;
 }
 
 /**
  * Countdown Props
  */
- export interface CountdownProps {
+export interface CountdownProps {
   close_at: Date;
   has_fan_pick: number;
 }
-

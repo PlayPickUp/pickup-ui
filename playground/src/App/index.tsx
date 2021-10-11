@@ -24,7 +24,8 @@ import {
   ProgressButton,
   StatusIcon,
   Hero,
-  Card
+  Card,
+  FeedCard,
   // HorizontalRule,
 } from "@playpickup/core";
 import "@playpickup/core/dist/index.css";
@@ -141,6 +142,11 @@ const handleChange = () => {
   console.log("change!");
 };
 
+const Picks = [
+  { label: "Ravens", value: "Ravens" },
+  { label: "Chiefs", value: "Chiefs" },
+];
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
@@ -152,6 +158,20 @@ const App: React.FC = () => {
       <div style={{ margin: 40 }}>
         <HorizontalRule />
       </div> */}
+
+      <div style={{ padding: 40 }}>
+        <FeedCard
+          publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          publisherName="Prime Time Sports"
+          publishedAt="23m"
+          title="Chiefs vs. Ravens Who wins?"
+          image="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0"
+          pickCount={2}
+          timeLeft={new Date()}
+          picks={Picks}
+        />
+      </div>
+
       <div style={{ margin: 40 }}>
         <Dropdown value={1} onChange={handleChange}>
           <option value={1}>A - Z</option>
@@ -199,6 +219,7 @@ const App: React.FC = () => {
           }}
         />
       </div>
+
       <div style={{ padding: 40 }}>
         <ProgressButton
           status="Not Enough Points" // comes from the Node API

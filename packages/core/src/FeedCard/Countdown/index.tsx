@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import { createUseStyles, useTheme } from "react-jss";
-import  Pick  from "../icons/Pick";
+import Pick from "../icons/Pick";
 import Timer from "../icons/Timer";
 import { DefaultTheme, CountdownProps } from "../../types";
 
