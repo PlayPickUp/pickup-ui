@@ -23,30 +23,34 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   postContent: {
     flex: "1 1 405px",
     padding: "0 20px 20px",
-    [theme.mediaQuery(theme.breakpoints.medium)]: {
-      flex: "0 1 405px",
-      padding: "20px 0 0",
-    },
   },
   featuredImage: {
     order: -2,
     "& > div": {
-      width: "120%",
+      width: "100%",
       borderRadius: theme.borderRadius,
       backgroundColor: theme.colors.grey.light,
       backgroundSize: "cover",
       backgroundPosition: "center center",
       borderBottomLeftRadius: 0,
       borderBottomRightRadius: 0,
-    },
-    [theme.mediaQuery(theme.breakpoints.medium)]: {
-      "& > div": {
-        width: "100%",
         height: "120px",
         objectFit: "contain",
-        borderRadius: theme.borderRadius,
-      },
     },
+  },
+  expandedFeaturedIgmage: {
+    order: -2,
+    "& > div": {
+      height:'140px',
+      borderRadius: theme.borderRadius,
+      backgroundColor: theme.colors.grey.light,
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+      borderBottomLeftRadius: 0,
+      borderTopRightRadius: 0,
+      width: "140px",
+      objectFit: "contain",
+    }
   },
   publisherRow: {
     display: "flex",
@@ -78,6 +82,18 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  expandedCard: {
+    backgroundColor: theme.colors.white,
+    margin: "10px",
+    border: "1px solid #E5E3E8",
+    boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.08)",
+    borderRadius: "8px",
+    maxWidth: "420px",
+    minHeight: "140px",
+    height:"100%",
+    display: "flex",
+    flexDirection: "row",
+  },
 }));
 
 const renderFeaturedImage = (featured_img: string) => {
@@ -95,102 +111,108 @@ const FeedCard: React.FC<FeedCardProps> = ({
   timeLeft,
   pickCount,
   picks,
+  expanded,
 }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.card}>
-      <a className={classes.featuredImage} title={title}>
-        <div style={renderFeaturedImage(image)} />
-      </a>
+    <div className={expanded ? classes.expandedCard : classes.card}>
+      <div>
+        <a className={expanded ? classes.expandedFeaturedIgmage : classes.featuredImage} title={title}>
+          <div style={renderFeaturedImage(image)} />
+        </a>
+      </div>
 
-      <div className={classes.publisherRow}>
-        <img
-          src={publisherIcon}
-          alt={publisherName}
-          style={{
-            width: "16px",
-            height: "16px",
-          }}
-        />
-        <a
-          style={{
-            display: "inline-block",
-            paddingLeft: 10,
-          }}
-          title={publisherName}
-        >
+      <div style={{maxWidth: `${expanded ? "280px": "200px"}`,
+                                  wordWrap: "break-word"
+                                }}>
+        <div className={classes.publisherRow}>
+          <img
+            src={publisherIcon}
+            alt={publisherName}
+            style={{
+              width: "16px",
+              height: "16px",
+            }}
+          />
+          <a
+            style={{
+              display: "inline-block",
+              paddingLeft: 10,
+            }}
+            title={publisherName}
+          >
+            <Typography
+              variant="body"
+              style={{ fontSize: 12 }}
+              color={"#615E66"}
+              useUnescape
+            >
+              {publisherName}
+            </Typography>
+          </a>
           <Typography
             variant="body"
-            style={{ fontSize: 12 }}
-            color={"#615E66"}
+            element="span"
+            color={defaultTheme.colors.grey.base}
+            style={{
+              display: "inline-block",
+              marginLeft: 14,
+              fontSize: 12,
+            }}
+          >
+            {publishedAt}
+          </Typography>
+        </div>
+
+        <a title={title} style={{ color: "inherit" }}>
+          <Typography
+            variant="heading3"
+            element="h3"
+            style={{
+              fontWeight: "normal",
+              fontSize: 18,
+              letterSpacing: "-0.1px",
+              padding: "0 10px",
+            }}
             useUnescape
           >
-            {publisherName}
+            {title}
           </Typography>
         </a>
-        <Typography
-          variant="body"
-          element="span"
-          color={defaultTheme.colors.grey.base}
+
+        <div
           style={{
-            display: "inline-block",
-            marginLeft: 14,
-            fontSize: 12,
+            padding: "8px",
           }}
         >
-          {publishedAt}
-        </Typography>
-      </div>
+          {picks.map((pick) => {
+            return (
+              <Button
+                key={pick.value}
+                color="light"
+                style={{
+                  fontSize: 11,
+                  minHeight: 24,
+                  padding: "0 10px",
+                  display: "inline-block",
+                  marginRight: "10px",
+                  paddingBottom: "2px",
+                }}
+              >
+                {pick.label}
+              </Button>
+            );
+          })}
+        </div>
 
-      <a title={title} style={{ color: "inherit" }}>
-        <Typography
-          variant="heading3"
-          element="h3"
+        <div
           style={{
-            fontWeight: "normal",
-            fontSize: 18,
-            letterSpacing: "-0.1px",
-            padding: "0 10px",
-            maxWidth: 200,
+            padding: "2px 10px 10px 10px",
           }}
-          useUnescape
         >
-          {title}
-        </Typography>
-      </a>
-
-      <div
-        style={{
-          padding: "8px",
-        }}
-      >
-        {picks.map((pick) => {
-          return (
-            <Button
-              key={pick.value}
-              color="light"
-              style={{
-                fontSize: 11,
-                minHeight: 24,
-                padding: "0 10px",
-                display: "inline-block",
-                marginRight: "10px",
-                paddingBottom: "2px",
-              }}
-            >
-              {pick.label}
-            </Button>
-          );
-        })}
-      </div>
-
-      <div
-        style={{
-          padding: "2px 10px 10px 10px",
-        }}
-      >
-        <Countdown close_at={timeLeft} has_fan_pick={pickCount} />
+          <Countdown close_at={timeLeft} has_fan_pick={pickCount} />
+        </div>
       </div>
     </div>
   );

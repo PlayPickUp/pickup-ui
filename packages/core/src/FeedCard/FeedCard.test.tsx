@@ -19,6 +19,7 @@ test("Renders and matches snapshot", () => {
           { label: "Ravens", value: "Ravens" },
           { label: "Chiefs", value: "Chiefs" },
         ]}
+        expanded={false}
       />
     </ThemeProvider>
   );

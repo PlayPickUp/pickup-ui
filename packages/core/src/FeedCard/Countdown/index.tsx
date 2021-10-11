@@ -64,7 +64,6 @@ const Countdown: React.FC<CountdownProps> = (props) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
   const theme = useTheme<DefaultTheme>();
   const picks: CountdownProps = {
     has_fan_pick: props.has_fan_pick,
@@ -77,24 +76,21 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     let days = 0;
     let hours = 0;
     let minutes = 0;
-    let seconds = 0;
     timerID = setInterval(() => {
-      const end = moment(props.close_at).format("YYYY-MM-DD HH:mm:ss");
-      const then: moment.Moment = moment(end, "YYYY-MM-DD HH:mm:ss");
+      const end = moment(props.close_at).format("YYYY-MM-DD HH:mm");
+      const then: moment.Moment = moment(end, "YYYY-MM-DD HH:mm");
       const now: moment.Moment = moment();
       if (then > now) {
         duration = moment.duration(then.diff(now));
         days = Math.floor(duration.asDays());
         hours = duration.hours();
         minutes = duration.minutes();
-        seconds = duration.seconds();
       }
 
       setDays(days);
       setHours(hours);
       setMinutes(minutes);
-      setSeconds(seconds);
-    }, 1000);
+      }, 1000);
     return () => {
       clearInterval(timerID);
     };
@@ -104,8 +100,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     return (
       `${days > 0 ? days + "D " : ""}` +
       `${hours > 0 ? hours + "h " : ""}` +
-      `${minutes > 0 ? minutes + "m " : ""}` +
-      `${seconds > 0 ? seconds + "s " : ""}`
+      `${minutes > 0 ? minutes + "m " : ""}`
     );
   };
 
@@ -113,7 +108,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
     <div className={classes.container}>
       <div className={classes.timer}>
         <Timer color="currentColor" className={classes.timerIcon} />
-        {hours || minutes || seconds > 0 ? (
+        {hours || minutes > 0 ? (
           generateTimer()
         ) : (
           <span className={classes.closed}>CLOSED</span>
