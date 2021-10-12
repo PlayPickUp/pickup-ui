@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./index.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -25,12 +26,10 @@ import {
   StatusIcon,
   Hero,
   Card,
-  // HorizontalRule,
+  HorizontalRule,
 } from "@playpickup/core";
 // import "@playpickup/core/dist/index.css";
 import { Create, Countdown, Pick } from "@playpickup/icons";
-
-import "./index.css";
 
 const handleEditClick = () => {
   console.log("handledEditCLick");
@@ -145,12 +144,26 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider withReset={false}>
-      {/* <div style={{ margin: 40 }}>
+      <div style={{ padding: 40 }}>
+        <Typography variant="title">Hello, PickUp!</Typography>
+        <Typography
+          variant="heading3"
+          style={{ fontStyle: "normal", margin: "20px 0" }}
+        >
+          👋 Howdy human!!!
+        </Typography>
+        <Typography>
+          Feel free to throw some components in here for testing. It's your lil
+          component playground!
+        </Typography>
+      </div>
+
+      <div style={{ margin: 40 }}>
         <HorizontalRule showBolt />
       </div>
       <div style={{ margin: 40 }}>
         <HorizontalRule />
-      </div> */}
+      </div>
       <div style={{ margin: 40 }}>
         <Dropdown value={1} onChange={handleChange}>
           <option value={1}>A - Z</option>
@@ -278,19 +291,6 @@ const App: React.FC = () => {
         <Paper style={{ minHeight: 200 }}>
           <Typography variant="body">Hello, PickUp!</Typography>
         </Paper>
-      </div>
-      <div style={{ padding: 40 }}>
-        <Typography variant="title">Hello, PickUp!</Typography>
-        <Typography
-          variant="heading3"
-          style={{ fontStyle: "normal", margin: "20px 0" }}
-        >
-          👋 Howdy human!1!
-        </Typography>
-        <Typography>
-          Feel free to throw some components in here for testing. It''s your lil
-          component playground!
-        </Typography>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         {/* Throw Some Stuff Here Dawgie */}
@@ -557,7 +557,6 @@ const App: React.FC = () => {
         <Chip
           color="primary"
           label="All Sports"
-          // onClick={(e) => console.log(e)}
           href="http://google.com"
           element="a"
           isActive
