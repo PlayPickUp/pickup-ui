@@ -81,7 +81,7 @@ const Typography: React.FC<
       className={classNames({
         [classes.root]: true,
         [classes.title]: variant === "title",
-        [classes.body]: variant === "body" || "span",
+        [classes.body]: variant === "body" || variant === "span",
         [classes.body2]: variant === "body2",
         [classes.heading2]: variant === "heading2",
         [classes.heading3]: variant === "heading3",
