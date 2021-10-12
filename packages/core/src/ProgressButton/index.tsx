@@ -15,6 +15,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "100%",
     height: "auto",
     minHeight: 47,
+    margin: 0,
+    padding: 0,
     backgroundColor: theme.colors.purple.lightBase,
     color: theme.colors.white,
     borderRadius: 5,

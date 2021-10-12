@@ -27,11 +27,10 @@ import {
   Card,
   // HorizontalRule,
 } from "@playpickup/core";
-import "@playpickup/core/dist/index.css";
+// import "@playpickup/core/dist/index.css";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
 import "./index.css";
-import { values } from "lodash";
 
 const handleEditClick = () => {
   console.log("handledEditCLick");
@@ -145,7 +144,7 @@ const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
-    <ThemeProvider>
+    <ThemeProvider withReset={false}>
       {/* <div style={{ margin: 40 }}>
         <HorizontalRule showBolt />
       </div>
@@ -220,7 +219,7 @@ const App: React.FC = () => {
           eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
         />
       </div>
-      <div style={{ padding: 40, width: 340 }}>
+      <div style={{ padding: 40, width: 340, boxSizing: "border-box" }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
           displayText="Absolutely"
@@ -245,7 +244,7 @@ const App: React.FC = () => {
           isPick={true}
         />
       </div>
-      <div style={{ padding: 40, width: 340 }}>
+      <div style={{ padding: 40, width: 340, boxSizing: "border-box" }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
           displayText="Definitely Not"

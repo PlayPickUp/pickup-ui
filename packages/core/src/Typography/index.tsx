@@ -10,6 +10,11 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
     position: "relative",
     color: (props) => props.color || "inherit",
+    margin: 0,
+    padding: 0,
+    verticalAlign: "baseline",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
   },
   title: {
     ...theme.typography.fontStyles.mobile.title,
