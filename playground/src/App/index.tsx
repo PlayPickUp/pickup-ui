@@ -149,7 +149,7 @@ const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
-    <ThemeProvider withReset={false}>
+    <ThemeProvider withReset={true}>
       <div style={{ padding: 40 }}>
         <Typography variant="title">Hello, PickUp!</Typography>
         <Typography
