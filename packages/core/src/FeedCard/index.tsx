@@ -34,14 +34,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       backgroundPosition: "center center",
       borderBottomLeftRadius: 0,
       borderBottomRightRadius: 0,
-        height: "120px",
-        objectFit: "contain",
+      height: "120px",
+      objectFit: "contain",
     },
   },
   expandedFeaturedIgmage: {
     order: -2,
     "& > div": {
-      height:'140px',
+      height: "140px",
       borderRadius: theme.borderRadius,
       backgroundColor: theme.colors.grey.light,
       backgroundSize: "cover",
@@ -50,7 +50,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       borderTopRightRadius: 0,
       width: "140px",
       objectFit: "contain",
-    }
+    },
   },
   publisherRow: {
     display: "flex",
@@ -90,9 +90,31 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     borderRadius: "8px",
     maxWidth: "420px",
     minHeight: "140px",
-    height:"100%",
+    height: "100%",
     display: "flex",
     flexDirection: "row",
+  },
+  button: {
+    fontSize: 11,
+    minHeight: 24,
+    padding: "0 10px",
+    display: "inline-block",
+    marginRight: theme.spacing.base * 5,
+  },
+  h3: {
+    fontWeight: "normal",
+    fontSize: 18,
+    letterSpacing: "-0.1px",
+    padding: "0 10px",
+  },
+  publisherImage: {
+    width: "16px",
+    height: "16px",
+  },
+  body: {
+    display: "inline-block",
+    marginLeft: theme.spacing.base * 5,
+    fontSize: 12,
   },
 }));
 
@@ -118,33 +140,37 @@ const FeedCard: React.FC<FeedCardProps> = ({
   return (
     <div className={expanded ? classes.expandedCard : classes.card}>
       <div>
-        <a className={expanded ? classes.expandedFeaturedIgmage : classes.featuredImage} title={title}>
+        <a
+          className={
+            expanded ? classes.expandedFeaturedIgmage : classes.featuredImage
+          }
+          title={title}
+        >
           <div style={renderFeaturedImage(image)} />
         </a>
       </div>
 
-      <div style={{maxWidth: `${expanded ? "280px": "200px"}`,
-                                  wordWrap: "break-word"
-                                }}>
+      <div
+        style={{
+          maxWidth: `${expanded ? "280px" : "200px"}`,
+          wordWrap: "break-word",
+        }}
+      >
         <div className={classes.publisherRow}>
           <img
             src={publisherIcon}
             alt={publisherName}
-            style={{
-              width: "16px",
-              height: "16px",
-            }}
+            className={classes.publisherImage}
           />
           <a
             style={{
               display: "inline-block",
-              paddingLeft: 10,
             }}
             title={publisherName}
           >
             <Typography
               variant="body"
-              style={{ fontSize: 12 }}
+              className={classes.body}
               color={"#615E66"}
               useUnescape
             >
@@ -155,11 +181,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
             variant="body"
             element="span"
             color={defaultTheme.colors.grey.base}
-            style={{
-              display: "inline-block",
-              marginLeft: 14,
-              fontSize: 12,
-            }}
+            className={classes.body}
           >
             {publishedAt}
           </Typography>
@@ -169,12 +191,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           <Typography
             variant="heading3"
             element="h3"
-            style={{
-              fontWeight: "normal",
-              fontSize: 18,
-              letterSpacing: "-0.1px",
-              padding: "0 10px",
-            }}
+            className={classes.h3}
             useUnescape
           >
             {title}
@@ -188,18 +205,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
         >
           {picks.map((pick) => {
             return (
-              <Button
-                key={pick.value}
-                color="light"
-                style={{
-                  fontSize: 11,
-                  minHeight: 24,
-                  padding: "0 10px",
-                  display: "inline-block",
-                  marginRight: "10px",
-                  paddingBottom: "2px",
-                }}
-              >
+              <Button key={pick.value} color="light" className={classes.button}>
                 {pick.label}
               </Button>
             );
