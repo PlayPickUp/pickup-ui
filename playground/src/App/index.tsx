@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
@@ -29,11 +29,10 @@ import {
   Card,
   HorizontalRule,
 } from "@playpickup/core";
-// import "@playpickup/core/dist/index.css";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
 const handleEditClick = () => {
-  console.log("handledEditCLick");
+  console.log("handledEditClick");
 };
 
 const rows = [
@@ -149,7 +148,7 @@ const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
-    <ThemeProvider withReset={true}>
+    <ThemeProvider withReset={false}>
       <div style={{ padding: 40 }}>
         <Typography variant="title">Hello, PickUp!</Typography>
         <Typography
@@ -501,7 +500,12 @@ const App: React.FC = () => {
         <Loader />
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Formik
           initialValues={{
@@ -546,7 +550,12 @@ const App: React.FC = () => {
         </Formik>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Formik
           initialValues={{ leagueTwo: "" }}
@@ -573,7 +582,12 @@ const App: React.FC = () => {
         </Formik>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Chip
           color="primary"
@@ -584,7 +598,12 @@ const App: React.FC = () => {
         />
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Button variant="fit" color="secondary">
           Make Your Pick
@@ -594,14 +613,24 @@ const App: React.FC = () => {
         </Button>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Typography className="hello-world" useUnescape>
           Oakland A&#8217;s Eye a New Home
         </Typography>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <FormError
           errors={{
