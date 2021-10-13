@@ -37,7 +37,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     height: "48px",
     borderRadius: "24px",
     backgroundColor: theme.colors.white,
-    border: "0.5px solid ${theme.colors.grey.light}",
+    border: `.5px solid ${theme.colors.grey.light}`,
+    boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.04)",
     right: "24px",
   },
   leftArrow: {
@@ -49,7 +50,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     height: "48px",
     borderRadius: "24px",
     backgroundColor: theme.colors.white,
-    border: "0.5px solid ${theme.colors.grey.light}",
+    border: `.5px solid ${theme.colors.grey.light}`,
+    boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.04)",
     left: "24px",
   },
 }));
