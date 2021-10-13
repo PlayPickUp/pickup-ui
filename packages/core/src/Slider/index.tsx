@@ -6,7 +6,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   sliderContainer: {
     width: "100%",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
   },
   sliderWrapper: {
     display: "flex",
@@ -19,7 +19,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     height: "100%",
   },
   sliderContent: {
-    display:"flex",
+    display: "flex",
     transition: "all 250ms linear",
     msOverflowStyle: "none" /* hide scrollbar in IE and Edge */,
     scrollbarWidth: "none" /* hide scrollbar in Firefox */,
@@ -36,8 +36,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "48px",
     height: "48px",
     borderRadius: "24px",
-    backgroundColor: "white",
-    border: "1px solid #ddd",
+    backgroundColor: theme.colors.white,
+    border: "0.5px solid ${theme.colors.grey.light}",
     right: "24px",
   },
   leftArrow: {
@@ -48,16 +48,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "48px",
     height: "48px",
     borderRadius: "24px",
-    backgroundColor: "white",
-    border: "1px solid #ddd",
+    backgroundColor: theme.colors.white,
+    border: "0.5px solid ${theme.colors.grey.light}",
     left: "24px",
   },
 }));
 
-const Slider: React.FC<SliderProps> = ({ 
-    children,
-    show 
-}) => {
+const Slider: React.FC<SliderProps> = ({ children, show }) => {
   const classes = useStyles();
 
   const [currentIndex, setCurrentIndex] = useState(0);
