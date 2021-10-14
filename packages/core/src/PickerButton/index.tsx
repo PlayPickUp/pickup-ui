@@ -53,6 +53,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     padding: `0 ${theme.spacing.base * 2}px`,
     zIndex: 2,
+    boxSizing: "border-box",
   },
   resultContainer: {
     display: "flex",

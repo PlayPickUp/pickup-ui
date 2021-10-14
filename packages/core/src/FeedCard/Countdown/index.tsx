@@ -4,6 +4,7 @@ import { createUseStyles, useTheme } from "react-jss";
 import Pick from "../icons/Pick";
 import Timer from "../icons/Timer";
 import { DefaultTheme, CountdownProps } from "../../types";
+import Typography from "../../Typography";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   timer: {
@@ -52,10 +53,12 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   closed: {
     color: "red",
+    fontSize: "11px",
   },
   picked: {
     color: (picks: CountdownProps) =>
       picks.has_fan_pick ? theme.colors.purple.dark : theme.colors.grey.dark,
+    fontSize: "11px",
   },
 }));
 
@@ -111,14 +114,16 @@ const Countdown: React.FC<CountdownProps> = (props) => {
         {hours || minutes > 0 ? (
           generateTimer()
         ) : (
-          <span className={classes.closed}>CLOSED</span>
+          <Typography variant="span" className={classes.closed}>
+            CLOSED
+          </Typography>
         )}
       </div>
       <div className={classes.pick}>
         <Pick color="currentColor" className={classes.pickedIcon} />
-        <span className={classes.picked}>
+        <Typography variant="span" className={classes.picked}>
           {props.has_fan_pick ? "Picked" : "Not Picked"}
-        </span>
+        </Typography>
       </div>
     </div>
   );

@@ -90,7 +90,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="closed-0-2-34"
+              class="root-0-2-14 root-d6-0-2-38 body-0-2-18 closed-0-2-34"
             >
               CLOSED
             </span>
@@ -114,7 +114,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="picked-0-2-35 picked-d3-0-2-37"
+              class="root-0-2-14 root-d7-0-2-39 body-0-2-18 picked-0-2-35 picked-d3-0-2-37"
             >
               Picked
             </span>
@@ -152,13 +152,13 @@ exports[`Renders and matches snapshot 1`] = `
           title="Prime Time Sports"
         >
           <p
-            class="root-0-2-14 root-d6-0-2-38 body-0-2-18 body-0-2-13"
+            class="root-0-2-14 root-d8-0-2-40 body-0-2-18 body-0-2-13"
           >
             Prime Time Sports
           </p>
         </a>
         <span
-          class="root-0-2-14 root-d7-0-2-39 body-0-2-18 body-0-2-13"
+          class="root-0-2-14 root-d9-0-2-41 body-0-2-18 body-0-2-13"
         >
           23m
         </span>
@@ -167,7 +167,7 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="root-0-2-14 root-d8-0-2-40 heading3-0-2-17 h3-0-2-11"
+          class="root-0-2-14 root-d10-0-2-42 heading3-0-2-17 h3-0-2-11"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
@@ -176,13 +176,13 @@ exports[`Renders and matches snapshot 1`] = `
         style="padding: 8px;"
       >
         <button
-          class="root-0-2-23 root-d2-0-2-41 light-0-2-25 button-0-2-10"
+          class="root-0-2-23 root-d2-0-2-43 light-0-2-25 button-0-2-10"
           data-testid="pickup-button"
         >
           Ravens
         </button>
         <button
-          class="root-0-2-23 root-d3-0-2-42 light-0-2-25 button-0-2-10"
+          class="root-0-2-23 root-d3-0-2-44 light-0-2-25 button-0-2-10"
           data-testid="pickup-button"
         >
           Chiefs
@@ -211,7 +211,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="closed-0-2-34"
+              class="root-0-2-14 root-d11-0-2-47 body-0-2-18 closed-0-2-34"
             >
               CLOSED
             </span>
@@ -220,7 +220,7 @@ exports[`Renders and matches snapshot 1`] = `
             class="pick-0-2-30"
           >
             <svg
-              class="pickedIcon-0-2-33 pickedIcon-d4-0-2-43"
+              class="pickedIcon-0-2-33 pickedIcon-d4-0-2-45"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="picked-0-2-35 picked-d5-0-2-44"
+              class="root-0-2-14 root-d12-0-2-48 body-0-2-18 picked-0-2-35 picked-d5-0-2-46"
             >
               Picked
             </span>

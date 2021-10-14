@@ -59,6 +59,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     display: "flex",
     position: "relative",
     flexFlow: "row nowrap",
+    alignItems: "center",
   },
   phonePrefix: {
     position: "relative",
