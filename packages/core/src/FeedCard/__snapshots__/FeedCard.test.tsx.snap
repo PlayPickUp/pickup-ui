@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="card-0-2-8"
+  >
+    <div>
+      <a
+        class="featuredImage-0-2-3"
+        title="Chiefs vs. Ravens Who wins?"
+      >
+        <div
+          style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
+        />
+      </a>
+    </div>
+    <div
+      style="max-width: 200px; word-wrap: break-word;"
+    >
+      <div
+        class="publisherRow-0-2-5"
+      >
+        <img
+          alt="Prime Time Sports"
+          class="publisherImage-0-2-12"
+          src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+        />
+        <a
+          style="display: inline-block;"
+          title="Prime Time Sports"
+        >
+          <p
+            class="root-0-2-14 root-d3-0-2-20 body-0-2-18 body-0-2-13"
+          >
+            Prime Time Sports
+          </p>
+        </a>
+        <span
+          class="root-0-2-14 root-d4-0-2-21 body-0-2-18 body-0-2-13"
+        >
+          23m
+        </span>
+      </div>
+      <a
+        title="Chiefs vs. Ravens Who wins?"
+      >
+        <h3
+          class="root-0-2-14 root-d5-0-2-22 heading3-0-2-17 h3-0-2-11"
+        >
+          Chiefs vs. Ravens Who wins?
+        </h3>
+      </a>
+      <div
+        style="padding: 8px;"
+      >
+        <button
+          class="root-0-2-23 root-d0-0-2-27 light-0-2-25 button-0-2-10"
+          data-testid="pickup-button"
+        >
+          Ravens
+        </button>
+        <button
+          class="root-0-2-23 root-d1-0-2-28 light-0-2-25 button-0-2-10"
+          data-testid="pickup-button"
+        >
+          Chiefs
+        </button>
+      </div>
+      <div
+        style="padding: 2px 10px 10px 10px;"
+      >
+        <div
+          class="container-0-2-31"
+        >
+          <div
+            class="timer-0-2-29"
+          >
+            <svg
+              class="timerIcon-0-2-32"
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="root-0-2-14 root-d6-0-2-38 body-0-2-18 closed-0-2-34"
+            >
+              CLOSED
+            </span>
+          </div>
+          <div
+            class="pick-0-2-30"
+          >
+            <svg
+              class="pickedIcon-0-2-33 pickedIcon-d2-0-2-36"
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="root-0-2-14 root-d7-0-2-39 body-0-2-18 picked-0-2-35 picked-d3-0-2-37"
+            >
+              Picked
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="expandedCard-0-2-9"
+  >
+    <div>
+      <a
+        class="expandedFeaturedIgmage-0-2-4"
+        title="Chiefs vs. Ravens Who wins?"
+      >
+        <div
+          style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
+        />
+      </a>
+    </div>
+    <div
+      style="max-width: 280px; word-wrap: break-word;"
+    >
+      <div
+        class="publisherRow-0-2-5"
+      >
+        <img
+          alt="Prime Time Sports"
+          class="publisherImage-0-2-12"
+          src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+        />
+        <a
+          style="display: inline-block;"
+          title="Prime Time Sports"
+        >
+          <p
+            class="root-0-2-14 root-d8-0-2-40 body-0-2-18 body-0-2-13"
+          >
+            Prime Time Sports
+          </p>
+        </a>
+        <span
+          class="root-0-2-14 root-d9-0-2-41 body-0-2-18 body-0-2-13"
+        >
+          23m
+        </span>
+      </div>
+      <a
+        title="Chiefs vs. Ravens Who wins?"
+      >
+        <h3
+          class="root-0-2-14 root-d10-0-2-42 heading3-0-2-17 h3-0-2-11"
+        >
+          Chiefs vs. Ravens Who wins?
+        </h3>
+      </a>
+      <div
+        style="padding: 8px;"
+      >
+        <button
+          class="root-0-2-23 root-d2-0-2-43 light-0-2-25 button-0-2-10"
+          data-testid="pickup-button"
+        >
+          Ravens
+        </button>
+        <button
+          class="root-0-2-23 root-d3-0-2-44 light-0-2-25 button-0-2-10"
+          data-testid="pickup-button"
+        >
+          Chiefs
+        </button>
+      </div>
+      <div
+        style="padding: 2px 10px 10px 10px;"
+      >
+        <div
+          class="container-0-2-31"
+        >
+          <div
+            class="timer-0-2-29"
+          >
+            <svg
+              class="timerIcon-0-2-32"
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span
+              class="root-0-2-14 root-d11-0-2-47 body-0-2-18 closed-0-2-34"
+            >
+              CLOSED
+            </span>
+          </div>
+          <div
+            class="pick-0-2-30"
+          >
+            <svg
+              class="pickedIcon-0-2-33 pickedIcon-d4-0-2-45"
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="root-0-2-14 root-d12-0-2-48 body-0-2-18 picked-0-2-35 picked-d5-0-2-46"
+            >
+              Picked
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

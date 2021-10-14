@@ -28,6 +28,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     "&:hover, &:focus, &:active": {
       extend: "defaultActive",
     },
+    boxSizing: "border-box",
   },
   primaryActive: {
     border: `1px solid ${theme.colors.primary.base}`,

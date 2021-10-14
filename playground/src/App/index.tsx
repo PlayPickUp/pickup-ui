@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   DataTable,
   Dropdown,
   Fab,
+  FeedCard,
   FormError,
   Icon,
   Label,
@@ -25,16 +27,12 @@ import {
   StatusIcon,
   Hero,
   Card,
-  // HorizontalRule,
+  HorizontalRule,
 } from "@playpickup/core";
-import "@playpickup/core/dist/index.css";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
-import "./index.css";
-import { values } from "lodash";
-
 const handleEditClick = () => {
-  console.log("handledEditCLick");
+  console.log("handledEditClick");
 };
 
 const rows = [
@@ -141,17 +139,64 @@ const handleChange = () => {
   console.log("change!");
 };
 
+const Picks = [
+  { label: "Ravens", value: "Ravens" },
+  { label: "Chiefs", value: "Chiefs" },
+];
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
   return (
-    <ThemeProvider>
-      {/* <div style={{ margin: 40 }}>
+    <ThemeProvider withReset={false}>
+      <div style={{ padding: 40 }}>
+        <Typography variant="title">Hello, PickUp!</Typography>
+        <Typography
+          variant="heading3"
+          style={{ fontStyle: "normal", margin: "20px 0" }}
+        >
+          👋 Howdy human!!!
+        </Typography>
+        <Typography>
+          Feel free to throw some components in here for testing. It's your lil
+          component playground!
+        </Typography>
+      </div>
+
+      <div style={{ margin: 40 }}>
         <HorizontalRule showBolt />
       </div>
       <div style={{ margin: 40 }}>
         <HorizontalRule />
-      </div> */}
+      </div>
+
+      <div style={{ padding: 40 }}>
+        <FeedCard
+          publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          publisherName="Prime Time Sports"
+          publishedAt="23m"
+          title="Chiefs vs. Ravens Who wins?"
+          image="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0"
+          pickCount={2}
+          timeLeft={new Date()}
+          picks={Picks}
+          expanded={false}
+        />
+      </div>
+      <div style={{ padding: 40 }}>
+        <FeedCard
+          publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          publisherName="Prime Time Sports"
+          publishedAt="23m"
+          title="Chiefs vs. Ravens Who wins?"
+          image="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0"
+          pickCount={2}
+          timeLeft={new Date()}
+          picks={Picks}
+          expanded={true}
+        />
+      </div>
+
       <div style={{ margin: 40 }}>
         <Dropdown value={1} onChange={handleChange}>
           <option value={1}>A - Z</option>
@@ -199,6 +244,7 @@ const App: React.FC = () => {
           }}
         />
       </div>
+
       <div style={{ padding: 40 }}>
         <ProgressButton
           status="Not Enough Points" // comes from the Node API
@@ -220,7 +266,7 @@ const App: React.FC = () => {
           eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
         />
       </div>
-      <div style={{ padding: 40, width: 340 }}>
+      <div style={{ padding: 40, width: 340, boxSizing: "border-box" }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
           displayText="Absolutely"
@@ -245,7 +291,7 @@ const App: React.FC = () => {
           isPick={true}
         />
       </div>
-      <div style={{ padding: 40, width: 340 }}>
+      <div style={{ padding: 40, width: 340, boxSizing: "border-box" }}>
         <PickerButton
           onClick={(e: any) => console.log(e)}
           displayText="Definitely Not"
@@ -279,19 +325,6 @@ const App: React.FC = () => {
         <Paper style={{ minHeight: 200 }}>
           <Typography variant="body">Hello, PickUp!</Typography>
         </Paper>
-      </div>
-      <div style={{ padding: 40 }}>
-        <Typography variant="title">Hello, PickUp!</Typography>
-        <Typography
-          variant="heading3"
-          style={{ fontStyle: "normal", margin: "20px 0" }}
-        >
-          👋 Howdy human!1!
-        </Typography>
-        <Typography>
-          Feel free to throw some components in here for testing. It''s your lil
-          component playground!
-        </Typography>
       </div>
       <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
         {/* Throw Some Stuff Here Dawgie */}
@@ -481,7 +514,12 @@ const App: React.FC = () => {
         <Loader />
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Formik
           initialValues={{
@@ -526,7 +564,12 @@ const App: React.FC = () => {
         </Formik>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Formik
           initialValues={{ leagueTwo: "" }}
@@ -553,19 +596,28 @@ const App: React.FC = () => {
         </Formik>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Chip
           color="primary"
           label="All Sports"
-          // onClick={(e) => console.log(e)}
           href="http://google.com"
           element="a"
           isActive
         />
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Button variant="fit" color="secondary">
           Make Your Pick
@@ -575,14 +627,24 @@ const App: React.FC = () => {
         </Button>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <Typography className="hello-world" useUnescape>
           Oakland A&#8217;s Eye a New Home
         </Typography>
       </div>
       <div
-        style={{ marginTop: 40, marginBottom: 40, padding: 40, maxWidth: 550 }}
+        style={{
+          marginTop: 40,
+          marginBottom: 40,
+          padding: 40,
+          maxWidth: 550,
+        }}
       >
         <FormError
           errors={{

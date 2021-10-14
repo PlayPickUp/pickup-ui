@@ -10,6 +10,11 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
     position: "relative",
     color: (props) => props.color || "inherit",
+    margin: 0,
+    padding: 0,
+    verticalAlign: "baseline",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
   },
   title: {
     ...theme.typography.fontStyles.mobile.title,
@@ -76,7 +81,7 @@ const Typography: React.FC<
       className={classNames({
         [classes.root]: true,
         [classes.title]: variant === "title",
-        [classes.body]: variant === "body",
+        [classes.body]: variant === "body" || variant === "span",
         [classes.body2]: variant === "body2",
         [classes.heading2]: variant === "heading2",
         [classes.heading3]: variant === "heading3",
