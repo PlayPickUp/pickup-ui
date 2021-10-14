@@ -66,16 +66,13 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
   useEffect(() => {
     window.addEventListener("resize", showWidth);
   }, []);
-  console.log(width);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
 
   const [touchPosition, setTouchPosition] = useState(null);
 
 const ref = useRef(null);
-const show = Number(width)/250
-console.log('this is show' + show)
-  
+const show = Number(width)/250  
   // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
