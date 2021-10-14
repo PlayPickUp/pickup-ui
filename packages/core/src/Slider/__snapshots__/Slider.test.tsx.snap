@@ -13,7 +13,7 @@ exports[`Renders and matches snapshot 1`] = `
       >
         <div
           class="sliderContent-0-2-4"
-          style="transform: translateX(-0%);"
+          style="transform: translateX(-NaN%);"
         >
           <div
             class="card-0-2-15"
@@ -985,11 +985,6 @@ exports[`Renders and matches snapshot 1`] = `
           </div>
         </div>
       </div>
-      <button
-        class="rightArrow-0-2-6"
-      >
-        &gt;
-      </button>
     </div>
   </div>
 </div>

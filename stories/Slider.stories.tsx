@@ -5,9 +5,6 @@ import { Slider, FeedCard, FeedCardProps } from "@playpickup/core";
 export default {
   title: "Core/Slider",
   component: Slider,
-  args: {
-    show: 5,
-  },
 } as Meta;
 
 const Picks = [

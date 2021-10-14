@@ -11,7 +11,7 @@ test("Renders and matches snapshot", () => {
       ];
     const { container } = render(
       <ThemeProvider>
-        <Slider show={5}>
+        <Slider>
         <FeedCard
           publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
           publisherName="Prime Sports"

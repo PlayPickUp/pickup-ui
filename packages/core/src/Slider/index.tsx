@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { createUseStyles } from "react-jss";
 import { DefaultTheme, SliderProps } from "../types";
 
@@ -56,14 +56,26 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
 }));
 
-const Slider: React.FC<SliderProps> = ({ children, show }) => {
+const Slider: React.FC<SliderProps> = ({ children }) => {
   const classes = useStyles();
-
+  const [width, setWidth] = useState();
+  const showWidth = () => {
+      const newWidth = ref.current.clientWidth;
+      setWidth(newWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", showWidth);
+  }, []);
+  console.log(width);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
 
   const [touchPosition, setTouchPosition] = useState(null);
 
+const ref = useRef(null);
+const show = Number(width)/250
+console.log('this is show' + show)
+  
   // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
@@ -109,7 +121,7 @@ const Slider: React.FC<SliderProps> = ({ children, show }) => {
 
   return (
     <div className={classes.sliderContainer}>
-      <div className={classes.sliderWrapper}>
+      <div className={classes.sliderWrapper } ref={ref}>
         {currentIndex > 0 && (
           <button onClick={prev} className={classes.leftArrow}>
             &lt;
