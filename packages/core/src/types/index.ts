@@ -603,7 +603,7 @@ export interface FeedCardProps {
   pickCount: number;
   picks?: Picks[];
   buttonProps?: ButtonProps;
-  expanded?: boolean;
+  expanded: boolean;
 }
 
 /**

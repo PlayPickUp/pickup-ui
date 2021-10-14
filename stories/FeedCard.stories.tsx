@@ -35,6 +35,10 @@ export default {
       defaultValue: 2,
       description: "The Pick count",
     },
+    expanded: {
+      defaultValue: false,
+      description: "Is the card expanded or not"
+    }
   },
   args: {
     image:
@@ -50,6 +54,7 @@ export default {
       { label: "Ravens", value: "Ravens" },
       { label: "Chiefs", value: "Chiefs" },
     ],
+    expanded: true
   },
 } as Meta;
 
