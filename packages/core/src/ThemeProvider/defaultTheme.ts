@@ -57,7 +57,7 @@ const colors: DefaultThemeColors = {
 
 // Font and Typography
 const fontFamilies: FontFamilies = {
-  body: "Inter, Helvetica, sans-serif",
+  body: "'Inter', Helvetica, sans-serif",
   headline: "'Ringside-Condensed', Helvetica, sans-serif",
 };
 

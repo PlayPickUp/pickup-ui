@@ -34,11 +34,11 @@ exports[`Renders and matches snapshot 1`] = `
           $20 Value
         </p>
       </div>
-      <h4
-        class="root-0-2-7 root-d5-0-2-15 heading-0-2-5"
+      <p
+        class="root-0-2-7 root-d5-0-2-15 body-0-2-11 heading-0-2-5"
       >
         CROSSNET Four-Way Volleyball
-      </h4>
+      </p>
       <p
         class="root-0-2-7 root-d6-0-2-16 body-0-2-11 description-0-2-6"
       >

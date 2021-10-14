@@ -31,6 +31,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     height: (props) => (props.size === "small" ? 42 : 54),
     backgroundColor: (props) =>
       props.color ? props.color : theme.colors.white,
+    border: "none",
     borderRadius: "50%",
     "&:hover, &:focus, &:active": {
       backgroundColor: (props) =>
