@@ -1,5 +1,7 @@
-/* This is derived from the unsupported jss-increase-specificity plugin at https://github.com/iamstarkov/jss-increase-specificity */
+/* This is based on the unsupported jss-increase-specificity plugin at https://github.com/iamstarkov/jss-increase-specificity
+JSS's original createGenerateId has been adapted here to use logic from that plugin. /*
 
+// From the original plugin:
 /**
  * use :not(#\20), :not(.\20) and :not(\20) instead of generating unlikely
  * appearing ids…
@@ -9,25 +11,41 @@
  * — twitter.com/subzey/status/829051085885153280
  */
 
-var selector = ":not(#\\20)";
-var defaultOptions = { repeat: 3 };
+import { Rule, StyleSheet, CreateGenerateId } from "jss";
 
-export const increaseSpecificity = (userOptions) => {
-  const options = Object.assign({}, defaultOptions, userOptions);
-  const prefix = Array(options.repeat + 1).join(selector);
-
-  const onProcessRule = (rule, sheet) => {
-    const parent = rule.options.parent;
-
-    if (
-      sheet.options.increaseSpecificity === false ||
-      rule.type !== "style" ||
-      (parent && parent.type === "keyframes")
-    )
-      return;
-
-    rule.selectorText = prefix + rule.selectorText;
+type JssSheet = StyleSheet & {
+  options: {
+    jss: {
+      id: number;
+    };
   };
+};
 
-  return { onProcessRule: onProcessRule };
+var selector = ":not(#\\20)";
+const repeat = 3;
+const maxRules = 1e10;
+
+export const increaseSpecificity: CreateGenerateId = (options = {}) => {
+  let ruleCounter = 0;
+  console.log({ options });
+  return (rule: Rule, sheet?: JssSheet): string => {
+    ruleCounter += 1;
+    if (ruleCounter > maxRules) {
+      console.warn(
+        false,
+        `[JSS] You might have a memory leak. Rule counter is at ${ruleCounter}.`
+      );
+    }
+    const jssId = String(sheet.options.jss.id) ?? "";
+    const prefix = sheet.options.classNamePrefix ?? "";
+
+    let suffix = selector;
+    for (let i = 1; i < repeat; i++) {
+      suffix += selector;
+    }
+
+    return `${prefix + rule.key}${
+      jssId ? `-${jssId}` : ""
+    }-${ruleCounter}${suffix}`;
+  };
 };
