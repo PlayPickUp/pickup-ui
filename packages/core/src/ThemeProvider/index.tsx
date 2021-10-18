@@ -1,4 +1,5 @@
 import React from "react";
+import { create } from "jss";
 import { ThemeProvider as JSSThemeProvider } from "react-jss";
 import merge from "lodash/merge";
 
@@ -6,6 +7,9 @@ import { defaultTheme } from "./defaultTheme";
 
 import { ThemeProviderProps } from "../types";
 import GlobalsAndReset from "./GlobalsAndReset";
+
+// Insert specificity plugin
+create({ plugins: null });
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
