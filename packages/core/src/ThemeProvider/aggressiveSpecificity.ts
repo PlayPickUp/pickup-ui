@@ -11,15 +11,8 @@ JSS's original createGenerateId has been adapted here to use logic from that plu
  * — twitter.com/subzey/status/829051085885153280
  */
 
-import { Rule, StyleSheet, CreateGenerateId } from "jss";
-
-type JssSheet = StyleSheet & {
-  options: {
-    jss: {
-      id: number;
-    };
-  };
-};
+import { Rule, CreateGenerateId } from "jss";
+import { JssStyleSheet } from "../types";
 
 var selector = ":not(#\\20)";
 const repeat = 3;
@@ -28,7 +21,7 @@ const maxRules = 1e10;
 export const increaseSpecificity: CreateGenerateId = (options = {}) => {
   let ruleCounter = 0;
   console.log({ options });
-  return (rule: Rule, sheet?: JssSheet): string => {
+  return (rule: Rule, sheet?: JssStyleSheet): string => {
     ruleCounter += 1;
     if (ruleCounter > maxRules) {
       console.warn(
@@ -39,8 +32,8 @@ export const increaseSpecificity: CreateGenerateId = (options = {}) => {
     const jssId = String(sheet.options.jss.id) ?? "";
     const prefix = sheet.options.classNamePrefix ?? "";
 
-    let suffix = selector;
-    for (let i = 1; i < repeat; i++) {
+    let suffix = "";
+    for (let i = 0; i < repeat; i++) {
       suffix += selector;
     }
 
