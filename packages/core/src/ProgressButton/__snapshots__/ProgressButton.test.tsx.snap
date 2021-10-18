@@ -3,14 +3,14 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <a
-    class="root-0-2-2"
+    class="PU--root-0-2-2"
     data-testid="progess-button"
   >
     <div
-      class="progressBar-0-2-3 progressBar-d1-0-2-9"
+      class="PU--progressBar-0-2-3 PU--progressBar-d1-0-2-9"
     />
     <div
-      class="textContainer-0-2-7"
+      class="PU--textContainer-0-2-7"
     >
       125 / 250 points
     </div>
