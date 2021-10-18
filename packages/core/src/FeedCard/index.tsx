@@ -110,7 +110,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   publisherImage: {
     width: "16px",
     height: "16px",
-    marginLeft:"10px"
+    marginLeft: theme.spacing.base * 2,
+
   },
   body: {
     display: "inline-block",
