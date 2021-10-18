@@ -14,7 +14,7 @@ JSS's original createGenerateId has been adapted here to use logic from that plu
 import { Rule, CreateGenerateId } from "jss";
 import { JssStyleSheet } from "../types";
 
-var selector = ":not(#\\20)";
+const selector = ":not(#\\20)";
 const repeat = 3;
 const maxRules = 1e10;
 
