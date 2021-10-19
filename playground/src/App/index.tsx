@@ -31,6 +31,8 @@ import {
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
+import { async } from "regenerator-runtime";
+
 const handleEditClick = () => {
   console.log("handledEditClick");
 };
@@ -128,6 +130,26 @@ const leagues = [
   {
     value: "golf",
     label: "Golf",
+  },
+  {
+    value: "frisbee",
+    label: "Frisbee",
+  },
+  {
+    value: "bowling",
+    label: "Bowling",
+  },
+  {
+    value: "polevault",
+    label: "polevault",
+  },
+  {
+    value: "billiards",
+    label: "billiards",
+  },
+  {
+    value: "dodgeball",
+    label: "Dodgeball",
   },
 ];
 
@@ -571,7 +593,7 @@ const App: React.FC = () => {
           maxWidth: 550,
         }}
       >
-        <Formik
+        {/* <Formik
           initialValues={{ leagueTwo: "" }}
           validationSchema={Yup.object().shape({
             leagueTwo: Yup.string().required("Leagues are required"),
@@ -593,7 +615,7 @@ const App: React.FC = () => {
               <button type="submit">Submit</button>
             </Form>
           )}
-        </Formik>
+        </Formik> */}
       </div>
       <div
         style={{
@@ -659,6 +681,36 @@ const App: React.FC = () => {
         <Countdown color="red" />
         countdown <Pick color="red" /> Pick
       </div>
+      <div>MULTI SELECT ENHANCE ZONE</div>
+      <Formik
+        initialValues={{ selected_tags: "" }}
+        validationSchema={Yup.object().shape({
+          selected_tags: Yup.string().nullable(),
+        })}
+        onSubmit={async (values) => {
+          console.log(values);
+        }}
+      >
+        {({ handleSubmit, isSubmitting }) => (
+          <Form
+            style={{
+              maxWidth: 400,
+              display: "block",
+              position: "relative",
+              width: "100%",
+            }}
+          >
+            <Field
+              id="selected_tags"
+              name="selected_tags"
+              items={leagues}
+              label="Leagues"
+              component={MultiSelect}
+            />
+            <Button useSubmit submitText="blast off" disabled={isSubmitting} />
+          </Form>
+        )}
+      </Formik>
     </ThemeProvider>
   );
 };

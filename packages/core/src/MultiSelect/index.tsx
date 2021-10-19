@@ -118,7 +118,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   dropdown: {
     position: "relative",
     top: -3,
-    height: "auto",
+    height: "200px",
+    overflow: "scroll",
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
     fontSize: 14,
@@ -155,6 +156,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   const classes = useStyles();
   const theme: DefaultTheme = useTheme();
   const input = useRef(null);
+
   return (
     <>
       <MultiDownshift
@@ -170,23 +172,15 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           // action are coming from MultiDownshift composibility for the win!
           getRemoveButtonProps,
           removeItem,
-
           isOpen,
           inputValue,
           selectedItems,
           getItemProps,
           highlightedIndex,
-          toggleMenu,
         }) => (
           <div className={classes.root}>
             <Label htmlFor={props.field.name}>{label}</Label>
-            <div
-              onClick={() => {
-                toggleMenu();
-                !isOpen && input.current.focus();
-              }}
-              style={{ position: "relative" }}
-            >
+            <div style={{ position: "relative" }}>
               <div
                 className={classes.inputWrapper}
                 style={{ position: "relative" }}
@@ -219,7 +213,11 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                     placeholder: "Select items...",
                     className: classes.input,
                     onKeyDown(event: KeyboardEvent) {
-                      if (event.key === "Backspace" && !inputValue) {
+                      if (
+                        event.key === "Backspace" &&
+                        !inputValue &&
+                        selectedItems.length > 0
+                      ) {
                         removeItem(selectedItems[selectedItems.length - 1]);
                       }
                     },
@@ -229,7 +227,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 <button
                   {...getToggleButtonProps({
                     // prevents the menu from immediately toggling
-                    // closed (due to our custom click handler above).
+                    // closed (due to our custom click handler above)
                     onClick(event: MouseEvent) {
                       event.stopPropagation();
                     },
@@ -254,31 +252,40 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 style: { display: isOpen ? "block" : "none" },
               })}
             >
-              {isOpen
-                ? getItems(items, inputValue).map(
-                    (item: SelectItem, index: number) => (
-                      <li
-                        key={`${item.value}${index}`}
-                        {...getItemProps({
-                          item,
-                          index,
-                          className: classes.dropdownItem,
-                          style: {
-                            backgroundColor:
-                              highlightedIndex === index
-                                ? theme.colors.purple.light
-                                : theme.colors.white,
-                            fontWeight: selectedItems.includes(item)
-                              ? "bold"
-                              : "normal",
-                          },
-                        })}
-                      >
-                        {item.label}
-                      </li>
+              <div>
+                <input
+                  {...getInputProps({
+                    placeholder: "Search items...",
+                    id: "search",
+                    className: classes.input,
+                  })}
+                />
+                {isOpen
+                  ? getItems(items, inputValue).map(
+                      (item: SelectItem, index: number) => (
+                        <li
+                          key={`${item.value}${index}`}
+                          {...getItemProps({
+                            item,
+                            index,
+                            className: classes.dropdownItem,
+                            style: {
+                              backgroundColor:
+                                highlightedIndex === index
+                                  ? theme.colors.purple.light
+                                  : theme.colors.white,
+                              fontWeight: selectedItems.includes(item)
+                                ? "bold"
+                                : "normal",
+                            },
+                          })}
+                        >
+                          {item.label}
+                        </li>
+                      )
                     )
-                  )
-                : null}
+                  : null}
+              </div>
             </ul>
           </div>
         )}
