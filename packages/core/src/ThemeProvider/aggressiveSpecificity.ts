@@ -20,7 +20,6 @@ const maxRules = 1e10;
 
 export const increaseSpecificity: CreateGenerateId = (options = {}) => {
   let ruleCounter = 0;
-  console.log({ options });
   return (rule: Rule, sheet?: JssStyleSheet): string => {
     ruleCounter += 1;
     if (ruleCounter > maxRules) {
