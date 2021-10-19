@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, MouseEvent, useRef } from "react";
+import React, { KeyboardEvent, useRef } from "react";
 import MultiDownshift from "./MultiDownshift";
 import classNames from "classnames";
 import { createUseStyles, useTheme } from "react-jss";
@@ -226,11 +226,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 />
                 <button
                   {...getToggleButtonProps({
-                    // prevents the menu from immediately toggling
-                    // closed (due to our custom click handler above)
-                    onClick(event: MouseEvent) {
-                      event.stopPropagation();
-                    },
                     className: classes.iconButton,
                   })}
                 >
