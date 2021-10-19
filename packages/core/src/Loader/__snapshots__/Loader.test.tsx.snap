@@ -3,16 +3,16 @@
 exports[`Loader renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-2"
+    class="PU--root-0-2-2"
   >
     <div
-      class="animContainer-0-2-3"
+      class="PU--animContainer-0-2-3"
     >
       <div
-        class="iconBg-0-2-4"
+        class="PU--iconBg-0-2-4"
       />
       <div
-        class="iconContainer-0-2-5"
+        class="PU--iconContainer-0-2-5"
       >
         <svg
           fill="none"
@@ -34,7 +34,7 @@ exports[`Loader renders without crashing, matches snapshot 1`] = `
       style="margin-top: 20px;"
     >
       <p
-        class="root-0-2-6 root-d3-0-2-12 heading2-0-2-8"
+        class="PU--root-0-2-6 PU--root-d3-0-2-12 PU--heading2-0-2-8"
       >
         Loading
       </p>

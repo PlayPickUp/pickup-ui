@@ -3,15 +3,15 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-2 root-d0-0-2-6"
+    class="PU--root-0-2-2 PU--root-d0-0-2-6"
     data-testid="fab-root"
   >
     <button
-      class="button-0-2-3 button-d1-0-2-7"
+      class="PU--button-0-2-3 PU--button-d1-0-2-7"
       data-testid="fab-target"
     >
       <div
-        class="root-0-2-8 root-d0-0-2-9"
+        class="PU--root-0-2-8 PU--root-d0-0-2-9"
         data-testid="icon"
         style="border-radius: 50%;"
       >
