@@ -18,6 +18,7 @@ const selector = ":not(#\\20)";
 const repeat = 3;
 const maxRules = 1e10;
 
+// Options parameter is required to fulfill the CreateGenerateId type from JSS
 export const increaseSpecificity: CreateGenerateId = (options = {}) => {
   let ruleCounter = 0;
   return (rule: Rule, sheet?: JssStyleSheet): string => {
