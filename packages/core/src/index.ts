@@ -18,12 +18,14 @@ import Paper from "./Paper";
 import PickerButton from "./PickerButton";
 import ProgressButton from "./ProgressButton";
 import Select from "./Select";
+import Slider from "./Slider";
 import StatusIcon from "./StatusIcon";
 import TextArea from "./TextArea";
 import TextInput from "./TextInput";
 import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
+
 
 
 // react-jss
@@ -52,6 +54,7 @@ export {
   PickerButton,
   ProgressButton,
   Select,
+  Slider,
   StatusIcon,
   TextArea,
   TextInput,

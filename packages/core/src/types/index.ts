@@ -7,6 +7,7 @@ import React, {
   ReactNode,
   SetStateAction,
   Dispatch,
+  ReactNodeArray,
 } from "react";
 import { StyleSheet } from "jss";
 
@@ -623,4 +624,8 @@ export interface FeedCardProps {
 export interface CountdownProps {
   close_at: Date;
   has_fan_pick: number;
+}
+
+export interface SliderProps {
+  children?:ReactNodeArray;
 }
