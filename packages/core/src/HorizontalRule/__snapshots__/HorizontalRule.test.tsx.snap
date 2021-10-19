@@ -3,10 +3,10 @@
 exports[`Horizontal Rule renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1"
+    class="PU--root-0-2-1"
   >
     <hr
-      class="rule-0-2-2"
+      class="PU--rule-0-2-2"
     />
   </div>
 </div>
@@ -15,13 +15,13 @@ exports[`Horizontal Rule renders without crashing, matches snapshot 1`] = `
 exports[`Horizontal Rule with Bolt renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1"
+    class="PU--root-0-2-1"
   >
     <hr
-      class="rule-0-2-2"
+      class="PU--rule-0-2-2"
     />
     <div
-      class="bolt-0-2-3"
+      class="PU--bolt-0-2-3"
     >
       <img
         alt=""
@@ -31,7 +31,7 @@ exports[`Horizontal Rule with Bolt renders without crashing, matches snapshot 1`
       />
     </div>
     <hr
-      class="rule-0-2-2"
+      class="PU--rule-0-2-2"
     />
      
   </div>

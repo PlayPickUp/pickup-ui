@@ -3,7 +3,7 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1 root-d0-0-2-2"
+    class="PU--root-0-2-1 PU--root-d0-0-2-2"
     data-testid="statusIcon"
   >
     <svg

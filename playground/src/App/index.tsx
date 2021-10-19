@@ -169,6 +169,8 @@ const Picks = [
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
 
+  // To test with global resets, set withReset to true
+  // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
     <ThemeProvider withReset={false}>
       <div style={{ padding: 40 }}>

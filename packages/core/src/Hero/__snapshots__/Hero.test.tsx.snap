@@ -3,48 +3,48 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1"
+    class="PU--root-0-2-1"
   >
     <div
-      class="container-0-2-2"
+      class="PU--container-0-2-2"
     >
       <div
-        class="row-0-2-3"
+        class="PU--row-0-2-3"
       >
         <div
-          class="imageColumn-0-2-5"
+          class="PU--imageColumn-0-2-5"
         >
           <img
             alt="bowlero"
-            class="image-0-2-9"
+            class="PU--image-0-2-9"
             src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
           />
         </div>
         <div
-          class="column-0-2-4"
+          class="PU--column-0-2-4"
         >
           <div
-            class="eyebrow-0-2-6"
+            class="PU--eyebrow-0-2-6"
           >
             <p
-              class="root-0-2-10 root-d3-0-2-16 body2-0-2-15"
+              class="PU--root-0-2-10 PU--root-d3-0-2-16 PU--body2-0-2-15"
             >
               Eyebrow Title
             </p>
             <p
-              class="root-0-2-10 root-d4-0-2-17 body2-0-2-15"
+              class="PU--root-0-2-10 PU--root-d4-0-2-17 PU--body2-0-2-15"
             >
               Eyebrow Description
             </p>
           </div>
           <h2
-            class="root-0-2-10 root-d5-0-2-18 heading2-0-2-12 title-0-2-7"
+            class="PU--root-0-2-10 PU--root-d5-0-2-18 PU--heading2-0-2-12 PU--title-0-2-7"
             data-testid="hero-title"
           >
             Hero Title
           </h2>
           <p
-            class="root-0-2-10 root-d6-0-2-19 body-0-2-14 description-0-2-8"
+            class="PU--root-0-2-10 PU--root-d6-0-2-19 PU--body-0-2-14 PU--description-0-2-8"
             data-testid="hero-description"
           >
             Hero Description
