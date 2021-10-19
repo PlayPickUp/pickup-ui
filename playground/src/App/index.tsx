@@ -172,7 +172,7 @@ const App: React.FC = () => {
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
-    <ThemeProvider withReset={false}>
+    <ThemeProvider withReset={false} aggressive>
       <div style={{ padding: 40 }}>
         <Typography variant="title">Hello, PickUp!</Typography>
         <Typography
