@@ -3,16 +3,16 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <div
-    class="sliderContainer-0-2-1"
+    class="PU--sliderContainer-0-2-1"
   >
     <div
-      class="sliderWrapper-0-2-2"
+      class="PU--sliderWrapper-0-2-2"
     >
       <div
-        class="sliderContentWrapper-0-2-3"
+        class="PU--sliderContentWrapper-0-2-3"
       >
         <div
-          class="sliderContent-0-2-4"
+          class="PU--sliderContent-0-2-4"
           style="transform: translateX(-NaN%);"
         >
           <div />

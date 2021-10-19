@@ -9,6 +9,16 @@ import React, {
   Dispatch,
   ReactNodeArray,
 } from "react";
+import { StyleSheet } from "jss";
+
+// Default JSS type inexplicably doesn't account for options.jss.id
+export type JssStyleSheet = StyleSheet & {
+  options: {
+    jss: {
+      id: number;
+    };
+  };
+};
 
 /**
  *
@@ -19,6 +29,7 @@ export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
   theme?: DefaultTheme;
+  aggressive: boolean;
 }
 
 export interface PurpleMap {
