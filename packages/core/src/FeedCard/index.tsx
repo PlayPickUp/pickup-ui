@@ -58,7 +58,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row wrap",
     alignItems: "center",
     width: "100%",
-    padding: "10px",
+    margin:theme.spacing.base
   },
   publisherHeadline: {
     flex: "0 1 calc(100% - 58px)",
@@ -110,11 +110,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   publisherImage: {
     width: "16px",
     height: "16px",
+    marginLeft: theme.spacing.base * 2,
+
   },
   body: {
     display: "inline-block",
-    marginLeft: theme.spacing.base * 5,
+    margin: theme.spacing.base,
     fontSize: 12,
+    marginRight: theme.spacing.base,
   },
 }));
 
