@@ -7,7 +7,18 @@ import React, {
   ReactNode,
   SetStateAction,
   Dispatch,
+  ReactNodeArray,
 } from "react";
+import { StyleSheet } from "jss";
+
+// Default JSS type inexplicably doesn't account for options.jss.id
+export type JssStyleSheet = StyleSheet & {
+  options: {
+    jss: {
+      id: number;
+    };
+  };
+};
 
 /**
  *
@@ -18,6 +29,7 @@ export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
   theme?: DefaultTheme;
+  aggressive: boolean;
 }
 
 export interface PurpleMap {
@@ -612,4 +624,8 @@ export interface FeedCardProps {
 export interface CountdownProps {
   close_at: Date;
   has_fan_pick: number;
+}
+
+export interface SliderProps {
+  children?:ReactNodeArray;
 }

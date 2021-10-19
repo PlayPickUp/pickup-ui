@@ -3,7 +3,7 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <select
-    class="root-0-2-2"
+    class="PU--root-0-2-2"
   >
     <option
       value="1"
