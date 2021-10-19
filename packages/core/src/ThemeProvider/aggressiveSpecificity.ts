@@ -37,6 +37,11 @@ export const increaseSpecificity: CreateGenerateId = (options = {}) => {
       suffix += selector;
     }
 
+    if (options.minify) {
+      // Using "c" because a number can't be the first char in a class name.
+      return `${prefix || "c"}${jssId}${ruleCounter}${suffix}`;
+    }
+
     return `${prefix + rule.key}${
       jssId ? `-${jssId}` : ""
     }-${ruleCounter}${suffix}`;
