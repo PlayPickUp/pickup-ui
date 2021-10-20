@@ -54,32 +54,31 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.04)",
     left: "24px",
   },
-
 }));
 
 const Slider: React.FC<SliderProps> = ({ children }) => {
   const classes = useStyles();
-  const [isMobile, setIsMobile] = useState(false)
- 
-//choose the screen size 
-const handleResize = () => {
-  if (window.innerWidth < 720) {
-      setIsMobile(true)
-  } else {
-      setIsMobile(false)
-  }
-}
+  const [isMobile, setIsMobile] = useState(false);
 
-// create an event listener
-useEffect(() => {
-  window.addEventListener("resize", handleResize)
-})
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
 
   const [width, setWidth] = useState();
   const showWidth = () => {
-      const newWidth = ref.current.clientWidth;
-      setWidth(newWidth);
-  }
+    const newWidth = ref.current.clientWidth;
+    setWidth(newWidth);
+  };
   useEffect(() => {
     window.addEventListener("resize", showWidth);
   }, []);
@@ -88,8 +87,8 @@ useEffect(() => {
 
   const [touchPosition, setTouchPosition] = useState(null);
 
-const ref = useRef(null);
-const show = Number(width)/240  
+  const ref = useRef(null);
+  const show = Number(width) / 240;
   // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
@@ -135,17 +134,18 @@ const show = Number(width)/240
 
   return (
     <div className={classes.sliderContainer}>
-      <div className={classes.sliderWrapper } ref={ref} onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}>
-
-        {(!isMobile && currentIndex > 0) && (
+      <div
+        className={classes.sliderWrapper}
+        ref={ref}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
+        {!isMobile && currentIndex > 0 && (
           <button onClick={prev} className={classes.leftArrow}>
             &lt;
           </button>
         )}
-        <div
-          className={classes.sliderContentWrapper}
-        >
+        <div className={classes.sliderContentWrapper}>
           <div
             className={classes.sliderContent}
             style={{
@@ -155,7 +155,7 @@ const show = Number(width)/240
             {children}
           </div>
         </div>
-        {(!isMobile && currentIndex < length - show) && (
+        {!isMobile && currentIndex < length - show && (
           <button onClick={next} className={classes.rightArrow}>
             &gt;
           </button>
