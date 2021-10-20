@@ -29,7 +29,7 @@ export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
   theme?: DefaultTheme;
-  aggressive: boolean;
+  aggressive?: boolean;
 }
 
 export interface PurpleMap {
@@ -627,5 +627,5 @@ export interface CountdownProps {
 }
 
 export interface SliderProps {
-  children?:ReactNodeArray;
+  children?: ReactNodeArray;
 }
