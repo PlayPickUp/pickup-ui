@@ -37,6 +37,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   horizontal: {
     color: "grey",
   },
+  postForm: {
+    display: "block",
+    position: "relative",
+    width: "100%",
+    maxWidth: "400px",
+    "& ul": { listStyleType: "none" },
+  },
 }));
 
 const handleEditClick = () => {
@@ -155,6 +162,7 @@ const Picks = [
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
   const classes = useStyles();
+
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
