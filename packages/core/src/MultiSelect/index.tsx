@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, useRef } from "react";
+import React, { useRef } from "react";
 import MultiDownshift from "./MultiDownshift";
 import classNames from "classnames";
 import { createUseStyles, useTheme } from "react-jss";
@@ -171,16 +171,23 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           // note that the getRemoveButtonProps prop getter and the removeItem
           // action are coming from MultiDownshift composibility for the win!
           getRemoveButtonProps,
-          removeItem,
+          // removeItem,
           isOpen,
           inputValue,
           selectedItems,
           getItemProps,
           highlightedIndex,
+          toggleMenu,
         }) => (
           <div className={classes.root}>
             <Label htmlFor={props.field.name}>{label}</Label>
-            <div style={{ position: "relative" }}>
+            <div
+              onClick={() => {
+                toggleMenu();
+                !isOpen && input.current.focus();
+              }}
+              style={{ position: "relative" }}
+            >
               <div
                 className={classes.inputWrapper}
                 style={{ position: "relative" }}
@@ -191,6 +198,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                       <div key={`${item.value}${i}`} className={classes.tag}>
                         <span>{item.label}</span>
                         <button
+                          style={{ padding: 0 }}
                           {...getRemoveButtonProps({
                             item,
                           })}
@@ -210,22 +218,17 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 <input
                   {...getInputProps({
                     ref: input,
-                    placeholder: "Select items...",
+                    placeholder: "Search & Select items...",
                     className: classes.input,
-                    onKeyDown(event: KeyboardEvent) {
-                      if (
-                        event.key === "Backspace" &&
-                        !inputValue &&
-                        selectedItems.length > 0
-                      ) {
-                        removeItem(selectedItems[selectedItems.length - 1]);
-                      }
-                    },
-                    ...props.field,
                   })}
                 />
                 <button
                   {...getToggleButtonProps({
+                    // prevents the menu from immediately toggling
+                    // closed (due to our custom click handler above).
+                    onClick(event: MouseEvent) {
+                      event.stopPropagation();
+                    },
                     className: classes.iconButton,
                   })}
                 >
@@ -248,13 +251,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
               })}
             >
               <div>
-                <input
-                  {...getInputProps({
-                    placeholder: "Search items...",
-                    id: "search",
-                    className: classes.input,
-                  })}
-                />
                 {isOpen
                   ? getItems(items, inputValue).map(
                       (item: SelectItem, index: number) => (
