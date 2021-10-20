@@ -13,14 +13,15 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row nowrap",
     justifyContent: "space-around",
     alignItems: "center",
-    padding: theme.spacing.base * 2,
+    padding: theme.spacing.base * 4,
     "& * + *": {
       display: "inline-block",
     },
   },
   rule: {
     border: "none",
-    backgroundColor: "currentColor",
+    backgroundColor: (props: HorizontalRuleProps) =>
+      props.color ? props.color : theme.colors.grey.dark,
     height: 1,
     width: "100%",
   },
@@ -42,15 +43,19 @@ const HorizontalRule: React.FC<HorizontalRuleProps> = ({
   showBolt,
   className,
   style,
+  color,
 }) => {
-  const classes = useStyles();
+  const props: HorizontalRuleProps = {
+    color: color,
+  };
+  const classes = useStyles({ ...props });
   return (
     <div className={classNames(classes.root, className)} style={style}>
       {showBolt ? (
         <>
           <hr className={classes.rule} />
           <div className={classes.bolt}>
-            <Bolt fill="currentColor" />
+            <Bolt fill={color} />
           </div>
           <hr className={classes.rule} />{" "}
         </>

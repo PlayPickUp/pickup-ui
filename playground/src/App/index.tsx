@@ -182,10 +182,10 @@ const App: React.FC = () => {
       </div>
 
       {/* <div style={{ margin: 40, color: defaultTheme.colors.grey.light }}> */}
-      <HorizontalRule showBolt className={classes.horizontal} />
+      <HorizontalRule color="red" showBolt className={classes.horizontal} />
       {/* </div> */}
       <div style={{ margin: 40, color: "purple" }}>
-        <HorizontalRule />
+        <HorizontalRule color="red" />
       </div>
 
       <div style={{ padding: 40 }}>

@@ -592,6 +592,7 @@ export interface HorizontalRuleProps {
   showBolt?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
 }
 
 /**
