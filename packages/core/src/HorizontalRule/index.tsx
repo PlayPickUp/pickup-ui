@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 
-import bolt from "./bolt.svg";
+import Bolt from "./bolt";
 
 import { DefaultTheme, HorizontalRuleProps } from "../types";
 
@@ -20,7 +20,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   rule: {
     border: "none",
-    backgroundColor: theme.colors.grey.base,
+    backgroundColor: "currentColor",
     height: 1,
     width: "100%",
   },
@@ -50,7 +50,7 @@ const HorizontalRule: React.FC<HorizontalRuleProps> = ({
         <>
           <hr className={classes.rule} />
           <div className={classes.bolt}>
-            <img src={bolt} alt="" role="presentation" aria-hidden={true} />
+            <Bolt fill="currentColor" />
           </div>
           <hr className={classes.rule} />{" "}
         </>
