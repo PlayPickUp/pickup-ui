@@ -38,7 +38,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       objectFit: "contain",
     },
   },
-  expandedFeaturedIgmage: {
+  expandedFeaturedImage: {
     order: -2,
     "& > div": {
       height: "140px",
@@ -48,7 +48,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       backgroundPosition: "center center",
       borderBottomLeftRadius: 0,
       borderTopRightRadius: 0,
-      width: "140px",
+      width: "140",
       objectFit: "contain",
     },
   },
@@ -145,7 +145,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
       <div>
         <a
           className={
-            expanded ? classes.expandedFeaturedIgmage : classes.featuredImage
+            expanded ? classes.expandedFeaturedImage : classes.featuredImage
           }
           title={title}
         >
