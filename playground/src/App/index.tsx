@@ -36,7 +36,6 @@ import { Create, Countdown, Pick } from "@playpickup/icons";
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   horizontal: {
     color: "grey",
-    // fill: "red",
   },
 }));
 

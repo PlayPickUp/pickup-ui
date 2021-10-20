@@ -618,6 +618,10 @@ export interface FeedCardProps {
   expanded: boolean;
 }
 
+export interface BoltProps {
+  fill: string;
+}
+
 /**
  * Countdown Props
  */

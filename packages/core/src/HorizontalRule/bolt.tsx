@@ -1,6 +1,7 @@
 import React from "react";
+import { BoltProps } from "..";
 
-const Bolt = (props) => {
+const Bolt: React.FC<BoltProps> = (props) => {
   return (
     <svg
       width="15"
