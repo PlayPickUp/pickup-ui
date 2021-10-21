@@ -592,6 +592,7 @@ export interface HorizontalRuleProps {
   showBolt?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
 }
 
 /**
@@ -616,6 +617,10 @@ export interface FeedCardProps {
   picks?: Picks[];
   buttonProps?: ButtonProps;
   expanded: boolean;
+}
+
+export interface BoltProps {
+  fill: string;
 }
 
 /**

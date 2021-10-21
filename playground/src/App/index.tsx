@@ -28,8 +28,23 @@ import {
   Hero,
   Card,
   HorizontalRule,
+  createUseStyles,
+  DefaultTheme,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
+
+const useStyles = createUseStyles((theme: DefaultTheme) => ({
+  horizontal: {
+    color: "grey",
+  },
+  postForm: {
+    display: "block",
+    position: "relative",
+    width: "100%",
+    maxWidth: "400px",
+    "& ul": { listStyleType: "none" },
+  },
+}));
 
 const handleEditClick = () => {
   console.log("handledEditClick");
@@ -146,6 +161,7 @@ const Picks = [
 
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
+  const classes = useStyles();
 
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
@@ -165,11 +181,11 @@ const App: React.FC = () => {
         </Typography>
       </div>
 
-      <div style={{ margin: 40 }}>
-        <HorizontalRule showBolt />
-      </div>
-      <div style={{ margin: 40 }}>
-        <HorizontalRule />
+      {/* <div style={{ margin: 40, color: defaultTheme.colors.grey.light }}> */}
+      <HorizontalRule color="red" showBolt className={classes.horizontal} />
+      {/* </div> */}
+      <div style={{ margin: 40, color: "purple" }}>
+        <HorizontalRule color="red" />
       </div>
 
       <div style={{ padding: 40 }}>
