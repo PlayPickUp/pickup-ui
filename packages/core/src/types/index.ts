@@ -11,12 +11,21 @@ import React, {
 } from "react";
 import { StyleSheet } from "jss";
 
-// Default JSS type inexplicably doesn't account for options.jss.id
+/**
+ *
+ *
+ *  JSS Provider types
+ *
+ */
+
+export interface SpecificityPluginProps {
+  repeat?: number;
+  selector?: string;
+}
+
 export type JssStyleSheet = StyleSheet & {
   options: {
-    jss: {
-      id: number;
-    };
+    increaseSpecificity: boolean;
   };
 };
 
@@ -592,6 +601,7 @@ export interface HorizontalRuleProps {
   showBolt?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
 }
 
 /**
@@ -616,6 +626,10 @@ export interface FeedCardProps {
   picks?: Picks[];
   buttonProps?: ButtonProps;
   expanded: boolean;
+}
+
+export interface BoltProps {
+  fill: string;
 }
 
 /**
