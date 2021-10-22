@@ -20,7 +20,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   sliderContent: {
     display: "flex",
-    transition: "all 250ms linear",
+    transition: "all 240ms linear",
     msOverflowStyle: "none" /* hide scrollbar in IE and Edge */,
     scrollbarWidth: "none" /* hide scrollbar in Firefox */,
   },
@@ -88,7 +88,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
   const [touchPosition, setTouchPosition] = useState(null);
 
   const ref = useRef(null);
-  const show = Number(width) / 240;
+  const show = Number(width) / 220;
   // Set the length to match current children from props
   useEffect(() => {
     setLength(children.length);
