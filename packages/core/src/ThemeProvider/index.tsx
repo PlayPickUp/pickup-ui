@@ -1,12 +1,11 @@
 import React from "react";
-import { JssProvider, ThemeProvider as JSSThemeProvider } from "react-jss";
-import { createGenerateId as generateIdDefault } from "jss";
+import { jss, JssProvider, ThemeProvider as JSSThemeProvider } from "react-jss";
+import { increaseSpecificity } from "./specificityPlugin";
 import merge from "lodash/merge";
 
 import { defaultTheme } from "./defaultTheme";
 
 import { ThemeProviderProps } from "../types";
-import { increaseSpecificity } from "./aggressiveSpecificity";
 import GlobalsAndReset from "./GlobalsAndReset";
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
@@ -16,12 +15,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   aggressive = false,
   ...rest
 }) => {
+  if (aggressive) jss.use(increaseSpecificity());
   const mergedTheme = theme ? merge(defaultTheme, theme) : defaultTheme;
   return (
-    <JssProvider
-      classNamePrefix="PU--"
-      generateId={aggressive ? increaseSpecificity() : generateIdDefault()}
-    >
+    <JssProvider jss={jss} classNamePrefix="PU--">
       <JSSThemeProvider theme={mergedTheme} {...rest}>
         {withReset ? <GlobalsAndReset>{children}</GlobalsAndReset> : children}
       </JSSThemeProvider>

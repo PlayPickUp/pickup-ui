@@ -11,12 +11,21 @@ import React, {
 } from "react";
 import { StyleSheet } from "jss";
 
-// Default JSS type inexplicably doesn't account for options.jss.id
+/**
+ *
+ *
+ *  JSS Provider types
+ *
+ */
+
+export interface SpecificityPluginProps {
+  repeat?: number;
+  selector?: string;
+}
+
 export type JssStyleSheet = StyleSheet & {
   options: {
-    jss: {
-      id: number;
-    };
+    increaseSpecificity: boolean;
   };
 };
 
