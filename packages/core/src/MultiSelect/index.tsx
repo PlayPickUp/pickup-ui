@@ -144,7 +144,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   subtractIcon: {
     marginLeft: theme.spacing.base,
-    right: -7,
+    // right: -7,
   },
 }));
 
@@ -198,7 +198,9 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                       <div key={`${item.value}${i}`} className={classes.tag}>
                         <span>{item.label}</span>
                         <button
-                          style={{ padding: 0 }}
+                          style={{
+                            padding: 0,
+                          }}
                           {...getRemoveButtonProps({
                             item,
                           })}
