@@ -6,7 +6,7 @@ exports[`Horizontal Rule renders without crashing, matches snapshot 1`] = `
     class="PU--root-0-2-1"
   >
     <hr
-      class="PU--rule-0-2-2"
+      class="PU--rule-0-2-2 PU--rule-d0-0-2-4"
     />
   </div>
 </div>
@@ -18,20 +18,26 @@ exports[`Horizontal Rule with Bolt renders without crashing, matches snapshot 1`
     class="PU--root-0-2-1"
   >
     <hr
-      class="PU--rule-0-2-2"
+      class="PU--rule-0-2-2 PU--rule-d0-0-2-4"
     />
     <div
       class="PU--bolt-0-2-3"
     >
-      <img
-        alt=""
-        aria-hidden="true"
-        role="presentation"
-        src="test-file-stub"
-      />
+      <svg
+        height="18"
+        viewBox="0 0 15 18"
+        width="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8.75469 0L8.28319 6.96H14.4L5.64531 18L6.11681 11.04H0L8.75469 0Z"
+          fill-rule="evenodd"
+        />
+      </svg>
     </div>
     <hr
-      class="PU--rule-0-2-2"
+      class="PU--rule-0-2-2 PU--rule-d0-0-2-4"
     />
      
   </div>

@@ -11,12 +11,21 @@ import React, {
 } from "react";
 import { StyleSheet } from "jss";
 
-// Default JSS type inexplicably doesn't account for options.jss.id
+/**
+ *
+ *
+ *  JSS Provider types
+ *
+ */
+
+export interface SpecificityPluginProps {
+  repeat?: number;
+  selector?: string;
+}
+
 export type JssStyleSheet = StyleSheet & {
   options: {
-    jss: {
-      id: number;
-    };
+    increaseSpecificity: boolean;
   };
 };
 
@@ -29,7 +38,7 @@ export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
   theme?: DefaultTheme;
-  aggressive: boolean;
+  aggressive?: boolean;
 }
 
 export interface PurpleMap {
@@ -592,6 +601,7 @@ export interface HorizontalRuleProps {
   showBolt?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
 }
 
 /**
@@ -618,6 +628,10 @@ export interface FeedCardProps {
   expanded: boolean;
 }
 
+export interface BoltProps {
+  fill: string;
+}
+
 /**
  * Countdown Props
  */
@@ -627,5 +641,5 @@ export interface CountdownProps {
 }
 
 export interface SliderProps {
-  children?:ReactNodeArray;
+  children?: ReactNodeArray;
 }

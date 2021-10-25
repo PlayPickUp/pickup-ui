@@ -1,0 +1,6 @@
+.Playground button:not(:hover):not(:active):not(.has-background) {
+  background-color: #000;
+}
+.Playground h1 {
+  font-family: "Comic Sans", cursive;
+}
