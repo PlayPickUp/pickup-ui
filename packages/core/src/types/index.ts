@@ -98,6 +98,9 @@ export interface FontStyles {
   title: FontProperties;
   heading2: FontProperties;
   heading3: FontProperties;
+  heading4: FontProperties;
+  heading5: FontProperties;
+  heading6: FontProperties;
   body: FontProperties;
   body2: FontProperties;
 }
