@@ -144,7 +144,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   subtractIcon: {
     marginLeft: theme.spacing.base,
-    // right: -7,
   },
 }));
 
@@ -171,7 +170,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           // note that the getRemoveButtonProps prop getter and the removeItem
           // action are coming from MultiDownshift composibility for the win!
           getRemoveButtonProps,
-          // removeItem,
           isOpen,
           inputValue,
           selectedItems,
