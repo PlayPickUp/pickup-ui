@@ -24,7 +24,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   container: {
     float: "left",
-    width: 223,
+    width: 210,
     [theme.mediaQuery(theme.breakpoints.medium)]: {
       width: 300,
     },
@@ -93,7 +93,7 @@ const Countdown: React.FC<CountdownProps> = (props) => {
       setDays(days);
       setHours(hours);
       setMinutes(minutes);
-      }, 1000);
+    }, 1000);
     return () => {
       clearInterval(timerID);
     };

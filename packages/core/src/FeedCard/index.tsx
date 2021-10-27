@@ -58,7 +58,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row wrap",
     alignItems: "center",
     width: "100%",
-    margin:theme.spacing.base
+    margin: theme.spacing.base,
   },
   publisherHeadline: {
     flex: "0 1 calc(100% - 58px)",
@@ -88,11 +88,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     border: "1px solid #E5E3E8",
     boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.08)",
     borderRadius: "8px",
-    maxWidth: "420px",
+    maxWidth: "350px",
     minHeight: "140px",
     height: "100%",
     display: "flex",
     flexDirection: "row",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      maxWidth: "420px",
+    },
   },
   button: {
     fontSize: 11,
@@ -111,13 +114,19 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "16px",
     height: "16px",
     marginLeft: theme.spacing.base * 2,
-
   },
   body: {
     display: "inline-block",
     margin: theme.spacing.base,
     fontSize: 12,
     marginRight: theme.spacing.base,
+  },
+  rightContainer: {
+    maxWidth: (props) => (props.expanded ? "210px" : "200px"),
+    wordWrap: "break-word",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      maxWidth: (props) => (props.expanded ? "280px" : "200px"),
+    },
   },
 }));
 
@@ -138,7 +147,10 @@ const FeedCard: React.FC<FeedCardProps> = ({
   picks,
   expanded,
 }) => {
-  const classes = useStyles();
+  const props = {
+    expanded: expanded,
+  };
+  const classes = useStyles({ ...props });
 
   return (
     <div className={expanded ? classes.expandedCard : classes.card}>
@@ -153,12 +165,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
         </a>
       </div>
 
-      <div
-        style={{
-          maxWidth: `${expanded ? "280px" : "200px"}`,
-          wordWrap: "break-word",
-        }}
-      >
+      <div className={classes.rightContainer}>
         <div className={classes.publisherRow}>
           <img
             src={publisherIcon}
