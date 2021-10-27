@@ -31,13 +31,13 @@ exports[`Renders and matches snapshot 1`] = `
           title="Prime Time Sports"
         >
           <p
-            class="PU--root-0-2-14 PU--root-d3-0-2-20 PU--body-0-2-18 PU--body-0-2-13"
+            class="PU--root-0-2-14 PU--root-d6-0-2-23 PU--body-0-2-21 PU--body-0-2-13"
           >
             Prime Time Sports
           </p>
         </a>
         <span
-          class="PU--root-0-2-14 PU--root-d4-0-2-21 PU--body-0-2-18 PU--body-0-2-13"
+          class="PU--root-0-2-14 PU--root-d7-0-2-24 PU--body-0-2-21 PU--body-0-2-13"
         >
           23m
         </span>
@@ -46,7 +46,7 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-14 PU--root-d5-0-2-22 PU--heading3-0-2-17 PU--h3-0-2-11"
+          class="PU--root-0-2-14 PU--root-d8-0-2-25 PU--heading3-0-2-17 PU--h3-0-2-11"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
@@ -55,13 +55,13 @@ exports[`Renders and matches snapshot 1`] = `
         style="padding: 8px;"
       >
         <button
-          class="PU--root-0-2-23 PU--root-d0-0-2-27 PU--light-0-2-25 PU--button-0-2-10"
+          class="PU--root-0-2-26 PU--root-d0-0-2-30 PU--light-0-2-28 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Ravens
         </button>
         <button
-          class="PU--root-0-2-23 PU--root-d1-0-2-28 PU--light-0-2-25 PU--button-0-2-10"
+          class="PU--root-0-2-26 PU--root-d1-0-2-31 PU--light-0-2-28 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Chiefs
@@ -71,13 +71,13 @@ exports[`Renders and matches snapshot 1`] = `
         style="padding: 2px 10px 10px 10px;"
       >
         <div
-          class="PU--container-0-2-31"
+          class="PU--container-0-2-34"
         >
           <div
-            class="PU--timer-0-2-29"
+            class="PU--timer-0-2-32"
           >
             <svg
-              class="PU--timerIcon-0-2-32"
+              class="PU--timerIcon-0-2-35"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -90,16 +90,16 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-14 PU--root-d6-0-2-38 PU--body-0-2-18 PU--closed-0-2-34"
+              class="PU--root-0-2-14 PU--root-d9-0-2-41 PU--body-0-2-21 PU--closed-0-2-37"
             >
               CLOSED
             </span>
           </div>
           <div
-            class="PU--pick-0-2-30"
+            class="PU--pick-0-2-33"
           >
             <svg
-              class="PU--pickedIcon-0-2-33 PU--pickedIcon-d2-0-2-36"
+              class="PU--pickedIcon-0-2-36 PU--pickedIcon-d2-0-2-39"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -114,7 +114,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-14 PU--root-d7-0-2-39 PU--body-0-2-18 PU--picked-0-2-35 PU--picked-d3-0-2-37"
+              class="PU--root-0-2-14 PU--root-d10-0-2-42 PU--body-0-2-21 PU--picked-0-2-38 PU--picked-d3-0-2-40"
             >
               Picked
             </span>
@@ -152,13 +152,13 @@ exports[`Renders and matches snapshot 1`] = `
           title="Prime Time Sports"
         >
           <p
-            class="PU--root-0-2-14 PU--root-d8-0-2-40 PU--body-0-2-18 PU--body-0-2-13"
+            class="PU--root-0-2-14 PU--root-d11-0-2-43 PU--body-0-2-21 PU--body-0-2-13"
           >
             Prime Time Sports
           </p>
         </a>
         <span
-          class="PU--root-0-2-14 PU--root-d9-0-2-41 PU--body-0-2-18 PU--body-0-2-13"
+          class="PU--root-0-2-14 PU--root-d12-0-2-44 PU--body-0-2-21 PU--body-0-2-13"
         >
           23m
         </span>
@@ -167,7 +167,7 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-14 PU--root-d10-0-2-42 PU--heading3-0-2-17 PU--h3-0-2-11"
+          class="PU--root-0-2-14 PU--root-d13-0-2-45 PU--heading3-0-2-17 PU--h3-0-2-11"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
@@ -176,13 +176,13 @@ exports[`Renders and matches snapshot 1`] = `
         style="padding: 8px;"
       >
         <button
-          class="PU--root-0-2-23 PU--root-d2-0-2-43 PU--light-0-2-25 PU--button-0-2-10"
+          class="PU--root-0-2-26 PU--root-d2-0-2-46 PU--light-0-2-28 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Ravens
         </button>
         <button
-          class="PU--root-0-2-23 PU--root-d3-0-2-44 PU--light-0-2-25 PU--button-0-2-10"
+          class="PU--root-0-2-26 PU--root-d3-0-2-47 PU--light-0-2-28 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Chiefs
@@ -192,13 +192,13 @@ exports[`Renders and matches snapshot 1`] = `
         style="padding: 2px 10px 10px 10px;"
       >
         <div
-          class="PU--container-0-2-31"
+          class="PU--container-0-2-34"
         >
           <div
-            class="PU--timer-0-2-29"
+            class="PU--timer-0-2-32"
           >
             <svg
-              class="PU--timerIcon-0-2-32"
+              class="PU--timerIcon-0-2-35"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -211,16 +211,16 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-14 PU--root-d11-0-2-47 PU--body-0-2-18 PU--closed-0-2-34"
+              class="PU--root-0-2-14 PU--root-d14-0-2-50 PU--body-0-2-21 PU--closed-0-2-37"
             >
               CLOSED
             </span>
           </div>
           <div
-            class="PU--pick-0-2-30"
+            class="PU--pick-0-2-33"
           >
             <svg
-              class="PU--pickedIcon-0-2-33 PU--pickedIcon-d4-0-2-45"
+              class="PU--pickedIcon-0-2-36 PU--pickedIcon-d4-0-2-48"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-14 PU--root-d12-0-2-48 PU--body-0-2-18 PU--picked-0-2-35 PU--picked-d5-0-2-46"
+              class="PU--root-0-2-14 PU--root-d15-0-2-51 PU--body-0-2-21 PU--picked-0-2-38 PU--picked-d5-0-2-49"
             >
               Picked
             </span>

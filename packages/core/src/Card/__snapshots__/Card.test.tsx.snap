@@ -22,38 +22,38 @@ exports[`Renders and matches snapshot 1`] = `
         class="PU--eyebrow-0-2-4"
       >
         <p
-          class="PU--root-0-2-7 PU--root-d3-0-2-13 PU--body2-0-2-12"
+          class="PU--root-0-2-7 PU--root-d6-0-2-16 PU--body2-0-2-15"
           style="color: rgb(122, 96, 255);"
         >
           CROSSNET
         </p>
         <p
-          class="PU--root-0-2-7 PU--root-d4-0-2-14 PU--body2-0-2-12"
+          class="PU--root-0-2-7 PU--root-d7-0-2-17 PU--body2-0-2-15"
           style="color: rgb(97, 94, 102);"
         >
           $20 Value
         </p>
       </div>
       <p
-        class="PU--root-0-2-7 PU--root-d5-0-2-15 PU--body-0-2-11 PU--heading-0-2-5"
+        class="PU--root-0-2-7 PU--root-d8-0-2-18 PU--body-0-2-14 PU--heading-0-2-5"
       >
         CROSSNET Four-Way Volleyball
       </p>
       <p
-        class="PU--root-0-2-7 PU--root-d6-0-2-16 PU--body-0-2-11 PU--description-0-2-6"
+        class="PU--root-0-2-7 PU--root-d9-0-2-19 PU--body-0-2-14 PU--description-0-2-6"
       >
         The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors.
       </p>
       <a
-        class="PU--root-0-2-18"
+        class="PU--root-0-2-21"
         data-testid="progess-button"
         href="https://www.playpickup.com"
       >
         <div
-          class="PU--progressBar-0-2-19 PU--progressBar-d1-0-2-25"
+          class="PU--progressBar-0-2-22 PU--progressBar-d1-0-2-28"
         />
         <div
-          class="PU--textContainer-0-2-23"
+          class="PU--textContainer-0-2-26"
         >
           150 / 250 points
         </div>

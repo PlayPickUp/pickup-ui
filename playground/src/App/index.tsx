@@ -200,6 +200,14 @@ const App: React.FC = () => {
           >
             👋 Howdy human!!!
           </Typography>
+          <Typography variant="title">title</Typography>
+          <Typography variant="heading2">heading 2</Typography>
+          <Typography variant="heading3">heading 3</Typography>
+
+          <Typography variant="heading4">heading 4</Typography>
+          <Typography variant="heading5">heading 5</Typography>
+          <Typography variant="heading6">heading 6</Typography>
+
           <Typography>
             Feel free to throw some components in here for testing. It's your
             lil component playground!
