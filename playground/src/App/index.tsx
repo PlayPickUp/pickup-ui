@@ -720,7 +720,7 @@ const App: React.FC = () => {
           <Countdown color="red" />
           countdown <Pick color="red" /> Pick
         </div>
-        <div>MULTI SELECT ENHANCE ZONE</div>
+        {/* <div>MULTI SELECT ENHANCE ZONE</div>
         <Formik
           initialValues={{ selected_tags: "" }}
           validationSchema={Yup.object().shape({
@@ -753,7 +753,7 @@ const App: React.FC = () => {
               />
             </Form>
           )}
-        </Formik>
+        </Formik> */}
       </ThemeProvider>
     </div>
   );

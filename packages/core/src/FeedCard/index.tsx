@@ -58,7 +58,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row wrap",
     alignItems: "center",
     width: "100%",
-    margin: theme.spacing.base,
+    margin: (props) =>
+      props.expanded ? `0 ${theme.spacing.base}` : theme.spacing.base,
   },
   publisherHeadline: {
     flex: "0 1 calc(100% - 58px)",
@@ -106,9 +107,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   h3: {
     fontWeight: "normal",
-    fontSize: 18,
+    fontSize: (props) => (props.expanded ? 15 : 18),
     letterSpacing: "-0.1px",
+    lineHeight: (props) => (props.expanded ? "20px" : null),
     padding: "0 10px",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      fontSize: 18,
+    },
   },
   publisherImage: {
     width: "16px",
@@ -127,6 +132,15 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     [theme.mediaQuery(theme.breakpoints.small)]: {
       maxWidth: (props) => (props.expanded ? "280px" : "200px"),
     },
+  },
+  pick: {
+    padding: "4px 8px",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      padding: "8px",
+    },
+  },
+  countdown: {
+    padding: "2px 10px 10px 10px",
   },
 }));
 
@@ -208,11 +222,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           </Typography>
         </a>
 
-        <div
-          style={{
-            padding: "8px",
-          }}
-        >
+        <div className={classes.pick}>
           {picks.map((pick) => {
             return (
               <Button key={pick.value} color="light" className={classes.button}>
@@ -222,11 +232,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           })}
         </div>
 
-        <div
-          style={{
-            padding: "2px 10px 10px 10px",
-          }}
-        >
+        <div className={classes.countdown}>
           <Countdown close_at={timeLeft} has_fan_pick={pickCount} />
         </div>
       </div>
