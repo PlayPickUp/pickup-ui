@@ -16,10 +16,10 @@ exports[`Renders and matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d6-0-2-19"
+      class="PU--rightContainer-0-2-14 PU--rightContainer-d5-0-2-19"
     >
       <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d4-0-2-17"
+        class="PU--publisherRow-0-2-5 PU--publisherRow-d3-0-2-17"
       >
         <img
           alt="Prime Time Sports"
@@ -31,13 +31,13 @@ exports[`Renders and matches snapshot 1`] = `
           title="Prime Time Sports"
         >
           <p
-            class="PU--root-0-2-20 PU--root-d6-0-2-29 PU--body-0-2-27 PU--body-0-2-13"
+            class="PU--root-0-2-21 PU--root-d6-0-2-30 PU--body-0-2-28 PU--body-0-2-13"
           >
             Prime Time Sports
           </p>
         </a>
         <span
-          class="PU--root-0-2-20 PU--root-d7-0-2-30 PU--body-0-2-27 PU--body-0-2-13"
+          class="PU--root-0-2-21 PU--root-d7-0-2-31 PU--body-0-2-28 PU--body-0-2-13"
         >
           23m
         </span>
@@ -46,22 +46,22 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-20 PU--root-d8-0-2-31 PU--heading3-0-2-23 PU--h3-0-2-11 PU--h3-d5-0-2-18"
+          class="PU--root-0-2-21 PU--root-d8-0-2-32 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d4-0-2-18"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
       </a>
       <div
-        class="PU--pick-0-2-15"
+        class="PU--pick-0-2-15 PU--pick-d7-0-2-20"
       >
         <button
-          class="PU--root-0-2-32 PU--root-d0-0-2-36 PU--light-0-2-34 PU--button-0-2-10"
+          class="PU--root-0-2-33 PU--root-d0-0-2-37 PU--light-0-2-35 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Ravens
         </button>
         <button
-          class="PU--root-0-2-32 PU--root-d1-0-2-37 PU--light-0-2-34 PU--button-0-2-10"
+          class="PU--root-0-2-33 PU--root-d1-0-2-38 PU--light-0-2-35 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Chiefs
@@ -71,13 +71,13 @@ exports[`Renders and matches snapshot 1`] = `
         class="PU--countdown-0-2-16"
       >
         <div
-          class="PU--container-0-2-40"
+          class="PU--container-0-2-41"
         >
           <div
-            class="PU--timer-0-2-38"
+            class="PU--timer-0-2-39"
           >
             <svg
-              class="PU--timerIcon-0-2-41"
+              class="PU--timerIcon-0-2-42"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -90,16 +90,16 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-20 PU--root-d9-0-2-47 PU--body-0-2-27 PU--closed-0-2-43"
+              class="PU--root-0-2-21 PU--root-d9-0-2-48 PU--body-0-2-28 PU--closed-0-2-44"
             >
               CLOSED
             </span>
           </div>
           <div
-            class="PU--pick-0-2-39"
+            class="PU--pick-0-2-40"
           >
             <svg
-              class="PU--pickedIcon-0-2-42 PU--pickedIcon-d2-0-2-45"
+              class="PU--pickedIcon-0-2-43 PU--pickedIcon-d2-0-2-46"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -114,7 +114,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-20 PU--root-d10-0-2-48 PU--body-0-2-27 PU--picked-0-2-44 PU--picked-d3-0-2-46"
+              class="PU--root-0-2-21 PU--root-d10-0-2-49 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d3-0-2-47"
             >
               Picked
             </span>
@@ -137,10 +137,10 @@ exports[`Renders and matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d10-0-2-51"
+      class="PU--rightContainer-0-2-14 PU--rightContainer-d10-0-2-52"
     >
       <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d8-0-2-49"
+        class="PU--publisherRow-0-2-5 PU--publisherRow-d8-0-2-50"
       >
         <img
           alt="Prime Time Sports"
@@ -152,13 +152,13 @@ exports[`Renders and matches snapshot 1`] = `
           title="Prime Time Sports"
         >
           <p
-            class="PU--root-0-2-20 PU--root-d11-0-2-52 PU--body-0-2-27 PU--body-0-2-13"
+            class="PU--root-0-2-21 PU--root-d11-0-2-54 PU--body-0-2-28 PU--body-0-2-13"
           >
             Prime Time Sports
           </p>
         </a>
         <span
-          class="PU--root-0-2-20 PU--root-d12-0-2-53 PU--body-0-2-27 PU--body-0-2-13"
+          class="PU--root-0-2-21 PU--root-d12-0-2-55 PU--body-0-2-28 PU--body-0-2-13"
         >
           23m
         </span>
@@ -167,22 +167,22 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-20 PU--root-d13-0-2-54 PU--heading3-0-2-23 PU--h3-0-2-11 PU--h3-d9-0-2-50"
+          class="PU--root-0-2-21 PU--root-d13-0-2-56 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d9-0-2-51"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
       </a>
       <div
-        class="PU--pick-0-2-15"
+        class="PU--pick-0-2-15 PU--pick-d12-0-2-53"
       >
         <button
-          class="PU--root-0-2-32 PU--root-d2-0-2-55 PU--light-0-2-34 PU--button-0-2-10"
+          class="PU--root-0-2-33 PU--root-d2-0-2-57 PU--light-0-2-35 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Ravens
         </button>
         <button
-          class="PU--root-0-2-32 PU--root-d3-0-2-56 PU--light-0-2-34 PU--button-0-2-10"
+          class="PU--root-0-2-33 PU--root-d3-0-2-58 PU--light-0-2-35 PU--button-0-2-10"
           data-testid="pickup-button"
         >
           Chiefs
@@ -192,13 +192,13 @@ exports[`Renders and matches snapshot 1`] = `
         class="PU--countdown-0-2-16"
       >
         <div
-          class="PU--container-0-2-40"
+          class="PU--container-0-2-41"
         >
           <div
-            class="PU--timer-0-2-38"
+            class="PU--timer-0-2-39"
           >
             <svg
-              class="PU--timerIcon-0-2-41"
+              class="PU--timerIcon-0-2-42"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -211,16 +211,16 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-20 PU--root-d14-0-2-59 PU--body-0-2-27 PU--closed-0-2-43"
+              class="PU--root-0-2-21 PU--root-d14-0-2-61 PU--body-0-2-28 PU--closed-0-2-44"
             >
               CLOSED
             </span>
           </div>
           <div
-            class="PU--pick-0-2-39"
+            class="PU--pick-0-2-40"
           >
             <svg
-              class="PU--pickedIcon-0-2-42 PU--pickedIcon-d4-0-2-57"
+              class="PU--pickedIcon-0-2-43 PU--pickedIcon-d4-0-2-59"
               fill="none"
               height="24"
               viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ exports[`Renders and matches snapshot 1`] = `
               />
             </svg>
             <span
-              class="PU--root-0-2-20 PU--root-d15-0-2-60 PU--body-0-2-27 PU--picked-0-2-44 PU--picked-d5-0-2-58"
+              class="PU--root-0-2-21 PU--root-d15-0-2-62 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d5-0-2-60"
             >
               Picked
             </span>

@@ -134,10 +134,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
   },
   pick: {
-    padding: "4px 8px",
-    [theme.mediaQuery(theme.breakpoints.small)]: {
-      padding: "8px",
-    },
+    padding: (props) => (props.expanded ? "4px 8px" : "8px"),
   },
   countdown: {
     padding: "2px 10px 10px 10px",
