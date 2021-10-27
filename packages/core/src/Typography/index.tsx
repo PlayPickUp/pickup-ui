@@ -34,6 +34,24 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       ...theme.typography.fontStyles.desktop.heading3,
     },
   },
+  heading4: {
+    ...theme.typography.fontStyles.mobile.heading4,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading4,
+    },
+  },
+  heading5: {
+    ...theme.typography.fontStyles.mobile.heading5,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading5,
+    },
+  },
+  heading6: {
+    ...theme.typography.fontStyles.mobile.heading6,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading6,
+    },
+  },
   body: {
     ...theme.typography.fontStyles.mobile.body,
     "@media screen and (min-width: 787px):": {
@@ -85,6 +103,9 @@ const Typography: React.FC<
         [classes.body2]: variant === "body2",
         [classes.heading2]: variant === "heading2",
         [classes.heading3]: variant === "heading3",
+        [classes.heading4]: variant === "heading4",
+        [classes.heading5]: variant === "heading5",
+        [classes.heading6]: variant === "heading6",
         [className]: className,
       })}
       style={style}
