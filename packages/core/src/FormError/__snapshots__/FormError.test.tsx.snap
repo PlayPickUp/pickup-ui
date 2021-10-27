@@ -7,7 +7,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     style="margin-top: 4px;"
   >
     <p
-      class="PU--root-0-2-1 PU--root-d3-0-2-7 PU--body-0-2-5"
+      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--body-0-2-8"
     >
       This error should render
     </p>
