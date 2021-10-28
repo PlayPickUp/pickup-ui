@@ -16,10 +16,10 @@ exports[`Renders and matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d5-0-2-19"
+      class="PU--rightContainer-0-2-14 PU--rightContainer-d7-0-2-19"
     >
       <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d3-0-2-17"
+        class="PU--publisherRow-0-2-5 PU--publisherRow-d4-0-2-17"
       >
         <img
           alt="Prime Time Sports"
@@ -46,13 +46,13 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-21 PU--root-d8-0-2-32 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d4-0-2-18"
+          class="PU--root-0-2-21 PU--root-d8-0-2-32 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d5-0-2-18"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
       </a>
       <div
-        class="PU--pick-0-2-15 PU--pick-d7-0-2-20"
+        class="PU--pick-0-2-15 PU--pick-d9-0-2-20"
       >
         <button
           class="PU--root-0-2-33 PU--root-d0-0-2-37 PU--light-0-2-35 PU--button-0-2-10"
@@ -137,10 +137,10 @@ exports[`Renders and matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d10-0-2-52"
+      class="PU--rightContainer-0-2-14 PU--rightContainer-d14-0-2-52"
     >
       <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d8-0-2-50"
+        class="PU--publisherRow-0-2-5 PU--publisherRow-d11-0-2-50"
       >
         <img
           alt="Prime Time Sports"
@@ -167,13 +167,13 @@ exports[`Renders and matches snapshot 1`] = `
         title="Chiefs vs. Ravens Who wins?"
       >
         <h3
-          class="PU--root-0-2-21 PU--root-d13-0-2-56 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d9-0-2-51"
+          class="PU--root-0-2-21 PU--root-d13-0-2-56 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d12-0-2-51"
         >
           Chiefs vs. Ravens Who wins?
         </h3>
       </a>
       <div
-        class="PU--pick-0-2-15 PU--pick-d12-0-2-53"
+        class="PU--pick-0-2-15 PU--pick-d16-0-2-53"
       >
         <button
           class="PU--root-0-2-33 PU--root-d2-0-2-57 PU--light-0-2-35 PU--button-0-2-10"
