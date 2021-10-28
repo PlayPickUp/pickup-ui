@@ -112,7 +112,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     lineHeight: (props) => (props.expanded ? "20px" : null),
     padding: "0 10px",
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      fontSize: 18,
+      fontSize: (props) => (props.expanded ? 18 : 18),
+      lineHeight: (props) => (props.expanded ? "36px" : null),
     },
   },
   publisherImage: {
@@ -135,6 +136,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   pick: {
     padding: (props) => (props.expanded ? "4px 8px" : "8px"),
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      padding: (props) => (props.expanded ? "8px" : "8px"),
+    },
   },
   countdown: {
     padding: "2px 10px 10px 10px",
