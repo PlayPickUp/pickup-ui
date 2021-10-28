@@ -4,3 +4,8 @@
 .Playground h1 {
   font-family: "Comic Sans", cursive;
 }
+
+.Playground h1::after {
+  content: "\263A";
+  color: red;
+}

@@ -200,7 +200,9 @@ const App: React.FC = () => {
           >
             👋 Howdy human!!!
           </Typography>
-          <Typography variant="title">title</Typography>
+          <Typography variant="title" className={classes.title}>
+            title
+          </Typography>
           <Typography variant="heading2">heading 2</Typography>
           <Typography variant="heading3">heading 3</Typography>
 
