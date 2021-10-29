@@ -6,7 +6,7 @@
  **/
 
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
 
 import ThemeProvider from "../ThemeProvider";
@@ -31,7 +31,10 @@ const items: SelectItem[] = [
   },
 ];
 
-const FormComponent: React.FC<{ onSubmit: jest.Mock }> = ({ onSubmit }) => {
+const FormComponent: React.FC<{
+  onSubmit: jest.Mock;
+  initialValues: string[];
+}> = ({ onSubmit, initialValues }) => {
   const handleSubmit = async (values) => {
     await sleep(500);
     onSubmit(values);
@@ -41,7 +44,7 @@ const FormComponent: React.FC<{ onSubmit: jest.Mock }> = ({ onSubmit }) => {
       <div>
         <Formik
           initialValues={{
-            selectMany: "",
+            selectMany: initialValues,
           }}
           onSubmit={handleSubmit}
         >
@@ -62,8 +65,55 @@ const FormComponent: React.FC<{ onSubmit: jest.Mock }> = ({ onSubmit }) => {
 };
 
 const handleSubmit = jest.fn();
+const downArrow = { key: "Down", code: "Down", charCode: 40 };
+const enterKey = { key: "Enter", code: "Enter", charCode: 13 };
 
 test("MultiSelect renders without crashing, matches snapshot", () => {
-  const { container } = render(<FormComponent onSubmit={handleSubmit} />);
+  const { container } = render(
+    <FormComponent onSubmit={handleSubmit} initialValues={[]} />
+  );
   expect(container).toMatchSnapshot();
 });
+
+test("Selected item gets added to list", () => {
+  const { container, getByPlaceholderText } = render(
+    <FormComponent onSubmit={handleSubmit} initialValues={[]} />
+  );
+
+  const input = getByPlaceholderText("Search & Select items...");
+  fireEvent.keyDown(input, downArrow);
+  fireEvent.keyDown(input, enterKey);
+
+  expect(container.getElementsByTagName("span").length).toEqual(1);
+  cleanup;
+});
+
+/* Cannot get the button click to work */
+// test("Clicking item button removes it from the list", async () => {
+//   const { getByPlaceholderText, getByText, getByRole } = render(
+//     <FormComponent
+//       onSubmit={handleSubmit}
+//       initialValues={["Option 1", "Option 2"]}
+//     />
+//   );
+
+//   const input = getByPlaceholderText("Search & Select items...");
+//   fireEvent.keyDown(input, downArrow);
+//   act(() => {
+//     fireEvent.keyDown(input, enterKey);
+//   });
+
+//   await waitFor(() => {
+//     fireEvent.blur(input);
+//   });
+
+//   act(() => {
+//     fireEvent.click(getByRole("button", { name: /remove/i }));
+//   });
+
+//   await waitFor(() => {
+//     fireEvent.blur(input);
+//   });
+
+//   expect(getByText("Option 1")).toBeFalsy();
+// });
