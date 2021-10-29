@@ -46,7 +46,7 @@ exports[`Renders and matches snapshot 1`] = `
       </p>
       <a
         class="PU--root-0-2-21"
-        data-testid="progess-button"
+        data-testid="progress-button"
         href="https://www.playpickup.com"
       >
         <div

@@ -108,7 +108,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
   if (useSubmit) {
     return (
       <button
-        data-testid="progess-button"
+        data-testid="progress-button"
         className={classNames({
           [classes.root]: true,
           [classes.active]: active,
@@ -135,7 +135,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
   if (to) {
     return (
       <Link
-        data-testid="progess-button"
+        data-testid="progress-button"
         className={classNames({
           [classes.root]: true,
           [classes.active]: active,
@@ -159,7 +159,7 @@ const ProgressButton: React.FC<ProgressButtonProps> = ({
 
   return (
     <Element
-      data-testid="progess-button"
+      data-testid="progress-button"
       className={classNames({
         [classes.root]: true,
         [classes.active]: active,
