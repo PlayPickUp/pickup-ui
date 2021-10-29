@@ -56,7 +56,6 @@ test("Renders description", () => {
 test("Renders buttonProps", () => {
   const { getByText, getByTestId } = render(CardElement);
   expect(getByText("150 / 250 points")).toBeTruthy();
-  // console.log(getByTestId("progress-button"));
   expect(getByTestId("progress-button").getAttribute("href")).toEqual(
     "https://www.playpickup.com"
   );
