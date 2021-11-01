@@ -203,6 +203,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                           {...getRemoveButtonProps({
                             item,
                           })}
+                          type="button"
                         >
                           <Icon
                             className={classes.subtractIcon}

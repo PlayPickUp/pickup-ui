@@ -114,39 +114,6 @@ test("Props are passed and rendered", () => {
   cleanup;
 });
 
-/* TO DO: Test remove button */
-/* Cannot get the button click to work */
-// test("Clicking item button removes it from the list", async () => {
-//   const { getByPlaceholderText, getByText, getAllByRole } = render(
-//     <FormComponent onSubmit={handleSubmit} />
-//   );
-
-//   const input = getByPlaceholderText("Search & Select items...");
-//   fireEvent.keyDown(input, downArrow);
-//   act(() => {
-//     fireEvent.keyDown(input, enterKey);
-//   });
-
-//   await waitFor(() => {
-//     fireEvent.blur(input);
-//   });
-
-//   const elementToRemove = getAllByRole("button")[0];
-
-//   act(() => {
-//     // fireEvent.click(elementToRemove.nextElementSibling);
-//     fireEvent.click(elementToRemove);
-//   });
-
-//   await waitForElementToBeRemoved(() => elementToRemove);
-
-//   await waitFor(() => {
-//     fireEvent.blur(input);
-//   });
-
-//   expect(getByText("Option 1")).toBeFalsy();
-// });
-
 test("Values are passed to form submission", async () => {
   const { getByPlaceholderText, getByRole } = render(
     <FormComponent onSubmit={handleSubmit} />
