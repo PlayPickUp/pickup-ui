@@ -48,6 +48,17 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     maxWidth: "400px",
     "& ul": { listStyleType: "none" },
   },
+  playground: {
+    display: "flex",
+    position: "relative",
+    width: "100%",
+    // maxWidth: 920,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 4,
+    margin: "0 auto",
+  },
 }));
 
 const handleEditClick = () => {
@@ -190,7 +201,7 @@ const App: React.FC = () => {
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
-    <div className="Playground">
+    <div className={classes.playground}>
       <ThemeProvider withReset={false}>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
@@ -223,7 +234,7 @@ const App: React.FC = () => {
           <HorizontalRule color="red" />
         </div>
 
-        <div style={{ padding: 40 }}>
+        <div style={{}}>
           <FeedCard
             publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
             publisherName="Prime Time Sports"
@@ -236,7 +247,7 @@ const App: React.FC = () => {
             expanded={false}
           />
         </div>
-        <div style={{ padding: 40 }}>
+        <div style={{}}>
           <FeedCard
             publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
             publisherName="Prime Time Sports"
@@ -369,7 +380,7 @@ const App: React.FC = () => {
             showResult={true}
           />
         </div>
-        <div style={{ padding: 40, width: 450 }}>
+        {/* <div style={{ padding: 40, width: 450 }}>
           <Paper withLogo style={{ minHeight: 200 }}>
             <Typography variant="body">Hello, PickUp!</Typography>
           </Paper>
@@ -378,11 +389,10 @@ const App: React.FC = () => {
           <Paper style={{ minHeight: 200 }}>
             <Typography variant="body">Hello, PickUp!</Typography>
           </Paper>
-        </div>
+        </div> */}
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-          {/* Throw Some Stuff Here Dawgie */}
-
-          {/* NestedInput component w/ Formik as wrapper */}
+          Throw Some Stuff Here Dawgie NestedInput component w/ Formik as
+          wrapper
           <Formik
             initialValues={{ email: "", publicationName: "", url: "" }}
             validationSchema={Yup.object().shape({
@@ -555,13 +565,13 @@ const App: React.FC = () => {
             width: "100%",
           }}
         >
-          <DataTable
+          {/* <DataTable
             headCells={headCells}
             rows={rows}
             defaultSortColumn="id"
             tableTitle="Homebase Posts"
             actionToolbar={ActionToolbar}
-          />
+          /> */}
         </div>
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
           <Loader />
@@ -712,7 +722,7 @@ const App: React.FC = () => {
           <Countdown color="red" />
           countdown <Pick color="red" /> Pick
         </div>
-        <div>MULTI SELECT ENHANCE ZONE</div>
+        {/* <div>MULTI SELECT ENHANCE ZONE</div>
         <Formik
           initialValues={{ selected_tags: "" }}
           validationSchema={Yup.object().shape({
@@ -745,7 +755,7 @@ const App: React.FC = () => {
               />
             </Form>
           )}
-        </Formik>
+        </Formik> */}
       </ThemeProvider>
     </div>
   );
