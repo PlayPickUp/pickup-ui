@@ -32,12 +32,12 @@ import {
   Card,
   HorizontalRule,
   createUseStyles,
-  DefaultTheme,
+  CheckBox,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
 import { async } from "regenerator-runtime";
-const useStyles = createUseStyles((theme: DefaultTheme) => ({
+const useStyles = createUseStyles(() => ({
   horizontal: {
     color: "grey",
   },
@@ -58,6 +58,20 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexDirection: "column",
     padding: 4,
     margin: "0 auto",
+  },
+  root: {
+    display: "flex",
+    position: "relative",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: 4,
+    width: 300,
+  },
+  text: {
+    fontSize: 11,
+    textAlign: "left",
+    lineHeight: "18px",
+    color: "grey",
   },
 }));
 
@@ -211,9 +225,7 @@ const App: React.FC = () => {
           >
             👋 Howdy human!!!
           </Typography>
-          <Typography variant="title" className={classes.title}>
-            title
-          </Typography>
+          <Typography variant="title">title</Typography>
           <Typography variant="heading2">heading 2</Typography>
           <Typography variant="heading3">heading 3</Typography>
 
@@ -227,6 +239,17 @@ const App: React.FC = () => {
           </Typography>
         </div>
 
+        <div className={classes.root}>
+          <div style={{ paddingRight: 5, marginTop: 5 }}>
+            <CheckBox checked={true} />
+          </div>
+          <div>
+            <Typography className={classes.text} variant="body2" element="span">
+              Enter your mobile number to create or sign into your PickUp
+              account. Frequency varies. Privacy Policy and Terms of Services
+            </Typography>
+          </div>
+        </div>
         {/* <div style={{ margin: 40, color: defaultTheme.colors.grey.light }}> */}
         <HorizontalRule color="red" showBolt className={classes.horizontal} />
         {/* </div> */}

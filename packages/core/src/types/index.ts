@@ -646,3 +646,7 @@ export interface CountdownProps {
 export interface SliderProps {
   children?: ReactNodeArray;
 }
+
+export interface CheckBoxProps {
+  checked?: boolean;
+}
