@@ -6,7 +6,7 @@
  **/
 
 import React from "react";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
 
 import ThemeProvider from "../ThemeProvider";
@@ -81,7 +81,7 @@ test("Props are passed and rendered", () => {
   expect(getByText("MultiSelect Test")).toBeTruthy();
 
   const input = getByPlaceholderText("Search & Select items...");
-  // Down arrow opens menu
+  // Down arrow opens menu to reveal options
   fireEvent.keyDown(input, downArrow);
   expect(getByText("Option 2")).toBeTruthy();
   cleanup;
@@ -117,10 +117,8 @@ test("Props are passed and rendered", () => {
 /* TO DO: Test remove button */
 /* Cannot get the button click to work */
 // test("Clicking item button removes it from the list", async () => {
-//   const { getByPlaceholderText, getByText } = render(
-//     <FormComponent
-//       onSubmit={handleSubmit}
-//     />
+//   const { getByPlaceholderText, getByText, getAllByRole } = render(
+//     <FormComponent onSubmit={handleSubmit} />
 //   );
 
 //   const input = getByPlaceholderText("Search & Select items...");
@@ -133,15 +131,38 @@ test("Props are passed and rendered", () => {
 //     fireEvent.blur(input);
 //   });
 
+//   const elementToRemove = getAllByRole("button")[0];
+
+//   console.log({ elementToRemove });
+
 //   act(() => {
-//     fireEvent.click(getByText("Option 1").nextElementSibling);
+//     // fireEvent.click(elementToRemove.nextElementSibling);
+//     fireEvent.click(elementToRemove);
 //   });
+
+//   await waitForElementToBeRemoved(() => elementToRemove);
 
 //   await waitFor(() => {
 //     fireEvent.blur(input);
 //   });
 
-//   await waitFor(() => {
-//     expect(getByText("Option 1")).toBeFalsy();
-//   });
+//   expect(getByText("Option 1")).toBeFalsy();
 // });
+
+test("Values are passed to form submission", async () => {
+  const { getByPlaceholderText, getByRole } = render(
+    <FormComponent onSubmit={handleSubmit} />
+  );
+
+  const input = getByPlaceholderText("Search & Select items...");
+  fireEvent.keyDown(input, downArrow);
+  fireEvent.keyDown(input, enterKey);
+
+  fireEvent.click(getByRole("button", { name: /submit/i }));
+
+  await waitFor(() =>
+    expect(handleSubmit).toHaveBeenCalledWith({
+      selectMany: "option1",
+    })
+  );
+});
