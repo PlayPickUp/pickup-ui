@@ -31,10 +31,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       },
     },
     "& $checkmark": {
-      //   "&:before": {
-      //     boxSizing: "border-box",
-      //     content: '""',
-      //   },
       "&:after": {
         left: "5px",
         top: "2px",
