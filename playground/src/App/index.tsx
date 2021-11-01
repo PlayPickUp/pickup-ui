@@ -283,7 +283,7 @@ const App: React.FC = () => {
               heading="CROSSNET Four-Way Volleyball"
               description="The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors."
               buttonProps={{
-                status: "Ready to Redeem",
+                status: "Not Enough Points",
                 cost: 250,
                 fanPoints: 151.0,
                 to: {
