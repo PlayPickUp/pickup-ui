@@ -133,8 +133,6 @@ test("Props are passed and rendered", () => {
 
 //   const elementToRemove = getAllByRole("button")[0];
 
-//   console.log({ elementToRemove });
-
 //   act(() => {
 //     // fireEvent.click(elementToRemove.nextElementSibling);
 //     fireEvent.click(elementToRemove);
