@@ -24,12 +24,17 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
           /* When the checkbox is checked*/
           backgroundColor: theme.colors.purple.base,
           "&:after": {
+            boxSizing: "border-box",
             display: "block",
           },
         },
       },
     },
     "& $checkmark": {
+      //   "&:before": {
+      //     boxSizing: "border-box",
+      //     content: '""',
+      //   },
       "&:after": {
         left: "5px",
         top: "2px",
