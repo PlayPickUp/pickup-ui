@@ -162,6 +162,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         onChange={props.form.setFieldValue}
         itemToString={(item: SelectItem) => (item ? item.label : "")}
         field={props.field}
+        data-testid="multiselect"
       >
         {({
           getInputProps,
@@ -202,6 +203,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                           {...getRemoveButtonProps({
                             item,
                           })}
+                          type="button"
                         >
                           <Icon
                             className={classes.subtractIcon}
