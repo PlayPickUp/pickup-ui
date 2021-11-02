@@ -67,12 +67,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
 }));
 
-const CheckBox: React.FC<CheckBoxProps> = ({ checked = false }) => {
+const CheckBox: React.FC<CheckBoxProps> = ({ checked = false, onChange }) => {
   const classes = useStyles();
   const [isChecked, setIsChecked] = React.useState<boolean>(checked);
 
   const handleChange = () => {
     setIsChecked(!isChecked);
+    onChange(!isChecked);
   };
 
   return (

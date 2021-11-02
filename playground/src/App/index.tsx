@@ -1,6 +1,6 @@
 /* To test aggressive mode, put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 // import "./makeMeUgly.css";
@@ -210,8 +210,12 @@ const Picks = [
 
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
+  const [checked, setChecked] = useState<boolean>(false);
   const classes = useStyles();
 
+  useEffect(() => {
+    console.log(checked), [checked];
+  });
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
@@ -238,10 +242,14 @@ const App: React.FC = () => {
             lil component playground!
           </Typography>
         </div>
-
         <div className={classes.root}>
           <div style={{ paddingRight: 5, marginTop: 5 }}>
-            <CheckBox checked={true} />
+            <CheckBox
+              checked={checked}
+              onChange={(internal: boolean) => {
+                setChecked(internal);
+              }}
+            />
           </div>
           <div>
             <Typography className={classes.text} variant="body2" element="span">
@@ -249,6 +257,9 @@ const App: React.FC = () => {
               account. Frequency varies. Privacy Policy and Terms of Services
             </Typography>
           </div>
+          <button type="button" onClick={() => console.log(checked)}>
+            print value of checkbox
+          </button>
         </div>
         {/* <div style={{ margin: 40, color: defaultTheme.colors.grey.light }}> */}
         <HorizontalRule color="red" showBolt className={classes.horizontal} />

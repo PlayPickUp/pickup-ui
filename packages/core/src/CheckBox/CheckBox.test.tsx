@@ -7,7 +7,11 @@ import CheckBox from ".";
 test("Renders without crashing, matches snapshot", () => {
   const { container } = render(
     <ThemeProvider>
-      <CheckBox />
+      <CheckBox
+        onChange={(internal: boolean) => {
+          console.log(internal);
+        }}
+      />
     </ThemeProvider>
   );
   expect(container).toMatchSnapshot();
@@ -16,7 +20,12 @@ test("Renders without crashing, matches snapshot", () => {
 test("CheckBox can be Checked, and prop can be passed", () => {
   const { getByTestId } = render(
     <ThemeProvider>
-      <CheckBox checked={true} />
+      <CheckBox
+        checked={true}
+        onChange={(internal: boolean) => {
+          console.log(internal);
+        }}
+      />
     </ThemeProvider>
   );
   const input = getByTestId("checkbox");

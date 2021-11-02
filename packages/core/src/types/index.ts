@@ -649,4 +649,5 @@ export interface SliderProps {
 
 export interface CheckBoxProps {
   checked?: boolean;
+  onChange: (internal: boolean) => void;
 }
