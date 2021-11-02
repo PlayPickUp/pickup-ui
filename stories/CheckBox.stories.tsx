@@ -38,7 +38,7 @@ Default.parameters = {
       <CheckBox
       checked={false}
       onChange={(internal: boolean)=> {
-        console.log("use "+boolean)
+        console.log("use "+internal)
       }}
       />
       `,
