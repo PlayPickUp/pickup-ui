@@ -21,9 +21,27 @@ export default {
   },
   args: {
     checked: true,
+    onChange: (internal: boolean) => {
+      console.log("use " + internal);
+    },
   },
 } as Meta;
 
 const Template: Story<CheckBoxProps> = (args) => <CheckBox {...args} />;
 
 export const Default = Template.bind({});
+
+Default.parameters = {
+  docs: {
+    source: {
+      code: `
+      <CheckBox
+      checked={false}
+      onChange={(internal: boolean)=> {
+        console.log("use "+boolean)
+      }}
+      />
+      `,
+    },
+  },
+};
