@@ -13,6 +13,11 @@ export default {
       description: "Toggles checked state",
       control: "boolean",
     },
+    onChange: {
+      defaultValue: null,
+      description:
+        "Allows communication between component state and parent state",
+    },
   },
   args: {
     checked: true,
