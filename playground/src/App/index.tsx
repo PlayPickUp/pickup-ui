@@ -7,13 +7,11 @@ import "./index.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
-  DataTable,
   Dropdown,
   Fab,
   FeedCard,
   FormError,
   Icon,
-  Label,
   Loader,
   NestedInput,
   Select,
@@ -24,7 +22,6 @@ import {
   MultiSelect,
   Chip,
   Button,
-  Paper,
   PickerButton,
   ProgressButton,
   StatusIcon,
@@ -36,7 +33,6 @@ import {
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
-import { async } from "regenerator-runtime";
 const useStyles = createUseStyles(() => ({
   horizontal: {
     color: "grey",
@@ -52,7 +48,6 @@ const useStyles = createUseStyles(() => ({
     display: "flex",
     position: "relative",
     width: "100%",
-    // maxWidth: 920,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
@@ -229,18 +224,18 @@ const App: React.FC = () => {
           >
             👋 Howdy human!!!
           </Typography>
-          <Typography variant="title">title</Typography>
-          <Typography variant="heading2">heading 2</Typography>
-          <Typography variant="heading3">heading 3</Typography>
-
-          <Typography variant="heading4">heading 4</Typography>
-          <Typography variant="heading5">heading 5</Typography>
-          <Typography variant="heading6">heading 6</Typography>
 
           <Typography>
             Feel free to throw some components in here for testing. It's your
             lil component playground!
           </Typography>
+
+          <Typography variant="title">title</Typography>
+          <Typography variant="heading2">heading 2</Typography>
+          <Typography variant="heading3">heading 3</Typography>
+          <Typography variant="heading4">heading 4</Typography>
+          <Typography variant="heading5">heading 5</Typography>
+          <Typography variant="heading6">heading 6</Typography>
         </div>
         <div className={classes.root}>
           <div style={{ paddingRight: 5, marginTop: 5 }}>
@@ -716,10 +711,16 @@ const App: React.FC = () => {
             maxWidth: 550,
           }}
         >
+          <Button variant="fit" color="primary">
+            Make Your Pick
+          </Button>
           <Button variant="fit" color="secondary">
             Make Your Pick
           </Button>
           <Button variant="fit" color="light">
+            Make Your Pick
+          </Button>
+          <Button variant="fit" disabled>
             Make Your Pick
           </Button>
         </div>
@@ -756,7 +757,7 @@ const App: React.FC = () => {
           <Countdown color="red" />
           countdown <Pick color="red" /> Pick
         </div>
-        {/* <div>MULTI SELECT ENHANCE ZONE</div>
+        <div>MULTI SELECT ENHANCE ZONE</div>
         <Formik
           initialValues={{ selected_tags: "" }}
           validationSchema={Yup.object().shape({
@@ -789,7 +790,7 @@ const App: React.FC = () => {
               />
             </Form>
           )}
-        </Formik> */}
+        </Formik>
       </ThemeProvider>
     </div>
   );
