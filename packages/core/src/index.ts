@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Card from "./Card";
+import CheckBox from "./CheckBox";
 import Chip from "./Chip";
 import Countdown from "./FeedCard/Countdown";
 import DataTable from "./DataTable";
@@ -26,8 +27,6 @@ import ThemeProvider from "./ThemeProvider";
 import Typography from "./Typography";
 import { defaultTheme } from "./ThemeProvider/defaultTheme";
 
-
-
 // react-jss
 import { createUseStyles, useTheme } from "react-jss";
 
@@ -36,6 +35,7 @@ export * from "./types";
 export {
   Button,
   Card,
+  CheckBox,
   Chip,
   Countdown,
   DataTable,
@@ -63,5 +63,5 @@ export {
   createUseStyles,
   defaultTheme as PickUpTheme,
   defaultTheme,
-  useTheme
+  useTheme,
 };

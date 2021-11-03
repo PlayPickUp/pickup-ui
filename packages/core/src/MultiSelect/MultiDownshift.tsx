@@ -93,10 +93,12 @@ class MultiDownshift extends React.Component<
     unknown
   > => {
     return {
-      onClick: (e) => {
+      onClick: (e: MouseEvent) => {
         onClick && onClick(e);
         e.stopPropagation();
-        this.removeItem(item);
+        if (e.detail == 1) {
+          this.removeItem(item);
+        }
       },
       ...props,
     };

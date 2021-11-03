@@ -1,6 +1,6 @@
 /* To test aggressive mode, put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 // import "./makeMeUgly.css";
@@ -32,11 +32,12 @@ import {
   Card,
   HorizontalRule,
   createUseStyles,
-  DefaultTheme,
+  CheckBox,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
-const useStyles = createUseStyles((theme: DefaultTheme) => ({
+import { async } from "regenerator-runtime";
+const useStyles = createUseStyles(() => ({
   horizontal: {
     color: "grey",
   },
@@ -46,6 +47,31 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "100%",
     maxWidth: "400px",
     "& ul": { listStyleType: "none" },
+  },
+  playground: {
+    display: "flex",
+    position: "relative",
+    width: "100%",
+    // maxWidth: 920,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    padding: 4,
+    margin: "0 auto",
+  },
+  root: {
+    display: "flex",
+    position: "relative",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    padding: 4,
+    width: 300,
+  },
+  text: {
+    fontSize: 11,
+    textAlign: "left",
+    lineHeight: "18px",
+    color: "grey",
   },
 }));
 
@@ -147,6 +173,26 @@ const leagues = [
     value: "golf",
     label: "Golf",
   },
+  {
+    value: "frisbee",
+    label: "Frisbee",
+  },
+  {
+    value: "bowling",
+    label: "Bowling",
+  },
+  {
+    value: "polevault",
+    label: "polevault",
+  },
+  {
+    value: "billiards",
+    label: "billiards",
+  },
+  {
+    value: "dodgeball",
+    label: "Dodgeball",
+  },
 ];
 
 const ActionToolbar = () => {
@@ -164,12 +210,16 @@ const Picks = [
 
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
+  const [checked, setChecked] = useState<boolean>(false);
   const classes = useStyles();
 
+  useEffect(() => {
+    console.log(checked), [checked];
+  });
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
   return (
-    <div className="Playground">
+    <div className={classes.playground}>
       <ThemeProvider withReset={false}>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
@@ -179,12 +229,38 @@ const App: React.FC = () => {
           >
             👋 Howdy human!!!
           </Typography>
+          <Typography variant="title">title</Typography>
+          <Typography variant="heading2">heading 2</Typography>
+          <Typography variant="heading3">heading 3</Typography>
+
+          <Typography variant="heading4">heading 4</Typography>
+          <Typography variant="heading5">heading 5</Typography>
+          <Typography variant="heading6">heading 6</Typography>
+
           <Typography>
             Feel free to throw some components in here for testing. It's your
             lil component playground!
           </Typography>
         </div>
-
+        <div className={classes.root}>
+          <div style={{ paddingRight: 5, marginTop: 5 }}>
+            <CheckBox
+              checked={checked}
+              onChange={(internal: boolean) => {
+                setChecked(internal);
+              }}
+            />
+          </div>
+          <div>
+            <Typography className={classes.text} variant="body2" element="span">
+              Enter your mobile number to create or sign into your PickUp
+              account. Frequency varies. Privacy Policy and Terms of Services
+            </Typography>
+          </div>
+          <button type="button" onClick={() => console.log(checked)}>
+            print value of checkbox
+          </button>
+        </div>
         {/* <div style={{ margin: 40, color: defaultTheme.colors.grey.light }}> */}
         <HorizontalRule color="red" showBolt className={classes.horizontal} />
         {/* </div> */}
@@ -192,7 +268,7 @@ const App: React.FC = () => {
           <HorizontalRule color="red" />
         </div>
 
-        <div style={{ padding: 40 }}>
+        <div style={{}}>
           <FeedCard
             publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
             publisherName="Prime Time Sports"
@@ -205,7 +281,7 @@ const App: React.FC = () => {
             expanded={false}
           />
         </div>
-        <div style={{ padding: 40 }}>
+        <div style={{}}>
           <FeedCard
             publisherIcon="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
             publisherName="Prime Time Sports"
@@ -241,7 +317,7 @@ const App: React.FC = () => {
               heading="CROSSNET Four-Way Volleyball"
               description="The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors."
               buttonProps={{
-                status: "Ready to Redeem",
+                status: "Not Enough Points",
                 cost: 250,
                 fanPoints: 151.0,
                 to: {
@@ -338,7 +414,7 @@ const App: React.FC = () => {
             showResult={true}
           />
         </div>
-        <div style={{ padding: 40, width: 450 }}>
+        {/* <div style={{ padding: 40, width: 450 }}>
           <Paper withLogo style={{ minHeight: 200 }}>
             <Typography variant="body">Hello, PickUp!</Typography>
           </Paper>
@@ -347,11 +423,10 @@ const App: React.FC = () => {
           <Paper style={{ minHeight: 200 }}>
             <Typography variant="body">Hello, PickUp!</Typography>
           </Paper>
-        </div>
+        </div> */}
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
-          {/* Throw Some Stuff Here Dawgie */}
-
-          {/* NestedInput component w/ Formik as wrapper */}
+          Throw Some Stuff Here Dawgie NestedInput component w/ Formik as
+          wrapper
           <Formik
             initialValues={{ email: "", publicationName: "", url: "" }}
             validationSchema={Yup.object().shape({
@@ -524,13 +599,13 @@ const App: React.FC = () => {
             width: "100%",
           }}
         >
-          <DataTable
+          {/* <DataTable
             headCells={headCells}
             rows={rows}
             defaultSortColumn="id"
             tableTitle="Homebase Posts"
             actionToolbar={ActionToolbar}
-          />
+          /> */}
         </div>
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
           <Loader />
@@ -681,6 +756,40 @@ const App: React.FC = () => {
           <Countdown color="red" />
           countdown <Pick color="red" /> Pick
         </div>
+        {/* <div>MULTI SELECT ENHANCE ZONE</div>
+        <Formik
+          initialValues={{ selected_tags: "" }}
+          validationSchema={Yup.object().shape({
+            selected_tags: Yup.string().nullable(),
+          })}
+          onSubmit={async (values) => {
+            console.log(values);
+          }}
+        >
+          {({ handleSubmit, isSubmitting }) => (
+            <Form
+              style={{
+                maxWidth: 400,
+                display: "block",
+                position: "relative",
+                width: "100%",
+              }}
+            >
+              <Field
+                id="selected_tags"
+                name="selected_tags"
+                items={leagues}
+                label="Leagues"
+                component={MultiSelect}
+              />
+              <Button
+                useSubmit
+                submitText="blast off"
+                disabled={isSubmitting}
+              />
+            </Form>
+          )}
+        </Formik> */}
       </ThemeProvider>
     </div>
   );

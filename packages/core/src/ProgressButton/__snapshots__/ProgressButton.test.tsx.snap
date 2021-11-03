@@ -4,7 +4,7 @@ exports[`Renders and matches snapshot 1`] = `
 <div>
   <a
     class="PU--root-0-2-2"
-    data-testid="progess-button"
+    data-testid="progress-button"
   >
     <div
       class="PU--progressBar-0-2-3 PU--progressBar-d1-0-2-9"

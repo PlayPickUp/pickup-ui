@@ -16,9 +16,9 @@ import { SpecificityPluginProps, JssStyleSheet } from "../types";
 export function increaseSpecificity(options?: SpecificityPluginProps): Plugin {
   const selector = options?.selector ?? ":not(#\\20)";
   const repeat = options?.repeat ?? 3;
-  const suffix = Array(repeat + 1).join(selector);
+  const prefix = Array(repeat + 1).join(selector);
 
-  // 'rule' is left untyped because the Rule import from jss is not functioning as expected
+  // 'rule' is left untyped because the Rule import from jss is not recognizing all child properties
   function onProcessRule(rule, sheet: JssStyleSheet): Plugin["onProcessRule"] {
     const parent = rule.options.parent;
     if (
@@ -28,7 +28,7 @@ export function increaseSpecificity(options?: SpecificityPluginProps): Plugin {
     )
       return;
 
-    rule.selectorText += suffix;
+    rule.selectorText = prefix + rule.selectorText;
   }
   return { onProcessRule };
 }

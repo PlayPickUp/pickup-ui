@@ -58,7 +58,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row wrap",
     alignItems: "center",
     width: "100%",
-    margin:theme.spacing.base
+    margin: (props) =>
+      props.expanded ? `0 ${theme.spacing.base}` : theme.spacing.base,
   },
   publisherHeadline: {
     flex: "0 1 calc(100% - 58px)",
@@ -88,11 +89,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     border: "1px solid #E5E3E8",
     boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.08)",
     borderRadius: "8px",
-    maxWidth: "420px",
+    maxWidth: "350px",
     minHeight: "140px",
     height: "100%",
     display: "flex",
     flexDirection: "row",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      maxWidth: "420px",
+    },
   },
   button: {
     fontSize: 11,
@@ -103,21 +107,41 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   h3: {
     fontWeight: "normal",
-    fontSize: 18,
+    fontSize: (props) => (props.expanded ? 15 : 18),
     letterSpacing: "-0.1px",
+    lineHeight: (props) => (props.expanded ? "20px" : null),
     padding: "0 10px",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      fontSize: (props) => (props.expanded ? 18 : 18),
+      lineHeight: (props) => (props.expanded ? "36px" : null),
+    },
   },
   publisherImage: {
     width: "16px",
     height: "16px",
     marginLeft: theme.spacing.base * 2,
-
   },
   body: {
     display: "inline-block",
     margin: theme.spacing.base,
     fontSize: 12,
     marginRight: theme.spacing.base,
+  },
+  rightContainer: {
+    maxWidth: (props) => (props.expanded ? "210px" : "200px"),
+    wordWrap: "break-word",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      maxWidth: (props) => (props.expanded ? "280px" : "200px"),
+    },
+  },
+  pick: {
+    padding: (props) => (props.expanded ? "4px 8px" : "8px"),
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      padding: (props) => (props.expanded ? "8px" : "8px"),
+    },
+  },
+  countdown: {
+    padding: "2px 10px 10px 10px",
   },
 }));
 
@@ -138,7 +162,10 @@ const FeedCard: React.FC<FeedCardProps> = ({
   picks,
   expanded,
 }) => {
-  const classes = useStyles();
+  const props = {
+    expanded: expanded,
+  };
+  const classes = useStyles({ ...props });
 
   return (
     <div className={expanded ? classes.expandedCard : classes.card}>
@@ -153,12 +180,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
         </a>
       </div>
 
-      <div
-        style={{
-          maxWidth: `${expanded ? "280px" : "200px"}`,
-          wordWrap: "break-word",
-        }}
-      >
+      <div className={classes.rightContainer}>
         <div className={classes.publisherRow}>
           <img
             src={publisherIcon}
@@ -201,11 +223,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           </Typography>
         </a>
 
-        <div
-          style={{
-            padding: "8px",
-          }}
-        >
+        <div className={classes.pick}>
           {picks.map((pick) => {
             return (
               <Button key={pick.value} color="light" className={classes.button}>
@@ -215,11 +233,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           })}
         </div>
 
-        <div
-          style={{
-            padding: "2px 10px 10px 10px",
-          }}
-        >
+        <div className={classes.countdown}>
           <Countdown close_at={timeLeft} has_fan_pick={pickCount} />
         </div>
       </div>
