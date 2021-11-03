@@ -34,7 +34,7 @@ exports[`Loader renders without crashing, matches snapshot 1`] = `
       style="margin-top: 20px;"
     >
       <p
-        class="PU--root-0-2-6 PU--root-d3-0-2-12 PU--heading2-0-2-8"
+        class="PU--root-0-2-6 PU--root-d6-0-2-15 PU--heading2-0-2-8"
       >
         Loading
       </p>
