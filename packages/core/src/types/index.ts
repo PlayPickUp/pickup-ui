@@ -652,3 +652,14 @@ export interface CheckBoxProps {
   checked?: boolean;
   onChange: (internal: boolean) => void;
 }
+
+// Breadcrumbs
+
+export interface Path {
+  name: string;
+  path: string;
+}
+
+export interface BreadcrumbsProps {
+  crumbs: Array<Path>;
+}

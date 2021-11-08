@@ -1,16 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
-import { DefaultTheme } from "../types";
-
-export interface Path {
-  name: string;
-  path: string;
-}
-
-export interface BreadcrumbsProps {
-  crumbs: Array<Path>;
-}
+import { DefaultTheme, BreadcrumbsProps } from "../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
