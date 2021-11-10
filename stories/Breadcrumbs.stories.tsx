@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Story, Meta } from "@storybook/react";
 import { Breadcrumbs, BreadcrumbsProps } from "@playpickup/core";
 
@@ -29,7 +30,9 @@ export default {
 } as Meta;
 
 const Template: Story<BreadcrumbsProps> = (args) => (
-  <BreadcrumbsProps {...args} />
+  <Router>
+    <Breadcrumbs {...args} />
+  </Router>
 );
 
 export const Default = Template.bind({});
