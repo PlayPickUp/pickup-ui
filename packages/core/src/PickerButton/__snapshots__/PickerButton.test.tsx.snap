@@ -7,7 +7,7 @@ exports[`Renders and matches snapshot 1`] = `
     data-testid="picker-button"
   >
     <div
-      class="PU--nonPickedBar-0-2-10"
+      class="PU--nonPickedBar-0-2-11"
     >
       <div />
     </div>
@@ -18,26 +18,28 @@ exports[`Renders and matches snapshot 1`] = `
     </div>
   </button>
   <button
-    class="PU--root-0-2-2 PU--result-0-2-3 PU--isIncorrect-0-2-12"
+    class="PU--root-0-2-2 PU--result-0-2-3 PU--isIncorrect-0-2-13"
     data-testid="picker-button"
     style="margin-bottom: 10px;"
   >
     <div
-      class="PU--nonPickedBar-0-2-10 PU--barActive-0-2-15 PU--barActive-d3-0-2-19 PU--barIncorrect-0-2-14"
+      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d3-0-2-20 PU--barIncorrect-0-2-15"
     >
       <div />
     </div>
     <div
       class="PU--textContainer-0-2-5"
     >
-      <div>
+      <div
+        class=""
+      >
         Definitely Not
       </div>
       <div
         class="PU--resultContainer-0-2-6"
       >
         <div
-          class="PU--bolt-0-2-7 PU--hasIcon-0-2-8"
+          class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
         >
           <img
             aria-hidden="true"
@@ -45,7 +47,9 @@ exports[`Renders and matches snapshot 1`] = `
             src="test-file-stub"
           />
         </div>
-        <div>
+        <div
+          class=""
+        >
           33.33
           %
         </div>
@@ -53,26 +57,28 @@ exports[`Renders and matches snapshot 1`] = `
     </div>
   </button>
   <button
-    class="PU--root-0-2-2 PU--result-0-2-3 PU--isCorrect-0-2-11"
+    class="PU--root-0-2-2 PU--result-0-2-3 PU--isCorrect-0-2-12"
     data-testid="picker-button"
     style="margin-bottom: 10px;"
   >
     <div
-      class="PU--nonPickedBar-0-2-10 PU--barActive-0-2-15 PU--barActive-d5-0-2-21 PU--barCorrect-0-2-13"
+      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d5-0-2-22 PU--barCorrect-0-2-14"
     >
       <div />
     </div>
     <div
       class="PU--textContainer-0-2-5"
     >
-      <div>
+      <div
+        class=""
+      >
         Absolutely
       </div>
       <div
         class="PU--resultContainer-0-2-6"
       >
         <div
-          class="PU--bolt-0-2-7 PU--hasIcon-0-2-8"
+          class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
         >
           <img
             aria-hidden="true"
@@ -80,7 +86,9 @@ exports[`Renders and matches snapshot 1`] = `
             src="test-file-stub"
           />
         </div>
-        <div>
+        <div
+          class=""
+        >
           56
           %
         </div>
@@ -93,28 +101,32 @@ exports[`Renders and matches snapshot 1`] = `
     style="margin-bottom: 10px;"
   >
     <div
-      class="PU--nonPickedBar-0-2-10 PU--barActive-0-2-15 PU--barActive-d7-0-2-23"
+      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d7-0-2-24"
     >
       <div />
     </div>
     <div
       class="PU--textContainer-0-2-5"
     >
-      <div>
+      <div
+        class=""
+      >
         Maybe?
       </div>
       <div
         class="PU--resultContainer-0-2-6"
       >
         <div
-          class="PU--bolt-0-2-7"
+          class="PU--bolt-0-2-8"
         >
           <img
             aria-hidden="true"
             role="presentation"
           />
         </div>
-        <div>
+        <div
+          class=""
+        >
           33.33
           %
         </div>

@@ -142,6 +142,7 @@ export interface DefaultZIndex {
 export interface DefaultGradients {
   main: string;
   hover: string;
+  disabled: string;
 }
 
 export type MediaQuery = (minWidth: number) => string;
