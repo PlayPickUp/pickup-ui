@@ -1,12 +1,12 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import DataTable from ".";
 
 import { rows, headCells } from "./__mocks__/data.mock";
 
-const ActionToolbar = () => {
+const ActionToolbar: React.FC = () => {
   return <div>Edit</div>;
 };
 
@@ -20,7 +20,7 @@ test("Table title renders correctly", () => {
         headCells={headCells}
         defaultSortColumn={"id"}
         tableTitle="Homebase Posts"
-        actionToolbar={ActionToolbar}
+        actionToolbar={() => <ActionToolbar />}
       />
     </ThemeProvider>
   );
@@ -35,13 +35,30 @@ test("Default sort renders correctly", () => {
         headCells={headCells}
         defaultSortColumn={"id"}
         tableTitle="Homebase Posts"
-        actionToolbar={ActionToolbar}
+        actionToolbar={() => <ActionToolbar />}
       />
     </ThemeProvider>
   );
   expect(getByText("ID").childNodes[1].textContent).toEqual(
     "sorted descending"
   );
+});
+
+test("Action toolbar renders correctly", () => {
+  const { getByRole, getByText } = render(
+    <ThemeProvider>
+      <DataTable
+        rows={rows}
+        headCells={headCells}
+        defaultSortColumn={"id"}
+        tableTitle="Homebase Posts"
+        actionToolbar={() => <ActionToolbar />}
+      />
+    </ThemeProvider>
+  );
+  const checkbox = getByRole("checkbox", { name: "select all" });
+  fireEvent.click(checkbox);
+  expect(getByText("Edit")).toBeTruthy();
 });
 
 test("Data is received and rendered", () => {
@@ -52,7 +69,7 @@ test("Data is received and rendered", () => {
         headCells={headCells}
         defaultSortColumn={"id"}
         tableTitle="Homebase Posts"
-        actionToolbar={ActionToolbar}
+        actionToolbar={() => <ActionToolbar />}
       />
     </ThemeProvider>
   );

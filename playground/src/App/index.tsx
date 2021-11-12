@@ -617,7 +617,7 @@ const App: React.FC = () => {
             rows={rows}
             defaultSortColumn="id"
             tableTitle="Homebase Posts"
-            actionToolbar={ActionToolbar}
+            actionToolbar={() => <ActionToolbar />}
           />
         </div>
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
