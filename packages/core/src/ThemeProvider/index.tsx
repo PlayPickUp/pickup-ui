@@ -20,13 +20,13 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   if (aggressive) jss.use(increaseSpecificity());
   const mergedTheme = theme ? merge(defaultTheme, theme) : defaultTheme;
   return (
+        <div id="PickUpUI">
     <JssProvider jss={jss} classNamePrefix="PU--">
       <JSSThemeProvider theme={mergedTheme} {...rest}>
-        <div id="PickUpUI">
           {withReset ? <GlobalsAndReset>{children}</GlobalsAndReset> : children}
-        </div>
       </JSSThemeProvider>
     </JssProvider>
+        </div>
   );
 };
 
