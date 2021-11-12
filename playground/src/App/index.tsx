@@ -213,9 +213,11 @@ const App: React.FC = () => {
   });
   // To test with global resets, set withReset to true
   // To test with highly-specific CSS selectors, add 'aggressive' prop to ThemeProvider
+  // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
+    <div className="Playground">
     <div className={classes.playground}>
-      <ThemeProvider withReset={false}>
+      <ThemeProvider withReset={true}>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
           <Typography
@@ -792,6 +794,7 @@ const App: React.FC = () => {
           )}
         </Formik>
       </ThemeProvider>
+    </div>
     </div>
   );
 };

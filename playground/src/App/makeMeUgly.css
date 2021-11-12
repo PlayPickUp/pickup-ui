@@ -1,3 +1,7 @@
+.Playground {
+  background-color: darkgoldenrod;
+}
+
 .Playground button:not(:hover):not(:active):not(.has-background) {
   background-color: #000;
 }
