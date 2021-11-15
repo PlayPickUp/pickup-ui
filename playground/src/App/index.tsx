@@ -7,6 +7,7 @@ import "./index.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
+  DataTable,
   Dropdown,
   Fab,
   FeedCard,
@@ -611,13 +612,13 @@ const App: React.FC = () => {
             width: "100%",
           }}
         >
-          {/* <DataTable
+          <DataTable
             headCells={headCells}
             rows={rows}
             defaultSortColumn="id"
             tableTitle="Homebase Posts"
-            actionToolbar={ActionToolbar}
-          /> */}
+            actionToolbar={() => <ActionToolbar />}
+          />
         </div>
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
           <Loader />
