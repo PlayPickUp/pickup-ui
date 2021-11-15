@@ -30,6 +30,7 @@ import {
   HorizontalRule,
   createUseStyles,
   CheckBox,
+  Breadcrumbs,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
@@ -203,6 +204,17 @@ const Picks = [
   { label: "Chiefs", value: "Chiefs" },
 ];
 
+const crumbs = [
+  {
+    name: "Sports Betting",
+    path: "/sports-betting",
+  },
+  {
+    name: "Arizona Sports Betting",
+    path: "/arizona-sports-betting",
+  },
+];
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
   const [checked, setChecked] = useState<boolean>(false);
@@ -216,6 +228,11 @@ const App: React.FC = () => {
   return (
     <div className={classes.playground}>
       <ThemeProvider withReset={false}>
+        <Router>
+          <div style={{ margin: 50 }}>
+            <Breadcrumbs crumbs={crumbs} />
+          </div>
+        </Router>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
           <Typography
