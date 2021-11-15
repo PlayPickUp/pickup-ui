@@ -470,6 +470,7 @@ export interface ChipProps {
   label: string;
   element?: keyof JSX.IntrinsicElements;
   href?: string;
+  to?: string;
 }
 
 /**

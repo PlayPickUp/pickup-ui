@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
 
@@ -8,6 +9,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   defaultActive: {
     backgroundColor: theme.colors.white,
     outline: "none",
+  },
+  link: {
+    textDecoration: "none",
   },
   root: {
     display: "inline-flex",
@@ -105,10 +109,12 @@ const Chip: React.FC<ChipProps> = ({
   onClick,
   element,
   href,
+  to,
 }) => {
   const classes = useStyles({ color, disabled });
   const Element: keyof JSX.IntrinsicElements = element ? element : "button";
-  return (
+
+  const renderedChip = (
     <Element
       data-testid="chip"
       disabled={disabled}
@@ -127,6 +133,16 @@ const Chip: React.FC<ChipProps> = ({
       <span>{label}</span>
     </Element>
   );
+
+  if (to) {
+    return (
+      <Link to={to} className={classes.link}>
+        {renderedChip}
+      </Link>
+    );
+  }
+
+  return renderedChip;
 };
 
 export default Chip;

@@ -229,11 +229,6 @@ const App: React.FC = () => {
   return (
     <div className={classes.playground}>
       <ThemeProvider withReset={false}>
-        <Router>
-          <div style={{ margin: 50 }}>
-            <Breadcrumbs crumbs={crumbs} />
-          </div>
-        </Router>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
           <Typography
@@ -247,6 +242,18 @@ const App: React.FC = () => {
             Feel free to throw some components in here for testing. It's your
             lil component playground!
           </Typography>
+
+          <Router>
+            <div style={{ margin: 50 }}>
+              <Breadcrumbs crumbs={crumbs} />
+              <Chip
+                color="primary"
+                label="Chip With Router"
+                to="/news"
+                isActive
+              />
+            </div>
+          </Router>
 
           <Typography variant="title">title</Typography>
           <Typography variant="heading2">heading 2</Typography>

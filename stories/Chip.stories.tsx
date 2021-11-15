@@ -51,6 +51,11 @@ export default {
       defaultValue: null,
       type: { name: "string", required: true },
     },
+    to: {
+      description: "Destination path for router Link",
+      defaultValue: null,
+      type: "text",
+    },
   },
   args: {
     isActive: false,
