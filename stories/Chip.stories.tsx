@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "react-router-dom";
 import { Story, Meta } from "@storybook/react";
 
 import { Chip } from "@playpickup/core";
@@ -52,9 +53,9 @@ export default {
       type: { name: "string", required: true },
     },
     to: {
-      description: "Destination path for router Link",
+      description:
+        "Allows the Chip to use React Router Link component under the hood and uses `to` value as link",
       defaultValue: null,
-      type: "text",
     },
   },
   args: {
@@ -64,6 +65,7 @@ export default {
     color: "default",
     disabled: false,
     label: "All Sports",
+    to: "",
   },
 } as Meta;
 
