@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders without crashing, matches snapshot 1`] = `
+<div>
+  <div>
+    <form
+      action="#"
+    >
+      <div
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-0-label"
+        class="PU--root-0-2-1 Input-1-2-3"
+        data-testid="select"
+        role="combobox"
+        style="color: blue;"
+      >
+        <div
+          data-testid="label-wrapper"
+        >
+          <label
+            class="PU--label-0-2-8"
+            data-testid="label"
+            for="downshift-0-input"
+          >
+            Select Test
+          </label>
+        </div>
+        <input
+          aria-autocomplete="list"
+          aria-labelledby="downshift-0-label"
+          autocomplete="off"
+          class="PU--selectButton-0-2-2"
+          id="downshift-0-input"
+          name="selection"
+          placeholder="Select one"
+          value=""
+        />
+        <button
+          aria-haspopup="true"
+          aria-label="toggle-menu"
+          class="PU--iconButton-0-2-3"
+          data-toggle="true"
+          role="button"
+          type="button"
+        >
+          <div
+            class="PU--root-0-2-9 PU--root-d0-0-2-10 PU--icon-0-2-4"
+            data-testid="icon"
+          >
+            <svg
+              height="140"
+              version="1.1"
+              viewBox="0 0 140 140"
+              width="140"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"
+              >
+                <path
+                  d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"
+                  fill="none"
+                  stroke="#9D9D9E"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <ul
+          aria-labelledby="downshift-0-label"
+          class="PU--dropdown-0-2-6"
+          id="downshift-0-menu"
+          role="listbox"
+          style="display: none;"
+        />
+      </div>
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;
