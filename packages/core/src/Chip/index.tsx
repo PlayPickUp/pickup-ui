@@ -114,7 +114,30 @@ const Chip: React.FC<ChipProps> = ({
   const classes = useStyles({ color, disabled });
   const Element: keyof JSX.IntrinsicElements = element ? element : "button";
 
-  const renderedChip = (
+  if (to) {
+    return (
+      <Link to={to} className={classes.link}>
+        <Element
+          data-testid="chip"
+          disabled={disabled}
+          className={classNames({
+            [classes.root]: true,
+            [classes.primary]: color && color === "primary",
+            [classes.secondary]: color && color === "secondary",
+            [classes.disabled]: disabled,
+            [classes.isActive]: isActive,
+            [className]: className,
+          })}
+          onClick={onClick}
+          style={style}
+        >
+          <span>{label}</span>
+        </Element>
+      </Link>
+    );
+  }
+
+  return (
     <Element
       data-testid="chip"
       disabled={disabled}
@@ -133,16 +156,6 @@ const Chip: React.FC<ChipProps> = ({
       <span>{label}</span>
     </Element>
   );
-
-  if (to) {
-    return (
-      <Link to={to} className={classes.link}>
-        {renderedChip}
-      </Link>
-    );
-  }
-
-  return renderedChip;
 };
 
 export default Chip;
