@@ -469,7 +469,7 @@ export interface ChipProps {
   style?: React.CSSProperties;
   isActive?: boolean;
   label: string;
-  element?: keyof JSX.IntrinsicElements | JSXElementConstructor<unknown>;
+  element?: keyof JSX.IntrinsicElements | JSXElementConstructor<any>;
   href?: string;
   to?: string;
 }

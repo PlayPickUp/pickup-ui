@@ -111,7 +111,7 @@ const Chip: React.FC<ChipProps> = ({
   to,
 }) => {
   const classes = useStyles({ color, disabled });
-  const Element: keyof JSX.IntrinsicElements | JSXElementConstructor<unknown> =
+  const Element: keyof JSX.IntrinsicElements | JSXElementConstructor<any> =
     element ?? "button";
 
   return (
