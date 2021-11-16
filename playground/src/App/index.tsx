@@ -1,7 +1,7 @@
 /* To test aggressive mode, put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
 // import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
@@ -248,6 +248,7 @@ const App: React.FC = () => {
               <Breadcrumbs crumbs={crumbs} />
               <Chip
                 color="primary"
+                element={Link}
                 label="Chip With Router"
                 to="/news"
                 isActive

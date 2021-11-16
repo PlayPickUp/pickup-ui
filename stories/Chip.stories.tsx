@@ -52,9 +52,14 @@ export default {
       defaultValue: null,
       type: { name: "string", required: true },
     },
+    element: {
+      description:
+        "Underlying HTML element or JSX Constructor to render, default value is button",
+      defaultValue: null,
+    },
     to: {
       description:
-        "Allows the Chip to use React Router Link component under the hood and uses `to` value as link",
+        "Allows the Chip to use React Router Link component under the hood and uses `to` value as link. Element must be Link constructor",
       defaultValue: null,
     },
   },
@@ -66,6 +71,7 @@ export default {
     disabled: false,
     label: "All Sports",
     to: "",
+    element: "button",
   },
 } as Meta;
 

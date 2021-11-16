@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSXElementConstructor } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
@@ -112,30 +112,8 @@ const Chip: React.FC<ChipProps> = ({
   to,
 }) => {
   const classes = useStyles({ color, disabled });
-  const Element: keyof JSX.IntrinsicElements = element ? element : "button";
-
-  if (to) {
-    return (
-      <Link to={to} className={classes.link}>
-        <Element
-          data-testid="chip"
-          disabled={disabled}
-          className={classNames({
-            [classes.root]: true,
-            [classes.primary]: color && color === "primary",
-            [classes.secondary]: color && color === "secondary",
-            [classes.disabled]: disabled,
-            [classes.isActive]: isActive,
-            [className]: className,
-          })}
-          onClick={onClick}
-          style={style}
-        >
-          <span>{label}</span>
-        </Element>
-      </Link>
-    );
-  }
+  let Element: keyof JSX.IntrinsicElements | JSXElementConstructor<unknown> =
+    element ?? "button";
 
   return (
     <Element
@@ -152,6 +130,7 @@ const Chip: React.FC<ChipProps> = ({
       onClick={onClick}
       style={style}
       href={href}
+      to={to || href}
     >
       <span>{label}</span>
     </Element>
