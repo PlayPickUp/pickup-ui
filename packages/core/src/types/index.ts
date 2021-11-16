@@ -10,7 +10,6 @@ import React, {
   ReactNodeArray,
   JSXElementConstructor,
 } from "react";
-import { Link } from "react-router-dom";
 import { StyleSheet } from "jss";
 
 /**
