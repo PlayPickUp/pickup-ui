@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Breadcrumbs from "./Breadcrumbs";
 import Card from "./Card";
 import CheckBox from "./CheckBox";
 import Chip from "./Chip";
@@ -34,6 +35,7 @@ export * from "./types";
 
 export {
   Button,
+  Breadcrumbs,
   Card,
   CheckBox,
   Chip,

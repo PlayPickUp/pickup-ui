@@ -142,6 +142,7 @@ export interface DefaultZIndex {
 export interface DefaultGradients {
   main: string;
   hover: string;
+  disabled: string;
 }
 
 export type MediaQuery = (minWidth: number) => string;
@@ -650,4 +651,15 @@ export interface SliderProps {
 export interface CheckBoxProps {
   checked?: boolean;
   onChange: (internal: boolean) => void;
+}
+
+// Breadcrumbs
+
+export interface Path {
+  name: string;
+  path: string;
+}
+
+export interface BreadcrumbsProps {
+  crumbs: Array<Path>;
 }

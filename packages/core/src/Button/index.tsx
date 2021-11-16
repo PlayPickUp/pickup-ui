@@ -20,12 +20,12 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     borderRadius: theme.borderRadius,
     border: "none",
     background: theme.gradients.main,
-    fontFamily: theme.typography.fontFamilies.headline,
+    fontFamily: theme.typography.fontFamilies.body,
     fontSize: 18,
     lineHeight: "24px",
     letterSpacing: "0.3px",
     color: theme.colors.white,
-    textTransform: "uppercase",
+    textTransform: "capitalize",
     transition: "opacity 200ms ease-in-out",
     opacity: 1,
     fallbacks: {
@@ -44,7 +44,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     color: theme.colors.primary.dark,
   },
   disabled: {
-    background: theme.colors.grey.light,
+    background: theme.gradients.disabled,
     color: theme.colors.grey.base,
   },
 }));
