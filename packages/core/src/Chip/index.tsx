@@ -1,5 +1,4 @@
 import React, { JSXElementConstructor } from "react";
-import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
 
@@ -112,7 +111,7 @@ const Chip: React.FC<ChipProps> = ({
   to,
 }) => {
   const classes = useStyles({ color, disabled });
-  let Element: keyof JSX.IntrinsicElements | JSXElementConstructor<unknown> =
+  const Element: keyof JSX.IntrinsicElements | JSXElementConstructor<unknown> =
     element ?? "button";
 
   return (
