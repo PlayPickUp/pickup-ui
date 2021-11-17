@@ -136,7 +136,11 @@ const Select: React.FC<SelectProps> = ({
           selectedItem,
         }) => {
           return (
-            <div className={classNames(classes.root, className)} style={style}>
+            <div
+              data-testid="select"
+              className={classNames(classes.root, className)}
+              style={style}
+            >
               <Label {...getLabelProps()}>{label}</Label>
               <input
                 className={classes.selectButton}

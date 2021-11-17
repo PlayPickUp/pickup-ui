@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "@playpickup/core";
 
 export const parameters = {
@@ -8,7 +9,9 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider>
-      <Story />
+      <Router>
+        <Story />
+      </Router>
     </ThemeProvider>
   ),
 ];

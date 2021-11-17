@@ -10,7 +10,7 @@ import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
 
 import ThemeProvider from "../ThemeProvider";
-import MultiSelect from ".";
+import Select from ".";
 import { SelectItem } from "../types";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -43,17 +43,20 @@ const FormComponent: React.FC<{
       <div>
         <Formik
           initialValues={{
-            selectMany: "",
+            selection: "",
           }}
           onSubmit={handleSubmit}
         >
           <Form>
             <Field
-              id="selectMany"
-              name="selectMany"
-              label="MultiSelect Test"
+              id="selection"
+              name="selection"
+              label="Select Test"
+              placeholder="Select one"
+              className="Input-1-2-3"
+              style={{ color: "blue" }}
               items={items}
-              component={MultiSelect}
+              component={Select}
             />
             <button type="submit">Submit</button>
           </Form>
@@ -64,56 +67,57 @@ const FormComponent: React.FC<{
 };
 
 const handleSubmit = jest.fn();
-// We could break these out into a testHelpers file, if they're reused elsewhere
-const downArrow = { key: "Down", code: "Down", charCode: 40 };
-const enterKey = { key: "Enter", code: "Enter", charCode: 13 };
 
-test("MultiSelect renders without crashing, matches snapshot", () => {
+test("Select renders without crashing, matches snapshot", () => {
   const { container } = render(<FormComponent onSubmit={handleSubmit} />);
   expect(container).toMatchSnapshot();
 });
 
 test("Props are passed and rendered", () => {
-  const { getByText, getByPlaceholderText } = render(
+  const { getByText, getByRole, getByPlaceholderText, getByTestId } = render(
     <FormComponent onSubmit={handleSubmit} />
   );
 
-  expect(getByText("MultiSelect Test")).toBeTruthy();
-
-  const input = getByPlaceholderText("Search & Select items...");
-  // Down arrow opens menu to reveal options
-  fireEvent.keyDown(input, downArrow);
+  expect(getByText("Select Test")).toBeTruthy();
+  expect(getByPlaceholderText("Select one")).toBeTruthy();
+  expect(getByTestId("select").getAttribute("class")).toContain("Input-1-2-3");
+  expect(getByTestId("select").getAttribute("style")).toEqual("color: blue;");
+  const menuButton = getByRole("button", { name: "toggle-menu" });
+  fireEvent.click(menuButton);
   expect(getByText("Option 2")).toBeTruthy();
   cleanup;
 });
 
-test("Selected item gets added to list", () => {
-  const { container, getByPlaceholderText } = render(
+test("Item is selectable", () => {
+  const { getByText, getByRole } = render(
     <FormComponent onSubmit={handleSubmit} />
   );
 
-  const input = getByPlaceholderText("Search & Select items...");
-  fireEvent.keyDown(input, downArrow);
-  fireEvent.keyDown(input, enterKey);
+  const menuButton = getByRole("button", { name: "toggle-menu" });
+  fireEvent.click(menuButton);
+  fireEvent.click(getByText("Option 1"));
 
-  expect(container.getElementsByTagName("span").length).toEqual(1);
+  const input = getByRole("textbox", {
+    name: "Select Test",
+  }) as HTMLInputElement;
+  expect(input.value).toEqual("option1");
   cleanup;
 });
 
 test("Values are passed to form submission", async () => {
-  const { getByPlaceholderText, getByRole } = render(
+  const { getByText, getByRole } = render(
     <FormComponent onSubmit={handleSubmit} />
   );
 
-  const input = getByPlaceholderText("Search & Select items...");
-  fireEvent.keyDown(input, downArrow);
-  fireEvent.keyDown(input, enterKey);
+  const menuButton = getByRole("button", { name: "toggle-menu" });
+  fireEvent.click(menuButton);
+  fireEvent.click(getByText("Option 1"));
 
   fireEvent.click(getByRole("button", { name: /submit/i }));
 
   await waitFor(() =>
     expect(handleSubmit).toHaveBeenCalledWith({
-      selectMany: "option1",
+      selection: "option1",
     })
   );
 });
