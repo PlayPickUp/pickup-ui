@@ -129,7 +129,7 @@ const Chip: React.FC<ChipProps> = ({
       onClick={onClick}
       style={style}
       href={href}
-      to={to || href}
+      to={to}
     >
       <span>{label}</span>
     </Element>
