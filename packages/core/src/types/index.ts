@@ -8,6 +8,7 @@ import React, {
   SetStateAction,
   Dispatch,
   ReactNodeArray,
+  JSXElementConstructor,
 } from "react";
 import { StyleSheet } from "jss";
 
@@ -468,8 +469,9 @@ export interface ChipProps {
   style?: React.CSSProperties;
   isActive?: boolean;
   label: string;
-  element?: keyof JSX.IntrinsicElements;
+  element?: keyof JSX.IntrinsicElements | JSXElementConstructor<any>;
   href?: string;
+  to?: string;
 }
 
 /**

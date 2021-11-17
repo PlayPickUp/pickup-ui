@@ -1,7 +1,7 @@
 /* To test aggressive mode, put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
 // import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
@@ -229,11 +229,6 @@ const App: React.FC = () => {
   return (
     <div className={classes.playground}>
       <ThemeProvider withReset={false}>
-        <Router>
-          <div style={{ margin: 50 }}>
-            <Breadcrumbs crumbs={crumbs} />
-          </div>
-        </Router>
         <div style={{ padding: 40 }}>
           <Typography variant="title">Hello, PickUp!</Typography>
           <Typography
@@ -247,6 +242,19 @@ const App: React.FC = () => {
             Feel free to throw some components in here for testing. It's your
             lil component playground!
           </Typography>
+
+          <Router>
+            <div style={{ margin: 50 }}>
+              <Breadcrumbs crumbs={crumbs} />
+              <Chip
+                color="primary"
+                element={Link}
+                label="Chip With Router"
+                to="/news"
+                isActive
+              />
+            </div>
+          </Router>
 
           <Typography variant="title">title</Typography>
           <Typography variant="heading2">heading 2</Typography>
