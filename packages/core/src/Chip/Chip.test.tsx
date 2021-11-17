@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { fireEvent, render } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
@@ -43,6 +44,17 @@ test("Element <a> and href render link correctly", () => {
   expect(getByText("Click Me").closest("a").getAttribute("href")).toBe(
     "https://www.playpickup.com"
   );
+});
+
+test("Link element renders <a> and href correctly from 'to' prop", () => {
+  const { getByText } = render(
+    <ThemeProvider>
+      <Router>
+        <Chip label="Click Me" element={Link} to="/news" />
+      </Router>
+    </ThemeProvider>
+  );
+  expect(getByText("Click Me").closest("a").getAttribute("href")).toBe("/news");
 });
 
 test("Chip is disabled when prop disabled is true", () => {
