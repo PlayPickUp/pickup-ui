@@ -3,14 +3,18 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    data-testid="formError"
-    style="margin-top: 4px;"
+    id="PickUpUI"
   >
-    <p
-      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--body-0-2-8"
+    <div
+      data-testid="formError"
+      style="margin-top: 4px;"
     >
-      This error should render
-    </p>
+      <p
+        class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--body-0-2-8"
+      >
+        This error should render
+      </p>
+    </div>
   </div>
 </div>
 `;
