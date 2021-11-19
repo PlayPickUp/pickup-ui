@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "react-router-dom";
 import { Story, Meta } from "@storybook/react";
 
 import { Chip } from "@playpickup/core";
@@ -51,6 +52,16 @@ export default {
       defaultValue: null,
       type: { name: "string", required: true },
     },
+    element: {
+      description:
+        "Underlying HTML element or JSX Constructor to render, default value is button",
+      defaultValue: null,
+    },
+    to: {
+      description:
+        "Allows the Chip to use React Router Link component under the hood and uses `to` value as link. Element must be Link constructor",
+      defaultValue: null,
+    },
   },
   args: {
     isActive: false,
@@ -59,6 +70,8 @@ export default {
     color: "default",
     disabled: false,
     label: "All Sports",
+    to: "",
+    element: "button",
   },
 } as Meta;
 

@@ -1,12 +1,13 @@
 /* To test aggressive mode, put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
 // import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
+  DataTable,
   Dropdown,
   Fab,
   FeedCard,
@@ -30,6 +31,7 @@ import {
   HorizontalRule,
   createUseStyles,
   CheckBox,
+  Breadcrumbs,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
@@ -203,6 +205,17 @@ const Picks = [
   { label: "Chiefs", value: "Chiefs" },
 ];
 
+const crumbs = [
+  {
+    name: "Sports Betting",
+    path: "/sports-betting",
+  },
+  {
+    name: "Arizona Sports Betting",
+    path: "/arizona-sports-betting",
+  },
+];
+
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
   const [checked, setChecked] = useState<boolean>(false);
@@ -231,6 +244,19 @@ const App: React.FC = () => {
             Feel free to throw some components in here for testing. It's your
             lil component playground!
           </Typography>
+
+          <Router>
+            <div style={{ margin: 50 }}>
+              <Breadcrumbs crumbs={crumbs} />
+              <Chip
+                color="primary"
+                element={Link}
+                label="Chip With Router"
+                to="/news"
+                isActive
+              />
+            </div>
+          </Router>
 
           <Typography variant="title">title</Typography>
           <Typography variant="heading2">heading 2</Typography>
@@ -596,13 +622,13 @@ const App: React.FC = () => {
             width: "100%",
           }}
         >
-          {/* <DataTable
+          <DataTable
             headCells={headCells}
             rows={rows}
             defaultSortColumn="id"
             tableTitle="Homebase Posts"
-            actionToolbar={ActionToolbar}
-          /> */}
+            actionToolbar={() => <ActionToolbar />}
+          />
         </div>
         <div style={{ marginTop: 40, marginBottom: 40, padding: 40 }}>
           <Loader />
