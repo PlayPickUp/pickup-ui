@@ -2,136 +2,140 @@
 
 exports[`Renders and matches snapshot 1`] = `
 <div>
-  <button
-    class="PU--root-0-2-2"
-    data-testid="picker-button"
+  <div
+    id="PickUpUI"
   >
-    <div
-      class="PU--nonPickedBar-0-2-11"
-    >
-      <div />
-    </div>
-    <div
-      style="z-index: 2; position: relative;"
-    >
-      Absolutely
-    </div>
-  </button>
-  <button
-    class="PU--root-0-2-2 PU--result-0-2-3 PU--isIncorrect-0-2-13"
-    data-testid="picker-button"
-    style="margin-bottom: 10px;"
-  >
-    <div
-      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d3-0-2-20 PU--barIncorrect-0-2-15"
-    >
-      <div />
-    </div>
-    <div
-      class="PU--textContainer-0-2-5"
+    <button
+      class="PU--root-0-2-2"
+      data-testid="picker-button"
     >
       <div
-        class=""
+        class="PU--nonPickedBar-0-2-11"
       >
-        Definitely Not
+        <div />
       </div>
       <div
-        class="PU--resultContainer-0-2-6"
-      >
-        <div
-          class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
-        >
-          <img
-            aria-hidden="true"
-            role="presentation"
-            src="test-file-stub"
-          />
-        </div>
-        <div
-          class=""
-        >
-          33.33
-          %
-        </div>
-      </div>
-    </div>
-  </button>
-  <button
-    class="PU--root-0-2-2 PU--result-0-2-3 PU--isCorrect-0-2-12"
-    data-testid="picker-button"
-    style="margin-bottom: 10px;"
-  >
-    <div
-      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d5-0-2-22 PU--barCorrect-0-2-14"
-    >
-      <div />
-    </div>
-    <div
-      class="PU--textContainer-0-2-5"
-    >
-      <div
-        class=""
+        style="z-index: 2; position: relative;"
       >
         Absolutely
       </div>
+    </button>
+    <button
+      class="PU--root-0-2-2 PU--result-0-2-3 PU--isIncorrect-0-2-13"
+      data-testid="picker-button"
+      style="margin-bottom: 10px;"
+    >
       <div
-        class="PU--resultContainer-0-2-6"
+        class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d3-0-2-20 PU--barIncorrect-0-2-15"
       >
-        <div
-          class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
-        >
-          <img
-            aria-hidden="true"
-            role="presentation"
-            src="test-file-stub"
-          />
-        </div>
+        <div />
+      </div>
+      <div
+        class="PU--textContainer-0-2-5"
+      >
         <div
           class=""
         >
-          56
-          %
+          Definitely Not
         </div>
-      </div>
-    </div>
-  </button>
-  <button
-    class="PU--root-0-2-2 PU--result-0-2-3"
-    data-testid="picker-button"
-    style="margin-bottom: 10px;"
-  >
-    <div
-      class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d7-0-2-24"
-    >
-      <div />
-    </div>
-    <div
-      class="PU--textContainer-0-2-5"
-    >
-      <div
-        class=""
-      >
-        Maybe?
-      </div>
-      <div
-        class="PU--resultContainer-0-2-6"
-      >
         <div
-          class="PU--bolt-0-2-8"
+          class="PU--resultContainer-0-2-6"
         >
-          <img
-            aria-hidden="true"
-            role="presentation"
-          />
+          <div
+            class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
+          >
+            <img
+              aria-hidden="true"
+              role="presentation"
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class=""
+          >
+            33.33
+            %
+          </div>
         </div>
+      </div>
+    </button>
+    <button
+      class="PU--root-0-2-2 PU--result-0-2-3 PU--isCorrect-0-2-12"
+      data-testid="picker-button"
+      style="margin-bottom: 10px;"
+    >
+      <div
+        class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d5-0-2-22 PU--barCorrect-0-2-14"
+      >
+        <div />
+      </div>
+      <div
+        class="PU--textContainer-0-2-5"
+      >
         <div
           class=""
         >
-          33.33
-          %
+          Absolutely
+        </div>
+        <div
+          class="PU--resultContainer-0-2-6"
+        >
+          <div
+            class="PU--bolt-0-2-8 PU--hasIcon-0-2-9"
+          >
+            <img
+              aria-hidden="true"
+              role="presentation"
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class=""
+          >
+            56
+            %
+          </div>
         </div>
       </div>
-    </div>
-  </button>
+    </button>
+    <button
+      class="PU--root-0-2-2 PU--result-0-2-3"
+      data-testid="picker-button"
+      style="margin-bottom: 10px;"
+    >
+      <div
+        class="PU--nonPickedBar-0-2-11 PU--barActive-0-2-16 PU--barActive-d7-0-2-24"
+      >
+        <div />
+      </div>
+      <div
+        class="PU--textContainer-0-2-5"
+      >
+        <div
+          class=""
+        >
+          Maybe?
+        </div>
+        <div
+          class="PU--resultContainer-0-2-6"
+        >
+          <div
+            class="PU--bolt-0-2-8"
+          >
+            <img
+              aria-hidden="true"
+              role="presentation"
+            />
+          </div>
+          <div
+            class=""
+          >
+            33.33
+            %
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
 </div>
 `;

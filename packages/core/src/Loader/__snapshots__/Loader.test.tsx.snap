@@ -3,41 +3,45 @@
 exports[`Loader renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="PU--root-0-2-2"
+    id="PickUpUI"
   >
     <div
-      class="PU--animContainer-0-2-3"
+      class="PU--root-0-2-2"
     >
       <div
-        class="PU--iconBg-0-2-4"
-      />
-      <div
-        class="PU--iconContainer-0-2-5"
+        class="PU--animContainer-0-2-3"
       >
-        <svg
-          fill="none"
-          height="18"
-          viewBox="0 0 15 18"
-          width="15"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="PU--iconBg-0-2-4"
+        />
+        <div
+          class="PU--iconContainer-0-2-5"
         >
-          <path
-            clip-rule="evenodd"
-            d="M8.75469 0L8.28319 6.96H14.4L5.64531 18L6.11681 11.04H0L8.75469 0Z"
-            fill="#FFF"
-            fill-rule="evenodd"
-          />
-        </svg>
+          <svg
+            fill="none"
+            height="18"
+            viewBox="0 0 15 18"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8.75469 0L8.28319 6.96H14.4L5.64531 18L6.11681 11.04H0L8.75469 0Z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
-    </div>
-    <div
-      style="margin-top: 20px;"
-    >
-      <p
-        class="PU--root-0-2-6 PU--root-d6-0-2-15 PU--heading2-0-2-8"
+      <div
+        style="margin-top: 20px;"
       >
-        Loading
-      </p>
+        <p
+          class="PU--root-0-2-6 PU--root-d6-0-2-15 PU--heading2-0-2-8"
+        >
+          Loading
+        </p>
+      </div>
     </div>
   </div>
 </div>

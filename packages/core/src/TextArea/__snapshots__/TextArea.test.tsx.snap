@@ -3,15 +3,19 @@
 exports[`TextArea renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="PU--root-0-2-1"
-    data-testid="textarea-wrapper"
+    id="PickUpUI"
   >
-    <textarea
-      class="PU--textarea-0-2-2"
-      name="excerpt"
+    <div
+      class="PU--root-0-2-1"
+      data-testid="textarea-wrapper"
     >
-      This is an excerpt, it is a pretty cool excerpt. It contains text.
-    </textarea>
+      <textarea
+        class="PU--textarea-0-2-2"
+        name="excerpt"
+      >
+        This is an excerpt, it is a pretty cool excerpt. It contains text.
+      </textarea>
+    </div>
   </div>
 </div>
 `;

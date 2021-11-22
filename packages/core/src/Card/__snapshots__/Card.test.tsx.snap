@@ -3,61 +3,65 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <div
-    class="PU--root-0-2-1"
-    data-testid="card"
+    id="PickUpUI"
   >
     <div
-      class="PU--image-0-2-2"
-    >
-      <img
-        alt="CROSSNET"
-        src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
-        style="width: 100%; height: auto;"
-      />
-    </div>
-    <div
-      class="PU--container-0-2-3"
+      class="PU--root-0-2-1"
+      data-testid="card"
     >
       <div
-        class="PU--eyebrow-0-2-4"
+        class="PU--image-0-2-2"
       >
-        <p
-          class="PU--root-0-2-7 PU--root-d6-0-2-16 PU--body2-0-2-15"
-          style="color: rgb(122, 96, 255);"
-        >
-          CROSSNET
-        </p>
-        <p
-          class="PU--root-0-2-7 PU--root-d7-0-2-17 PU--body2-0-2-15"
-          style="color: rgb(97, 94, 102);"
-        >
-          $20 Value
-        </p>
-      </div>
-      <p
-        class="PU--root-0-2-7 PU--root-d8-0-2-18 PU--body-0-2-14 PU--heading-0-2-5"
-      >
-        CROSSNET Four-Way Volleyball
-      </p>
-      <p
-        class="PU--root-0-2-7 PU--root-d9-0-2-19 PU--body-0-2-14 PU--description-0-2-6"
-      >
-        The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors.
-      </p>
-      <a
-        class="PU--root-0-2-21"
-        data-testid="progress-button"
-        href="https://www.playpickup.com"
-      >
-        <div
-          class="PU--progressBar-0-2-22 PU--progressBar-d1-0-2-28"
+        <img
+          alt="CROSSNET"
+          src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          style="width: 100%; height: auto;"
         />
+      </div>
+      <div
+        class="PU--container-0-2-3"
+      >
         <div
-          class="PU--textContainer-0-2-26"
+          class="PU--eyebrow-0-2-4"
         >
-          150 / 250 points
+          <p
+            class="PU--root-0-2-7 PU--root-d6-0-2-16 PU--body2-0-2-15"
+            style="color: rgb(122, 96, 255);"
+          >
+            CROSSNET
+          </p>
+          <p
+            class="PU--root-0-2-7 PU--root-d7-0-2-17 PU--body2-0-2-15"
+            style="color: rgb(97, 94, 102);"
+          >
+            $20 Value
+          </p>
         </div>
-      </a>
+        <p
+          class="PU--root-0-2-7 PU--root-d8-0-2-18 PU--body-0-2-14 PU--heading-0-2-5"
+        >
+          CROSSNET Four-Way Volleyball
+        </p>
+        <p
+          class="PU--root-0-2-7 PU--root-d9-0-2-19 PU--body-0-2-14 PU--description-0-2-6"
+        >
+          The world's first four-way volleyball game! Set up within minutes in sand, grass, or indoors.
+        </p>
+        <a
+          class="PU--root-0-2-21"
+          data-testid="progress-button"
+          href="https://www.playpickup.com"
+        >
+          <div
+            class="PU--progressBar-0-2-22 PU--progressBar-d1-0-2-28"
+          />
+          <div
+            class="PU--textContainer-0-2-26"
+          >
+            150 / 250 points
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
