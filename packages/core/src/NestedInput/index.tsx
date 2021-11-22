@@ -82,8 +82,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   phoneButtonSmall: {
     fontSize: 14,
     padding: "0 14px",
-    fontFamily: "Inter",
-    "&:focus": {},
   },
 }));
 
