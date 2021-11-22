@@ -2,7 +2,8 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 import color from "color";
-
+import iconCorrect from "./icon_correct.svg";
+import iconIncorrect from "./icon_incorrect.svg";
 import bolt from "./bolt.svg";
 
 import { DefaultTheme, PickerButtonProps } from "../types";
@@ -38,7 +39,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   resultPicked: {
     backgroundColor: theme.colors.white,
-    border: `1px solid ${theme.colors.purple.base}`,
+    border: `1px solid ${theme.colors.primary.dark}`,
     "&:hover": {
       backgroundColor: theme.colors.white,
     },
@@ -52,6 +53,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     padding: `0 ${theme.spacing.base * 2}px`,
     zIndex: 2,
+    boxSizing: "border-box",
   },
   resultContainer: {
     display: "flex",
@@ -60,10 +62,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
   },
+  resultText: {
+    color: theme.colors.primary.dark,
+  },
   bolt: {
     display: "none",
   },
-  isPick: {
+  hasIcon: {
     display: "block",
     "& img": {
       position: "relative",
@@ -88,7 +93,70 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       left: 0,
       width: 0,
       height: "100%",
-      backgroundColor: theme.colors.purple.light,
+      backgroundColor: "#EAE5FF", // custom color requested here
+    },
+  },
+  nonPickedBar: {
+    display: "block",
+    position: "absolute",
+    top: 4,
+    left: 4,
+    width: "calc(100% - 8px)",
+    height: "calc(100% - 8px)",
+    borderRadius: 2,
+    zIndex: 1,
+    "& > div": {
+      display: "block",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: 0,
+      height: "100%",
+      backgroundColor: theme.colors.grey.light,
+    },
+  },
+  isCorrect: {
+    border: `1px solid ${theme.colors.green.base}`,
+  },
+  isIncorrect: {
+    border: `1px solid ${theme.colors.red.base}`,
+  },
+  barCorrect: {
+    display: "block",
+    position: "absolute",
+    top: 4,
+    left: 4,
+    width: "calc(100% - 8px)",
+    height: "calc(100% - 8px)",
+    borderRadius: 2,
+    zIndex: 1,
+    "& > div": {
+      display: "block",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: 0,
+      height: "100%",
+      backgroundColor: theme.colors.green.light,
+    },
+  },
+  barIncorrect: {
+    display: "block",
+    position: "absolute",
+    top: 4,
+    left: 4,
+    width: "calc(100% - 8px)",
+    height: "calc(100% - 8px)",
+    borderRadius: 2,
+    zIndex: 1,
+    "& > div": {
+      display: "block",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: 0,
+      height: "100%",
+      backgroundColor: theme.colors.red.light,
     },
   },
   barActive: {
@@ -107,8 +175,20 @@ const PickerButton: React.FC<PickerButtonProps> = ({
   showResult = false,
   result,
   isPick,
+  isCorrect,
+  isIncorrect,
 }) => {
   const classes = useStyles({ result });
+
+  const displayIcon = () => {
+    if (isCorrect) {
+      return iconCorrect;
+    } else if (isIncorrect) {
+      return iconIncorrect;
+    } else if (isPick) {
+      return bolt;
+    }
+  };
 
   return (
     <button
@@ -117,6 +197,8 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         [classes.root]: true,
         [classes.result]: showResult,
         [classes.resultPicked]: isPick,
+        [classes.isCorrect]: isCorrect,
+        [classes.isIncorrect]: isIncorrect,
         [className]: className,
       })}
       onClick={onClick}
@@ -124,8 +206,11 @@ const PickerButton: React.FC<PickerButtonProps> = ({
     >
       <div
         className={classNames({
-          [classes.bar]: true,
+          [classes.bar]: isPick ? true : false,
+          [classes.nonPickedBar]: !isPick ? true : false,
           [classes.barActive]: showResult,
+          [classes.barCorrect]: isCorrect,
+          [classes.barIncorrect]: isIncorrect,
         })}
       >
         <div />
@@ -134,17 +219,17 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         <div style={{ zIndex: 2, position: "relative" }}>{displayText}</div>
       ) : (
         <div className={classes.textContainer}>
-          <div>{displayText}</div>
+          <div className={classNames({[classes.resultText]: isPick})}>{displayText}</div>
           <div className={classes.resultContainer}>
             <div
               className={classNames({
                 [classes.bolt]: true,
-                [classes.isPick]: isPick,
+                [classes.hasIcon]: isPick || isCorrect || isIncorrect,
               })}
             >
-              <img src={bolt} aria-hidden role="presentation" />
+              <img src={displayIcon()} aria-hidden role="presentation" />
             </div>
-            <div>{result}%</div>
+            <div className={classNames({[classes.resultText]: isPick})}>{result}%</div>
           </div>
         </div>
       )}

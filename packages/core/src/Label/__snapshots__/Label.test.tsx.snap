@@ -3,15 +3,19 @@
 exports[`Label renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    data-testid="label-wrapper"
+    id="PickUpUI"
   >
-    <label
-      class="label-0-2-1"
-      data-testid="label"
-      for="firstName"
+    <div
+      data-testid="label-wrapper"
     >
-      First Name
-    </label>
+      <label
+        class="PU--label-0-2-1"
+        data-testid="label"
+        for="firstName"
+      >
+        First Name
+      </label>
+    </div>
   </div>
 </div>
 `;

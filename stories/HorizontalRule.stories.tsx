@@ -30,6 +30,14 @@ export default {
         category: "Styling",
       },
     },
+    color: {
+      defaultValue: false,
+      description: "changes default color of line and bolt",
+      control: "text",
+      table: {
+        category: "styling",
+      },
+    },
   },
   args: {
     showBolt: false,

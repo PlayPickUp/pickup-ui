@@ -1,0 +1,15 @@
+.Playground {
+  background-color: darkgoldenrod;
+}
+
+.Playground button:not(:hover):not(:active):not(.has-background) {
+  background-color: #000;
+}
+.Playground h1 {
+  font-family: "Comic Sans", cursive;
+}
+
+.Playground h1::after {
+  content: "\263A";
+  color: red;
+}

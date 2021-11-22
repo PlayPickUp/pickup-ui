@@ -1,4 +1,4 @@
-import React, { KeyboardEvent, MouseEvent, useRef } from "react";
+import React, { useRef } from "react";
 import MultiDownshift from "./MultiDownshift";
 import classNames from "classnames";
 import { createUseStyles, useTheme } from "react-jss";
@@ -65,6 +65,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       border: `1px solid ${theme.colors.grey.base}`,
       outline: "none",
     },
+    boxSizing: "border-box",
   },
   input: {
     position: "relative",
@@ -82,6 +83,23 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
   },
   iconButton: {
+    display: "inline-block",
+    "-webkit-appearance": "none",
+    "-moz-appearance": "none",
+    userSelect: "none",
+    textDecoration: "none",
+    fontFamily: "inherit",
+    fontSize: "inherit",
+    color: "inherit",
+    cursor: "pointer",
+    border: "none",
+    backgroundColor: "transparent",
+    borderColor: "transparent",
+    padding: "0",
+    margin: "0",
+    "&:disabled": {
+      cursor: "not-allowed",
+    },
     position: "absolute",
     right: `${theme.spacing.base * 3}px`,
     top: `${theme.spacing.base * 3.25}px`,
@@ -100,7 +118,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   dropdown: {
     position: "relative",
     top: -3,
-    height: "auto",
+    height: "200px",
+    overflow: "scroll",
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
     fontSize: 14,
@@ -125,7 +144,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   subtractIcon: {
     marginLeft: theme.spacing.base,
-    right: -7,
   },
 }));
 
@@ -137,12 +155,14 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
   const classes = useStyles();
   const theme: DefaultTheme = useTheme();
   const input = useRef(null);
+
   return (
     <>
       <MultiDownshift
         onChange={props.form.setFieldValue}
         itemToString={(item: SelectItem) => (item ? item.label : "")}
         field={props.field}
+        data-testid="multiselect"
       >
         {({
           getInputProps,
@@ -151,8 +171,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
           // note that the getRemoveButtonProps prop getter and the removeItem
           // action are coming from MultiDownshift composibility for the win!
           getRemoveButtonProps,
-          removeItem,
-
           isOpen,
           inputValue,
           selectedItems,
@@ -179,9 +197,13 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                       <div key={`${item.value}${i}`} className={classes.tag}>
                         <span>{item.label}</span>
                         <button
+                          style={{
+                            padding: 0,
+                          }}
                           {...getRemoveButtonProps({
                             item,
                           })}
+                          type="button"
                         >
                           <Icon
                             className={classes.subtractIcon}
@@ -198,14 +220,8 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 <input
                   {...getInputProps({
                     ref: input,
-                    placeholder: "Select items...",
+                    placeholder: "Search & Select items...",
                     className: classes.input,
-                    onKeyDown(event: KeyboardEvent) {
-                      if (event.key === "Backspace" && !inputValue) {
-                        removeItem(selectedItems[selectedItems.length - 1]);
-                      }
-                    },
-                    ...props.field,
                   })}
                 />
                 <button
@@ -236,31 +252,33 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                 style: { display: isOpen ? "block" : "none" },
               })}
             >
-              {isOpen
-                ? getItems(items, inputValue).map(
-                    (item: SelectItem, index: number) => (
-                      <li
-                        key={`${item.value}${index}`}
-                        {...getItemProps({
-                          item,
-                          index,
-                          className: classes.dropdownItem,
-                          style: {
-                            backgroundColor:
-                              highlightedIndex === index
-                                ? theme.colors.purple.light
-                                : theme.colors.white,
-                            fontWeight: selectedItems.includes(item)
-                              ? "bold"
-                              : "normal",
-                          },
-                        })}
-                      >
-                        {item.label}
-                      </li>
+              <div>
+                {isOpen
+                  ? getItems(items, inputValue).map(
+                      (item: SelectItem, index: number) => (
+                        <li
+                          key={`${item.value}${index}`}
+                          {...getItemProps({
+                            item,
+                            index,
+                            className: classes.dropdownItem,
+                            style: {
+                              backgroundColor:
+                                highlightedIndex === index
+                                  ? theme.colors.purple.light
+                                  : theme.colors.white,
+                              fontWeight: selectedItems.includes(item)
+                                ? "bold"
+                                : "normal",
+                            },
+                          })}
+                        >
+                          {item.label}
+                        </li>
+                      )
                     )
-                  )
-                : null}
+                  : null}
+              </div>
             </ul>
           </div>
         )}

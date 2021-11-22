@@ -17,6 +17,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     paddingLeft: theme.spacing.base * 7,
     paddingRight: theme.spacing.base * 7,
     maxWidth: theme.spacing.base * 214,
+    boxSizing: "border-box",
   },
   row: {
     display: "flex",

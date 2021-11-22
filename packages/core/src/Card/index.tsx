@@ -26,7 +26,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       spread: 3,
       color: theme.colors.grey.light,
     },
-    padding: 10,
+    padding: theme.spacing.base * 2.5,
+    boxSizing: "border-box",
   },
   image: {
     display: "flex",
@@ -117,7 +118,7 @@ const Card: React.FC<CardProps> = ({
             {eyebrow.description}
           </Typography>
         </div>
-        <Typography className={classes.heading} variant="heading4">
+        <Typography className={classes.heading} variant="body">
           {heading}
         </Typography>
         <Typography className={classes.description} variant="body">

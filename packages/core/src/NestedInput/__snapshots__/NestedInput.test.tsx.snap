@@ -3,69 +3,73 @@
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="root-0-2-1 root-d0-0-2-8"
+    id="PickUpUI"
   >
     <div
-      class="inputContainer-0-2-2"
+      class="PU--root-0-2-1 PU--root-d0-0-2-8"
     >
-      <input
-        class="input-0-2-3 input-d1-0-2-9"
-        name="email"
-        placeholder="you@example.com"
-        value="eric@playpickup.com"
-      />
+      <div
+        class="PU--inputContainer-0-2-2"
+      >
+        <input
+          class="PU--input-0-2-3 PU--input-d1-0-2-9"
+          name="email"
+          placeholder="you@example.com"
+          value="eric@playpickup.com"
+        />
+      </div>
+      <div>
+        <input
+          class="PU--root-0-2-10 PU--root-d0-0-2-14"
+          data-testid="pickup-button"
+          type="submit"
+          value="Sign Up"
+        />
+      </div>
     </div>
-    <div>
-      <input
-        class="root-0-2-10 root-d0-0-2-14"
-        data-testid="pickup-button"
-        type="submit"
-        value="Sign Up"
-      />
-    </div>
-  </div>
-  <div
-    class="root-0-2-1 root-d2-0-2-15"
-  >
     <div
-      class="inputContainer-0-2-2"
+      class="PU--root-0-2-1 PU--root-d2-0-2-15"
     >
-      <input
-        class="input-0-2-3 input-d3-0-2-16"
-        name="phone"
-        placeholder="(123) 293-5555"
-        value=""
-      />
+      <div
+        class="PU--inputContainer-0-2-2"
+      >
+        <input
+          class="PU--input-0-2-3 PU--input-d3-0-2-16"
+          name="phone"
+          placeholder="(123) 293-5555"
+          value=""
+        />
+      </div>
+      <div>
+        <input
+          class="PU--root-0-2-10 PU--root-d1-0-2-17"
+          data-testid="pickup-button"
+          type="submit"
+          value="Verify"
+        />
+      </div>
     </div>
-    <div>
-      <input
-        class="root-0-2-10 root-d1-0-2-17"
-        data-testid="pickup-button"
-        type="submit"
-        value="Verify"
-      />
-    </div>
-  </div>
-  <div
-    class="root-0-2-1 root-d4-0-2-18"
-  >
     <div
-      class="inputContainer-0-2-2"
+      class="PU--root-0-2-1 PU--root-d4-0-2-18"
     >
-      <input
-        class="input-0-2-3 input-d5-0-2-19"
-        name="otp"
-        placeholder="123456"
-        value=""
-      />
-    </div>
-    <div>
-      <input
-        class="root-0-2-10 root-d2-0-2-20"
-        data-testid="pickup-button"
-        type="submit"
-        value="Verify Pick"
-      />
+      <div
+        class="PU--inputContainer-0-2-2"
+      >
+        <input
+          class="PU--input-0-2-3 PU--input-d5-0-2-19"
+          name="otp"
+          placeholder="123456"
+          value=""
+        />
+      </div>
+      <div>
+        <input
+          class="PU--root-0-2-10 PU--root-d2-0-2-20"
+          data-testid="pickup-button"
+          type="submit"
+          value="Verify Pick"
+        />
+      </div>
     </div>
   </div>
 </div>

@@ -2,20 +2,28 @@
 
 exports[`Color prop is passed successfully 1`] = `
 <div>
-  <p
-    class="root-0-2-1 root-d4-0-2-8 body-0-2-5"
+  <div
+    id="PickUpUI"
   >
-    I am red text!
-  </p>
+    <p
+      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--body-0-2-8"
+    >
+      I am red text!
+    </p>
+  </div>
 </div>
 `;
 
 exports[`Renders without crashing, matches snapshot 1`] = `
 <div>
-  <h1
-    class="root-0-2-1 root-d3-0-2-7 title-0-2-2"
+  <div
+    id="PickUpUI"
   >
-    PlayPickUp
-  </h1>
+    <h1
+      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--title-0-2-2"
+    >
+      PlayPickUp
+    </h1>
+  </div>
 </div>
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSXElementConstructor } from "react";
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
 
@@ -8,6 +8,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   defaultActive: {
     backgroundColor: theme.colors.white,
     outline: "none",
+  },
+  link: {
+    textDecoration: "none",
   },
   root: {
     display: "inline-flex",
@@ -28,6 +31,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     "&:hover, &:focus, &:active": {
       extend: "defaultActive",
     },
+    boxSizing: "border-box",
   },
   primaryActive: {
     border: `1px solid ${theme.colors.primary.base}`,
@@ -104,9 +108,12 @@ const Chip: React.FC<ChipProps> = ({
   onClick,
   element,
   href,
+  to,
 }) => {
   const classes = useStyles({ color, disabled });
-  const Element: keyof JSX.IntrinsicElements = element ? element : "button";
+  const Element: keyof JSX.IntrinsicElements | JSXElementConstructor<any> =
+    element ?? "button";
+
   return (
     <Element
       data-testid="chip"
@@ -122,6 +129,7 @@ const Chip: React.FC<ChipProps> = ({
       onClick={onClick}
       style={style}
       href={href}
+      to={to}
     >
       <span>{label}</span>
     </Element>

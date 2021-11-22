@@ -1,9 +1,13 @@
 import Button from "./Button";
+import Breadcrumbs from "./Breadcrumbs";
 import Card from "./Card";
+import CheckBox from "./CheckBox";
 import Chip from "./Chip";
+import Countdown from "./FeedCard/Countdown";
 import DataTable from "./DataTable";
 import Dropdown from "./Dropdown";
 import Fab from "./Fab";
+import FeedCard from "./FeedCard";
 import FormError from "./FormError";
 import Hero from "./Hero";
 import HorizontalRule from "./HorizontalRule";
@@ -16,6 +20,7 @@ import Paper from "./Paper";
 import PickerButton from "./PickerButton";
 import ProgressButton from "./ProgressButton";
 import Select from "./Select";
+import Slider from "./Slider";
 import StatusIcon from "./StatusIcon";
 import TextArea from "./TextArea";
 import TextInput from "./TextInput";
@@ -30,11 +35,15 @@ export * from "./types";
 
 export {
   Button,
+  Breadcrumbs,
   Card,
+  CheckBox,
   Chip,
+  Countdown,
   DataTable,
   Dropdown,
   Fab,
+  FeedCard,
   FormError,
   Hero,
   HorizontalRule,
@@ -47,6 +56,7 @@ export {
   PickerButton,
   ProgressButton,
   Select,
+  Slider,
   StatusIcon,
   TextArea,
   TextInput,

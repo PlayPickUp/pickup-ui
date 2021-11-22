@@ -41,6 +41,16 @@ export default {
       description:
         "Switches component to show itself as the current selection (or pick)",
     },
+    isCorrect: {
+      defaultValue: false,
+      description:
+        "Switches component to show itself as a correctly graded pick.",
+    },
+    isIncorrect: {
+      defaultValue: false,
+      description:
+        "Switches component to show itself as an incorrectly graded pick.",
+    },
   },
   args: {
     displayText: "Absolutely 💯",
@@ -55,6 +65,9 @@ const Template: Story<PickerButtonProps> = (args) => <PickerButton {...args} />;
 export const Default = Template.bind({});
 export const Result = Template.bind({});
 export const SelectedPick = Template.bind({});
+export const CorrectPick = Template.bind({});
+export const IncorrectPick = Template.bind({});
+export const ClosedOrDisqualifiedPick = Template.bind({});
 
 Result.args = {
   isPick: false,
@@ -63,5 +76,23 @@ Result.args = {
 
 SelectedPick.args = {
   isPick: true,
+  showResult: true,
+};
+
+CorrectPick.args = {
+  isCorrect: true,
+  isIncorrect: false,
+  showResult: true,
+};
+
+IncorrectPick.args = {
+  isCorrect: false,
+  isIncorrect: true,
+  showResult: true,
+};
+
+ClosedOrDisqualifiedPick.args = {
+  isCorrect: false,
+  isIncorrect: false,
   showResult: true,
 };
