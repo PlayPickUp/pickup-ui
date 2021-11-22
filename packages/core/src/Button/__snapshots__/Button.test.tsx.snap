@@ -2,12 +2,16 @@
 
 exports[`Renders and matches snapshot 1`] = `
 <div>
-  <button
-    class="PU--root-0-2-1 PU--root-d0-0-2-5"
-    data-testid="pickup-button"
-    href="https://www.playpickup.com"
+  <div
+    id="PickUpUI"
   >
-    Make your pick
-  </button>
+    <button
+      class="PU--root-0-2-1 PU--root-d0-0-2-5"
+      data-testid="pickup-button"
+      href="https://www.playpickup.com"
+    >
+      Make your pick
+    </button>
+  </div>
 </div>
 `;

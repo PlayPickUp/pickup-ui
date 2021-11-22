@@ -39,7 +39,6 @@ export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
   theme?: DefaultTheme;
-  aggressive?: boolean;
 }
 
 export interface PurpleMap {
