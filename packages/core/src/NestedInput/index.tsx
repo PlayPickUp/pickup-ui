@@ -18,8 +18,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     border: (props) =>
       props.inputFocus
-        ? `1px solid ${theme.colors.grey.dark}`
-        : `1px solid ${theme.colors.purple.base}`,
+        ? `1px solid ${theme.colors.purple.base}`
+        : `1px solid #DFDAE6`,
     borderRadius: theme.borderRadius * 2,
     backgroundColor: theme.colors.white,
     width: "100%",
@@ -48,7 +48,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       border: "none",
       outline: "none",
       "& $root": {
-        borderColor: theme.colors.grey.dark,
+        borderColor: theme.colors.purple.base,
       },
     },
     "&:disabled": {
@@ -82,6 +82,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   phoneButtonSmall: {
     fontSize: 14,
     padding: "0 14px",
+    fontFamily: "Inter",
+    "&:focus": {},
   },
 }));
 
