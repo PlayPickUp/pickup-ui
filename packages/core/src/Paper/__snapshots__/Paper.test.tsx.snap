@@ -3,9 +3,13 @@
 exports[`Paper renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="PU--root-0-2-1 PU--root-d0-0-2-3"
+    id="PickUpUI"
   >
-    Hello, World
+    <div
+      class="PU--root-0-2-1 PU--root-d0-0-2-3"
+    >
+      Hello, World
+    </div>
   </div>
 </div>
 `;
@@ -13,20 +17,24 @@ exports[`Paper renders without crashing, matches snapshot 1`] = `
 exports[`Paper with logo heading renders without crashing, matches snapshot 1`] = `
 <div>
   <div
-    class="PU--root-0-2-1 PU--root-d0-0-2-3"
+    id="PickUpUI"
   >
     <div
-      class="PU--logoHeading-0-2-2"
+      class="PU--root-0-2-1 PU--root-d0-0-2-3"
     >
-      <div>
-        <img
-          alt="PickUp"
-          role="presentation"
-          src="test-file-stub"
-        />
+      <div
+        class="PU--logoHeading-0-2-2"
+      >
+        <div>
+          <img
+            alt="PickUp"
+            role="presentation"
+            src="test-file-stub"
+          />
+        </div>
       </div>
+      Hello, World
     </div>
-    Hello, World
   </div>
 </div>
 `;

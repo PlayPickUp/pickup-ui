@@ -3,242 +3,246 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <div
-    class="PU--card-0-2-8"
+    id="PickUpUI"
   >
-    <div>
-      <a
-        class="PU--featuredImage-0-2-3"
-        title="Chiefs vs. Ravens Who wins?"
-      >
-        <div
-          style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
-        />
-      </a>
-    </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d7-0-2-19"
+      class="PU--card-0-2-8"
     >
-      <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d4-0-2-17"
-      >
-        <img
-          alt="Prime Time Sports"
-          class="PU--publisherImage-0-2-12"
-          src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
-        />
+      <div>
         <a
-          style="display: inline-block;"
-          title="Prime Time Sports"
+          class="PU--featuredImage-0-2-3"
+          title="Chiefs vs. Ravens Who wins?"
         >
-          <p
-            class="PU--root-0-2-21 PU--root-d6-0-2-30 PU--body-0-2-28 PU--body-0-2-13"
-          >
-            Prime Time Sports
-          </p>
+          <div
+            style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
+          />
         </a>
-        <span
-          class="PU--root-0-2-21 PU--root-d7-0-2-31 PU--body-0-2-28 PU--body-0-2-13"
-        >
-          23m
-        </span>
-      </div>
-      <a
-        title="Chiefs vs. Ravens Who wins?"
-      >
-        <h3
-          class="PU--root-0-2-21 PU--root-d8-0-2-32 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d5-0-2-18"
-        >
-          Chiefs vs. Ravens Who wins?
-        </h3>
-      </a>
-      <div
-        class="PU--pick-0-2-15 PU--pick-d9-0-2-20"
-      >
-        <button
-          class="PU--root-0-2-33 PU--root-d0-0-2-37 PU--light-0-2-35 PU--button-0-2-10"
-          data-testid="pickup-button"
-        >
-          Ravens
-        </button>
-        <button
-          class="PU--root-0-2-33 PU--root-d1-0-2-38 PU--light-0-2-35 PU--button-0-2-10"
-          data-testid="pickup-button"
-        >
-          Chiefs
-        </button>
       </div>
       <div
-        class="PU--countdown-0-2-16"
+        class="PU--rightContainer-0-2-14 PU--rightContainer-d7-0-2-19"
       >
         <div
-          class="PU--container-0-2-41"
+          class="PU--publisherRow-0-2-5 PU--publisherRow-d4-0-2-17"
+        >
+          <img
+            alt="Prime Time Sports"
+            class="PU--publisherImage-0-2-12"
+            src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          />
+          <a
+            style="display: inline-block;"
+            title="Prime Time Sports"
+          >
+            <p
+              class="PU--root-0-2-21 PU--root-d6-0-2-30 PU--body-0-2-28 PU--body-0-2-13"
+            >
+              Prime Time Sports
+            </p>
+          </a>
+          <span
+            class="PU--root-0-2-21 PU--root-d7-0-2-31 PU--body-0-2-28 PU--body-0-2-13"
+          >
+            23m
+          </span>
+        </div>
+        <a
+          title="Chiefs vs. Ravens Who wins?"
+        >
+          <h3
+            class="PU--root-0-2-21 PU--root-d8-0-2-32 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d5-0-2-18"
+          >
+            Chiefs vs. Ravens Who wins?
+          </h3>
+        </a>
+        <div
+          class="PU--pick-0-2-15 PU--pick-d9-0-2-20"
+        >
+          <button
+            class="PU--root-0-2-33 PU--root-d0-0-2-37 PU--light-0-2-35 PU--button-0-2-10"
+            data-testid="pickup-button"
+          >
+            Ravens
+          </button>
+          <button
+            class="PU--root-0-2-33 PU--root-d1-0-2-38 PU--light-0-2-35 PU--button-0-2-10"
+            data-testid="pickup-button"
+          >
+            Chiefs
+          </button>
+        </div>
+        <div
+          class="PU--countdown-0-2-16"
         >
           <div
-            class="PU--timer-0-2-39"
+            class="PU--container-0-2-41"
           >
-            <svg
-              class="PU--timerIcon-0-2-42"
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="PU--timer-0-2-39"
             >
-              <path
-                d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span
-              class="PU--root-0-2-21 PU--root-d9-0-2-48 PU--body-0-2-28 PU--closed-0-2-44"
+              <svg
+                class="PU--timerIcon-0-2-42"
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="PU--root-0-2-21 PU--root-d9-0-2-48 PU--body-0-2-28 PU--closed-0-2-44"
+              >
+                CLOSED
+              </span>
+            </div>
+            <div
+              class="PU--pick-0-2-40"
             >
-              CLOSED
-            </span>
-          </div>
-          <div
-            class="PU--pick-0-2-40"
-          >
-            <svg
-              class="PU--pickedIcon-0-2-43 PU--pickedIcon-d2-0-2-46"
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <span
-              class="PU--root-0-2-21 PU--root-d10-0-2-49 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d3-0-2-47"
-            >
-              Picked
-            </span>
+              <svg
+                class="PU--pickedIcon-0-2-43 PU--pickedIcon-d2-0-2-46"
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="PU--root-0-2-21 PU--root-d10-0-2-49 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d3-0-2-47"
+              >
+                Picked
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="PU--expandedCard-0-2-9"
-  >
-    <div>
-      <a
-        class="PU--expandedFeaturedIgmage-0-2-4"
-        title="Chiefs vs. Ravens Who wins?"
-      >
-        <div
-          style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
-        />
-      </a>
-    </div>
     <div
-      class="PU--rightContainer-0-2-14 PU--rightContainer-d14-0-2-52"
+      class="PU--expandedCard-0-2-9"
     >
-      <div
-        class="PU--publisherRow-0-2-5 PU--publisherRow-d11-0-2-50"
-      >
-        <img
-          alt="Prime Time Sports"
-          class="PU--publisherImage-0-2-12"
-          src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
-        />
+      <div>
         <a
-          style="display: inline-block;"
-          title="Prime Time Sports"
+          class="PU--expandedFeaturedIgmage-0-2-4"
+          title="Chiefs vs. Ravens Who wins?"
         >
-          <p
-            class="PU--root-0-2-21 PU--root-d11-0-2-54 PU--body-0-2-28 PU--body-0-2-13"
-          >
-            Prime Time Sports
-          </p>
+          <div
+            style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
+          />
         </a>
-        <span
-          class="PU--root-0-2-21 PU--root-d12-0-2-55 PU--body-0-2-28 PU--body-0-2-13"
-        >
-          23m
-        </span>
-      </div>
-      <a
-        title="Chiefs vs. Ravens Who wins?"
-      >
-        <h3
-          class="PU--root-0-2-21 PU--root-d13-0-2-56 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d12-0-2-51"
-        >
-          Chiefs vs. Ravens Who wins?
-        </h3>
-      </a>
-      <div
-        class="PU--pick-0-2-15 PU--pick-d16-0-2-53"
-      >
-        <button
-          class="PU--root-0-2-33 PU--root-d2-0-2-57 PU--light-0-2-35 PU--button-0-2-10"
-          data-testid="pickup-button"
-        >
-          Ravens
-        </button>
-        <button
-          class="PU--root-0-2-33 PU--root-d3-0-2-58 PU--light-0-2-35 PU--button-0-2-10"
-          data-testid="pickup-button"
-        >
-          Chiefs
-        </button>
       </div>
       <div
-        class="PU--countdown-0-2-16"
+        class="PU--rightContainer-0-2-14 PU--rightContainer-d14-0-2-52"
       >
         <div
-          class="PU--container-0-2-41"
+          class="PU--publisherRow-0-2-5 PU--publisherRow-d11-0-2-50"
+        >
+          <img
+            alt="Prime Time Sports"
+            class="PU--publisherImage-0-2-12"
+            src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
+          />
+          <a
+            style="display: inline-block;"
+            title="Prime Time Sports"
+          >
+            <p
+              class="PU--root-0-2-21 PU--root-d11-0-2-54 PU--body-0-2-28 PU--body-0-2-13"
+            >
+              Prime Time Sports
+            </p>
+          </a>
+          <span
+            class="PU--root-0-2-21 PU--root-d12-0-2-55 PU--body-0-2-28 PU--body-0-2-13"
+          >
+            23m
+          </span>
+        </div>
+        <a
+          title="Chiefs vs. Ravens Who wins?"
+        >
+          <h3
+            class="PU--root-0-2-21 PU--root-d13-0-2-56 PU--heading3-0-2-24 PU--h3-0-2-11 PU--h3-d12-0-2-51"
+          >
+            Chiefs vs. Ravens Who wins?
+          </h3>
+        </a>
+        <div
+          class="PU--pick-0-2-15 PU--pick-d16-0-2-53"
+        >
+          <button
+            class="PU--root-0-2-33 PU--root-d2-0-2-57 PU--light-0-2-35 PU--button-0-2-10"
+            data-testid="pickup-button"
+          >
+            Ravens
+          </button>
+          <button
+            class="PU--root-0-2-33 PU--root-d3-0-2-58 PU--light-0-2-35 PU--button-0-2-10"
+            data-testid="pickup-button"
+          >
+            Chiefs
+          </button>
+        </div>
+        <div
+          class="PU--countdown-0-2-16"
         >
           <div
-            class="PU--timer-0-2-39"
+            class="PU--container-0-2-41"
           >
-            <svg
-              class="PU--timerIcon-0-2-42"
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="PU--timer-0-2-39"
             >
-              <path
-                d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span
-              class="PU--root-0-2-21 PU--root-d14-0-2-61 PU--body-0-2-28 PU--closed-0-2-44"
+              <svg
+                class="PU--timerIcon-0-2-42"
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 5.71999L17.4 1.85999L16.11 3.38999L20.71 7.24999L22 5.71999ZM7.88 3.38999L6.6 1.85999L2 5.70999L3.29 7.23998L7.88 3.38999ZM12.5 7.99999H11V14L15.75 16.85L16.5 15.62L12.5 13.25V7.99999ZM12 3.99999C7.03 3.99999 3 8.02999 3 13C3 17.97 7.02 22 12 22C16.97 22 21 17.97 21 13C21 8.02999 16.97 3.99999 12 3.99999ZM12 20C8.13 20 5 16.87 5 13C5 9.12999 8.13 5.99999 12 5.99999C15.87 5.99999 19 9.12999 19 13C19 16.87 15.87 20 12 20Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span
+                class="PU--root-0-2-21 PU--root-d14-0-2-61 PU--body-0-2-28 PU--closed-0-2-44"
+              >
+                CLOSED
+              </span>
+            </div>
+            <div
+              class="PU--pick-0-2-40"
             >
-              CLOSED
-            </span>
-          </div>
-          <div
-            class="PU--pick-0-2-40"
-          >
-            <svg
-              class="PU--pickedIcon-0-2-43 PU--pickedIcon-d4-0-2-59"
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <span
-              class="PU--root-0-2-21 PU--root-d15-0-2-62 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d5-0-2-60"
-            >
-              Picked
-            </span>
+              <svg
+                class="PU--pickedIcon-0-2-43 PU--pickedIcon-d4-0-2-59"
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M13.5118 3.75024L13.0534 10.5167H19.0001L10.4888 21.2498L10.9472 14.4833H5.00049L13.5118 3.75024Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="PU--root-0-2-21 PU--root-d15-0-2-62 PU--body-0-2-28 PU--picked-0-2-45 PU--picked-d5-0-2-60"
+              >
+                Picked
+              </span>
+            </div>
           </div>
         </div>
       </div>

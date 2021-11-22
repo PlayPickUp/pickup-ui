@@ -2,29 +2,33 @@
 
 exports[`Renders and matches snapshot 1`] = `
 <div>
-  <nav
-    class="PU--root-0-2-1"
+  <div
+    id="PickUpUI"
   >
-    <ul
-      class="PU--list-0-2-2"
+    <nav
+      class="PU--root-0-2-1"
     >
-      <li>
-        <a
-          class="PU--link-0-2-3"
-          href="/sports-betting"
-        >
-          Sports Betting
-        </a>
-        <span
-          class="PU--separator-0-2-4"
-        >
-          /
-        </span>
-      </li>
-      <li>
-        Arizona Sports Betting
-      </li>
-    </ul>
-  </nav>
+      <ul
+        class="PU--list-0-2-2"
+      >
+        <li>
+          <a
+            class="PU--link-0-2-3"
+            href="/sports-betting"
+          >
+            Sports Betting
+          </a>
+          <span
+            class="PU--separator-0-2-4"
+          >
+            /
+          </span>
+        </li>
+        <li>
+          Arizona Sports Betting
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 `;

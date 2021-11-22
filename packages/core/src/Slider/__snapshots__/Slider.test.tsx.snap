@@ -3,19 +3,23 @@
 exports[`Renders and matches snapshot 1`] = `
 <div>
   <div
-    class="PU--sliderContainer-0-2-1"
+    id="PickUpUI"
   >
     <div
-      class="PU--sliderWrapper-0-2-2"
+      class="PU--sliderContainer-0-2-1"
     >
       <div
-        class="PU--sliderContentWrapper-0-2-3"
+        class="PU--sliderWrapper-0-2-2"
       >
         <div
-          class="PU--sliderContent-0-2-4"
-          style="transform: translateX(-NaN%);"
+          class="PU--sliderContentWrapper-0-2-3"
         >
-          <div />
+          <div
+            class="PU--sliderContent-0-2-4"
+            style="transform: translateX(-NaN%);"
+          >
+            <div />
+          </div>
         </div>
       </div>
     </div>

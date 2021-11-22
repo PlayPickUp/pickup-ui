@@ -2,18 +2,22 @@
 
 exports[`Renders and matches snapshot 1`] = `
 <div>
-  <a
-    class="PU--root-0-2-2"
-    data-testid="progress-button"
+  <div
+    id="PickUpUI"
   >
-    <div
-      class="PU--progressBar-0-2-3 PU--progressBar-d1-0-2-9"
-    />
-    <div
-      class="PU--textContainer-0-2-7"
+    <a
+      class="PU--root-0-2-2"
+      data-testid="progress-button"
     >
-      125 / 250 points
-    </div>
-  </a>
+      <div
+        class="PU--progressBar-0-2-3 PU--progressBar-d1-0-2-9"
+      />
+      <div
+        class="PU--textContainer-0-2-7"
+      >
+        125 / 250 points
+      </div>
+    </a>
+  </div>
 </div>
 `;
