@@ -21,6 +21,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
+      color: theme.colors.primary.base,
     },
   },
   separator: {
