@@ -48,7 +48,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       border: "none",
       outline: "none",
       "& $root": {
-        borderColor: theme.colors.purple.base,
+        borderColor: theme.colors.grey.dark,
       },
     },
     "&:disabled": {
