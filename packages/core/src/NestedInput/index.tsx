@@ -141,6 +141,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
                 smartCaret={false}
                 disabled={disabled}
                 onChange={(e) => props.form.setFieldValue(props.field.name, e)}
+                onBlur={(e) => {
+                  toggleFocus();
+                  props.field.onBlur(e);
+                }}
+                onFocus={toggleFocus}
               />
             </div>
           ) : (
