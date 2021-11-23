@@ -55,10 +55,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   eyebrow: {
     display: "flex",
     flexDirection: "row",
-    "& > :first-child": {
-      paddingRight: theme.spacing.base * 2,
-      color: theme.colors.purple.base,
-    },
     [theme.mediaQuery(theme.breakpoints.small)]: {
       width: "100%",
     },
@@ -118,12 +114,6 @@ const Hero: React.FC<HeroProps> = ({
             <img className={classes.image} src={image_src} alt={image_alt} />
           </div>
           <div className={classes.column}>
-            {eyebrow ? (
-              <div className={classes.eyebrow}>
-                <Typography variant="body2">{eyebrow.name}</Typography>
-                <Typography variant="body2">{eyebrow.description}</Typography>
-              </div>
-            ) : null}
             <Typography
               data-testid="hero-title"
               className={classes.title}
@@ -131,6 +121,11 @@ const Hero: React.FC<HeroProps> = ({
             >
               {title}
             </Typography>
+            {eyebrow ? (
+              <div className={classes.eyebrow}>
+                <Typography variant="body2">{`${eyebrow.name} | ${eyebrow.description}`}</Typography>
+              </div>
+            ) : null}
             <Typography
               data-testid="hero-description"
               className={classes.description}
