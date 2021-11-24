@@ -227,26 +227,22 @@ const App: React.FC = () => {
   });
   // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
-    <div className="Playground">
-      <div className={classes.playground}>
-        <ThemeProvider>
-          <Router>
-            <div style={{ margin: 40, maxWidth: 936 }}>
-              <Hero
-                title="The State of Sports Betting"
-                description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
-                image_src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
-                image_alt="bowlero"
-                eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
-                href="https://store.trxtraining.com/products/trx-training-club-burn-unlimited"
-                crumbs={crumbs}
-                chip="500 Points"
-              />
-            </div>
-          </Router>
-        </ThemeProvider>
-      </div>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <div>
+          <Hero
+            title="The State of Sports Betting"
+            description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
+            image_src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
+            image_alt="bowlero"
+            eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
+            href="https://store.trxtraining.com/products/trx-training-club-burn-unlimited"
+            crumbs={crumbs}
+            chip="500 Points"
+          />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 };
 

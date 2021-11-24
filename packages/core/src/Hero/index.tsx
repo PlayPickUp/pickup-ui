@@ -6,6 +6,7 @@ import { Breadcrumbs, Chip } from "..";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
+    width: "100%",
     backgroundColor: "#F6F4FF",
     textAlign: "center",
     [theme.mediaQuery(theme.breakpoints.small)]: {
@@ -13,6 +14,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
   },
   container: {
+    margin: "0 auto",
     padding: [theme.spacing.base * 5, theme.spacing.base * 5],
     maxWidth: theme.spacing.base * 214,
     boxSizing: "border-box",
@@ -48,6 +50,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
+    overflow: "hidden",
     paddingBottom: theme.spacing.base * 2,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       paddingBottom: 0,
@@ -88,7 +91,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     marginTop: theme.spacing.base * 2,
   },
   breadcrumbs: {
-    marginBottom: theme.spacing.base * 2,
+    marginBottom: theme.spacing.base * 4,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       marginBottom: 0,
     },
