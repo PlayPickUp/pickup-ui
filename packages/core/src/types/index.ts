@@ -567,11 +567,9 @@ export interface HeroProps {
   description: React.ReactText;
   image_src: string;
   image_alt: string;
-}
-
-export interface HeroStyleState {
-  titleVariant: TypographyProps["variant"];
-  descriptionVariant: TypographyProps["variant"];
+  href?: string;
+  chip?: string;
+  crumbs?: Array<Path>;
 }
 
 /**
