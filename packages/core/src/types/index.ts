@@ -661,4 +661,5 @@ export interface Path {
 
 export interface BreadcrumbsProps {
   crumbs: Array<Path>;
+  className?: string;
 }
