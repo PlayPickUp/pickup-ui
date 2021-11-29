@@ -19,6 +19,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   link: {
     color: theme.colors.black,
     textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+      color: theme.colors.primary.base,
+    },
   },
   separator: {
     display: "inline-block",
