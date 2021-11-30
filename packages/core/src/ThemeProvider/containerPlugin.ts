@@ -18,7 +18,15 @@ export function containUI(container?: string): Plugin {
     )
       return;
 
-    rule.selectorText = prefix + rule.selectorText;
+    if (rule.selectorText.includes(",")) {
+      const allSelectors = rule.selectorText.split(",");
+      const transformedSelectors = allSelectors.map((selector: string) =>
+        selector.includes(prefix) ? selector : prefix + selector
+      );
+      rule.selectorText = transformedSelectors.join(",");
+    } else {
+      rule.selectorText = prefix + rule.selectorText;
+    }
   }
   return { onProcessRule };
 }
