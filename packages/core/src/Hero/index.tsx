@@ -50,11 +50,22 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    overflow: "hidden",
     paddingBottom: theme.spacing.base * 2,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       paddingBottom: 0,
     },
+  },
+  imageContainer: {
+    height: "100%",
+    maxWidth: 350,
+    overflow: "hidden",
+    borderRadius: 4,
+  },
+  image: {
+    display: "block",
+    maxWidth: "100%",
+    height: "100%",
+    objectFit: "cover",
   },
   eyebrow: {
     display: "flex",
@@ -77,12 +88,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       fontSize: 15,
       lineHeight: `${theme.spacing.base * 6}px`,
     },
-  },
-  image: {
-    maxWidth: 300,
-    width: "auto",
-    height: "100%",
-    borderRadius: 4,
   },
   chip: {
     border: ["solid", theme.colors.primary.base, 1],
@@ -117,7 +122,9 @@ const Hero: React.FC<HeroProps> = ({
         ) : null}
         <div className={classes.row}>
           <div className={classes.imageColumn}>
-            <img className={classes.image} src={image_src} alt={image_alt} />
+            <div className={classes.imageContainer}>
+              <img className={classes.image} src={image_src} alt={image_alt} />
+            </div>
           </div>
           <div className={classes.column}>
             <Typography
