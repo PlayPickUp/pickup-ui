@@ -17,37 +17,36 @@ exports[`Renders and matches snapshot 1`] = `
           <div
             class="PU--imageColumn-0-2-5"
           >
-            <img
-              alt="bowlero"
-              class="PU--image-0-2-9"
-              src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
-            />
+            <div
+              class="PU--imageContainer-0-2-6"
+            >
+              <img
+                alt="bowlero"
+                class="PU--image-0-2-7"
+                src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
+              />
+            </div>
           </div>
           <div
             class="PU--column-0-2-4"
           >
-            <div
-              class="PU--eyebrow-0-2-6"
-            >
-              <p
-                class="PU--root-0-2-10 PU--root-d6-0-2-19 PU--body2-0-2-18"
-              >
-                Eyebrow Title
-              </p>
-              <p
-                class="PU--root-0-2-10 PU--root-d7-0-2-20 PU--body2-0-2-18"
-              >
-                Eyebrow Description
-              </p>
-            </div>
             <h2
-              class="PU--root-0-2-10 PU--root-d8-0-2-21 PU--heading2-0-2-12 PU--title-0-2-7"
+              class="PU--root-0-2-13 PU--root-d6-0-2-22 PU--heading2-0-2-15 PU--title-0-2-9"
               data-testid="hero-title"
             >
               Hero Title
             </h2>
+            <div
+              class="PU--eyebrow-0-2-8"
+            >
+              <p
+                class="PU--root-0-2-13 PU--root-d7-0-2-23 PU--body2-0-2-21"
+              >
+                Eyebrow Title | Eyebrow Description
+              </p>
+            </div>
             <p
-              class="PU--root-0-2-10 PU--root-d9-0-2-22 PU--body-0-2-17 PU--description-0-2-8"
+              class="PU--root-0-2-13 PU--root-d8-0-2-24 PU--body-0-2-20 PU--description-0-2-10"
               data-testid="hero-description"
             >
               Hero Description

@@ -28,6 +28,23 @@ export default {
       defaultValue: "Bowlero",
       description: "Alt text in case image cannot render",
     },
+    chip: {
+      defaultValue: "500 Points",
+      description: "Typically used for Marketplace points value",
+    },
+    crumbs: {
+      defaultValue: [
+        {
+          name: "Sports Betting",
+          path: "/sports-betting",
+        },
+        {
+          name: "Arizona Sports Betting",
+          path: "/arizona-sports-betting",
+        },
+      ],
+      description: "An array of paths for breadcrumbs component",
+    },
   },
   args: {
     title: "Hero Title",
@@ -40,6 +57,17 @@ export default {
     image_src:
       "https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg",
     image_alt: "Bowlero",
+    chip: "500 Points",
+    crumbs: [
+      {
+        name: "Sports Betting",
+        path: "/sports-betting",
+      },
+      {
+        name: "Arizona Sports Betting",
+        path: "/arizona-sports-betting",
+      },
+    ],
   },
 } as Meta;
 
