@@ -229,7 +229,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <Router>
-        <div>
+        <div className="Playground">
           <Hero
             title="The State of Sports Betting"
             description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."

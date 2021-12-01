@@ -5,7 +5,7 @@
 
 import { Plugin } from "jss";
 
-export function containUI(container?: string): Plugin {
+export function containUI(withReset: boolean, container?: string): Plugin {
   const prefix = container ? container : "body #PickUpUI ";
 
   // 'rule' is left untyped because the Rule import from jss is not recognizing all child properties
@@ -13,8 +13,9 @@ export function containUI(container?: string): Plugin {
     const parent = rule.options.parent;
     if (
       rule.type !== "style" ||
+      rule.selectorText.includes(prefix) ||
       (parent && parent.type === "keyframes") ||
-      rule.selectorText.includes(prefix)
+      (withReset && parent && parent.key === "@global")
     )
       return;
 
