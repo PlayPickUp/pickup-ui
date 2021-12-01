@@ -13,7 +13,7 @@ export function containUI(withReset: boolean, container?: string): Plugin {
     const parent = rule.options.parent;
     if (
       rule.type !== "style" ||
-      rule.selectorText.includes(prefix) ||
+      rule.selectorText?.includes(prefix) ||
       (parent && parent.type === "keyframes") ||
       (withReset && parent && parent.key === "@global")
     )
