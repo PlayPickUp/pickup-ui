@@ -42,7 +42,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
     [theme.mediaQuery(theme.breakpoints.small)]: {
       padding: 0,
-      justifyContent: "left",
+      alignItems: "start",
     },
   },
   imageColumn: {
@@ -57,6 +57,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   imageContainer: {
     height: "100%",
+    maxHeight: 300,
     maxWidth: 350,
     overflow: "hidden",
     borderRadius: 4,
@@ -94,6 +95,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     color: theme.colors.primary.base,
     backgroundColor: "white",
     marginTop: theme.spacing.base * 2,
+    // [theme.mediaQuery(theme.breakpoints.small)]: {
+    //   alignSelf: "left",
+    // },
   },
   breadcrumbs: {
     marginBottom: theme.spacing.base * 4,
@@ -146,11 +150,11 @@ const Hero: React.FC<HeroProps> = ({
             >
               {description}
             </Typography>
+            {chip ? (
+              <Chip className={classes.chip} label={chip} element="div" />
+            ) : null}
           </div>
         </div>
-        {chip ? (
-          <Chip className={classes.chip} label={chip} element="div" />
-        ) : null}
       </div>
     </div>
   );

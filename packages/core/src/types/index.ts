@@ -567,7 +567,6 @@ export interface HeroProps {
   description: React.ReactText;
   image_src: string;
   image_alt: string;
-  href?: string;
   chip?: string;
   crumbs?: Array<Path>;
 }
