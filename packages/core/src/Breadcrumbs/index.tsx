@@ -2,6 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { Link } from "react-router-dom";
 import { DefaultTheme, BreadcrumbsProps } from "../types";
+import classNames from "classnames";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
@@ -33,6 +34,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   crumbs,
+  className,
 }: BreadcrumbsProps) => {
   const classes = useStyles();
   const mappedCrumbs = crumbs.map(({ path, name }, index: number) => {
@@ -51,7 +53,12 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   });
 
   return (
-    <nav className={classes.root}>
+    <nav
+      className={classNames({
+        [className]: className,
+        [classes.root]: true,
+      })}
+    >
       <ul className={classes.list}>{mappedCrumbs}</ul>
     </nav>
   );

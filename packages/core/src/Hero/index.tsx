@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { createUseStyles } from "react-jss";
-import { DefaultTheme, HeroProps, HeroStyleState } from "../types";
+import { DefaultTheme, HeroProps } from "../types";
 import Typography from "../Typography";
+import { Breadcrumbs, Chip } from "..";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
-    backgroundColor: theme.colors.grey.light,
-    paddingTop: theme.spacing.base * 8,
-    paddingBottom: theme.spacing.base * 8,
+    width: "100%",
+    backgroundColor: "#F6F4FF",
     textAlign: "center",
     [theme.mediaQuery(theme.breakpoints.small)]: {
       textAlign: "left",
     },
   },
   container: {
-    paddingLeft: theme.spacing.base * 7,
-    paddingRight: theme.spacing.base * 7,
+    margin: "0 auto",
+    padding: [theme.spacing.base * 5, theme.spacing.base * 5],
     maxWidth: theme.spacing.base * 214,
     boxSizing: "border-box",
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      padding: theme.spacing.base * 7,
+    },
   },
   row: {
     display: "flex",
@@ -39,7 +42,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     },
     [theme.mediaQuery(theme.breakpoints.small)]: {
       padding: 0,
-      justifyContent: "left",
+      alignItems: "start",
     },
   },
   imageColumn: {
@@ -52,39 +55,52 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       paddingBottom: 0,
     },
   },
+  imageContainer: {
+    height: "100%",
+    maxHeight: 300,
+    maxWidth: 350,
+    overflow: "hidden",
+    borderRadius: 4,
+  },
+  image: {
+    display: "block",
+    maxWidth: "100%",
+    height: "100%",
+    objectFit: "cover",
+  },
   eyebrow: {
     display: "flex",
     flexDirection: "row",
-    "& > :first-child": {
-      paddingRight: theme.spacing.base * 2,
-      color: theme.colors.purple.base,
-    },
     [theme.mediaQuery(theme.breakpoints.small)]: {
       width: "100%",
     },
   },
   title: {
     fontWeight: "normal",
+    fontSize: 30,
     width: "100%",
-    [theme.mediaQuery(theme.breakpoints.small)]: {
-      fontSize: 34,
-      lineHeight: `${theme.spacing.base * 10}px`,
-    },
+    lineHeight: `${theme.spacing.base * 9}px`,
   },
   description: {
     fontSize: 13,
     width: "100%",
     lineHeight: `${theme.spacing.base * 5}px`,
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      fontSize: 18,
-      lineHeight: `${theme.spacing.base * 7}px`,
+      fontSize: 15,
+      lineHeight: `${theme.spacing.base * 6}px`,
     },
   },
-  image: {
-    maxWidth: 300,
-    width: "100%",
-    height: "auto",
-    borderRadius: 15,
+  chip: {
+    border: ["solid", theme.colors.primary.base, 1],
+    color: theme.colors.primary.base,
+    backgroundColor: "white",
+    marginTop: theme.spacing.base * 2,
+  },
+  breadcrumbs: {
+    marginBottom: theme.spacing.base * 4,
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      marginBottom: 0,
+    },
   },
 }));
 
@@ -94,50 +110,46 @@ const Hero: React.FC<HeroProps> = ({
   image_src,
   image_alt,
   eyebrow,
+  chip,
+  crumbs,
 }) => {
   const classes = useStyles();
-  const [heroStyle, setHeroStyle] = useState<HeroStyleState>({
-    titleVariant: "heading3",
-    descriptionVariant: "body",
-  });
-
-  useEffect(() => {
-    if (eyebrow) {
-      setHeroStyle({
-        ...heroStyle,
-        titleVariant: "heading2",
-      });
-    }
-  }, []);
 
   return (
     <div className={classes.root}>
       <div className={classes.container}>
+        {crumbs ? (
+          <Breadcrumbs className={classes.breadcrumbs} crumbs={crumbs} />
+        ) : null}
         <div className={classes.row}>
           <div className={classes.imageColumn}>
-            <img className={classes.image} src={image_src} alt={image_alt} />
+            <div className={classes.imageContainer}>
+              <img className={classes.image} src={image_src} alt={image_alt} />
+            </div>
           </div>
           <div className={classes.column}>
-            {eyebrow ? (
-              <div className={classes.eyebrow}>
-                <Typography variant="body2">{eyebrow.name}</Typography>
-                <Typography variant="body2">{eyebrow.description}</Typography>
-              </div>
-            ) : null}
             <Typography
               data-testid="hero-title"
               className={classes.title}
-              variant={heroStyle.titleVariant}
+              variant="heading2"
             >
               {title}
             </Typography>
+            {eyebrow ? (
+              <div className={classes.eyebrow}>
+                <Typography variant="body2">{`${eyebrow.name} | ${eyebrow.description}`}</Typography>
+              </div>
+            ) : null}
             <Typography
               data-testid="hero-description"
               className={classes.description}
-              variant={heroStyle.descriptionVariant}
+              variant="body"
             >
               {description}
             </Typography>
+            {chip ? (
+              <Chip className={classes.chip} label={chip} element="div" />
+            ) : null}
           </div>
         </div>
       </div>

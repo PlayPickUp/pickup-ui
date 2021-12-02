@@ -567,11 +567,8 @@ export interface HeroProps {
   description: React.ReactText;
   image_src: string;
   image_alt: string;
-}
-
-export interface HeroStyleState {
-  titleVariant: TypographyProps["variant"];
-  descriptionVariant: TypographyProps["variant"];
+  chip?: string;
+  crumbs?: Array<Path>;
 }
 
 /**
@@ -663,4 +660,5 @@ export interface Path {
 
 export interface BreadcrumbsProps {
   crumbs: Array<Path>;
+  className?: string;
 }
