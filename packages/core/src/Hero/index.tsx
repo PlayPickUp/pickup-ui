@@ -65,7 +65,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   image: {
     display: "block",
     maxWidth: "100%",
-    height: "100%",
+    height: "auto",
     objectFit: "cover",
   },
   eyebrow: {
