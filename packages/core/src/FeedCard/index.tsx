@@ -176,7 +176,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           }
           title={title}
         >
-          <div style={renderFeaturedImage(image)} />
+          <div style={renderFeaturedImage(image)} data-testid="featuredImage" />
         </a>
       </div>
 
