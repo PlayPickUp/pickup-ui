@@ -31,7 +31,7 @@ test("Color prop changes the color of the Horizontal Rule and bolt", () => {
   expect(container).toMatchSnapshot();
 });
 
-test("Props are passed and rendered", () => {
+test("Style props are passed and rendered", () => {
   const { getByTestId } = render(
     <ThemeProvider>
       <HorizontalRule className="test-1-2-3" style={{ opacity: 0.5 }} />
