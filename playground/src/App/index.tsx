@@ -233,7 +233,7 @@ const App: React.FC = () => {
           <Hero
             title="The State of Sports Betting"
             description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
-            image_src="https://www.playpickup.com/3a6ae08caa07d98bdee0.svg"
+            image_src="https://images.ctfassets.net/vr34jcb0tstv/6v9VCB5kU8MB1F5DOojcfW/ac4b49231aaee3ef086045efb23c5935/fanatics_white.png"
             image_alt="pickup-logo"
             eyebrow={{ name: "Fanatics", description: "$30 value" }} // comment out to see non-eyebrow formatting
             crumbs={crumbs}
