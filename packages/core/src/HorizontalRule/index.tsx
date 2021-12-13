@@ -50,7 +50,11 @@ const HorizontalRule: React.FC<HorizontalRuleProps> = ({
   };
   const classes = useStyles({ ...props });
   return (
-    <div className={classNames(classes.root, className)} style={style}>
+    <div
+      className={classNames(classes.root, className)}
+      style={style}
+      data-testid="horizontalRule"
+    >
       {showBolt ? (
         <>
           <hr className={classes.rule} />
