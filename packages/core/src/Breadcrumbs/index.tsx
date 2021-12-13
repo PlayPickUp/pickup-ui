@@ -59,7 +59,9 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
         [classes.root]: true,
       })}
     >
-      <ul className={classes.list}>{mappedCrumbs}</ul>
+      <ul className={classes.list} aria-label="breadcrumbs">
+        {mappedCrumbs}
+      </ul>
     </nav>
   );
 };

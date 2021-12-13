@@ -9,6 +9,7 @@ exports[`Renders and matches snapshot 1`] = `
       class="PU--root-0-2-1"
     >
       <ul
+        aria-label="breadcrumbs"
         class="PU--list-0-2-2"
       >
         <li>
