@@ -97,6 +97,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     marginTop: theme.spacing.base * 2,
   },
   breadcrumbs: {
+    textAlign: "left",
     marginBottom: theme.spacing.base * 4,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       marginBottom: 0,
