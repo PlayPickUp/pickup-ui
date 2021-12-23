@@ -14,6 +14,7 @@ exports[`Renders and matches snapshot 1`] = `
           title="Chiefs vs. Ravens Who wins?"
         >
           <div
+            data-testid="featuredImage"
             style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
           />
         </a>
@@ -135,6 +136,7 @@ exports[`Renders and matches snapshot 1`] = `
           title="Chiefs vs. Ravens Who wins?"
         >
           <div
+            data-testid="featuredImage"
             style="background-image: url(https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/ravens/qhsyhehrwlw6he1nfmq0);"
           />
         </a>

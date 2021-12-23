@@ -10,12 +10,19 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     lineHeight: `${theme.spacing.base * 5}px`,
     color: theme.colors.black,
   },
-  list: {
-    display: "flex",
-    alignItems: "center",
+  uList: {
+    display: "inline-flex",
     listStyle: "none",
+    flexWrap: "flex",
     padding: 0,
     margin: 0,
+  },
+  nameList: {
+    display: "inline-flex",
+    flexWrap: "no wrap",
+  },
+  pathList: {
+    textAlign: "left",
   },
   link: {
     color: theme.colors.black,
@@ -39,11 +46,15 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
   const classes = useStyles();
   const mappedCrumbs = crumbs.map(({ path, name }, index: number) => {
     if (index === crumbs.length - 1) {
-      return <li key={name}>{name}</li>;
+      return (
+        <li key={name} className={classes.pathList}>
+          {name}
+        </li>
+      );
     }
 
     return (
-      <li key={name}>
+      <li key={name} className={classes.nameList}>
         <Link className={classes.link} to={path}>
           {name}
         </Link>
@@ -59,7 +70,9 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
         [classes.root]: true,
       })}
     >
-      <ul className={classes.list}>{mappedCrumbs}</ul>
+      <ul className={classes.uList} aria-label="breadcrumbs">
+        {mappedCrumbs}
+      </ul>
     </nav>
   );
 };

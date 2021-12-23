@@ -65,7 +65,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   image: {
     display: "block",
     maxWidth: "100%",
-    height: "100%",
+    height: "auto",
     objectFit: "cover",
   },
   eyebrow: {
@@ -97,6 +97,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     marginTop: theme.spacing.base * 2,
   },
   breadcrumbs: {
+    textAlign: "left",
     marginBottom: theme.spacing.base * 4,
     [theme.mediaQuery(theme.breakpoints.small)]: {
       marginBottom: 0,
