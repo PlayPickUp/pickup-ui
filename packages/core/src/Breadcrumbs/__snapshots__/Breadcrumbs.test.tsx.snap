@@ -9,22 +9,27 @@ exports[`Renders and matches snapshot 1`] = `
       class="PU--root-0-2-1"
     >
       <ul
-        class="PU--list-0-2-2"
+        aria-label="breadcrumbs"
+        class="PU--uList-0-2-2"
       >
-        <li>
+        <li
+          class="PU--nameList-0-2-3"
+        >
           <a
-            class="PU--link-0-2-3"
+            class="PU--link-0-2-5"
             href="/sports-betting"
           >
             Sports Betting
           </a>
           <span
-            class="PU--separator-0-2-4"
+            class="PU--separator-0-2-6"
           >
             /
           </span>
         </li>
-        <li>
+        <li
+          class="PU--pathList-0-2-4"
+        >
           Arizona Sports Betting
         </li>
       </ul>

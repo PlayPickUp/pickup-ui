@@ -110,6 +110,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         [className]: className,
       })}
       {...props}
+      data-testid="dropdown"
     >
       {children}
     </select>
