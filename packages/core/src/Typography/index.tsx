@@ -10,6 +10,11 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
     position: "relative",
     color: (props) => props.color || "inherit",
+    margin: 0,
+    padding: 0,
+    verticalAlign: "baseline",
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
   },
   title: {
     ...theme.typography.fontStyles.mobile.title,
@@ -27,6 +32,24 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     ...theme.typography.fontStyles.mobile.heading3,
     "@media screen and (min-width: 787px):": {
       ...theme.typography.fontStyles.desktop.heading3,
+    },
+  },
+  heading4: {
+    ...theme.typography.fontStyles.mobile.heading4,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading4,
+    },
+  },
+  heading5: {
+    ...theme.typography.fontStyles.mobile.heading5,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading5,
+    },
+  },
+  heading6: {
+    ...theme.typography.fontStyles.mobile.heading6,
+    "@media screen and (min-width: 787px):": {
+      ...theme.typography.fontStyles.desktop.heading6,
     },
   },
   body: {
@@ -76,10 +99,13 @@ const Typography: React.FC<
       className={classNames({
         [classes.root]: true,
         [classes.title]: variant === "title",
-        [classes.body]: variant === "body",
+        [classes.body]: variant === "body" || variant === "span",
         [classes.body2]: variant === "body2",
         [classes.heading2]: variant === "heading2",
         [classes.heading3]: variant === "heading3",
+        [classes.heading4]: variant === "heading4",
+        [classes.heading5]: variant === "heading5",
+        [classes.heading6]: variant === "heading6",
         [className]: className,
       })}
       style={style}

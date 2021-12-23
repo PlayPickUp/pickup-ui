@@ -2,24 +2,29 @@
 
 exports[`Renders and matches snapshot 1`] = `
 <div>
-  <select
-    class="root-0-2-2"
+  <div
+    id="PickUpUI"
   >
-    <option
-      value="1"
+    <select
+      class="PU--root-0-2-2"
+      data-testid="dropdown"
     >
-      Option 1
-    </option>
-    <option
-      value="2"
-    >
-      Option 2
-    </option>
-    <option
-      value="3"
-    >
-      Option 3
-    </option>
-  </select>
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+      <option
+        value="3"
+      >
+        Option 3
+      </option>
+    </select>
+  </div>
 </div>
 `;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <label
+      class="PU--contain-0-2-1"
+    >
+      <input
+        data-testid="checkbox"
+        type="checkbox"
+      />
+      <span
+        class="PU--checkmark-0-2-2"
+      />
+    </label>
+  </div>
+</div>
+`;

@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import classNames from "classnames";
 
-import bolt from "./bolt.svg";
+import Bolt from "./bolt";
 
 import { DefaultTheme, HorizontalRuleProps } from "../types";
 
@@ -13,14 +13,15 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row nowrap",
     justifyContent: "space-around",
     alignItems: "center",
-    padding: theme.spacing.base * 2,
+    padding: theme.spacing.base * 4,
     "& * + *": {
       display: "inline-block",
     },
   },
   rule: {
     border: "none",
-    backgroundColor: theme.colors.grey.base,
+    backgroundColor: (props: HorizontalRuleProps) =>
+      props.color ? props.color : theme.colors.grey.dark,
     height: 1,
     width: "100%",
   },
@@ -42,15 +43,23 @@ const HorizontalRule: React.FC<HorizontalRuleProps> = ({
   showBolt,
   className,
   style,
+  color,
 }) => {
-  const classes = useStyles();
+  const props: HorizontalRuleProps = {
+    color: color,
+  };
+  const classes = useStyles({ ...props });
   return (
-    <div className={classNames(classes.root, className)} style={style}>
+    <div
+      className={classNames(classes.root, className)}
+      style={style}
+      data-testid="horizontalRule"
+    >
       {showBolt ? (
         <>
           <hr className={classes.rule} />
           <div className={classes.bolt}>
-            <img src={bolt} alt="" role="presentation" aria-hidden={true} />
+            <Bolt fill={color} />
           </div>
           <hr className={classes.rule} />{" "}
         </>

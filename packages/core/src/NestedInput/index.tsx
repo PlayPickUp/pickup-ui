@@ -18,8 +18,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     border: (props) =>
       props.inputFocus
-        ? `1px solid ${theme.colors.grey.dark}`
-        : `1px solid ${theme.colors.purple.base}`,
+        ? `1px solid ${theme.colors.purple.base}`
+        : `1px solid #DFDAE6`,
     borderRadius: theme.borderRadius * 2,
     backgroundColor: theme.colors.white,
     width: "100%",
@@ -59,6 +59,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     display: "flex",
     position: "relative",
     flexFlow: "row nowrap",
+    alignItems: "center",
   },
   phonePrefix: {
     position: "relative",
@@ -138,6 +139,11 @@ const NestedInput: React.FC<NestedInputProps> = ({
                 smartCaret={false}
                 disabled={disabled}
                 onChange={(e) => props.form.setFieldValue(props.field.name, e)}
+                onBlur={(e) => {
+                  toggleFocus();
+                  props.field.onBlur(e);
+                }}
+                onFocus={toggleFocus}
               />
             </div>
           ) : (

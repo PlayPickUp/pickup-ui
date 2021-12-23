@@ -7,7 +7,28 @@ import React, {
   ReactNode,
   SetStateAction,
   Dispatch,
+  ReactNodeArray,
+  JSXElementConstructor,
 } from "react";
+import { StyleSheet } from "jss";
+
+/**
+ *
+ *
+ *  JSS Provider types
+ *
+ */
+
+export interface SpecificityPluginProps {
+  repeat?: number;
+  selector?: string;
+}
+
+export type JssStyleSheet = StyleSheet & {
+  options: {
+    increaseSpecificity: boolean;
+  };
+};
 
 /**
  *
@@ -77,6 +98,9 @@ export interface FontStyles {
   title: FontProperties;
   heading2: FontProperties;
   heading3: FontProperties;
+  heading4: FontProperties;
+  heading5: FontProperties;
+  heading6: FontProperties;
   body: FontProperties;
   body2: FontProperties;
 }
@@ -118,6 +142,7 @@ export interface DefaultZIndex {
 export interface DefaultGradients {
   main: string;
   hover: string;
+  disabled: string;
 }
 
 export type MediaQuery = (minWidth: number) => string;
@@ -443,8 +468,9 @@ export interface ChipProps {
   style?: React.CSSProperties;
   isActive?: boolean;
   label: string;
-  element?: keyof JSX.IntrinsicElements;
+  element?: keyof JSX.IntrinsicElements | JSXElementConstructor<any>;
   href?: string;
+  to?: string;
 }
 
 /**
@@ -541,11 +567,8 @@ export interface HeroProps {
   description: React.ReactText;
   image_src: string;
   image_alt: string;
-}
-
-export interface HeroStyleState {
-  titleVariant: TypographyProps["variant"];
-  descriptionVariant: TypographyProps["variant"];
+  chip?: string;
+  crumbs?: Array<Path>;
 }
 
 /**
@@ -580,4 +603,62 @@ export interface HorizontalRuleProps {
   showBolt?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  color?: string;
+}
+
+/**
+ * FeedCard Component
+ */
+export interface PublisherIconProps {
+  publisher_logo_url: string | null;
+  size?: "small" | "large";
+}
+export interface Picks {
+  label: string;
+  value: string;
+}
+export interface FeedCardProps {
+  image: string;
+  publisherIcon: string;
+  publisherName: string;
+  publishedAt: string;
+  title: string;
+  timeLeft: Date;
+  pickCount: number;
+  picks?: Picks[];
+  buttonProps?: ButtonProps;
+  expanded: boolean;
+}
+
+export interface BoltProps {
+  fill: string;
+}
+
+/**
+ * Countdown Props
+ */
+export interface CountdownProps {
+  close_at: Date;
+  has_fan_pick: number;
+}
+
+export interface SliderProps {
+  children?: ReactNodeArray;
+}
+
+export interface CheckBoxProps {
+  checked?: boolean;
+  onChange: (internal: boolean) => void;
+}
+
+// Breadcrumbs
+
+export interface Path {
+  name: string;
+  path: string;
+}
+
+export interface BreadcrumbsProps {
+  crumbs: Array<Path>;
+  className?: string;
 }

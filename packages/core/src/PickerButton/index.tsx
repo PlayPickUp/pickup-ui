@@ -39,7 +39,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   resultPicked: {
     backgroundColor: theme.colors.white,
-    border: `1px solid ${theme.colors.purple.base}`,
+    border: `1px solid ${theme.colors.primary.dark}`,
     "&:hover": {
       backgroundColor: theme.colors.white,
     },
@@ -53,6 +53,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     padding: `0 ${theme.spacing.base * 2}px`,
     zIndex: 2,
+    boxSizing: "border-box",
   },
   resultContainer: {
     display: "flex",
@@ -60,6 +61,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexFlow: "row nowrap",
     justifyContent: "flex-end",
     alignItems: "center",
+  },
+  resultText: {
+    color: theme.colors.primary.dark,
   },
   bolt: {
     display: "none",
@@ -89,7 +93,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       left: 0,
       width: 0,
       height: "100%",
-      backgroundColor: theme.colors.purple.light,
+      backgroundColor: "#EAE5FF", // custom color requested here
     },
   },
   nonPickedBar: {
@@ -215,7 +219,7 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         <div style={{ zIndex: 2, position: "relative" }}>{displayText}</div>
       ) : (
         <div className={classes.textContainer}>
-          <div>{displayText}</div>
+          <div className={classNames({[classes.resultText]: isPick})}>{displayText}</div>
           <div className={classes.resultContainer}>
             <div
               className={classNames({
@@ -225,7 +229,7 @@ const PickerButton: React.FC<PickerButtonProps> = ({
             >
               <img src={displayIcon()} aria-hidden role="presentation" />
             </div>
-            <div>{result}%</div>
+            <div className={classNames({[classes.resultText]: isPick})}>{result}%</div>
           </div>
         </div>
       )}

@@ -22,7 +22,7 @@ const purple: PurpleMap = {
   light: "#F5F0FF",
   lightBase: "#AFA0FF",
   base: "#7A60FF",
-  dark: "#6F5AD8",
+  dark: "#5E24FF",
 };
 
 const green: GreenMap = {
@@ -57,7 +57,7 @@ const colors: DefaultThemeColors = {
 
 // Font and Typography
 const fontFamilies: FontFamilies = {
-  body: "Inter, Helvetica, sans-serif",
+  body: "'Inter', Helvetica, sans-serif",
   headline: "'Ringside-Condensed', Helvetica, sans-serif",
 };
 
@@ -86,6 +86,30 @@ const fontStyles: ResponsiveFonts = {
       fontWeight: 600,
       fontSize: 28,
       lineHeight: "34px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading4: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 22,
+      lineHeight: "28px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading5: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 16,
+      lineHeight: "22px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading6: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 13,
+      lineHeight: "16px",
       letterSpacing: "0.1px",
       color: "inherit",
     },
@@ -132,6 +156,30 @@ const fontStyles: ResponsiveFonts = {
       fontWeight: 600,
       fontSize: 22,
       lineHeight: "26px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading4: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 16,
+      lineHeight: "18px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading5: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 13,
+      lineHeight: "15px",
+      letterSpacing: "0.1px",
+      color: "inherit",
+    },
+    heading6: {
+      fontFamily: fontFamilies.headline,
+      fontWeight: 600,
+      fontSize: 11,
+      lineHeight: "13px",
       letterSpacing: "0.1px",
       color: "inherit",
     },
@@ -230,6 +278,8 @@ const breakpoints: Breakpoints = {
 const gradients: DefaultGradients = {
   main: `linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%)`,
   hover: `linear-gradient(112.25deg, #914EFF 35.38%, #5D1BFF 122.56%)`,
+  disabled:
+    "linear-gradient(112.25deg, rgba(145,78,255,0.2) -20.38%, rgba(93,27,255,0.2) 122.56%)",
 };
 
 export const defaultTheme: DefaultTheme = {
