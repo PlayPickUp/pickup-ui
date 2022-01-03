@@ -17,7 +17,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   pick: {
     fontSize: "11px",
-    fontColor: theme.colors.purple.base,
+    fontColor: theme.colors.primary.base,
     lineHeight: "18px",
     verticalAlign: "middle",
     float: "left",
@@ -43,7 +43,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   pickedIcon: {
     verticalAlign: "middle",
     color: (picks: CountdownProps) =>
-      picks.has_fan_pick ? theme.colors.purple.dark : theme.colors.grey.dark,
+      picks.has_fan_pick ? theme.colors.primary.dark : theme.colors.grey.dark,
     height: theme.spacing.base * 5,
     width: theme.spacing.base * 5,
     [theme.mediaQuery(theme.breakpoints.medium)]: {
@@ -57,7 +57,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   picked: {
     color: (picks: CountdownProps) =>
-      picks.has_fan_pick ? theme.colors.purple.dark : theme.colors.grey.dark,
+      picks.has_fan_pick ? theme.colors.primary.dark : theme.colors.grey.dark,
     fontSize: "11px",
   },
 }));

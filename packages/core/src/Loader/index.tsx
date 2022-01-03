@@ -33,7 +33,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: 65,
     height: 65,
     borderRadius: "50%",
-    backgroundColor: theme.colors.purple.light,
+    backgroundColor: theme.colors.primary.light,
     animationName: "$pulse",
     animationFillMode: "forwards",
     animationIterationCount: "infinite",
@@ -49,7 +49,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: 50,
     borderRadius: "50%",
     padding: 10,
-    backgroundColor: theme.colors.purple.base,
+    backgroundColor: theme.colors.primary.base,
     "& svg": {
       width: "100%",
       height: "auto",
