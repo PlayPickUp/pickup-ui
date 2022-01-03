@@ -58,6 +58,7 @@ export interface GreyMap {
   lightBase: string;
   base: string;
   dark: string;
+  medium: string;
 }
 
 export interface RedMap {
