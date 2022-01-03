@@ -93,7 +93,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       left: 0,
       width: 0,
       height: "100%",
-      backgroundColor: "#EAE5FF", // custom color requested here
+      backgroundColor: theme.colors.primary.transparent,
     },
   },
   nonPickedBar: {
@@ -219,7 +219,9 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         <div style={{ zIndex: 2, position: "relative" }}>{displayText}</div>
       ) : (
         <div className={classes.textContainer}>
-          <div className={classNames({[classes.resultText]: isPick})}>{displayText}</div>
+          <div className={classNames({ [classes.resultText]: isPick })}>
+            {displayText}
+          </div>
           <div className={classes.resultContainer}>
             <div
               className={classNames({
@@ -229,7 +231,9 @@ const PickerButton: React.FC<PickerButtonProps> = ({
             >
               <img src={displayIcon()} aria-hidden role="presentation" />
             </div>
-            <div className={classNames({[classes.resultText]: isPick})}>{result}%</div>
+            <div className={classNames({ [classes.resultText]: isPick })}>
+              {result}%
+            </div>
           </div>
         </div>
       )}
