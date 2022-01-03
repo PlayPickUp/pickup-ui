@@ -46,6 +46,7 @@ export interface PurpleMap {
   lightBase: string;
   base: string;
   dark: string;
+  transparent: string;
 }
 
 export interface GreenMap {
