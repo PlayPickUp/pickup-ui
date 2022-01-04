@@ -1,10 +1,10 @@
 import React from "react";
-import { createUseStyles } from "react-jss";
+import { createUseStyles, useTheme } from "react-jss";
 import classNames from "classnames";
 import color from "color";
-import iconCorrect from "./icon_correct.svg";
-import iconIncorrect from "./icon_incorrect.svg";
-import bolt from "./bolt.svg";
+import IconCorrect from "./icons/IconCorrect";
+import IconIncorrect from "./icons/IconIncorrect";
+import Bolt from "./icons/Bolt";
 
 import { DefaultTheme, PickerButtonProps } from "../types";
 
@@ -70,12 +70,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   hasIcon: {
     display: "block",
-    "& img": {
-      position: "relative",
-      width: 11,
-      height: "auto",
-      marginRight: theme.spacing.base * 3,
-    },
+    position: "relative",
+    width: 11,
+    height: "auto",
+    marginRight: theme.spacing.base * 3,
   },
   bar: {
     display: "block",
@@ -93,7 +91,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       left: 0,
       width: 0,
       height: "100%",
-      backgroundColor: "#EAE5FF", // custom color requested here
+      backgroundColor: theme.colors.primary.transparent,
     },
   },
   nonPickedBar: {
@@ -179,14 +177,15 @@ const PickerButton: React.FC<PickerButtonProps> = ({
   isIncorrect,
 }) => {
   const classes = useStyles({ result });
+  const theme: DefaultTheme = useTheme();
 
-  const displayIcon = () => {
+  const displayIcon = (): JSX.Element => {
     if (isCorrect) {
-      return iconCorrect;
+      return <IconCorrect color={theme.colors.green.base} />;
     } else if (isIncorrect) {
-      return iconIncorrect;
+      return <IconIncorrect color={theme.colors.red.base} />;
     } else if (isPick) {
-      return bolt;
+      return <Bolt color={theme.colors.primary.base} />;
     }
   };
 
@@ -219,7 +218,9 @@ const PickerButton: React.FC<PickerButtonProps> = ({
         <div style={{ zIndex: 2, position: "relative" }}>{displayText}</div>
       ) : (
         <div className={classes.textContainer}>
-          <div className={classNames({[classes.resultText]: isPick})}>{displayText}</div>
+          <div className={classNames({ [classes.resultText]: isPick })}>
+            {displayText}
+          </div>
           <div className={classes.resultContainer}>
             <div
               className={classNames({
@@ -227,9 +228,11 @@ const PickerButton: React.FC<PickerButtonProps> = ({
                 [classes.hasIcon]: isPick || isCorrect || isIncorrect,
               })}
             >
-              <img src={displayIcon()} aria-hidden role="presentation" />
+              {displayIcon()}
             </div>
-            <div className={classNames({[classes.resultText]: isPick})}>{result}%</div>
+            <div className={classNames({ [classes.resultText]: isPick })}>
+              {result}%
+            </div>
           </div>
         </div>
       )}

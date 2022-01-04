@@ -230,16 +230,13 @@ const grey = {
 
 const publisherTheme: Partial<DefaultTheme> = {
   colors: {
-    // primary: { ...grey },
-    // secondary: { ...grey },
-    // green: red,
-    // purple: grey,
-    // grey,
-    // red,
-    black: "#FF1244",
-    // white: "#FFF",
-    // success: red.base,
-    // error: red.base,
+    primary: {
+      light: "#4EAB75",
+      lightBase: "#4EAB75",
+      base: "#4EAB75",
+      dark: "#4EAB75",
+      transparent: "#DFEDE4",
+    },
   },
 };
 
@@ -265,14 +262,18 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
-          <Typography variant="body">
-            we are here today to test partial theme override
-          </Typography>
-          <PickerButton
-            displayText="testPickerButton"
-            onClick={() => console.log("test")}
-            result={1}
-          ></PickerButton>
+          <div style={{ width: "50%", margin: "0 auto" }}>
+            <Typography variant="body">
+              we are here today to test partial theme override
+            </Typography>
+            <PickerButton
+              displayText="testPickerButton"
+              onClick={() => console.log("test")}
+              result={12}
+              isPick
+              showResult
+            />
+          </div>
         </div>
       </Router>
     </ThemeProvider>
