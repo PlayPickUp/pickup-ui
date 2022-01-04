@@ -33,6 +33,7 @@ import {
   createUseStyles,
   CheckBox,
   Breadcrumbs,
+  DefaultTheme,
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
@@ -216,6 +217,37 @@ const crumbs = [
     path: "/$200 off $400 TRX Suspension Trainer Bundle & Training Club",
   },
 ];
+const red = {
+  light: "#FF1244",
+  base: "#FF1244",
+};
+const grey = {
+  light: "#FF1244",
+  lightBase: "#FF1244",
+  base: "#FF1244",
+  dark: "#FF1244",
+};
+
+const publisherTheme: Partial<DefaultTheme> = {
+  colors: {
+    primary: {
+      light: "#4EAB75",
+      lightBase: "#4EAB75",
+      base: "#4EAB75",
+      dark: "#4EAB75",
+      transparent: "#DFEDE4",
+    },
+    // secondary: { ...grey },
+    // green: red,
+    // purple: grey,
+    // grey,
+    // red,
+    black: "#FF1244",
+    // white: "#FFF",
+    // success: red.base,
+    // error: red.base,
+  },
+};
 
 const App: React.FC = () => {
   const [twoStep, setTwoStep] = useState<boolean>(false);
@@ -227,7 +259,7 @@ const App: React.FC = () => {
   });
   // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={publisherTheme}>
       <Router>
         <div className="Playground">
           <Hero
@@ -239,13 +271,16 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
+          <Typography variant="body">
+            we are here today to test partial theme override
+          </Typography>
           <PickerButton
-            displayText="Who picked this?"
-            onClick={() => {}}
-            isPick
+            displayText="testPickerButton"
+            onClick={() => console.log("test")}
             result={12}
+            isPick
             showResult
-          />
+          ></PickerButton>
         </div>
       </Router>
     </ThemeProvider>
