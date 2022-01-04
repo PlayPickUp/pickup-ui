@@ -35,6 +35,7 @@ const grey: GreyMap = {
   lightBase: "#DDDDDD",
   base: "#9D9D9E",
   dark: "#615E66",
+  medium: "#DFDAE6",
 };
 
 const red: RedMap = {
