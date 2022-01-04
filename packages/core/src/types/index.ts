@@ -160,7 +160,7 @@ export type DefaultTheme = {
   breakpoints: Breakpoints;
   mediaQuery: MediaQuery;
   colors: Partial<DefaultThemeColors>;
-  gradients: DefaultGradients;
+  gradients: Partial<DefaultGradients>;
   shadows: DefaultShadows;
   spacing: DefaultSpacing;
   typography: Partial<DefaultTypography>;
