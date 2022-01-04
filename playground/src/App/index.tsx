@@ -237,15 +237,6 @@ const publisherTheme: Partial<DefaultTheme> = {
       dark: "#4EAB75",
       transparent: "#DFEDE4",
     },
-    // secondary: { ...grey },
-    // green: red,
-    // purple: grey,
-    // grey,
-    // red,
-    black: "#FF1244",
-    // white: "#FFF",
-    // success: red.base,
-    // error: red.base,
   },
 };
 
