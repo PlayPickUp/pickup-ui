@@ -46,6 +46,7 @@ export interface PurpleMap {
   lightBase: string;
   base: string;
   dark: string;
+  transparent: string;
 }
 
 export interface GreenMap {
@@ -84,7 +85,7 @@ export interface FontFamilies {
   headline: string;
 }
 
-interface FontProperties {
+export interface FontProperties {
   fontFamily: string;
   fontWeight: number | string;
   fontStyle?: string;
@@ -159,7 +160,7 @@ export type DefaultTheme = {
   breakpoints: Breakpoints;
   mediaQuery: MediaQuery;
   colors: Partial<DefaultThemeColors>;
-  gradients: DefaultGradients;
+  gradients: Partial<DefaultGradients>;
   shadows: DefaultShadows;
   spacing: DefaultSpacing;
   typography: Partial<DefaultTypography>;

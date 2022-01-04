@@ -18,8 +18,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     border: (props) =>
       props.inputFocus
-        ? `1px solid ${theme.colors.purple.base}`
-        : `1px solid #DFDAE6`,
+        ? `1px solid ${theme.colors.primary.base}`
+        : `1px solid ${theme.colors.grey.medium}`,
     borderRadius: theme.borderRadius * 2,
     backgroundColor: theme.colors.white,
     width: "100%",
