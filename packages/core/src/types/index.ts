@@ -38,7 +38,7 @@ export type JssStyleSheet = StyleSheet & {
 export interface ThemeProviderProps {
   children: any;
   withReset?: boolean;
-  theme?: DefaultTheme;
+  theme?: Partial<DefaultTheme>;
 }
 
 export interface PurpleMap {
@@ -58,6 +58,7 @@ export interface GreyMap {
   lightBase: string;
   base: string;
   dark: string;
+  medium: string;
 }
 
 export interface RedMap {
@@ -157,11 +158,11 @@ export type DefaultTheme = {
   borderRadius: number;
   breakpoints: Breakpoints;
   mediaQuery: MediaQuery;
-  colors: DefaultThemeColors;
+  colors: Partial<DefaultThemeColors>;
   gradients: DefaultGradients;
   shadows: DefaultShadows;
   spacing: DefaultSpacing;
-  typography: DefaultTypography;
+  typography: Partial<DefaultTypography>;
   zIndex: DefaultZIndex;
 };
 
