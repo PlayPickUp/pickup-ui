@@ -85,7 +85,7 @@ export interface FontFamilies {
   headline: string;
 }
 
-interface FontProperties {
+export interface FontProperties {
   fontFamily: string;
   fontWeight: number | string;
   fontStyle?: string;

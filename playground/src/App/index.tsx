@@ -239,6 +239,13 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
+          <PickerButton
+            displayText="Who picked this?"
+            onClick={() => {}}
+            isPick
+            result={12}
+            showResult
+          />
         </div>
       </Router>
     </ThemeProvider>
