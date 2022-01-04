@@ -262,16 +262,18 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
-          <Typography variant="body">
-            we are here today to test partial theme override
-          </Typography>
-          <PickerButton
-            displayText="testPickerButton"
-            onClick={() => console.log("test")}
-            result={12}
-            isPick
-            showResult
-          ></PickerButton>
+          <div style={{ width: "50%", margin: "0 auto" }}>
+            <Typography variant="body">
+              we are here today to test partial theme override
+            </Typography>
+            <PickerButton
+              displayText="testPickerButton"
+              onClick={() => console.log("test")}
+              result={12}
+              isPick
+              showResult
+            />
+          </div>
         </div>
       </Router>
     </ThemeProvider>
