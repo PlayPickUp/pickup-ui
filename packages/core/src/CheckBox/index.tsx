@@ -22,7 +22,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       "&:checked": {
         "& ~ $checkmark": {
           /* When the checkbox is checked*/
-          backgroundColor: theme.colors.purple.base,
+          backgroundColor: theme.colors.primary.base,
           "&:after": {
             boxSizing: "border-box",
             display: "block",
@@ -45,7 +45,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     "&:hover": {
       "& input": {
         "& ~ $checkmark": {
-          backgroundColor: theme.colors.purple.lightBase,
+          backgroundColor: theme.colors.primary.lightBase,
         },
       },
     },
@@ -58,7 +58,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     height: "16px",
     width: "16px",
     borderRadius: "3px",
-    backgroundColor: theme.colors.purple.base,
+    backgroundColor: theme.colors.primary.base,
     "&:after": {
       content: '""',
       position: "absolute",

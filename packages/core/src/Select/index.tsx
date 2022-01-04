@@ -191,7 +191,7 @@ const Select: React.FC<SelectProps> = ({
                             style: {
                               backgroundColor:
                                 highlightedIndex === index
-                                  ? theme.colors.purple.light
+                                  ? theme.colors.primary.light
                                   : theme.colors.white,
                               fontWeight:
                                 selectedItem === item ? "bold" : "normal",

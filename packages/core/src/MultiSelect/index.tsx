@@ -31,14 +31,14 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     position: "relative",
     width: "auto",
-    backgroundColor: theme.colors.purple.light,
-    border: `1px solid ${theme.colors.purple.dark}`,
+    backgroundColor: theme.colors.primary.light,
+    border: `1px solid ${theme.colors.primary.dark}`,
     borderRadius: "55px",
     padding: `${theme.spacing.base}px ${theme.spacing.base * 3.5}px`,
     margin: `${theme.spacing.base * 2}px ${theme.spacing.base}px 0`,
     fontSize: 12,
     fontFamily: theme.typography.fontFamilies.body,
-    color: theme.colors.purple.dark,
+    color: theme.colors.primary.dark,
     textAlign: "center",
     cursor: "default",
     "& span": {
@@ -208,7 +208,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                           <Icon
                             className={classes.subtractIcon}
                             size={12}
-                            color={theme.colors.purple.dark}
+                            color={theme.colors.primary.dark}
                           >
                             <SubtractCircle />
                           </Icon>
@@ -265,7 +265,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
                             style: {
                               backgroundColor:
                                 highlightedIndex === index
-                                  ? theme.colors.purple.light
+                                  ? theme.colors.primary.light
                                   : theme.colors.white,
                               fontWeight: selectedItems.includes(item)
                                 ? "bold"

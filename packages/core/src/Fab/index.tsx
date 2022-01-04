@@ -37,7 +37,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       backgroundColor: (props) =>
         props.color
           ? Color(props.color).lighten(0.5).toString()
-          : theme.colors.purple.light,
+          : theme.colors.primary.light,
     },
   },
   title: {
