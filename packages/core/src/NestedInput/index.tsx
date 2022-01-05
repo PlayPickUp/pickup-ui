@@ -37,7 +37,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
     fontSize: (props) =>
-      props.usePhoneNumber || props.useVerificationCode ? 15 : 16,
+      props.usePhoneNumber || props.useVerificationCode ? 16 : 16,
     lineHeight: (props) =>
       props.usePhoneNumber || props.useVerificationCode ? "22px" : "24px",
     letterSpacing: "0.1px",

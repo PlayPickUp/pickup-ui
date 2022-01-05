@@ -262,7 +262,7 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
-          <div style={{ width: "50%", margin: "0 auto" }}>
+          <div>
             <Typography variant="body">
               we are here today to test partial theme override
             </Typography>
@@ -273,6 +273,33 @@ const App: React.FC = () => {
               isPick
               showResult
             />
+            <Formik
+              initialValues={{ phoneNumber: "" }}
+              validationSchema={Yup.object().shape({
+                phoneNumber: Yup.string()
+                  .min(12, "Must be at least 10 digits")
+                  .max(12, "Cannot be longer than 10 digits") // note: these numbers are offset to account for +1 in the input
+                  .required("Valid phone number required"),
+              })}
+              onSubmit={async (values, { setSubmitting }) => {
+                console.log(values);
+              }}
+            >
+              {({ isSubmitting }) => (
+                <Form noValidate>
+                  <Field
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    usePhoneNumber={true}
+                    label="Mobile Phone Number"
+                    buttonText="Submit"
+                    useSubmit={true}
+                    disabled={isSubmitting}
+                    component={NestedInput}
+                  />
+                </Form>
+              )}
+            </Formik>
           </div>
         </div>
       </Router>
