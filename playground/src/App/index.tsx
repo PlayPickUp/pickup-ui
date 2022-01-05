@@ -252,7 +252,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={publisherTheme}>
       <Router>
-        <div className="Playground">
+        {/* <div className="Playground">
           <Hero
             title="The State of Sports Betting"
             description="Mobile and online sports betting is now legal and available in 15 states in the United States. It’s been three years since the Supreme Court struck down the federal ban on sports betting, allowing states to legalize it if they wish."
@@ -262,45 +262,45 @@ const App: React.FC = () => {
             crumbs={crumbs}
             chip="500 Points"
           />
-          <div>
-            <Typography variant="body">
-              we are here today to test partial theme override
-            </Typography>
-            <PickerButton
-              displayText="testPickerButton"
-              onClick={() => console.log("test")}
-              result={12}
-              isPick
-              showResult
-            />
-            <Formik
-              initialValues={{ phoneNumber: "" }}
-              validationSchema={Yup.object().shape({
-                phoneNumber: Yup.string()
-                  .min(12, "Must be at least 10 digits")
-                  .max(12, "Cannot be longer than 10 digits") // note: these numbers are offset to account for +1 in the input
-                  .required("Valid phone number required"),
-              })}
-              onSubmit={async (values, { setSubmitting }) => {
-                console.log(values);
-              }}
-            >
-              {({ isSubmitting }) => (
-                <Form noValidate>
-                  <Field
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    usePhoneNumber={true}
-                    label="Mobile Phone Number"
-                    buttonText="Submit"
-                    useSubmit={true}
-                    disabled={isSubmitting}
-                    component={NestedInput}
-                  />
-                </Form>
-              )}
-            </Formik>
-          </div>
+          <div> */}
+        <div style={{ width: "90%" }}>
+          {/* <Typography variant="body">
+            we are here today to test partial theme override
+          </Typography>
+          <PickerButton
+            displayText="testPickerButton"
+            onClick={() => console.log("test")}
+            result={12}
+            isPick
+            showResult
+          /> */}
+          <Formik
+            initialValues={{ phoneNumber: "" }}
+            validationSchema={Yup.object().shape({
+              phoneNumber: Yup.string()
+                .min(12, "Must be at least 10 digits")
+                .max(12, "Cannot be longer than 10 digits") // note: these numbers are offset to account for +1 in the input
+                .required("Valid phone number required"),
+            })}
+            onSubmit={async (values, { setSubmitting }) => {
+              console.log(values);
+            }}
+          >
+            {({ isSubmitting }) => (
+              <Form noValidate>
+                <Field
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  usePhoneNumber={true}
+                  label="Mobile Phone Number"
+                  buttonText="Submit"
+                  useSubmit={true}
+                  disabled={isSubmitting}
+                  component={NestedInput}
+                />
+              </Form>
+            )}
+          </Formik>
         </div>
       </Router>
     </ThemeProvider>
