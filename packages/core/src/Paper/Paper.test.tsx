@@ -52,3 +52,22 @@ test("Paper padding prop is passed and rendered", () => {
   const style = window.getComputedStyle(paperDiv);
   expect(style.paddingTop).toBe("8px");
 })
+
+test("Paper children are passed and rendered", () => {
+  const { getByText } = render(
+    <ThemeProvider>
+      <Paper>Hello, World</Paper>
+    </ThemeProvider>
+  );
+  expect(getByText("Hello, World")).toBeTruthy();
+});
+
+test("Paper classNames and styles are passed and rendered", () => {
+  const { getByTestId } = render(
+    <ThemeProvider>
+      <Paper className="test-1-2-3" style={{ fontWeight: 800 }}>Hello, World</Paper>
+    </ThemeProvider>
+  );
+  expect(getByTestId("paper").hasAttribute("style")).toBeTruthy();
+  expect(getByTestId("paper").getAttribute("class")).toContain("test-1-2-3");
+});
