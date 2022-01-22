@@ -148,6 +148,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
           ) : (
             <input
               {...props.field}
+              id={props.id}
               className={classes.input}
               placeholder={placeholder}
               onFocus={toggleFocus}

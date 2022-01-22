@@ -1,5 +1,5 @@
-import React from "react";
-import { fireEvent, render } from "@testing-library/react";
+import React, { useState } from "react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
@@ -82,7 +82,7 @@ test("useSubmit is false", () => {
 test("onClick function is passed", () => {
   const handleChange = jest.fn();
   const handleClick = jest.fn();
-  const { getByTestId } = render(
+  const { getByText } = render(
     <ThemeProvider>
       <NestedInput
         buttonText="test submit"
@@ -102,32 +102,59 @@ test("onClick function is passed", () => {
       />
     </ThemeProvider>
   );
-  fireEvent.click(getByTestId("pickup-nested-button"));
-  expect(getByTestId("pickup-nested-button")).toBeCalled;
+  const button = getByText("test submit");
+  fireEvent.click(button);
+  expect(handleClick).toBeCalled;
 });
 
-// test("Props render correctly", () => {
-//   const handleChange = jest.fn();
-//   const { getByPlaceholderText, getByTestId } = render(
-//     <ThemeProvider>
-//       <NestedInput
-//         id="email"
-//         name="email"
-//         placeholder="you@example.com"
-//         buttonText="Sign Up"
-//         handleChange={handleChange}
-//       />
-//     </ThemeProvider>
-//   );
-//   const input = getByTestId("nested-input");
-//   expect(getByPlaceholderText("you@example.com")).toBeTruthy();
-//   expect(input.getAttribute("id")).toEqual("email");
-//   expect(input.getAttribute("name")).toEqual("email");
-//   expect(getByTestId("pickup-button").getAttribute("value")).toEqual("Sign Up");
+test("Props render correctly", async () => {
+  const InputTest = (): JSX.Element => {
+    const [value, setValue] = useState("initial value");
+    const setFieldValue = (
+      name: string,
+      event: React.BaseSyntheticEvent
+    ): void => {
+      event.preventDefault();
+      console.log("SETFIELDVALUE");
+      setValue(event.currentTarget.value);
+    };
+    return (
+      <ThemeProvider>
+        <NestedInput
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          buttonText="Sign Up"
+          handleChange={(evt: React.BaseSyntheticEvent) => {
+            console.log("HANDLE CHANGE");
+            setValue(evt.currentTarget.value);
+          }}
+          field={{
+            value: value,
+            name: "otp",
+            onBlur: jest.fn(),
+            onChange: jest.fn(),
+          }}
+          form={{
+            setFieldValue: setFieldValue,
+          }}
+        />
+      </ThemeProvider>
+    );
+  };
 
-// TODO: Wire this to work correctly
-// https://testing-library.com/docs/example-input-event/
-// fireEvent.change(input, { target: { value: "eric@playpickup.com" } });
-// expect(input.getAttribute("value")).toBe("eric@playpickup.com");
-// });
-//
+  const { getByPlaceholderText, getByTestId } = render(<InputTest />);
+  const input = getByPlaceholderText("you@example.com");
+  expect(input).toBeTruthy();
+  expect(input.getAttribute("id")).toEqual("email");
+  expect(input.getAttribute("name")).toEqual("otp");
+  expect(input.getAttribute("value")).toBe("initial value");
+  expect(getByTestId("pickup-button").getAttribute("value")).toEqual("Sign Up");
+
+  // TODO: Wire this to work correctly
+  // https://testing-library.com/docs/example-input-event/
+  fireEvent.change(input, { target: { value: "eric@playpickup.com" } });
+  await waitFor(() => {
+    expect(input.getAttribute("value")).toBe("eric@playpickup.com");
+  });
+});

@@ -13,6 +13,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       >
         <input
           class="PU--input-0-2-3 PU--input-d1-0-2-9"
+          id="email"
           name="email"
           placeholder="you@example.com"
           value="eric@playpickup.com"
@@ -35,6 +36,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       >
         <input
           class="PU--input-0-2-3 PU--input-d3-0-2-16"
+          id="phone"
           name="phone"
           placeholder="(123) 293-5555"
           value=""
@@ -57,6 +59,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       >
         <input
           class="PU--input-0-2-3 PU--input-d5-0-2-19"
+          id="otp"
           name="otp"
           placeholder="123456"
           value=""
