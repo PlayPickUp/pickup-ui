@@ -70,6 +70,8 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
       cursor: "pointer",
       border: "none",
       backgroundColor: "transparent",
+      background: "inherit",
+      backgroundImage: "inherit",
       borderColor: "transparent",
       padding: "0",
       margin: "0",
