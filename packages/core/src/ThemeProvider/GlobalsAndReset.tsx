@@ -72,6 +72,7 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
       backgroundColor: "transparent",
       background: "inherit",
       backgroundImage: "inherit",
+      boxShadow: "inherit",
       borderColor: "transparent",
       padding: "0",
       margin: "0",
