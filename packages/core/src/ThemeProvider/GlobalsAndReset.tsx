@@ -59,6 +59,7 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
     /* Reset `button` to nothing */
     /* https://gist.github.com/chrisheninger/a860f87ef4e529b2df606768b97665a8 */
     button: {
+      all: "initial",
       display: "inline-block",
       "-webkit-appearance": "none",
       "-moz-appearance": "none",
@@ -70,7 +71,6 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
       cursor: "pointer",
       border: "none",
       backgroundColor: "transparent",
-      background: "inherit",
       backgroundImage: "none",
       boxShadow: "none",
       borderColor: "transparent",
