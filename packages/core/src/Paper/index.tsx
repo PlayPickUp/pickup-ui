@@ -57,7 +57,7 @@ const Paper: React.FC<PaperProps> = ({
 }) => {
   const classes = useStyles({ padding, withLogo });
   return (
-    <div className={classNames(classes.root, className)} style={style}>
+    <div className={classNames(classes.root, className)} style={style} data-testid="paper">
       {withLogo ? (
         <div className={classes.logoHeading}>
           <div>

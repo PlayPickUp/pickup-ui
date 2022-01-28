@@ -9,6 +9,7 @@ const useStyles = createUseStyles({
   root: {
     position: "relative",
     width: (props) => props.size,
+    maxWidth: (props) => props.size,
     height: "auto",
     "& > svg": {
       display: "block",

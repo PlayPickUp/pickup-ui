@@ -36,8 +36,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       props.usePhoneNumber || props.useVerificationCode ? 22 : 48,
     width: "100%",
     fontFamily: theme.typography.fontFamilies.body,
-    fontSize: (props) =>
-      props.usePhoneNumber || props.useVerificationCode ? 15 : 16,
+    fontSize: 16,
     lineHeight: (props) =>
       props.usePhoneNumber || props.useVerificationCode ? "22px" : "24px",
     letterSpacing: "0.1px",
@@ -81,7 +80,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   phoneButtonSmall: {
     fontSize: 14,
-    padding: "0 14px",
+    padding: "0 8px",
   },
 }));
 
