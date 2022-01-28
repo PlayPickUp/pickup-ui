@@ -1,58 +1,75 @@
 import React, { useState } from "react";
 import { fireEvent, render, waitFor } from "@testing-library/react";
-
+import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
+import { NestedInputProps } from "../types";
 
-test("Renders without crashing, matches snapshot", () => {
-  const handleChange = jest.fn();
-  const { container } = render(
+const NestedInputFormik = (
+  optionalProps?: Partial<NestedInputProps>
+): JSX.Element => {
+  return (
     <ThemeProvider>
-      <NestedInput
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        buttonText="Sign Up"
-        handleChange={handleChange}
-        field={{
-          value: "eric@playpickup.com",
-          name: "email",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-      <NestedInput
-        id="phone"
-        name="phone"
-        placeholder="(123) 293-5555"
-        buttonText="Verify"
-        handleChange={handleChange}
-        field={{
-          value: "",
-          name: "phone",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-      <NestedInput
-        id="otp"
-        name="otp"
-        placeholder="123456"
-        buttonText="Verify Pick"
-        handleChange={handleChange}
-        field={{
-          value: "",
-          name: "otp",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
+      <div>
+        <Formik
+          initialValues={{
+            email: "initial value",
+          }}
+          onSubmit={jest.fn()}
+        >
+          <Form>
+            <Field
+              id="nestedInput"
+              name="nestedInput"
+              placeholder={
+                optionalProps.usePhoneNumber
+                  ? "123-456-7890"
+                  : "Placeholder text"
+              }
+              buttonText="Click Button"
+              component={NestedInput}
+              value="initial value"
+              {...optionalProps}
+            />
+          </Form>
+        </Formik>
+      </div>
     </ThemeProvider>
   );
+};
+
+test("Standard NestedInput renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik />);
   expect(container).toMatchSnapshot();
+});
+
+test("NestedInput with usePhoneNumber renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik usePhoneNumber />);
+  expect(container).toMatchSnapshot();
+});
+
+test("NestedInput with useVerificationCode renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik useVerificationCode />);
+  expect(container).toMatchSnapshot();
+});
+
+test("Standard NestedInput props pass and render correctly", () => {
+  const onClick = jest.fn();
+  const { getByPlaceholderText, getByTestId } = render(
+    <NestedInputFormik onClick={onClick} />
+  );
+
+  const input = getByPlaceholderText("Placeholder text");
+  expect(input).toBeTruthy();
+  expect(input.getAttribute("id")).toEqual("nestedInput");
+  expect(input.getAttribute("name")).toEqual("nestedInput");
+  expect(input.getAttribute("value")).toBe("initial value");
+  expect(getByTestId("pickup-button").getAttribute("value")).toEqual("Sign Up");
+
+  // TODO: Wire this to work correctly
+  // https://testing-library.com/docs/example-input-event/
+  fireEvent.change(input, { target: { value: "eric@playpickup.com" } });
+  expect(input.getAttribute("value")).toBe("eric@playpickup.com");
 });
 
 test("useSubmit is false", () => {
@@ -131,7 +148,7 @@ test("Props render correctly", async () => {
           }}
           field={{
             value: value,
-            name: "otp",
+            name: "email",
             onBlur: jest.fn(),
             onChange: jest.fn(),
           }}
@@ -147,7 +164,7 @@ test("Props render correctly", async () => {
   const input = getByPlaceholderText("you@example.com");
   expect(input).toBeTruthy();
   expect(input.getAttribute("id")).toEqual("email");
-  expect(input.getAttribute("name")).toEqual("otp");
+  expect(input.getAttribute("name")).toEqual("email");
   expect(input.getAttribute("value")).toBe("initial value");
   expect(getByTestId("pickup-button").getAttribute("value")).toEqual("Sign Up");
 
