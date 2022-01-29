@@ -26,6 +26,7 @@ exports[`NestedInput with usePhoneNumber renders without crashing, matches snaps
               <input
                 autocomplete="tel"
                 class="PU--input-0-2-3 PU--input-d1-0-2-9"
+                id="nestedInput"
                 name="nestedInput"
                 placeholder="(345) 555-2343"
                 type="tel"
@@ -68,7 +69,7 @@ exports[`NestedInput with useVerificationCode renders without crashing, matches 
               id="nestedInput"
               name="nestedInput"
               placeholder="Placeholder text"
-              value=""
+              value="initial value"
             />
           </div>
           <div>
@@ -106,7 +107,7 @@ exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
               id="nestedInput"
               name="nestedInput"
               placeholder="Placeholder text"
-              value=""
+              value="initial value"
             />
           </div>
           <div>
