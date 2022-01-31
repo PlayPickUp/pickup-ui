@@ -1,16 +1,21 @@
 import React from "react";
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
 import { NestedInputProps } from "../types";
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 interface OptionalProps extends NestedInputProps {
-  handleSubmit?: jest.Mock;
+  onSubmit?: jest.Mock;
 }
 const NestedInputFormik = (
   optionalProps?: Partial<OptionalProps>
 ): JSX.Element => {
+  const handleSubmit = async (values) => {
+    await sleep(500);
+    optionalProps.onSubmit(values);
+  };
   return (
     <ThemeProvider>
       <div>
@@ -18,7 +23,7 @@ const NestedInputFormik = (
           initialValues={{
             nestedInput: "initial value",
           }}
-          onSubmit={optionalProps.handleSubmit}
+          onSubmit={handleSubmit}
         >
           <Form>
             <Field
@@ -100,15 +105,17 @@ test("Verification code NestedInput props pass and render correctly", () => {
   expect(input.getAttribute("value")).toBe("123456");
 });
 
-test("Submit is passed when useSubmit is true", () => {
+test("Submit is passed when useSubmit is true", async () => {
   const handleSubmit = jest.fn();
-  const { getByText } = render(
-    <NestedInputFormik handleSubmit={handleSubmit} />
-  );
+  const { getByText } = render(<NestedInputFormik onSubmit={handleSubmit} />);
   const button = getByText("Click Button");
   expect(button).toBeTruthy();
   fireEvent.click(button);
-  expect(handleSubmit).toBeCalled();
+  await waitFor(() =>
+    expect(handleSubmit).toHaveBeenCalledWith({
+      nestedInput: "initial value",
+    })
+  );
 });
 
 test("onClick is passed when useSubmit is false", () => {
