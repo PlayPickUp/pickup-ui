@@ -205,8 +205,8 @@ const PickerButton: React.FC<PickerButtonProps> = ({
     >
       <div
         className={classNames({
-          [classes.bar]: isPick ? true : false,
-          [classes.nonPickedBar]: !isPick ? true : false,
+          [classes.bar]: isPick,
+          [classes.nonPickedBar]: !isPick,
           [classes.barActive]: showResult,
           [classes.barCorrect]: isCorrect,
           [classes.barIncorrect]: isIncorrect,
