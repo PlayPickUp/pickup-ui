@@ -12,7 +12,9 @@ test("Loader renders without crashing, matches snapshot", async () => {
     </ThemeProvider>
   );
   const loader = await screen.findByText("Loading");
+  await waitFor(() => expect(container).toBeTruthy());
   await waitFor(() => expect(loader).toBeTruthy());
+
 });
 
 test("Text override works as expected", async () => {
