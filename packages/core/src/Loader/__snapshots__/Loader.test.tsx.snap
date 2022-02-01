@@ -6,16 +6,16 @@ exports[`Loader renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-2"
+      class="PU-47047-root-0-2-2"
     >
       <div
-        class="PU--animContainer-0-2-3"
+        class="PU-47047-animContainer-0-2-3"
       >
         <div
-          class="PU--iconBg-0-2-4"
+          class="PU-47047-iconBg-0-2-4"
         />
         <div
-          class="PU--iconContainer-0-2-5"
+          class="PU-47047-iconContainer-0-2-5"
         >
           <svg
             fill="none"
@@ -37,7 +37,7 @@ exports[`Loader renders without crashing, matches snapshot 1`] = `
         style="margin-top: 20px;"
       >
         <p
-          class="PU--root-0-2-6 PU--root-d6-0-2-15 PU--heading2-0-2-8"
+          class="PU-47047-root-0-2-6 PU-47047-root-d6-0-2-15 PU-47047-heading2-0-2-8"
         >
           Loading
         </p>

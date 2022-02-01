@@ -6,7 +6,7 @@ exports[`Paper renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1 PU--root-d0-0-2-3"
+      class="PU-46859-root-0-2-1 PU-46859-root-d0-0-2-3"
       data-testid="paper"
     >
       Hello, World
@@ -21,11 +21,11 @@ exports[`Paper with logo heading renders without crashing, matches snapshot 1`] 
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1 PU--root-d0-0-2-3"
+      class="PU-23693-root-0-2-1 PU-23693-root-d0-0-2-3"
       data-testid="paper"
     >
       <div
-        class="PU--logoHeading-0-2-2"
+        class="PU-23693-logoHeading-0-2-2"
       >
         <div>
           <img

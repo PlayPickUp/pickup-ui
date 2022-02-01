@@ -6,14 +6,14 @@ exports[`Renders and matches snapshot 1`] = `
     id="PickUpUI"
   >
     <a
-      class="PU--root-0-2-2"
+      class="PU-71601-root-0-2-2"
       data-testid="progress-button"
     >
       <div
-        class="PU--progressBar-0-2-3 PU--progressBar-d1-0-2-9"
+        class="PU-71601-progressBar-0-2-3 PU-71601-progressBar-d1-0-2-9"
       />
       <div
-        class="PU--textContainer-0-2-7"
+        class="PU-71601-textContainer-0-2-7"
       >
         125 / 250 points
       </div>

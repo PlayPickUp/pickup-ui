@@ -6,13 +6,13 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1 PU--root-d0-0-2-8"
+      class="PU-77498-root-0-2-1 PU-77498-root-d0-0-2-8"
     >
       <div
-        class="PU--inputContainer-0-2-2"
+        class="PU-77498-inputContainer-0-2-2"
       >
         <input
-          class="PU--input-0-2-3 PU--input-d1-0-2-9"
+          class="PU-77498-input-0-2-3 PU-77498-input-d1-0-2-9"
           name="email"
           placeholder="you@example.com"
           value="eric@playpickup.com"
@@ -20,7 +20,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       </div>
       <div>
         <input
-          class="PU--root-0-2-10 PU--root-d0-0-2-14"
+          class="PU-77498-root-0-2-10 PU-77498-root-d0-0-2-14"
           data-testid="pickup-button"
           type="submit"
           value="Sign Up"
@@ -28,13 +28,13 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="PU--root-0-2-1 PU--root-d2-0-2-15"
+      class="PU-77498-root-0-2-1 PU-77498-root-d2-0-2-15"
     >
       <div
-        class="PU--inputContainer-0-2-2"
+        class="PU-77498-inputContainer-0-2-2"
       >
         <input
-          class="PU--input-0-2-3 PU--input-d3-0-2-16"
+          class="PU-77498-input-0-2-3 PU-77498-input-d3-0-2-16"
           name="phone"
           placeholder="(123) 293-5555"
           value=""
@@ -42,7 +42,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       </div>
       <div>
         <input
-          class="PU--root-0-2-10 PU--root-d1-0-2-17"
+          class="PU-77498-root-0-2-10 PU-77498-root-d1-0-2-17"
           data-testid="pickup-button"
           type="submit"
           value="Verify"
@@ -50,13 +50,13 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="PU--root-0-2-1 PU--root-d4-0-2-18"
+      class="PU-77498-root-0-2-1 PU-77498-root-d4-0-2-18"
     >
       <div
-        class="PU--inputContainer-0-2-2"
+        class="PU-77498-inputContainer-0-2-2"
       >
         <input
-          class="PU--input-0-2-3 PU--input-d5-0-2-19"
+          class="PU-77498-input-0-2-3 PU-77498-input-d5-0-2-19"
           name="otp"
           placeholder="123456"
           value=""
@@ -64,7 +64,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
       </div>
       <div>
         <input
-          class="PU--root-0-2-10 PU--root-d2-0-2-20"
+          class="PU-77498-root-0-2-10 PU-77498-root-d2-0-2-20"
           data-testid="pickup-button"
           type="submit"
           value="Verify Pick"

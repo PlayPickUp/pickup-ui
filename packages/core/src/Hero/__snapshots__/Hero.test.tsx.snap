@@ -6,47 +6,47 @@ exports[`Renders and matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1"
+      class="PU-22897-root-0-2-1"
     >
       <div
-        class="PU--container-0-2-2"
+        class="PU-22897-container-0-2-2"
       >
         <div
-          class="PU--row-0-2-3"
+          class="PU-22897-row-0-2-3"
         >
           <div
-            class="PU--imageColumn-0-2-5"
+            class="PU-22897-imageColumn-0-2-5"
           >
             <div
-              class="PU--imageContainer-0-2-6"
+              class="PU-22897-imageContainer-0-2-6"
             >
               <img
                 alt="bowlero"
-                class="PU--image-0-2-7"
+                class="PU-22897-image-0-2-7"
                 src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
               />
             </div>
           </div>
           <div
-            class="PU--column-0-2-4"
+            class="PU-22897-column-0-2-4"
           >
             <h2
-              class="PU--root-0-2-13 PU--root-d6-0-2-22 PU--heading2-0-2-15 PU--title-0-2-9"
+              class="PU-22897-root-0-2-13 PU-22897-root-d6-0-2-22 PU-22897-heading2-0-2-15 PU-22897-title-0-2-9"
               data-testid="hero-title"
             >
               Hero Title
             </h2>
             <div
-              class="PU--eyebrow-0-2-8"
+              class="PU-22897-eyebrow-0-2-8"
             >
               <p
-                class="PU--root-0-2-13 PU--root-d7-0-2-23 PU--body2-0-2-21"
+                class="PU-22897-root-0-2-13 PU-22897-root-d7-0-2-23 PU-22897-body2-0-2-21"
               >
                 Eyebrow Title | Eyebrow Description
               </p>
             </div>
             <p
-              class="PU--root-0-2-13 PU--root-d8-0-2-24 PU--body-0-2-20 PU--description-0-2-10"
+              class="PU-22897-root-0-2-13 PU-22897-root-d8-0-2-24 PU-22897-body-0-2-20 PU-22897-description-0-2-10"
               data-testid="hero-description"
             >
               Hero Description

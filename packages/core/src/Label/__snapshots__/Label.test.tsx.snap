@@ -9,7 +9,7 @@ exports[`Label renders without crashing, matches snapshot 1`] = `
       data-testid="label-wrapper"
     >
       <label
-        class="PU--label-0-2-1"
+        class="PU-31116-label-0-2-1"
         data-testid="label"
         for="firstName"
       >

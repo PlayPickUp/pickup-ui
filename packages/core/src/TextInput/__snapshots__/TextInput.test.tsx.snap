@@ -6,10 +6,10 @@ exports[`TextInput as password renders without crashing, matches snapshot 1`] = 
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1"
+      class="PU-94538-root-0-2-1"
     >
       <input
-        class="PU--input-0-2-2"
+        class="PU-94538-input-0-2-2"
         data-testid="text-input"
         name="firstName"
         type="password"
@@ -26,10 +26,10 @@ exports[`TextInput renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1"
+      class="PU-49661-root-0-2-1"
     >
       <input
-        class="PU--input-0-2-2"
+        class="PU-49661-input-0-2-2"
         data-testid="text-input"
         name="firstName"
         type="text"

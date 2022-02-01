@@ -6,7 +6,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-1 PU--root-d0-0-2-2"
+      class="PU-16753-root-0-2-1 PU-16753-root-d0-0-2-2"
       data-testid="icon"
     >
       <svg

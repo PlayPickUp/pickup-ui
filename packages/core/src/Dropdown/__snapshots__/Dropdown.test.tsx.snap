@@ -6,7 +6,7 @@ exports[`Renders and matches snapshot 1`] = `
     id="PickUpUI"
   >
     <select
-      class="PU--root-0-2-2"
+      class="PU-62869-root-0-2-2"
       data-testid="dropdown"
     >
       <option

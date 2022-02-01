@@ -13,7 +13,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="downshift-0-label"
-          class="PU--root-0-2-1 Input-1-2-3"
+          class="PU-12439-root-0-2-1 Input-1-2-3"
           data-testid="select"
           role="combobox"
           style="color: blue;"
@@ -22,7 +22,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
             data-testid="label-wrapper"
           >
             <label
-              class="PU--label-0-2-8"
+              class="PU-12439-label-0-2-8"
               data-testid="label"
               for="downshift-0-input"
             >
@@ -33,7 +33,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
             aria-autocomplete="list"
             aria-labelledby="downshift-0-label"
             autocomplete="off"
-            class="PU--selectButton-0-2-2"
+            class="PU-12439-selectButton-0-2-2"
             id="downshift-0-input"
             name="selection"
             placeholder="Select one"
@@ -42,13 +42,13 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           <button
             aria-haspopup="true"
             aria-label="toggle-menu"
-            class="PU--iconButton-0-2-3"
+            class="PU-12439-iconButton-0-2-3"
             data-toggle="true"
             role="button"
             type="button"
           >
             <div
-              class="PU--root-0-2-9 PU--root-d0-0-2-10 PU--icon-0-2-4"
+              class="PU-12439-root-0-2-9 PU-12439-root-d0-0-2-10 PU-12439-icon-0-2-4"
               data-testid="icon"
             >
               <svg
@@ -76,7 +76,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           </button>
           <ul
             aria-labelledby="downshift-0-label"
-            class="PU--dropdown-0-2-6"
+            class="PU-12439-dropdown-0-2-6"
             id="downshift-0-menu"
             role="listbox"
             style="display: none;"

@@ -6,7 +6,7 @@ exports[`Color prop is passed successfully 1`] = `
     id="PickUpUI"
   >
     <p
-      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--body-0-2-8"
+      class="PU-11499-root-0-2-1 PU-11499-root-d6-0-2-10 PU-11499-body-0-2-8"
     >
       I am red text!
     </p>
@@ -20,7 +20,7 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <h1
-      class="PU--root-0-2-1 PU--root-d6-0-2-10 PU--title-0-2-2"
+      class="PU-67892-root-0-2-1 PU-67892-root-d6-0-2-10 PU-67892-title-0-2-2"
     >
       PlayPickUp
     </h1>

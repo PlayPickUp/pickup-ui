@@ -6,14 +6,14 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <label
-      class="PU--contain-0-2-1"
+      class="PU-78634-contain-0-2-1"
     >
       <input
         data-testid="checkbox"
         type="checkbox"
       />
       <span
-        class="PU--checkmark-0-2-2"
+        class="PU-78634-checkmark-0-2-2"
       />
     </label>
   </div>
