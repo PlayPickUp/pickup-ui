@@ -1,6 +1,7 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import Fab from ".";
 import Create from "../../../icons/src/icon/Create";

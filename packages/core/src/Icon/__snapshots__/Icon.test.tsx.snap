@@ -1,12 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  height: auto;
+  position: relative;
+}
+
+body #PickUpUI .j1 {
+  width: 20px;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-16753-root-0-2-1 PU-16753-root-d0-0-2-2"
+      class="j0 j1"
       data-testid="icon"
     >
       <svg

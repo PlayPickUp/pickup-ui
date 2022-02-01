@@ -8,7 +8,8 @@
 import React from "react";
 import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import MultiSelect from ".";
 import { SelectItem } from "../types";

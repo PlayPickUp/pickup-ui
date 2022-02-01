@@ -1,19 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  width: 16px;
+  cursor: pointer;
+  height: 16px;
+  display: block;
+  position: relative;
+  font-size: 22px;
+  user-select: none;
+}
+
+body #PickUpUI .j1 {
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #7A60FF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <label
-      class="PU-78634-contain-0-2-1"
+      class="j0"
     >
       <input
         data-testid="checkbox"
         type="checkbox"
       />
       <span
-        class="PU-78634-checkmark-0-2-2"
+        class="j1"
       />
     </label>
   </div>

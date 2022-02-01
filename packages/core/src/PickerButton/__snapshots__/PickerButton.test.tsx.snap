@@ -1,16 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: auto;
+  display: block;
+  padding: 4px;
+  position: relative;
+  font-size: 14px;
+  min-height: 38px;
+  text-align: center;
+  transition: background-color 75ms ease;
+  border-radius: 5px;
+  background-color: #F3F2F5;
+}
+
+body #PickUpUI .j1 {
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  border-radius: 2px;
+}
+
+body #PickUpUI .j2 {
+  background-color: #FFF;
+}
+
+body #PickUpUI .j3 {
+  border: 1px solid #FF1244;
+}
+
+body #PickUpUI .j4 {}
+
+body #PickUpUI .j5 {}
+
+body #PickUpUI .j6 {
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  border-radius: 2px;
+}
+
+body #PickUpUI .j7 {
+  width: 100%;
+  display: flex;
+  padding: 0 8px;
+  z-index: 2;
+  position: relative;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body #PickUpUI .j8 {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body #PickUpUI .j9 {
+  display: none;
+}
+
+body #PickUpUI .j10 {
+  width: 11px;
+  height: auto;
+  display: block;
+  position: relative;
+  margin-right: 12px;
+}
+
+body #PickUpUI .j11 {
+  border: 1px solid #25DA95;
+}
+
+body #PickUpUI .j12 {}
+
+body #PickUpUI .j13 {
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  border-radius: 2px;
+}
+
+body #PickUpUI .j14 {}
+
 <div>
   <div
     id="PickUpUI"
   >
     <button
-      class="PU-11758-root-0-2-2"
+      class="j0"
       data-testid="picker-button"
     >
       <div
-        class="PU-11758-nonPickedBar-0-2-11"
+        class="j1"
       >
         <div />
       </div>
@@ -21,17 +122,17 @@ exports[`Renders and matches snapshot 1`] = `
       </div>
     </button>
     <button
-      class="PU-11758-root-0-2-2 PU-11758-result-0-2-3 PU-11758-isIncorrect-0-2-13"
+      class="j0 j2 j3"
       data-testid="picker-button"
       style="margin-bottom: 10px;"
     >
       <div
-        class="PU-11758-nonPickedBar-0-2-11 PU-11758-barActive-0-2-16 PU-11758-barActive-d3-0-2-20 PU-11758-barIncorrect-0-2-15"
+        class="j1 j4 j5 j6"
       >
         <div />
       </div>
       <div
-        class="PU-11758-textContainer-0-2-5"
+        class="j7"
       >
         <div
           class=""
@@ -39,10 +140,10 @@ exports[`Renders and matches snapshot 1`] = `
           Definitely Not
         </div>
         <div
-          class="PU-11758-resultContainer-0-2-6"
+          class="j8"
         >
           <div
-            class="PU-11758-bolt-0-2-8 PU-11758-hasIcon-0-2-9"
+            class="j9 j10"
           >
             <svg
               fill="none"
@@ -73,17 +174,17 @@ exports[`Renders and matches snapshot 1`] = `
       </div>
     </button>
     <button
-      class="PU-11758-root-0-2-2 PU-11758-result-0-2-3 PU-11758-isCorrect-0-2-12"
+      class="j0 j2 j11"
       data-testid="picker-button"
       style="margin-bottom: 10px;"
     >
       <div
-        class="PU-11758-nonPickedBar-0-2-11 PU-11758-barActive-0-2-16 PU-11758-barActive-d5-0-2-22 PU-11758-barCorrect-0-2-14"
+        class="j1 j4 j12 j13"
       >
         <div />
       </div>
       <div
-        class="PU-11758-textContainer-0-2-5"
+        class="j7"
       >
         <div
           class=""
@@ -91,10 +192,10 @@ exports[`Renders and matches snapshot 1`] = `
           Absolutely
         </div>
         <div
-          class="PU-11758-resultContainer-0-2-6"
+          class="j8"
         >
           <div
-            class="PU-11758-bolt-0-2-8 PU-11758-hasIcon-0-2-9"
+            class="j9 j10"
           >
             <svg
               fill="none"
@@ -121,17 +222,17 @@ exports[`Renders and matches snapshot 1`] = `
       </div>
     </button>
     <button
-      class="PU-11758-root-0-2-2 PU-11758-result-0-2-3"
+      class="j0 j2"
       data-testid="picker-button"
       style="margin-bottom: 10px;"
     >
       <div
-        class="PU-11758-nonPickedBar-0-2-11 PU-11758-barActive-0-2-16 PU-11758-barActive-d7-0-2-24"
+        class="j1 j4 j14"
       >
         <div />
       </div>
       <div
-        class="PU-11758-textContainer-0-2-5"
+        class="j7"
       >
         <div
           class=""
@@ -139,10 +240,10 @@ exports[`Renders and matches snapshot 1`] = `
           Maybe?
         </div>
         <div
-          class="PU-11758-resultContainer-0-2-6"
+          class="j8"
         >
           <div
-            class="PU-11758-bolt-0-2-8"
+            class="j9"
           />
           <div
             class=""

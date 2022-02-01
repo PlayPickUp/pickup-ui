@@ -1,16 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextArea renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  width: 100%;
+  position: relative;
+}
+
+body #PickUpUI .j1 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 400px;
+  resize: none;
+  padding: 16px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-79376-root-0-2-1"
+      class="j0"
       data-testid="textarea-wrapper"
     >
       <textarea
-        class="PU-79376-textarea-0-2-2"
+        class="j1"
         name="excerpt"
       >
         This is an excerpt, it is a pretty cool excerpt. It contains text.

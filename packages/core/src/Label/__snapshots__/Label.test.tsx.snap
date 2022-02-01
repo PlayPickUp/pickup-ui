@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  display: block;
+  padding: 4px 4px 12px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -9,7 +18,7 @@ exports[`Label renders without crashing, matches snapshot 1`] = `
       data-testid="label-wrapper"
     >
       <label
-        class="PU-31116-label-0-2-1"
+        class="j0"
         data-testid="label"
         for="firstName"
       >

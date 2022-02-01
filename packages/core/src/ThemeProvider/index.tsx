@@ -28,7 +28,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
   return (
     <div id="PickUpUI">
-      <JssProvider jss={jss} classNamePrefix={`PU-${random}-`}>
+      <JssProvider jss={jss} classNamePrefix={`PU${random}--`}>
         <JSSThemeProvider theme={mergedTheme} {...rest}>
           <GlobalsAndReset>{children}</GlobalsAndReset>
         </JSSThemeProvider>

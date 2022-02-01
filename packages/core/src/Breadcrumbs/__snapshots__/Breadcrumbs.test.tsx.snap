@@ -1,34 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  color: #2C2933;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+body #PickUpUI .j1 {
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  flex-wrap: flex;
+  list-style: none;
+}
+
+body #PickUpUI .j2 {
+  display: inline-flex;
+  flex-wrap: no wrap;
+}
+
+body #PickUpUI .j3 {
+  color: #2C2933;
+  text-decoration: none;
+}
+
+body #PickUpUI .j4 {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+body #PickUpUI .j5 {
+  text-align: left;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <nav
-      class="PU-22451-root-0-2-1"
+      class="j0"
     >
       <ul
         aria-label="breadcrumbs"
-        class="PU-22451-uList-0-2-2"
+        class="j1"
       >
         <li
-          class="PU-22451-nameList-0-2-3"
+          class="j2"
         >
           <a
-            class="PU-22451-link-0-2-5"
+            class="j3"
             href="/sports-betting"
           >
             Sports Betting
           </a>
           <span
-            class="PU-22451-separator-0-2-6"
+            class="j4"
           >
             /
           </span>
         </li>
         <li
-          class="PU-22451-pathList-0-2-4"
+          class="j5"
         >
           Arizona Sports Betting
         </li>

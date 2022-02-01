@@ -1,12 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  border: 1px solid #F3F2F5;
+  height: 36px;
+  position: relative;
+  font-size: 12px;
+  appearance: none;
+  transition: all 150ms ease-out;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 20px;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 24px;
+  letter-spacing: 0.1px;
+  padding-bottom: 8px;
+  background-color: #F3F2F5;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='9' viewBox='0 0 8 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18457 -2.38419e-07H3.3252V6.42188L0.848633 3.94531L0.254883 4.54687L3.75488 8.04688L7.2627 4.54687L6.65332 3.94531L4.18457 6.42188V-2.38419e-07Z' fill='%232C2933'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <select
-      class="PU-62869-root-0-2-2"
+      class="j0"
       data-testid="dropdown"
     >
       <option

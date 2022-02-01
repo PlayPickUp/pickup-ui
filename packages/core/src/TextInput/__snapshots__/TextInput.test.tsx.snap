@@ -1,15 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextInput as password renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  display: flex;
+  padding: 4px;
+  position: relative;
+}
+
+body #PickUpUI .j1 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 44px;
+  padding: 0 16px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-94538-root-0-2-1"
+      class="j0"
     >
       <input
-        class="PU-94538-input-0-2-2"
+        class="j1"
         data-testid="text-input"
         name="firstName"
         type="password"
@@ -21,15 +42,36 @@ exports[`TextInput as password renders without crashing, matches snapshot 1`] = 
 `;
 
 exports[`TextInput renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  display: flex;
+  padding: 4px;
+  position: relative;
+}
+
+body #PickUpUI .j1 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 44px;
+  padding: 0 16px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-49661-root-0-2-1"
+      class="j0"
     >
       <input
-        class="PU-49661-input-0-2-2"
+        class="j1"
         data-testid="text-input"
         name="firstName"
         type="text"

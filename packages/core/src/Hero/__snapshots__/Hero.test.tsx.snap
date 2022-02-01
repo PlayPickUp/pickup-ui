@@ -1,52 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j7 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body #PickUpUI .j8 {
+  color: inherit;
+}
+
+body #PickUpUI .j9 {
+  color: inherit;
+  font-size: 28px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+}
+
+body #PickUpUI .j12 {
+  color: inherit;
+}
+
+body #PickUpUI .j13 {
+  color: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j14 {
+  color: inherit;
+}
+
+body #PickUpUI .j15 {
+  color: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j0 {
+  width: 100%;
+  text-align: center;
+  background-color: #F6F4FF;
+}
+
+body #PickUpUI .j1 {
+  margin: 0 auto;
+  padding: 20px 20px;
+  max-width: 856px;
+  box-sizing: border-box;
+}
+
+body #PickUpUI .j2 {
+  display: flex;
+  flex-direction: column;
+}
+
+body #PickUpUI .j3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  justify-content: center;
+}
+
+body #PickUpUI .j4 {
+  height: 100%;
+  overflow: hidden;
+  max-width: 350px;
+  max-height: 300px;
+  border-radius: 4px;
+}
+
+body #PickUpUI .j5 {
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+body #PickUpUI .j6 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body #PickUpUI .j10 {
+  width: 100%;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 36px;
+}
+
+body #PickUpUI .j11 {
+  display: flex;
+  flex-direction: row;
+}
+
+body #PickUpUI .j16 {
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-22897-root-0-2-1"
+      class="j0"
     >
       <div
-        class="PU-22897-container-0-2-2"
+        class="j1"
       >
         <div
-          class="PU-22897-row-0-2-3"
+          class="j2"
         >
           <div
-            class="PU-22897-imageColumn-0-2-5"
+            class="j3"
           >
             <div
-              class="PU-22897-imageContainer-0-2-6"
+              class="j4"
             >
               <img
                 alt="bowlero"
-                class="PU-22897-image-0-2-7"
+                class="j5"
                 src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
               />
             </div>
           </div>
           <div
-            class="PU-22897-column-0-2-4"
+            class="j6"
           >
             <h2
-              class="PU-22897-root-0-2-13 PU-22897-root-d6-0-2-22 PU-22897-heading2-0-2-15 PU-22897-title-0-2-9"
+              class="j7 j8 j9 j10"
               data-testid="hero-title"
             >
               Hero Title
             </h2>
             <div
-              class="PU-22897-eyebrow-0-2-8"
+              class="j11"
             >
               <p
-                class="PU-22897-root-0-2-13 PU-22897-root-d7-0-2-23 PU-22897-body2-0-2-21"
+                class="j7 j12 j13"
               >
                 Eyebrow Title | Eyebrow Description
               </p>
             </div>
             <p
-              class="PU-22897-root-0-2-13 PU-22897-root-d8-0-2-24 PU-22897-body-0-2-20 PU-22897-description-0-2-10"
+              class="j7 j14 j15 j16"
               data-testid="hero-description"
             >
               Hero Description

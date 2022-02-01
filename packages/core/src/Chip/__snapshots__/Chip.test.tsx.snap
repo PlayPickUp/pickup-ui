@@ -1,12 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  width: auto;
+  border: 1px solid #F3F2F5;
+  height: 36px;
+  display: inline-flex;
+  padding: 8px 20px;
+  position: relative;
+  font-size: 12px;
+  appearance: none;
+  box-sizing: border-box;
+  transition: all 150ms ease-out;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 20px;
+  border-radius: 8px;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  background-color: #F3F2F5;
+}
+
+body #PickUpUI .j1 {}
+
+body #PickUpUI .j2 {
+  outline: none;
+  background-color: #FFF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <button
-      class="PU-14512-root-0-2-3 PU-14512-isActive-0-2-9 PU-14512-isActive-d0-0-2-10"
+      class="j0 j1 j2"
       data-testid="chip"
     >
       <span>

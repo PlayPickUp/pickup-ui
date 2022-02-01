@@ -1,16 +1,302 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j7 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body #PickUpUI .j8 {
+  color: #615E66;
+}
+
+body #PickUpUI .j9 {
+  color: inherit;
+  font-size: 15px;
+  font-style: normal;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j11 {
+  color: #9D9D9E;
+}
+
+body #PickUpUI .j12 {
+  color: inherit;
+}
+
+body #PickUpUI .j13 {
+  color: inherit;
+  font-size: 22px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j27 {
+  color: inherit;
+}
+
+body #PickUpUI .j32 {
+  color: inherit;
+}
+
+body #PickUpUI .j39 {
+  color: #615E66;
+}
+
+body #PickUpUI .j40 {
+  color: #9D9D9E;
+}
+
+body #PickUpUI .j41 {
+  color: inherit;
+}
+
+body #PickUpUI .j46 {
+  color: inherit;
+}
+
+body #PickUpUI .j48 {
+  color: inherit;
+}
+
+body #PickUpUI .j24 {
+  float: left;
+  width: 210px;
+}
+
+body #PickUpUI .j25 {
+  float: left;
+  font-size: 11px;
+  min-width: 120px;
+  font-color: #615E66;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+body #PickUpUI .j26 {
+  color: #615E66;
+  width: 20px;
+  height: 20px;
+  padding-right: 3px;
+  vertical-align: middle;
+}
+
+body #PickUpUI .j28 {
+  color: red;
+  font-size: 11px;
+}
+
+body #PickUpUI .j29 {
+  float: left;
+  font-size: 11px;
+  font-color: #7A60FF;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+body #PickUpUI .j30 {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+body #PickUpUI .j31 {
+  color: #5E24FF;
+}
+
+body #PickUpUI .j33 {
+  font-size: 11px;
+}
+
+body #PickUpUI .j34 {
+  color: #5E24FF;
+}
+
+body #PickUpUI .j47 {
+  color: #5E24FF;
+}
+
+body #PickUpUI .j49 {
+  color: #5E24FF;
+}
+
+body #PickUpUI .j18 {
+  background: #7A60FF;
+  color: #FFF;
+  border: none;
+  height: auto;
+  display: flex;
+  opacity: 1;
+  padding: 0 30px;
+  position: relative;
+  flex-flow: row nowrap;
+  font-size: 18px;
+  appearance: none;
+  background: linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%);
+  min-height: 47px;
+  transition: opacity 200ms ease-in-out;
+  align-items: center;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 24px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+body #PickUpUI .j19 {
+  width: auto;
+}
+
+body #PickUpUI .j20 {
+  color: #5E24FF;
+  background: #F5F0FF;
+}
+
+body #PickUpUI .j22 {
+  width: auto;
+}
+
+body #PickUpUI .j44 {
+  width: auto;
+}
+
+body #PickUpUI .j45 {
+  width: auto;
+}
+
+body #PickUpUI .j0 {
+  width: 220px;
+  border: 1px solid #E5E3E8;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+  min-height: 290px;
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j1 {
+  order: -2;
+}
+
+body #PickUpUI .j2 {
+  word-wrap: break-word;
+}
+
+body #PickUpUI .j3 {
+  max-width: 200px;
+}
+
+body #PickUpUI .j4 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+body #PickUpUI .j5 {
+  margin: 4px;
+}
+
+body #PickUpUI .j6 {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+body #PickUpUI .j10 {
+  margin: 4px;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+body #PickUpUI .j14 {
+  padding: 0 10px;
+  font-weight: normal;
+  letter-spacing: -0.1px;
+}
+
+body #PickUpUI .j15 {
+  font-size: 18px;
+}
+
+body #PickUpUI .j16 {}
+
+body #PickUpUI .j17 {
+  padding: 8px;
+}
+
+body #PickUpUI .j21 {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 11px;
+  min-height: 24px;
+  margin-right: 20px;
+}
+
+body #PickUpUI .j23 {
+  padding: 2px 10px 10px 10px;
+}
+
+body #PickUpUI .j35 {
+  border: 1px solid #E5E3E8;
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  max-width: 350px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+  min-height: 140px;
+  border-radius: 8px;
+  flex-direction: row;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j36 {
+  order: -2;
+}
+
+body #PickUpUI .j37 {
+  max-width: 210px;
+}
+
+body #PickUpUI .j38 {
+  margin: 0 4;
+}
+
+body #PickUpUI .j42 {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+body #PickUpUI .j43 {
+  padding: 4px 8px;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-47512-card-0-2-8"
+      class="j0"
     >
       <div>
         <a
-          class="PU-47512-featuredImage-0-2-3"
+          class="j1"
           title="Chiefs vs. Ravens Who wins?"
         >
           <div
@@ -20,14 +306,14 @@ exports[`Renders and matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="PU-47512-rightContainer-0-2-14 PU-47512-rightContainer-d7-0-2-19"
+        class="j2 j3"
       >
         <div
-          class="PU-47512-publisherRow-0-2-5 PU-47512-publisherRow-d4-0-2-17"
+          class="j4 j5"
         >
           <img
             alt="Prime Time Sports"
-            class="PU-47512-publisherImage-0-2-12"
+            class="j6"
             src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
           />
           <a
@@ -35,13 +321,13 @@ exports[`Renders and matches snapshot 1`] = `
             title="Prime Time Sports"
           >
             <p
-              class="PU-47512-root-0-2-21 PU-47512-root-d6-0-2-30 PU-47512-body-0-2-28 PU-47512-body-0-2-13"
+              class="j7 j8 j9 j10"
             >
               Prime Time Sports
             </p>
           </a>
           <span
-            class="PU-47512-root-0-2-21 PU-47512-root-d7-0-2-31 PU-47512-body-0-2-28 PU-47512-body-0-2-13"
+            class="j7 j11 j9 j10"
           >
             23m
           </span>
@@ -50,38 +336,38 @@ exports[`Renders and matches snapshot 1`] = `
           title="Chiefs vs. Ravens Who wins?"
         >
           <h3
-            class="PU-47512-root-0-2-21 PU-47512-root-d8-0-2-32 PU-47512-heading3-0-2-24 PU-47512-h3-0-2-11 PU-47512-h3-d5-0-2-18"
+            class="j7 j12 j13 j14 j15"
           >
             Chiefs vs. Ravens Who wins?
           </h3>
         </a>
         <div
-          class="PU-47512-pick-0-2-15 PU-47512-pick-d9-0-2-20"
+          class="j16 j17"
         >
           <button
-            class="PU-47512-root-0-2-33 PU-47512-root-d0-0-2-37 PU-47512-light-0-2-35 PU-47512-button-0-2-10"
+            class="j18 j19 j20 j21"
             data-testid="pickup-button"
           >
             Ravens
           </button>
           <button
-            class="PU-47512-root-0-2-33 PU-47512-root-d1-0-2-38 PU-47512-light-0-2-35 PU-47512-button-0-2-10"
+            class="j18 j22 j20 j21"
             data-testid="pickup-button"
           >
             Chiefs
           </button>
         </div>
         <div
-          class="PU-47512-countdown-0-2-16"
+          class="j23"
         >
           <div
-            class="PU-47512-container-0-2-41"
+            class="j24"
           >
             <div
-              class="PU-47512-timer-0-2-39"
+              class="j25"
             >
               <svg
-                class="PU-47512-timerIcon-0-2-42"
+                class="j26"
                 fill="none"
                 height="24"
                 viewBox="0 0 24 24"
@@ -94,16 +380,16 @@ exports[`Renders and matches snapshot 1`] = `
                 />
               </svg>
               <span
-                class="PU-47512-root-0-2-21 PU-47512-root-d9-0-2-48 PU-47512-body-0-2-28 PU-47512-closed-0-2-44"
+                class="j7 j27 j9 j28"
               >
                 CLOSED
               </span>
             </div>
             <div
-              class="PU-47512-pick-0-2-40"
+              class="j29"
             >
               <svg
-                class="PU-47512-pickedIcon-0-2-43 PU-47512-pickedIcon-d2-0-2-46"
+                class="j30 j31"
                 fill="none"
                 height="24"
                 viewBox="0 0 24 24"
@@ -118,7 +404,7 @@ exports[`Renders and matches snapshot 1`] = `
                 />
               </svg>
               <span
-                class="PU-47512-root-0-2-21 PU-47512-root-d10-0-2-49 PU-47512-body-0-2-28 PU-47512-picked-0-2-45 PU-47512-picked-d3-0-2-47"
+                class="j7 j32 j9 j33 j34"
               >
                 Picked
               </span>
@@ -128,11 +414,11 @@ exports[`Renders and matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="PU-47512-expandedCard-0-2-9"
+      class="j35"
     >
       <div>
         <a
-          class="PU-47512-expandedFeaturedIgmage-0-2-4"
+          class="j36"
           title="Chiefs vs. Ravens Who wins?"
         >
           <div
@@ -142,14 +428,14 @@ exports[`Renders and matches snapshot 1`] = `
         </a>
       </div>
       <div
-        class="PU-47512-rightContainer-0-2-14 PU-47512-rightContainer-d14-0-2-52"
+        class="j2 j37"
       >
         <div
-          class="PU-47512-publisherRow-0-2-5 PU-47512-publisherRow-d11-0-2-50"
+          class="j4 j38"
         >
           <img
             alt="Prime Time Sports"
-            class="PU-47512-publisherImage-0-2-12"
+            class="j6"
             src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/crossnet-play.jpg"
           />
           <a
@@ -157,13 +443,13 @@ exports[`Renders and matches snapshot 1`] = `
             title="Prime Time Sports"
           >
             <p
-              class="PU-47512-root-0-2-21 PU-47512-root-d11-0-2-54 PU-47512-body-0-2-28 PU-47512-body-0-2-13"
+              class="j7 j39 j9 j10"
             >
               Prime Time Sports
             </p>
           </a>
           <span
-            class="PU-47512-root-0-2-21 PU-47512-root-d12-0-2-55 PU-47512-body-0-2-28 PU-47512-body-0-2-13"
+            class="j7 j40 j9 j10"
           >
             23m
           </span>
@@ -172,38 +458,38 @@ exports[`Renders and matches snapshot 1`] = `
           title="Chiefs vs. Ravens Who wins?"
         >
           <h3
-            class="PU-47512-root-0-2-21 PU-47512-root-d13-0-2-56 PU-47512-heading3-0-2-24 PU-47512-h3-0-2-11 PU-47512-h3-d12-0-2-51"
+            class="j7 j41 j13 j14 j42"
           >
             Chiefs vs. Ravens Who wins?
           </h3>
         </a>
         <div
-          class="PU-47512-pick-0-2-15 PU-47512-pick-d16-0-2-53"
+          class="j16 j43"
         >
           <button
-            class="PU-47512-root-0-2-33 PU-47512-root-d2-0-2-57 PU-47512-light-0-2-35 PU-47512-button-0-2-10"
+            class="j18 j44 j20 j21"
             data-testid="pickup-button"
           >
             Ravens
           </button>
           <button
-            class="PU-47512-root-0-2-33 PU-47512-root-d3-0-2-58 PU-47512-light-0-2-35 PU-47512-button-0-2-10"
+            class="j18 j45 j20 j21"
             data-testid="pickup-button"
           >
             Chiefs
           </button>
         </div>
         <div
-          class="PU-47512-countdown-0-2-16"
+          class="j23"
         >
           <div
-            class="PU-47512-container-0-2-41"
+            class="j24"
           >
             <div
-              class="PU-47512-timer-0-2-39"
+              class="j25"
             >
               <svg
-                class="PU-47512-timerIcon-0-2-42"
+                class="j26"
                 fill="none"
                 height="24"
                 viewBox="0 0 24 24"
@@ -216,16 +502,16 @@ exports[`Renders and matches snapshot 1`] = `
                 />
               </svg>
               <span
-                class="PU-47512-root-0-2-21 PU-47512-root-d14-0-2-61 PU-47512-body-0-2-28 PU-47512-closed-0-2-44"
+                class="j7 j46 j9 j28"
               >
                 CLOSED
               </span>
             </div>
             <div
-              class="PU-47512-pick-0-2-40"
+              class="j29"
             >
               <svg
-                class="PU-47512-pickedIcon-0-2-43 PU-47512-pickedIcon-d4-0-2-59"
+                class="j30 j47"
                 fill="none"
                 height="24"
                 viewBox="0 0 24 24"
@@ -240,7 +526,7 @@ exports[`Renders and matches snapshot 1`] = `
                 />
               </svg>
               <span
-                class="PU-47512-root-0-2-21 PU-47512-root-d15-0-2-62 PU-47512-body-0-2-28 PU-47512-picked-0-2-45 PU-47512-picked-d5-0-2-60"
+                class="j7 j48 j9 j33 j49"
               >
                 Picked
               </span>

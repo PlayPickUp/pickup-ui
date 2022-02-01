@@ -1,6 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j1 {
+  display: block;
+  padding: 4px 4px 12px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+body #PickUpUI .j4 {
+  height: auto;
+  position: relative;
+}
+
+body #PickUpUI .j5 {
+  width: 20px;
+}
+
+body #PickUpUI .j0 {
+  width: 100%;
+  position: relative;
+}
+
+body #PickUpUI .j2 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 44px;
+  padding: 0 20px 0 16px;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j3 {
+  top: 49px;
+  color: inherit;
+  right: 12px;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+  position: absolute;
+  font-size: inherit;
+  font-family: inherit;
+  user-select: none;
+  border-color: transparent;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+body #PickUpUI .j6 {
+  position: relative;
+  transform: rotate(0deg);
+  transition: all 250ms ease-out;
+}
+
+body #PickUpUI .j7 {
+  top: -3px;
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: auto;
+  position: relative;
+  font-size: 14px;
+  border-top: transparent;
+  text-align: left;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -13,7 +98,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="downshift-0-label"
-          class="PU-12439-root-0-2-1 Input-1-2-3"
+          class="j0 Input-1-2-3"
           data-testid="select"
           role="combobox"
           style="color: blue;"
@@ -22,7 +107,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
             data-testid="label-wrapper"
           >
             <label
-              class="PU-12439-label-0-2-8"
+              class="j1"
               data-testid="label"
               for="downshift-0-input"
             >
@@ -33,7 +118,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
             aria-autocomplete="list"
             aria-labelledby="downshift-0-label"
             autocomplete="off"
-            class="PU-12439-selectButton-0-2-2"
+            class="j2"
             id="downshift-0-input"
             name="selection"
             placeholder="Select one"
@@ -42,13 +127,13 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           <button
             aria-haspopup="true"
             aria-label="toggle-menu"
-            class="PU-12439-iconButton-0-2-3"
+            class="j3"
             data-toggle="true"
             role="button"
             type="button"
           >
             <div
-              class="PU-12439-root-0-2-9 PU-12439-root-d0-0-2-10 PU-12439-icon-0-2-4"
+              class="j4 j5 j6"
               data-testid="icon"
             >
               <svg
@@ -76,7 +161,7 @@ exports[`Select renders without crashing, matches snapshot 1`] = `
           </button>
           <ul
             aria-labelledby="downshift-0-label"
-            class="PU-12439-dropdown-0-2-6"
+            class="j7"
             id="downshift-0-menu"
             role="listbox"
             style="display: none;"

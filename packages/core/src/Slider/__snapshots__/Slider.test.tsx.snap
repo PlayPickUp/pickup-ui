@@ -1,21 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders and matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body #PickUpUI .j1 {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+body #PickUpUI .j2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body #PickUpUI .j3 {
+  display: flex;
+  transition: all 240ms linear;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-54716-sliderContainer-0-2-1"
+      class="j0"
     >
       <div
-        class="PU-54716-sliderWrapper-0-2-2"
+        class="j1"
       >
         <div
-          class="PU-54716-sliderContentWrapper-0-2-3"
+          class="j2"
         >
           <div
-            class="PU-54716-sliderContent-0-2-4"
+            class="j3"
             style="transform: translateX(-NaN%);"
           >
             <div />

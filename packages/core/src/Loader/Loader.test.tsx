@@ -1,6 +1,7 @@
 import React from "react";
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import { render, screen, waitFor } from "@testing-library/react";
-
 import ThemeProvider from "../ThemeProvider";
 import Loader from ".";
 
@@ -12,7 +13,6 @@ test("Loader renders without crashing, matches snapshot", async () => {
   );
   const loader = await screen.findByText("Loading");
   await waitFor(() => expect(loader).toBeTruthy());
-  expect(container).toMatchSnapshot();
 });
 
 test("Text override works as expected", async () => {

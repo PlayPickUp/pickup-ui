@@ -1,20 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j4 {
+  height: auto;
+  position: relative;
+}
+
+body #PickUpUI .j5 {
+  width: 20px;
+}
+
+body #PickUpUI .j0 {
+  display: flex;
+  overflow: visible;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+body #PickUpUI .j1 {
+  width: 42px;
+  height: 42px;
+}
+
+body #PickUpUI .j2 {
+  border: none;
+  display: flex;
+  padding: 2px;
+  position: relative;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+body #PickUpUI .j3 {
+  width: 42px;
+  height: 42px;
+  background-color: #FFF;
+}
+
 <div>
   <div
     id="PickUpUI"
   >
     <div
-      class="PU-95646-root-0-2-2 PU-95646-root-d0-0-2-6"
+      class="j0 j1"
       data-testid="fab-root"
     >
       <button
-        class="PU-95646-button-0-2-3 PU-95646-button-d1-0-2-7"
+        class="j2 j3"
         data-testid="fab-target"
       >
         <div
-          class="PU-95646-root-0-2-8 PU-95646-root-d0-0-2-9"
+          class="j4 j5"
           data-testid="icon"
           style="border-radius: 50%;"
         >
