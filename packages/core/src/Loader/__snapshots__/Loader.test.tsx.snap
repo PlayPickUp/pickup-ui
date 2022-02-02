@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders without crashing, matches snapshot 1`] = `
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <div
+      class="PU100000--root-0-2-2"
+    >
+      <div
+        class="PU100000--animContainer-0-2-3"
+      >
+        <div
+          class="PU100000--iconBg-0-2-4"
+        />
+        <div
+          class="PU100000--iconContainer-0-2-5"
+        >
+          <svg
+            fill="none"
+            height="18"
+            viewBox="0 0 15 18"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8.75469 0L8.28319 6.96H14.4L5.64531 18L6.11681 11.04H0L8.75469 0Z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        style="margin-top: 20px;"
+      >
+        <p
+          class="PU100000--root-0-2-6 PU100000--root-d6-0-2-15 PU100000--heading2-0-2-8"
+        >
+          Loading
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <a
+      class="PU100000--root-0-2-2"
+      data-testid="progress-button"
+    >
+      <div
+        class="PU100000--progressBar-0-2-3 PU100000--progressBar-d1-0-2-9"
+      />
+      <div
+        class="PU100000--textContainer-0-2-7"
+      >
+        125 / 250 points
+      </div>
+    </a>
+  </div>
+</div>
+`;

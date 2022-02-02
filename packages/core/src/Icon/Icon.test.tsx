@@ -7,7 +7,8 @@ import Icon from ".";
 import Create from "../../../icons/src/icon/Create";
 
 test("Renders without crashing, matches snapshot", () => {
-  const { container } = render(
+    Math.random = jest.fn(() => 1);  // <--- This is the key, overriding the system's Math.random function
+    const { container } = render(
     <ThemeProvider>
       <Icon>
         <Create />

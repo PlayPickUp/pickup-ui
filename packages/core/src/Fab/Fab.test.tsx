@@ -1,7 +1,5 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import jssSerializer from 'jss-snapshot-serializer';
-expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import Fab from ".";
 import Create from "../../../icons/src/icon/Create";
@@ -9,12 +7,13 @@ import Create from "../../../icons/src/icon/Create";
 const handleChange = jest.fn();
 
 test("Renders without crashing, matches snapshot", () => {
-  const { container } = render(
+    Math.random = jest.fn(() => 1);  // <--- This is the key, overriding the system's Math.random function
+    const { container } = render(
     <ThemeProvider>
       <Fab icon={Create} title="New Post" onClick={handleChange} />
     </ThemeProvider>
   );
-  expect(container).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
 test("onClick fires once when clicked", () => {
