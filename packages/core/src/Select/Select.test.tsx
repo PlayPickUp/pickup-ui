@@ -72,7 +72,7 @@ const handleSubmit = jest.fn();
 test("Select renders without crashing, matches snapshot", () => {
   Math.random = jest.fn(() => 1);  // <--- This is the key, overriding the system's Math.random function
   const { container } = render(<FormComponent onSubmit={handleSubmit} />);
-  expect(container).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
 test("Props are passed and rendered", () => {

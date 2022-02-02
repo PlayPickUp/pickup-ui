@@ -15,7 +15,7 @@ test("Renders without crashing, matches snapshot", () => {
       </Icon>
     </ThemeProvider>
   );
-  expect(container).toBeTruthy();
+  expect(container).toMatchSnapshot();
 });
 
 test("Child component is passed and rendered correctly", () => {

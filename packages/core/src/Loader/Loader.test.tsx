@@ -1,6 +1,4 @@
 import React from "react";
-import jssSerializer from 'jss-snapshot-serializer';
-expect.addSnapshotSerializer(jssSerializer);
 import { render, screen, waitFor } from "@testing-library/react";
 import ThemeProvider from "../ThemeProvider";
 import Loader from ".";
@@ -13,7 +11,7 @@ test("Loader renders without crashing, matches snapshot", async () => {
     </ThemeProvider>
   );
   const loader = await screen.findByText("Loading");
-  await waitFor(() => expect(container).toBeTruthy());
+  await waitFor(() => expect(container).toMatchSnapshot());
   await waitFor(() => expect(loader).toBeTruthy());
 
 });
