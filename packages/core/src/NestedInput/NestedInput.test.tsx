@@ -1,6 +1,5 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import { fireEvent, render, waitFor } from "@testing-library/react";
 import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
