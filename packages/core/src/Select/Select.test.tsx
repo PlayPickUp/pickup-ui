@@ -6,8 +6,6 @@
  **/
 
 import React from "react";
-import jssSerializer from 'jss-snapshot-serializer';
-expect.addSnapshotSerializer(jssSerializer);
 import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
 import ThemeProvider from "../ThemeProvider";
