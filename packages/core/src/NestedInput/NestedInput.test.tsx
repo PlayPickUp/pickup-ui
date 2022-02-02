@@ -1,133 +1,145 @@
 import React from "react";
-import { fireEvent, render } from "@testing-library/react";
-
+import { fireEvent, render, waitFor } from "@testing-library/react";
+import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
 import NestedInput from "./index";
+import { NestedInputProps } from "../types";
 
-test("Renders without crashing, matches snapshot", () => {
-  const handleChange = jest.fn();
-  const { container } = render(
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+interface OptionalProps extends NestedInputProps {
+  onSubmit?: jest.Mock;
+}
+const NestedInputFormik = (
+  optionalProps?: Partial<OptionalProps>
+): JSX.Element => {
+  const handleSubmit = async (values) => {
+    await sleep(500);
+    optionalProps.onSubmit(values);
+  };
+  return (
     <ThemeProvider>
-      <NestedInput
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        buttonText="Sign Up"
-        handleChange={handleChange}
-        field={{
-          value: "eric@playpickup.com",
-          name: "email",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-      <NestedInput
-        id="phone"
-        name="phone"
-        placeholder="(123) 293-5555"
-        buttonText="Verify"
-        handleChange={handleChange}
-        field={{
-          value: "",
-          name: "phone",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-      <NestedInput
-        id="otp"
-        name="otp"
-        placeholder="123456"
-        buttonText="Verify Pick"
-        handleChange={handleChange}
-        field={{
-          value: "",
-          name: "otp",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
+      <div>
+        <Formik
+          initialValues={{
+            nestedInput: "initial value",
+          }}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <Field
+              id="nestedInput"
+              name="nestedInput"
+              placeholder="Placeholder text"
+              buttonText="Click Button"
+              component={NestedInput}
+              value="initial value"
+              {...optionalProps}
+            />
+          </Form>
+        </Formik>
+      </div>
     </ThemeProvider>
   );
+};
+
+test("Standard NestedInput renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik />);
   expect(container).toMatchSnapshot();
 });
 
-test("useSubmit is false", () => {
-  const handleChange = jest.fn();
-  const { getByTestId } = render(
-    <ThemeProvider>
-      <NestedInput
-        buttonText="test submit"
-        placeholder="test placeholder"
-        id="test"
-        name="test"
-        handleChange={handleChange}
-        useSubmit={false}
-        field={{
-          value: "",
-          name: "phone",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-    </ThemeProvider>
-  );
-  expect(getByTestId("pickup-nested-button")).toBeTruthy;
+test("NestedInput with usePhoneNumber renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik usePhoneNumber />);
+  expect(container).toMatchSnapshot();
 });
 
-test("onClick function is passed", () => {
-  const handleChange = jest.fn();
-  const handleClick = jest.fn();
-  const { getByTestId } = render(
-    <ThemeProvider>
-      <NestedInput
-        buttonText="test submit"
-        placeholder="test placeholder"
-        id="test"
-        name="test"
-        handleChange={handleChange}
-        useSubmit={false}
-        onClick={handleClick}
-        field={{
-          value: "",
-          name: "phone",
-          onBlur: jest.fn(),
-          onChange: jest.fn(),
-        }}
-        form={{}}
-      />
-    </ThemeProvider>
-  );
-  fireEvent.click(getByTestId("pickup-nested-button"));
-  expect(getByTestId("pickup-nested-button")).toBeCalled;
+test("NestedInput with useVerificationCode renders without crashing, matches snapshot", () => {
+  const { container } = render(<NestedInputFormik useVerificationCode />);
+  expect(container).toMatchSnapshot();
 });
 
-// test("Props render correctly", () => {
-//   const handleChange = jest.fn();
-//   const { getByPlaceholderText, getByTestId } = render(
-//     <ThemeProvider>
-//       <NestedInput
-//         id="email"
-//         name="email"
-//         placeholder="you@example.com"
-//         buttonText="Sign Up"
-//         handleChange={handleChange}
-//       />
-//     </ThemeProvider>
-//   );
-//   const input = getByTestId("nested-input");
-//   expect(getByPlaceholderText("you@example.com")).toBeTruthy();
-//   expect(input.getAttribute("id")).toEqual("email");
-//   expect(input.getAttribute("name")).toEqual("email");
-//   expect(getByTestId("pickup-button").getAttribute("value")).toEqual("Sign Up");
+test("Standard NestedInput props pass and render correctly", () => {
+  const { getByPlaceholderText } = render(
+    <NestedInputFormik useSubmit={false} />
+  );
 
-// TODO: Wire this to work correctly
-// https://testing-library.com/docs/example-input-event/
-// fireEvent.change(input, { target: { value: "eric@playpickup.com" } });
-// expect(input.getAttribute("value")).toBe("eric@playpickup.com");
-// });
-//
+  const input = getByPlaceholderText("Placeholder text");
+  expect(input).toBeTruthy();
+  expect(input.getAttribute("id")).toEqual("nestedInput");
+  expect(input.getAttribute("name")).toEqual("nestedInput");
+  expect(input.getAttribute("value")).toBe("initial value");
+  fireEvent.change(input, { target: { value: "eric@playpickup.com" } });
+  expect(input.getAttribute("value")).toBe("eric@playpickup.com");
+});
+
+test("Phone NestedInput props pass and render correctly", () => {
+  const { getByPlaceholderText, getByLabelText } = render(
+    <NestedInputFormik usePhoneNumber label="Phone input" useSubmit={false} />
+  );
+
+  expect(getByLabelText("Phone input")).toBeTruthy();
+  const input = getByPlaceholderText("(345) 555-2343");
+  expect(input).toBeTruthy();
+  expect(input.getAttribute("id")).toEqual("nestedInput");
+  expect(input.getAttribute("name")).toEqual("nestedInput");
+  expect(input.getAttribute("value")).toBe("");
+  fireEvent.change(input, { target: { value: "6151234567" } });
+  expect(input.getAttribute("value")).toBe("(615) 123-4567");
+});
+
+test("Verification code NestedInput props pass and render correctly", () => {
+  const { getByPlaceholderText, getByLabelText } = render(
+    <NestedInputFormik
+      useVerificationCode
+      label="Verification code"
+      useSubmit={false}
+    />
+  );
+
+  expect(getByLabelText("Verification code")).toBeTruthy();
+  const input = getByPlaceholderText("Placeholder text");
+  expect(input).toBeTruthy();
+  expect(input.getAttribute("id")).toEqual("nestedInput");
+  expect(input.getAttribute("name")).toEqual("nestedInput");
+  expect(input.getAttribute("value")).toBe("initial value");
+  fireEvent.change(input, { target: { value: "123456" } });
+  expect(input.getAttribute("value")).toBe("123456");
+});
+
+test("Submit is passed when useSubmit is true", async () => {
+  const handleSubmit = jest.fn();
+  const { getByText } = render(<NestedInputFormik onSubmit={handleSubmit} />);
+  const button = getByText("Click Button");
+  expect(button).toBeTruthy();
+  fireEvent.click(button);
+  await waitFor(() =>
+    expect(handleSubmit).toHaveBeenCalledWith({
+      nestedInput: "initial value",
+    })
+  );
+});
+
+test("onClick is passed when useSubmit is false", () => {
+  const onClick = jest.fn();
+  const { getByText } = render(
+    <NestedInputFormik useSubmit={false} onClick={onClick} />
+  );
+  const button = getByText("Click Button");
+  expect(button).toBeTruthy();
+  fireEvent.click(button);
+  expect(onClick).toBeCalled();
+});
+
+test("Disabled prop passes and is rendered correctly", () => {
+  const standardComponent = render(<NestedInputFormik disabled={true} />);
+  const input = standardComponent.getByPlaceholderText("Placeholder text");
+  const submitButton = standardComponent.getByText("Click Button");
+  const phoneComponent = render(
+    <NestedInputFormik usePhoneNumber disabled={true} useSubmit={false} />
+  );
+  const phoneInput = phoneComponent.getByPlaceholderText("(345) 555-2343");
+  const standardButton = phoneComponent.getByTestId("pickup-nested-button");
+  expect(input.hasAttribute("disabled"));
+  expect(phoneInput.hasAttribute("disabled"));
+  expect(submitButton.hasAttribute("disabled"));
+  expect(standardButton.hasAttribute("disabled"));
+});
