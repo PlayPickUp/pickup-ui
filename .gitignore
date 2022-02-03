@@ -8,3 +8,4 @@ dist
 build
 storybook-static
 .npmrc
+.idea

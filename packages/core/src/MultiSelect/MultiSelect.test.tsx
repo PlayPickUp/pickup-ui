@@ -8,7 +8,6 @@
 import React from "react";
 import { render, fireEvent, cleanup, waitFor } from "@testing-library/react";
 import { Formik, Field, Form } from "formik";
-
 import ThemeProvider from "../ThemeProvider";
 import MultiSelect from ".";
 import { SelectItem } from "../types";
@@ -69,6 +68,7 @@ const downArrow = { key: "Down", code: "Down", charCode: 40 };
 const enterKey = { key: "Enter", code: "Enter", charCode: 13 };
 
 test("MultiSelect renders without crashing, matches snapshot", () => {
+  Math.random = jest.fn(() => 1);  // <--- This is the key, overriding the system's Math.random function
   const { container } = render(<FormComponent onSubmit={handleSubmit} />);
   expect(container).toMatchSnapshot();
 });

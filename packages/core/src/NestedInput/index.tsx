@@ -130,6 +130,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
               <div className={classes.phonePrefix}>+1</div>
               <PhoneInput
                 {...props.field}
+                id={props.id}
                 // @ts-ignore
                 ref={inputRef}
                 className={classes.input}
@@ -148,6 +149,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
           ) : (
             <input
               {...props.field}
+              id={props.id}
               className={classes.input}
               placeholder={placeholder}
               onFocus={toggleFocus}

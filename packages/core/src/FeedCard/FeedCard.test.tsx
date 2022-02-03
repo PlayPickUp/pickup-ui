@@ -1,6 +1,7 @@
 import React from "react";
 import { render, waitFor } from "@testing-library/react";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import FeedCard from "./index";
 

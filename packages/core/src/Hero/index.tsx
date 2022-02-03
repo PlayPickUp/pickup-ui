@@ -2,7 +2,10 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { DefaultTheme, HeroProps } from "../types";
 import Typography from "../Typography";
-import { Breadcrumbs, Chip } from "..";
+import Breadcrumbs from "../Breadcrumbs";
+import Chip from "../Chip";
+
+
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
