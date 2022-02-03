@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import TextArea from ".";
 

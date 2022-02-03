@@ -6,15 +6,15 @@ exports[`Renders without crashing, matches snapshot 1`] = `
     id="PickUpUI"
   >
     <div
-      class="PU--root-0-2-2 PU--root-d0-0-2-6"
+      class="PU100000--root-0-2-2 PU100000--root-d0-0-2-6"
       data-testid="fab-root"
     >
       <button
-        class="PU--button-0-2-3 PU--button-d1-0-2-7"
+        class="PU100000--button-0-2-3 PU100000--button-d1-0-2-7"
         data-testid="fab-target"
       >
         <div
-          class="PU--root-0-2-8 PU--root-d0-0-2-9"
+          class="PU100000--root-0-2-8 PU100000--root-d0-0-2-9"
           data-testid="icon"
           style="border-radius: 50%;"
         >
