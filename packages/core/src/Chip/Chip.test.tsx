@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { fireEvent, render } from "@testing-library/react";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
 import Chip from "./index";
 

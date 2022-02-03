@@ -1,6 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NestedInput with usePhoneNumber renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j7 {
+  background: #7A60FF;
+  color: #FFF;
+  border: none;
+  height: auto;
+  display: flex;
+  opacity: 1;
+  padding: 0 30px;
+  position: relative;
+  flex-flow: row nowrap;
+  font-size: 18px;
+  appearance: none;
+  background: linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%);
+  min-height: 47px;
+  transition: opacity 200ms ease-in-out;
+  align-items: center;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 24px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+body #PickUpUI .j8 {
+  width: auto;
+}
+
+body #PickUpUI .j0 {
+  width: 100%;
+  display: flex;
+  padding: 0 6px;
+  position: relative;
+  flex-flow: row nowrap;
+  max-width: 360px;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j1 {
+  border: 1px solid #DFDAE6;
+  height: 60px;
+}
+
+body #PickUpUI .j2 {
+  flex: 1 1 auto;
+  padding-right: 8px;
+}
+
+body #PickUpUI .j3 {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+body #PickUpUI .j4 {
+  color: #615E66;
+  padding: 0 4px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 22px;
+}
+
+body #PickUpUI .j5 {
+  color: #615E66;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  appearance: none;
+  font-family: 'Inter', Helvetica, sans-serif;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j6 {
+  height: 22px;
+  line-height: 22px;
+}
+
+body #PickUpUI .j9 {
+  padding: 0 8px;
+  font-size: 14px;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -10,22 +97,22 @@ exports[`NestedInput with usePhoneNumber renders without crashing, matches snaps
         action="#"
       >
         <div
-          class="PU--root-0-2-1 PU--root-d0-0-2-8"
+          class="j0 j1"
         >
           <div
-            class="PU--inputContainer-0-2-2"
+            class="j2"
           >
             <div
-              class="PU--phoneContainer-0-2-4"
+              class="j3"
             >
               <div
-                class="PU--phonePrefix-0-2-5"
+                class="j4"
               >
                 +1
               </div>
               <input
                 autocomplete="tel"
-                class="PU--input-0-2-3 PU--input-d1-0-2-9"
+                class="j5 j6"
                 id="nestedInput"
                 name="nestedInput"
                 placeholder="(345) 555-2343"
@@ -36,7 +123,7 @@ exports[`NestedInput with usePhoneNumber renders without crashing, matches snaps
           </div>
           <div>
             <input
-              class="PU--root-0-2-10 PU--root-d0-0-2-14 PU--phoneButtonSmall-0-2-7"
+              class="j7 j8 j9"
               data-testid="pickup-button"
               type="submit"
               value="Click Button"
@@ -50,6 +137,77 @@ exports[`NestedInput with usePhoneNumber renders without crashing, matches snaps
 `;
 
 exports[`NestedInput with useVerificationCode renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j5 {
+  background: #7A60FF;
+  color: #FFF;
+  border: none;
+  height: auto;
+  display: flex;
+  opacity: 1;
+  padding: 0 30px;
+  position: relative;
+  flex-flow: row nowrap;
+  font-size: 18px;
+  appearance: none;
+  background: linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%);
+  min-height: 47px;
+  transition: opacity 200ms ease-in-out;
+  align-items: center;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 24px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+body #PickUpUI .j6 {
+  width: auto;
+}
+
+body #PickUpUI .j0 {
+  width: 100%;
+  display: flex;
+  padding: 0 6px;
+  position: relative;
+  flex-flow: row nowrap;
+  max-width: 360px;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j1 {
+  border: 1px solid #DFDAE6;
+  height: 56px;
+}
+
+body #PickUpUI .j2 {
+  flex: 1 1 auto;
+  padding-right: 8px;
+}
+
+body #PickUpUI .j3 {
+  color: #615E66;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  appearance: none;
+  font-family: 'Inter', Helvetica, sans-serif;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j4 {
+  height: 22px;
+  line-height: 22px;
+}
+
+body #PickUpUI .j7 {
+  padding: 0 8px;
+  font-size: 14px;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -59,13 +217,13 @@ exports[`NestedInput with useVerificationCode renders without crashing, matches 
         action="#"
       >
         <div
-          class="PU--root-0-2-1 PU--root-d0-0-2-8"
+          class="j0 j1"
         >
           <div
-            class="PU--inputContainer-0-2-2"
+            class="j2"
           >
             <input
-              class="PU--input-0-2-3 PU--input-d1-0-2-9"
+              class="j3 j4"
               id="nestedInput"
               name="nestedInput"
               placeholder="Placeholder text"
@@ -74,7 +232,7 @@ exports[`NestedInput with useVerificationCode renders without crashing, matches 
           </div>
           <div>
             <input
-              class="PU--root-0-2-10 PU--root-d0-0-2-14 PU--phoneButtonSmall-0-2-7"
+              class="j5 j6 j7"
               data-testid="pickup-button"
               type="submit"
               value="Click Button"
@@ -88,6 +246,72 @@ exports[`NestedInput with useVerificationCode renders without crashing, matches 
 `;
 
 exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j5 {
+  background: #7A60FF;
+  color: #FFF;
+  border: none;
+  height: auto;
+  display: flex;
+  opacity: 1;
+  padding: 0 30px;
+  position: relative;
+  flex-flow: row nowrap;
+  font-size: 18px;
+  appearance: none;
+  background: linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%);
+  min-height: 47px;
+  transition: opacity 200ms ease-in-out;
+  align-items: center;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 24px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+body #PickUpUI .j6 {
+  width: auto;
+}
+
+body #PickUpUI .j0 {
+  width: 100%;
+  display: flex;
+  padding: 0 6px;
+  position: relative;
+  flex-flow: row nowrap;
+  max-width: 360px;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+body #PickUpUI .j1 {
+  border: 1px solid #DFDAE6;
+  height: 56px;
+}
+
+body #PickUpUI .j2 {
+  flex: 1 1 auto;
+  padding-right: 8px;
+}
+
+body #PickUpUI .j3 {
+  color: #615E66;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  appearance: none;
+  font-family: 'Inter', Helvetica, sans-serif;
+  letter-spacing: 0.1px;
+}
+
+body #PickUpUI .j4 {
+  height: 48px;
+  line-height: 24px;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -97,13 +321,13 @@ exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
         action="#"
       >
         <div
-          class="PU--root-0-2-1 PU--root-d0-0-2-8"
+          class="j0 j1"
         >
           <div
-            class="PU--inputContainer-0-2-2"
+            class="j2"
           >
             <input
-              class="PU--input-0-2-3 PU--input-d1-0-2-9"
+              class="j3 j4"
               id="nestedInput"
               name="nestedInput"
               placeholder="Placeholder text"
@@ -112,7 +336,7 @@ exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
           </div>
           <div>
             <input
-              class="PU--root-0-2-10 PU--root-d0-0-2-14"
+              class="j5 j6"
               data-testid="pickup-button"
               type="submit"
               value="Click Button"

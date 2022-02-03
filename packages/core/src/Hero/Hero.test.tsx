@@ -1,6 +1,7 @@
 import React from "react";
 import { render, within } from "@testing-library/react";
-
+import jssSerializer from 'jss-snapshot-serializer';
+expect.addSnapshotSerializer(jssSerializer);
 import { BrowserRouter as Router } from "react-router-dom";
 
 import ThemeProvider from "../ThemeProvider";
