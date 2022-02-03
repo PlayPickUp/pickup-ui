@@ -163,6 +163,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
         <div>
           {useSubmit ? (
             <Button
+              style={{ minWidth: 90 }}
               className={
                 usePhoneNumber || useVerificationCode
                   ? classes.phoneButtonSmall
@@ -174,6 +175,7 @@ const NestedInput: React.FC<NestedInputProps> = ({
             />
           ) : (
             <Button
+              style={{ minWidth: 90 }}
               data-testid="pickup-nested-button"
               className={
                 usePhoneNumber || useVerificationCode

@@ -26,6 +26,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     letterSpacing: "0.3px",
     color: theme.colors.white,
     textTransform: "capitalize",
+    textAlign: "center",
     transition: "opacity 200ms ease-in-out",
     opacity: 1,
     fallbacks: {
