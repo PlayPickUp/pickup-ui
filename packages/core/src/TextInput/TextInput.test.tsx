@@ -7,7 +7,6 @@ import TextInput from ".";
 import { TextInputProps } from "../types";
 import { Formik, Form, Field } from "formik";
 
-// const handleChange = jest.fn();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 interface OptionalProps extends TextInputProps {
   onSubmit?: jest.Mock;
