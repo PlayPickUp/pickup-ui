@@ -1,5 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Standard TextInput renders with label without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  display: block;
+  padding: 4px 4px 12px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+body #PickUpUI .j1 {
+  display: flex;
+  padding: 4px;
+  position: relative;
+}
+
+body #PickUpUI .j2 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 44px;
+  padding: 0 16px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <div>
+      <form
+        action="#"
+      >
+        <div
+          data-testid="label-wrapper"
+        >
+          <label
+            class="j0"
+            data-testid="label"
+          >
+            test
+          </label>
+        </div>
+        <div
+          class="j1"
+        >
+          <input
+            class="j2"
+            data-testid="text-input"
+            id="textInput"
+            name="textInput"
+            placeholder="Placeholder text"
+            type="text"
+            value="initial value"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Standard TextInput renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j0 {
   display: flex;

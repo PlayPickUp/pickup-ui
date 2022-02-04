@@ -43,6 +43,11 @@ const TextInputFormik = (
   );
 };
 
+test("Standard TextInput renders with label without crashing, matches snapshot", () => {
+  const { container } = render(<TextInputFormik label="test" />);
+  expect(container).toMatchSnapshot();
+});
+
 test("Standard TextInput renders without crashing, matches snapshot", () => {
   const { container } = render(<TextInputFormik />);
   expect(container).toMatchSnapshot();
