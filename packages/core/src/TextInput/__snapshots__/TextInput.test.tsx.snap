@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput as password renders without crashing, matches snapshot 1`] = `
+exports[`Standard TextInput renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j0 {
   display: flex;
   padding: 4px;
@@ -26,57 +26,24 @@ body #PickUpUI .j1 {
   <div
     id="PickUpUI"
   >
-    <div
-      class="j0"
-    >
-      <input
-        class="j1"
-        data-testid="text-input"
-        name="firstName"
-        type="password"
-        value=""
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`TextInput renders without crashing, matches snapshot 1`] = `
-body #PickUpUI .j0 {
-  display: flex;
-  padding: 4px;
-  position: relative;
-}
-
-body #PickUpUI .j1 {
-  color: #2C2933;
-  width: 100%;
-  border: 1px solid #9D9D9E;
-  height: 44px;
-  padding: 0 16px;
-  position: relative;
-  font-size: 15px;
-  font-family: 'Inter', Helvetica, sans-serif;
-  line-height: 18px;
-  border-radius: 4px;
-  letter-spacing: 0.1px;
-  background-color: #FFF;
-}
-
-<div>
-  <div
-    id="PickUpUI"
-  >
-    <div
-      class="j0"
-    >
-      <input
-        class="j1"
-        data-testid="text-input"
-        name="firstName"
-        type="text"
-        value=""
-      />
+    <div>
+      <form
+        action="#"
+      >
+        <div
+          class="j0"
+        >
+          <input
+            class="j1"
+            data-testid="text-input"
+            id="textInput"
+            name="textInput"
+            placeholder="Placeholder text"
+            type="text"
+            value="initial value"
+          />
+        </div>
+      </form>
     </div>
   </div>
 </div>

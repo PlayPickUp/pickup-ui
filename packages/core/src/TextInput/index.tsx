@@ -37,6 +37,7 @@ const TextInput: React.FC<TextInputProps> = ({
   innerClassName,
   innerStyle,
   label,
+  placeholder,
   type = "text",
   ...props
 }) => {
@@ -47,10 +48,12 @@ const TextInput: React.FC<TextInputProps> = ({
       <div className={classNames(classes.root, className)} style={style}>
         <input
           data-testid="text-input"
+          id={props.id}
           className={classNames(classes.input, innerClassName)}
           style={innerStyle}
           {...props.field}
           type={type}
+          placeholder={placeholder}
         />
       </div>
       <FormError
