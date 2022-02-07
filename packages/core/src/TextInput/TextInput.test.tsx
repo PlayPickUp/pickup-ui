@@ -75,11 +75,21 @@ test("Standard TextInput as type password pass and render correctly", () => {
 
 test("className and style props are passed and rendered correctly", () => {
   const { getByTestId } = render(
-    <TextInputFormik className="test-12345" style={{ margin: "10px" }} />
+    <TextInputFormik
+      className="test-12345"
+      style={{ margin: "10px" }}
+      innerStyle={{ margin: "5px" }}
+      innerClassName="test-12345"
+    />
   );
 
-  const input = getByTestId("div");
+  const div = getByTestId("div");
+  expect(div.getAttribute("class")).toContain("test-12345");
+  const divStyle = window.getComputedStyle(div);
+  expect(divStyle.margin).toBe("10px");
+
+  const input = getByTestId("text-input");
   expect(input.getAttribute("class")).toContain("test-12345");
-  const style = window.getComputedStyle(input);
-  expect(style.margin).toBe("10px");
+  const inputStyle = window.getComputedStyle(input);
+  expect(inputStyle.margin).toBe("5px");
 });

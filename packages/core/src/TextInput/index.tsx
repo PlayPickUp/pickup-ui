@@ -44,7 +44,11 @@ const TextInput: React.FC<TextInputProps> = ({
   const classes = useStyles();
   return (
     <>
-      {label && <Label htmlFor={props.name}>{label}</Label>}
+      {label && (
+        <Label data-testId="label" htmlFor={props.name}>
+          {label}
+        </Label>
+      )}
       <div
         data-testid="div"
         className={classNames(classes.root, className)}
