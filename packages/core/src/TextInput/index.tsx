@@ -45,7 +45,7 @@ const TextInput: React.FC<TextInputProps> = ({
   return (
     <>
       {label && (
-        <Label data-testId="label" htmlFor={props.name}>
+        <Label data-testid="label" htmlFor={props.name}>
           {label}
         </Label>
       )}
