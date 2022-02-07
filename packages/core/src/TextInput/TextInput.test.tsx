@@ -29,6 +29,7 @@ const TextInputFormik = (
         >
           <Form>
             <Field
+              data-testid
               id="textInput"
               name="textInput"
               placeholder="Placeholder text"
@@ -70,4 +71,15 @@ test("Standard TextInput as type password pass and render correctly", () => {
 
   const input = getByPlaceholderText("Placeholder text");
   expect(input.getAttribute("type")).toEqual("password");
+});
+
+test("className and style props are passed and rendered correctly", () => {
+  const { getByTestId } = render(
+    <TextInputFormik className="test-12345" style={{ margin: "10px" }} />
+  );
+
+  const input = getByTestId("div");
+  expect(input.getAttribute("class")).toContain("test-12345");
+  const style = window.getComputedStyle(input);
+  expect(style.margin).toBe("10px");
 });

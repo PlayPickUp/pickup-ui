@@ -45,7 +45,11 @@ const TextInput: React.FC<TextInputProps> = ({
   return (
     <>
       {label && <Label htmlFor={props.name}>{label}</Label>}
-      <div className={classNames(classes.root, className)} style={style}>
+      <div
+        data-testid="div"
+        className={classNames(classes.root, className)}
+        style={style}
+      >
         <input
           data-testid="text-input"
           id={props.id}
