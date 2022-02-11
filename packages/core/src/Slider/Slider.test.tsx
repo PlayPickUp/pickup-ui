@@ -15,3 +15,12 @@ test("Renders and matches snapshot", () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+test("Slider children are passed and rendered", () => {
+    const { getByText } = render(
+        <ThemeProvider>
+            <Slider> <div>Hello, World</div></Slider>
+        </ThemeProvider>
+    );
+    expect(getByText("Hello, World")).toBeTruthy();
+});
