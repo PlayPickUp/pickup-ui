@@ -37,6 +37,7 @@ body #PickUpUI .j1 {
           <textarea
             class="j1"
             data-testid="textarea"
+            id="textArea"
             name="textArea"
           >
             initial value
@@ -105,6 +106,7 @@ body #PickUpUI .j2 {
           <textarea
             class="j2"
             data-testid="textarea"
+            id="textArea"
             name="textArea"
           >
             initial value

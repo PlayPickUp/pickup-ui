@@ -46,6 +46,7 @@ const TextArea: React.FC<TextAreaProps> = ({
         style={style}
       >
         <textarea
+          id={props.id}
           data-testid="textarea"
           className={classNames(classes.textarea, innerClassName)}
           style={innerStyle}

@@ -48,8 +48,10 @@ test("TextArea renders without crashing, matches snapshot", () => {
 });
 
 test("TextArea with label renders without crashing, matches snapshot", () => {
-  const { container } = render(<TextAreaFormik label="box" />);
+  const { container, getByLabelText } = render(<TextAreaFormik label="box" />);
   expect(container).toMatchSnapshot();
+  const labelText = getByLabelText("box");
+  expect(labelText).toBeTruthy();
 });
 
 test("Standard TextArea props pass amd remder correctly", () => {
