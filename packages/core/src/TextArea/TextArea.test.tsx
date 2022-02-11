@@ -47,7 +47,7 @@ test("TextArea renders without crashing, matches snapshot", () => {
   expect(container).toMatchSnapshot();
 });
 
-test("TextArea renders without crashing, matches snapshot", () => {
+test("TextArea with label renders without crashing, matches snapshot", () => {
   const { container } = render(<TextAreaFormik label="box" />);
   expect(container).toMatchSnapshot();
 });

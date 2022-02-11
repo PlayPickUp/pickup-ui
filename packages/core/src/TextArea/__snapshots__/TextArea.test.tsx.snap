@@ -48,7 +48,7 @@ body #PickUpUI .j1 {
 </div>
 `;
 
-exports[`TextArea renders without crashing, matches snapshot 2`] = `
+exports[`TextArea with label renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j0 {
   display: block;
   padding: 4px 4px 12px;
