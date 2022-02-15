@@ -135,7 +135,6 @@ test("Typography color, useUnescape, className and style props pass", () => {
   const typography = getByText("foo © bar ≠ baz 𝌆 qux");
   expect(typography.getAttribute("class")).toContain("test-12345");
   const style = window.getComputedStyle(typography);
-  console.log(style);
   expect(style.margin).toBe("10px");
   expect(style.color).toBe("red");
 });
