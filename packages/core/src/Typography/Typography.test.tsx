@@ -14,15 +14,6 @@ test("Renders without crashing, matches snapshot", () => {
   expect(container).toMatchSnapshot();
 });
 
-test("Color prop is passed successfully", () => {
-  const { container } = render(
-    <ThemeProvider>
-      <Typography color="#FF0000">I am red text!</Typography>
-    </ThemeProvider>
-  );
-  expect(container).toMatchSnapshot();
-});
-
 test("Typography element h1 and variant title props pass successfully", () => {
   const { container } = render(
     <ThemeProvider>
@@ -125,4 +116,26 @@ test("Typography element span and variant span props pass successfully", () => {
 
   const span = container.querySelector("span");
   expect(span.getAttribute("class")).toContain("body");
+});
+
+test("Typography color, useUnescape, className and style props pass", () => {
+  const { getByText } = render(
+    <ThemeProvider>
+      <Typography
+        className="test-12345"
+        style={{ margin: "10px" }}
+        color="red"
+        useUnescape
+      >
+        foo &copy; bar &ne; baz &#x1D306; qux
+      </Typography>
+    </ThemeProvider>
+  );
+
+  const typography = getByText("foo © bar ≠ baz 𝌆 qux");
+  expect(typography.getAttribute("class")).toContain("test-12345");
+  const style = window.getComputedStyle(typography);
+  console.log(style);
+  expect(style.margin).toBe("10px");
+  expect(style.color).toBe("red");
 });
