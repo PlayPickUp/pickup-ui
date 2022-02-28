@@ -13,3 +13,12 @@ body {
   content: "\263A";
   color: red;
 }
+
+.Playground,
+a.content-button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  margin: 0 auto 20px;
+}
