@@ -81,6 +81,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   phoneButtonSmall: {
     fontSize: 14,
     padding: "0 8px",
+    margin: "0",
   },
 }));
 
