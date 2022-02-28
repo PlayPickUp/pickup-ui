@@ -4,7 +4,7 @@ put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
-// import "./makeMeUgly.css";
+import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -271,7 +271,7 @@ const App: React.FC = () => {
                   <Field
                     id="phoneNumber"
                     name="phoneNumber"
-                    usePhoneNumber={true}
+                    useVerificationCode={true}
                     label="Mobile Phone Number"
                     buttonText="Submit"
                     useSubmit={true}

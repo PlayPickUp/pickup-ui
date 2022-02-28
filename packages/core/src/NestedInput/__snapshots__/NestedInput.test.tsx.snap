@@ -85,7 +85,6 @@ body #PickUpUI .j6 {
 }
 
 body #PickUpUI .j9 {
-  margin: 0;
   padding: 0 8px;
   font-size: 14px;
 }
@@ -208,7 +207,6 @@ body #PickUpUI .j4 {
 }
 
 body #PickUpUI .j7 {
-  margin: 0;
   padding: 0 8px;
   font-size: 14px;
 }
