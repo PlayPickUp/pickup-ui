@@ -26,16 +26,93 @@ body #PickUpUI .j1 {
   <div
     id="PickUpUI"
   >
-    <div
-      class="j0"
-      data-testid="textarea-wrapper"
-    >
-      <textarea
-        class="j1"
-        name="excerpt"
+    <div>
+      <form
+        action="#"
       >
-        This is an excerpt, it is a pretty cool excerpt. It contains text.
-      </textarea>
+        <div
+          class="j0"
+          data-testid="textarea-wrapper"
+        >
+          <textarea
+            class="j1"
+            data-testid="textarea"
+            id="textArea"
+            name="textArea"
+          >
+            initial value
+          </textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextArea with label renders without crashing, matches snapshot 1`] = `
+body #PickUpUI .j0 {
+  display: block;
+  padding: 4px 4px 12px;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Ringside-Condensed', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+body #PickUpUI .j1 {
+  width: 100%;
+  position: relative;
+}
+
+body #PickUpUI .j2 {
+  color: #2C2933;
+  width: 100%;
+  border: 1px solid #9D9D9E;
+  height: 400px;
+  resize: none;
+  padding: 16px;
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter', Helvetica, sans-serif;
+  line-height: 18px;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  background-color: #FFF;
+}
+
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <div>
+      <form
+        action="#"
+      >
+        <div
+          data-testid="label-wrapper"
+        >
+          <label
+            class="j0"
+            data-testid="label"
+            for="textArea"
+          >
+            box
+          </label>
+        </div>
+        <div
+          class="j1"
+          data-testid="textarea-wrapper"
+        >
+          <textarea
+            class="j2"
+            data-testid="textarea"
+            id="textArea"
+            name="textArea"
+          >
+            initial value
+          </textarea>
+        </div>
+      </form>
     </div>
   </div>
 </div>

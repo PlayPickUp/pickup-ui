@@ -1,80 +1,87 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import jssSerializer from 'jss-snapshot-serializer';
+import { render, fireEvent } from "@testing-library/react";
+import jssSerializer from "jss-snapshot-serializer";
 expect.addSnapshotSerializer(jssSerializer);
 import ThemeProvider from "../ThemeProvider";
+import { TextAreaProps } from "../types";
 import TextArea from ".";
+import { Formik, Form, Field } from "formik";
 
-const handleChange = jest.fn();
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+interface OptionalProps extends TextAreaProps {
+  onSubmit?: jest.Mock;
+}
 
-const initialValue =
-  "This is an excerpt, it is a pretty cool excerpt. It contains text.";
-
-test("TextArea renders without crashing, matches snapshot", () => {
-  const { container } = render(
+const TextAreaFormik = (
+  optionalProps?: Partial<OptionalProps>
+): JSX.Element => {
+  const handleSubmit = async (values) => {
+    await sleep(500);
+    optionalProps.onSubmit(values);
+  };
+  return (
     <ThemeProvider>
-      <TextArea
-        id="excerpt"
-        name="excerpt"
-        handleChange={handleChange}
-        field={{
-          name: "excerpt",
-          onChange: jest.fn(),
-          value: initialValue,
-          onBlur: jest.fn(),
-        }}
-        form={{}}
-      />
+      <div>
+        <Formik
+          initialValues={{ textArea: "initial value" }}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <Field
+              id="textArea"
+              name="textArea"
+              data-testid
+              component={TextArea}
+              value="initial value"
+              {...optionalProps}
+            />
+          </Form>
+        </Formik>
+      </div>
     </ThemeProvider>
   );
+};
 
+test("TextArea renders without crashing, matches snapshot", () => {
+  const { container } = render(<TextAreaFormik />);
   expect(container).toMatchSnapshot();
 });
 
-// test("Props are passed and rendered correctly", () => {
-//   const { getByTestId } = render(
-//     <ThemeProvider>
-//       <TextArea
-//         id="excerpt"
-//         name="excerpt"
-//         value={initialValue}
-//         handleChange={handleChange}
-//         innerClassName="custom-class"
-//         innerStyle={{ color: "red" }}
-//         style={{ color: "blue" }}
-//         className="another-custom-class"
-//       />
-//     </ThemeProvider>
-//   );
+test("TextArea with label renders without crashing, matches snapshot", () => {
+  const { container, getByLabelText } = render(<TextAreaFormik label="box" />);
+  expect(container).toMatchSnapshot();
+  const labelText = getByLabelText("box");
+  expect(labelText).toBeTruthy();
+});
 
-//   const textarea = getByTestId("textarea");
-//   const textareaWrapper = getByTestId("textarea-wrapper");
+test("Standard TextArea props pass amd remder correctly", () => {
+  const { getByText } = render(<TextAreaFormik />);
 
-//   expect(textarea.getAttribute("id")).toEqual("excerpt");
-//   expect(textarea.getAttribute("name")).toEqual("excerpt");
-//   expect(screen.getAllByDisplayValue(initialValue)).toBeTruthy();
+  const textArea = getByText("initial value");
+  expect(textArea).toBeTruthy();
+  expect(textArea.getAttribute("name")).toEqual("textArea");
+  fireEvent.change(textArea, { target: { value: "this is a test" } });
+  const textAreaNew = getByText("this is a test");
+  expect(textAreaNew).toBeTruthy();
+});
 
-//   expect(textareaWrapper.getAttribute("style")).toEqual("color: blue;");
-//   expect(textareaWrapper.getAttribute("class")).toContain(
-//     "another-custom-class"
-//   );
-// });
+test("className and style props are passed and rendered correctly", () => {
+  const { getByTestId } = render(
+    <TextAreaFormik
+      className="test-12345"
+      style={{ margin: "10px" }}
+      innerStyle={{ margin: "5px" }}
+      innerClassName="test-12345"
+    />
+  );
 
-// test("Handle change is fired when value is entered", async () => {
-//   const { getByTestId } = render(
-//     <ThemeProvider>
-//       <TextArea
-//         id="excerpt"
-//         name="excerpt"
-//         value={initialValue}
-//         handleChange={handleChange}
-//       />
-//     </ThemeProvider>
-//   );
-//   const textarea = getByTestId("textarea");
+  const div = getByTestId("textarea-wrapper");
+  expect(div.getAttribute("class")).toContain("test-12345");
+  const divStyle = window.getComputedStyle(div);
+  expect(divStyle.margin).toBe("10px");
 
-//   fireEvent.change(textarea, {
-//     target: { value: "This is a total change of the excerpt" },
-//   });
-//   expect(handleChange).toHaveBeenCalledTimes(1);
-// });
+  const input = getByTestId("textarea");
+  expect(input.getAttribute("class")).toContain("test-12345");
+  const inputStyle = window.getComputedStyle(input);
+  expect(inputStyle.margin).toBe("5px");
+});

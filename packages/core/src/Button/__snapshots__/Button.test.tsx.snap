@@ -15,6 +15,7 @@ body #PickUpUI .j0 {
   appearance: none;
   background: linear-gradient(112.25deg, #914EFF -20.38%, #5D1BFF 122.56%);
   min-height: 47px;
+  text-align: center;
   transition: opacity 200ms ease-in-out;
   align-items: center;
   font-family: 'Inter', Helvetica, sans-serif;
