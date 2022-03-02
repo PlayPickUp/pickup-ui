@@ -37,20 +37,31 @@ const TextInput: React.FC<TextInputProps> = ({
   innerClassName,
   innerStyle,
   label,
+  placeholder,
   type = "text",
   ...props
 }) => {
   const classes = useStyles();
   return (
     <>
-      {label && <Label htmlFor={props.name}>{label}</Label>}
-      <div className={classNames(classes.root, className)} style={style}>
+      {label && (
+        <Label data-testid="label" htmlFor={props.name}>
+          {label}
+        </Label>
+      )}
+      <div
+        data-testid="div"
+        className={classNames(classes.root, className)}
+        style={style}
+      >
         <input
           data-testid="text-input"
+          id={props.id}
           className={classNames(classes.input, innerClassName)}
           style={innerStyle}
           {...props.field}
           type={type}
+          placeholder={placeholder}
         />
       </div>
       <FormError
