@@ -9,14 +9,28 @@ exports[`Renders and matches snapshot 1`] = `
       data-testid="ad"
     >
       <div
-        class="PU100000--adContainer-0-2-2"
+        class="PU100000--container-0-2-5"
         style="width: 300px; height: 100px;"
       >
-        <img
-          alt="HelloWorld Ad"
-          class="PU100000--backgroundImage-0-2-1"
-          src="https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png"
-        />
+        <div
+          class="PU100000--foregroundImageContainer-0-2-3"
+        >
+          <img
+            alt="HelloWorld Ad"
+            class="PU100000--foregroundImage-0-2-2"
+            src="https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg"
+          />
+        </div>
+        <div
+          class="PU100000--copy-0-2-4"
+        >
+          <h3
+            class="PU100000--root-0-2-7 PU100000--root-d6-0-2-16 PU100000--heading3-0-2-10"
+            style="color: rgb(97, 94, 102);"
+          >
+            Hello World! Welcome to AdCopy Space!
+          </h3>
+        </div>
       </div>
     </div>
   </div>
