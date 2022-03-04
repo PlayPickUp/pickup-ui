@@ -664,3 +664,17 @@ export interface BreadcrumbsProps {
   crumbs: Array<Path>;
   className?: string;
 }
+
+export interface AdProps {
+  name: string;
+  url?: string;
+  backgroundImage: string;
+  foregroundImage?: string;
+  copy?: string;
+}
+
+export interface AdZoneProps {
+  height: string | number;
+  width: string | number;
+  adProps: AdProps;
+}
