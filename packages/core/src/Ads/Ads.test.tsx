@@ -31,6 +31,6 @@ test("Renders and matches snapshot", () => {
 test("Renders image", () => {
   const { container } = render(AdElement);
   expect(container.getElementsByTagName("img")[0].getAttribute("src")).toEqual(
-    "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png"
+    "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg"
   );
 });
