@@ -19,7 +19,7 @@ export default {
     adProps: {
       defaultValue: {
         name: "HelloWorld Ad",
-        url: "playpickup.com",
+        url: "https://playpickup.com",
         backgroundImage:
           "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
         foregroundImage:
@@ -34,7 +34,7 @@ export default {
     height: "125",
     adProps: {
       name: "HelloWorld Ad",
-      url: "playpickup.com",
+      url: "https://playpickup.com",
       backgroundImage:
         "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
     },
@@ -53,11 +53,11 @@ AdCopy.args = {
 
   adProps: {
     name: "HelloWorld Ad",
-    url: "playpickup.com",
+    url: "https://playpickup.com",
     backgroundImage:
       "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
     foregroundImage:
       "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg",
-    copy: "Hello World!  Welcome to the AdCopy!",
+    copy: `<div><h5>TEST AD WITH HTML</h5><br/><p><a href="https://pickup.bet/dukevsunc" style="text-decoration: none">Bet money and WIN!!!  Or lose it all! <br/> we don't control that.</a></p></div>`,
   },
 };
