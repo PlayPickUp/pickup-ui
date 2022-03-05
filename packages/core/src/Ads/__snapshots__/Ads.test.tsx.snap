@@ -24,12 +24,9 @@ exports[`Renders and matches snapshot 1`] = `
         <div
           class="PU100000--copy-0-2-4"
         >
-          <h3
-            class="PU100000--root-0-2-7 PU100000--root-d6-0-2-16 PU100000--heading3-0-2-10"
-            style="color: rgb(97, 94, 102);"
-          >
-            Hello World! Welcome to AdCopy Space!
-          </h3>
+          <h1>
+            Hello World!
+          </h1>
         </div>
       </div>
     </div>

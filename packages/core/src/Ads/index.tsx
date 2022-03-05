@@ -25,6 +25,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   copy: {
     display: "flex",
+    maxWidth: "60%",
     flexDirection: "row",
     "& > :first-child": {
       marginRight: 5,
@@ -48,13 +49,41 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   adContainer: {
     overflow: "hidden",
-    backgroundColor: theme.colors.white,
+    backgroundColor: theme.colors.grey.light,
   },
 }));
 
 const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
   const classes = useStyles();
 
+  if (adProps.foregroundImage && adProps.copy && adProps.url) {
+    return (
+      <div data-testid="ad">
+        <div
+          style={{
+            width: `${width}px`,
+            height: `${height}px`,
+          }}
+          className={classes.container}
+          onClick={() => window.open(adProps.url, "_blank")}
+        >
+          <div className={classes.foregroundImageContainer}>
+            <img
+              className={classes.foregroundImage}
+              src={adProps.foregroundImage}
+              alt={adProps.name}
+            />
+          </div>
+          <div
+            className={classes.copy}
+            dangerouslySetInnerHTML={{
+              __html: adProps.copy,
+            }}
+          ></div>
+        </div>
+      </div>
+    );
+  }
   if (adProps.foregroundImage && adProps.copy) {
     return (
       <div data-testid="ad">
@@ -72,30 +101,42 @@ const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
               alt={adProps.name}
             />
           </div>
-          <div className={classes.copy}>
-            <Typography
-              variant="heading3"
-              style={{ color: defaultTheme.colors.grey.dark }}
-            >
-              {adProps.copy}
-            </Typography>
-          </div>
+          <div
+            className={classes.copy}
+            dangerouslySetInnerHTML={{
+              __html: adProps.copy,
+            }}
+          ></div>
         </div>
       </div>
     );
   } else {
     return (
       <div data-testid="ad">
-        <div
-          style={{ width: `${width}px`, height: `${height}px` }}
-          className={classes.adContainer}
-        >
-          <img
-            className={classes.backgroundImage}
-            src={adProps.backgroundImage}
-            alt={adProps.name}
-          />
-        </div>
+        {adProps.url ? (
+          <div
+            style={{ width: `${width}px`, height: `${height}px` }}
+            className={classes.adContainer}
+            onClick={() => window.open(adProps.url, "_blank")}
+          >
+            <img
+              className={classes.backgroundImage}
+              src={adProps.backgroundImage}
+              alt={adProps.name}
+            />
+          </div>
+        ) : (
+          <div
+            style={{ width: `${width}px`, height: `${height}px` }}
+            className={classes.adContainer}
+          >
+            <img
+              className={classes.backgroundImage}
+              src={adProps.backgroundImage}
+              alt={adProps.name}
+            />
+          </div>
+        )}
       </div>
     );
   }
