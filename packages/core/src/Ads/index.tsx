@@ -1,8 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { AdZoneProps, DefaultTheme } from "../types";
-import { defaultTheme } from "../ThemeProvider/defaultTheme";
-import Typography from "../Typography";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   backgroundImage: {
