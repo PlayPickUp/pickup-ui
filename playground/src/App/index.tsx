@@ -251,7 +251,7 @@ const App: React.FC = () => {
   // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
     <div className="Playground">
-      <ThemeProvider theme={publisherTheme}>
+      <ThemeProvider theme={publisherTheme} withReset={false}>
         <Router>
           <div style={{ width: "90%" }}>
             <Formik
