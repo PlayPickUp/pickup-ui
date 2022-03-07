@@ -58,7 +58,7 @@ const GlobalsAndReset = injectSheet((theme: DefaultTheme) => ({
     },
     /* Reset `button` to nothing */
     /* https://gist.github.com/chrisheninger/a860f87ef4e529b2df606768b97665a8 */
-    'button, input[type="button"], input[type="submit"], input[type="reset"]': {
+    button: {
       all: "initial",
       display: "inline-block",
       "-webkit-appearance": "none",

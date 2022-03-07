@@ -62,7 +62,7 @@ body #PickUpUI .j3 {
 
 body #PickUpUI .j4 {
   color: #615E66;
-  padding: 0 4px;
+  padding: 0 8px;
   position: relative;
   font-size: 15px;
   font-family: 'Inter', Helvetica, sans-serif;
@@ -85,8 +85,10 @@ body #PickUpUI .j6 {
 }
 
 body #PickUpUI .j9 {
+  margin: 0;
   padding: 0 8px;
   font-size: 14px;
+  font-weight: normal;
 }
 
 <div>
@@ -207,8 +209,10 @@ body #PickUpUI .j4 {
 }
 
 body #PickUpUI .j7 {
+  margin: 0;
   padding: 0 8px;
   font-size: 14px;
+  font-weight: normal;
 }
 
 <div>
