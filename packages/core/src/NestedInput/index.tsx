@@ -25,7 +25,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     width: "100%",
     maxWidth: 360,
     height: (props) => (props.usePhoneNumber ? 60 : 56),
-    padding: "0 6px",
+    padding: [0, theme.spacing.base * 1.5],
   },
   inputContainer: {
     flex: "1 1 auto",
@@ -66,7 +66,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     lineHeight: "22px",
     fontFamily: theme.typography.fontFamilies.body,
     color: theme.colors.grey.dark,
-    padding: "0 4px",
+    padding: [0, theme.spacing.base * 2],
   },
   phoneLabel: {
     fontSize: 11,
@@ -80,7 +80,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   phoneButtonSmall: {
     fontSize: 14,
-    padding: "0 8px",
+    padding: [0, theme.spacing.base * 2],
+    margin: 0,
+    fontWeight: "normal",
   },
 }));
 
