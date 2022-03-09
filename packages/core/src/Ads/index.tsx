@@ -75,9 +75,6 @@ const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
             width: `${width}px`,
             height: `${height}px`,
             backgroundImage: `url(${adProps.backgroundImage}`,
-            backgroundSize: `contain`,
-            backgroundRepeat: `no-repeat`,
-            backgroundColor: `${defaultTheme.colors.grey.light}`,
           }}
           className={classes.container}
         >
