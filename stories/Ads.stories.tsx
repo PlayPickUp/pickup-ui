@@ -2,7 +2,6 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 import { Ad } from "@playpickup/core";
 import { AdZoneProps } from "../packages/core/src";
-import { Large } from "./Fab.stories";
 
 export default {
   title: "Core/Ad",
