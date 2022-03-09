@@ -13,7 +13,7 @@ exports[`Renders and matches snapshot 1`] = `
       >
         <div
           class="PU100000--container-0-2-4"
-          style="width: 300px; height: 100px; background-size: contain; background-repeat: no-repeat; background-color: rgb(243, 242, 245);"
+          style="width: 300px; height: 100px;"
         >
           <div
             class="PU100000--foregroundImageContainer-0-2-2"

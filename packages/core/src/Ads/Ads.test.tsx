@@ -22,21 +22,6 @@ const AdElement = (
   </ThemeProvider>
 );
 
-const defaultAdElement = (
-  <ThemeProvider>
-    <Ads
-      height={100}
-      width={300}
-      adProps={{
-        name: "HelloWorld Ad",
-        url: "https://www.playpickup.com",
-        backgroundImage:
-          "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
-      }}
-    />
-  </ThemeProvider>
-);
-
 test("Renders and matches snapshot", () => {
   Math.random = jest.fn(() => 1); // <--- This is the key, overriding the system's Math.random function
   const { container } = render(AdElement);

@@ -1,7 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { AdZoneProps, DefaultTheme } from "../types";
-import { defaultTheme } from "../ThemeProvider/defaultTheme";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   foregroundImage: {
@@ -31,6 +30,9 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     alignItems: "center",
     textAlign: "center",
     borderRadius: "4px",
+    backgroundSize: `contain`,
+    backgroundRepeat: `no-repeat`,
+    backgroundColor: `${theme.colors.grey.light}`,
   },
 }));
 
@@ -45,9 +47,6 @@ const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
               width: `${width}px`,
               height: `${height}px`,
               backgroundImage: `url(${adProps.backgroundImage}`,
-              backgroundSize: `contain`,
-              backgroundRepeat: `no-repeat`,
-              backgroundColor: `${defaultTheme.colors.grey.light}`,
             }}
             className={classes.container}
           >
