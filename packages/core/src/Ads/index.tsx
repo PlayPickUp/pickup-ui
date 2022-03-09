@@ -32,7 +32,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     borderRadius: "4px",
     backgroundSize: `contain`,
     backgroundRepeat: `no-repeat`,
-    backgroundColor: `${theme.colors.grey.light}`,
+    backgroundColor: theme.colors.grey.light,
   },
 }));
 
