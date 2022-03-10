@@ -676,5 +676,10 @@ export interface AdProps {
 export interface AdZoneProps {
   height: string | number;
   width: string | number;
-  adProps: AdProps;
+  name: string;
+  url?: string;
+  backgroundImage: string;
+  foregroundImage?: string;
+  copy?: string;
+  // adProps: AdProps;
 }

@@ -9,15 +9,24 @@ const AdElement = (
     <Ads
       height={100}
       width={300}
-      adProps={{
-        name: "HelloWorld Ad",
-        url: "https://www.playpickup.com",
-        backgroundImage:
-          "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
-        foregroundImage:
-          "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg",
-        copy: "<h1>Hello World!</h1>",
-      }}
+      name={"HelloWorld Ad"}
+      url={"https://www.playpickup.com"}
+      backgroundImage={
+        "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png"
+      }
+      foregroundImage={
+        "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg"
+      }
+      copy={"<h1>Hello World!</h1>"}
+      // adProps={{
+      //   name: "HelloWorld Ad",
+      //   url: "https://www.playpickup.com",
+      //   backgroundImage:
+      //     "https://images.ctfassets.net/vr34jcb0tstv/42KLMVnUxtYHYkBNfPh9CH/22f587c10adcd33faa6b3325f1096de0/BetMGM_200_Suns.png",
+      //   foregroundImage:
+      //     "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg",
+      //   copy: "<h1>Hello World!</h1>",
+      // }}
     />
   </ThemeProvider>
 );
@@ -35,12 +44,13 @@ test("Renders image for foreground", () => {
   );
 });
 
-test("Renders Copy", () => {
-  const { getByText } = render(AdElement);
-  expect(getByText("Hello World!")).toBeTruthy();
+test("Renders image for background", () => {
+  const container = render(AdElement);
+  const background = container.queryByTestId("background"); // get the background div
+  expect(background).toHaveProperty("style.backgroundImage");
 });
 
-test("Renders AdProps", () => {
+test("Renders Copy", () => {
   const { getByText } = render(AdElement);
   expect(getByText("Hello World!")).toBeTruthy();
 });

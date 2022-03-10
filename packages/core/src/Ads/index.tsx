@@ -1,5 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import DOMPurify from "dompurify";
+
 import { AdZoneProps, DefaultTheme } from "../types";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
@@ -36,34 +38,43 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
 }));
 
-const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
+const Ad: React.FC<AdZoneProps> = ({
+  width,
+  height,
+  name,
+  url,
+  backgroundImage,
+  foregroundImage,
+  copy,
+}) => {
   const classes = useStyles();
   return (
     <div data-testid="ad">
-      {adProps.url ? (
-        <a href={adProps.url}>
+      {url ? (
+        <a href={url}>
           <div
             style={{
               width: `${width}px`,
               height: `${height}px`,
-              backgroundImage: `url(${adProps.backgroundImage}`,
+              backgroundImage: `url(${backgroundImage}`,
             }}
             className={classes.container}
+            data-testid="background"
           >
-            {adProps.foregroundImage ? (
+            {foregroundImage ? (
               <div className={classes.foregroundImageContainer}>
                 <img
                   className={classes.foregroundImage}
-                  src={adProps.foregroundImage}
-                  alt={adProps.name}
+                  src={foregroundImage}
+                  alt={name}
                 />
               </div>
             ) : null}
-            {adProps.copy ? (
+            {copy ? (
               <div
                 className={classes.copy}
                 dangerouslySetInnerHTML={{
-                  __html: adProps.copy,
+                  __html: copy,
                 }}
               ></div>
             ) : null}
@@ -74,24 +85,25 @@ const Ad: React.FC<AdZoneProps> = ({ width, height, adProps }) => {
           style={{
             width: `${width}px`,
             height: `${height}px`,
-            backgroundImage: `url(${adProps.backgroundImage}`,
+            backgroundImage: `url(${backgroundImage}`,
           }}
           className={classes.container}
+          data-testid="background"
         >
-          {adProps.foregroundImage ? (
+          {foregroundImage ? (
             <div className={classes.foregroundImageContainer}>
               <img
                 className={classes.foregroundImage}
-                src={adProps.foregroundImage}
-                alt={adProps.name}
+                src={foregroundImage}
+                alt={name}
               />
             </div>
           ) : null}
-          {adProps.copy ? (
+          {copy ? (
             <div
               className={classes.copy}
               dangerouslySetInnerHTML={{
-                __html: adProps.copy,
+                __html: copy,
               }}
             ></div>
           ) : null}
