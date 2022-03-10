@@ -74,7 +74,7 @@ const Ad: React.FC<AdZoneProps> = ({
               <div
                 className={classes.copy}
                 dangerouslySetInnerHTML={{
-                  __html: copy,
+                  __html: DOMPurify.sanitize(copy),
                 }}
               ></div>
             ) : null}
