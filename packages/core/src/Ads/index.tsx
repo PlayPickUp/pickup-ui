@@ -19,7 +19,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   copy: {
     display: "flex",
-    maxWidth: "60%",
+    maxWidth: "66%",
+    align: "center",
     flexDirection: "row",
     "& > :first-child": {
       marginRight: 5,
@@ -35,6 +36,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     backgroundSize: `contain`,
     backgroundRepeat: `no-repeat`,
     backgroundColor: theme.colors.grey.light,
+    overflow: "hidden",
   },
 }));
 
