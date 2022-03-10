@@ -18,7 +18,9 @@ const AdElement = (
       foregroundImage={
         "https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg"
       }
-      copy={"<h1>Hello World!</h1>"}
+      copy={
+        '<script id="data" type="application/json">{"userId":1234,"userName":"John Doe","memberSince":"2000-01-01T00:00:00.000Z"}</script><h1>Hello World!</h1>'
+      }
     />
   </ThemeProvider>
 );
