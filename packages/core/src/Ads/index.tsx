@@ -7,19 +7,21 @@ import { AdZoneProps, DefaultTheme } from "../types";
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   foregroundImage: {
     maxWidth: "100%",
-    maxHeight: "100%",
+    height: "100%",
+    width: "auto",
     display: "block",
     objectFit: "contain",
-    margin: "auto",
   },
   foregroundImageContainer: {
-    width: "33%",
+    maxWidth: "25%",
     height: "90%",
     zIndex: "1",
+    flex: "1",
+    paddingRight: theme.spacing.base * 2.5,
   },
   copy: {
     display: "flex",
-    maxWidth: "66%",
+    maxWidth: "75%",
     align: "center",
     flexDirection: "row",
     "& > :first-child": {
@@ -37,6 +39,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     backgroundRepeat: `no-repeat`,
     backgroundColor: theme.colors.grey.light,
     overflow: "hidden",
+    padding: theme.spacing.base * 2.5,
   },
 }));
 
