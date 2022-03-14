@@ -8,6 +8,7 @@ import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
+  Ad,
   DataTable,
   Dropdown,
   Fab,
@@ -251,7 +252,7 @@ const App: React.FC = () => {
   // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
     <div className="Playground">
-      <ThemeProvider theme={publisherTheme} withReset={false}>
+      <ThemeProvider theme={publisherTheme}>
         <Router>
           <div style={{ width: "90%" }}>
             <Formik
