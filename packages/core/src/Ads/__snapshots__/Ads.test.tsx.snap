@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Copy is purified 1`] = `undefined`;
+
+exports[`Renders and matches snapshot 1`] = `
+<div>
+  <div
+    id="PickUpUI"
+  >
+    <div
+      data-testid="ad"
+    >
+      <a
+        href="https://www.playpickup.com"
+      >
+        <div
+          class="PU100000--container-0-2-4"
+          data-testid="background"
+          style="width: 300px; height: 100px;"
+        >
+          <div
+            class="PU100000--foregroundImageContainer-0-2-2"
+          >
+            <img
+              alt="HelloWorld Ad"
+              class="PU100000--foregroundImage-0-2-1"
+              src="https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/6f4f124a291d84da963b5491e4dc20b3/hero.svg"
+            />
+          </div>
+          <div
+            class="PU100000--copy-0-2-3"
+          >
+            <h1>
+              Hello World!
+            </h1>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
