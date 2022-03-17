@@ -1,3 +1,4 @@
+import Ad from "./Ads";
 import Button from "./Button";
 import Breadcrumbs from "./Breadcrumbs";
 import Card from "./Card";
@@ -34,6 +35,7 @@ import { createUseStyles, useTheme } from "react-jss";
 export * from "./types";
 
 export {
+  Ad,
   Button,
   Breadcrumbs,
   Card,
