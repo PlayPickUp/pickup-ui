@@ -10,7 +10,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     fontSize: "22px",
     userSelect: "none",
     height: 16,
-    width: 16,
     "& input": {
       /*  Hide the browser's default checkbox  */
       position: "absolute",
@@ -50,7 +49,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       },
     },
   },
-
+  checkBoxLabel: {
+    verticalAlign: "middle",
+    position: "relative",
+    left: `${theme.spacing.base * 6}px`,
+    bottom: `${theme.spacing.base}px`,
+    fontSize: 15,
+  },
   checkmark: {
     position: "absolute",
     top: 0,
@@ -67,7 +72,12 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
 }));
 
-const CheckBox: React.FC<CheckBoxProps> = ({ checked = false, onChange }) => {
+const CheckBox: React.FC<CheckBoxProps> = ({
+  checked = false,
+  onChange,
+  label,
+  ...props
+}) => {
   const classes = useStyles();
   const [isChecked, setIsChecked] = React.useState<boolean>(checked);
 
@@ -77,15 +87,18 @@ const CheckBox: React.FC<CheckBoxProps> = ({ checked = false, onChange }) => {
   };
 
   return (
-    <label className={classes.contain}>
-      <input
-        data-testid="checkbox"
-        type="checkbox"
-        checked={isChecked}
-        onChange={handleChange}
-      />
-      <span className={classes.checkmark} />
-    </label>
+    <>
+      <label className={classes.contain} htmlFor={props.name}>
+        <input
+          data-testid="checkbox"
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleChange}
+        />
+        <span className={classes.checkmark} />
+        {label && <label className={classes.checkBoxLabel}>{label}</label>}
+      </label>
+    </>
   );
 };
 
