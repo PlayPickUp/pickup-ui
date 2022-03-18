@@ -18,9 +18,13 @@ export default {
       description:
         "Allows communication between component state and parent state",
     },
+    label: {
+      description: "Optional label for checkbox",
+    },
   },
   args: {
     checked: true,
+    label: "Breaking News",
     onChange: (internal: boolean) => {
       console.log("use " + internal);
     },
@@ -36,6 +40,7 @@ Default.parameters = {
     source: {
       code: `
       <CheckBox
+      label="Breaking News"
       checked={false}
       onChange={(internal: boolean)=> {
         console.log("use "+internal)
