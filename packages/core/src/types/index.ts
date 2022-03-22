@@ -648,9 +648,10 @@ export interface SliderProps {
   children?: ReactNodeArray;
 }
 
-export interface CheckBoxProps {
+export interface CheckBoxProps extends BaseFormikFieldsWithHandleChange {
   checked?: boolean;
   onChange: (internal: boolean) => void;
+  label?: string;
 }
 
 // Breadcrumbs
