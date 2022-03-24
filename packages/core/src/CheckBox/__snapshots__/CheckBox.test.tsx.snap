@@ -2,7 +2,6 @@
 
 exports[`Renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j0 {
-  width: 16px;
   cursor: pointer;
   height: 16px;
   display: block;
