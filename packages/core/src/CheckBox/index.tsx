@@ -76,7 +76,6 @@ const CheckBox: React.FC<CheckBoxProps> = ({
   checked = false,
   onChange,
   label,
-  ...props
 }) => {
   const classes = useStyles();
   const [isChecked, setIsChecked] = React.useState<boolean>(checked);
@@ -88,7 +87,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({
 
   return (
     <>
-      <label className={classes.contain} htmlFor={props.name}>
+      <label className={classes.contain}>
         <input
           data-testid="checkbox"
           type="checkbox"
