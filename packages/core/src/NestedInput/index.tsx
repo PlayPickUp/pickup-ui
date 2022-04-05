@@ -211,45 +211,43 @@ const NestedInput: React.FC<NestedInputProps> = ({
           )}
         </div>
       </div>
-      {usePhoneNumber || useVerificationCode ? (
-        <div
-          className={classes.breakpointMini}
-          data-testid="breakpoint-small-div"
-        >
-          {useSubmit ? (
-            <Button
-              style={{ minWidth: 90, marginTop: 4 }}
-              className={
-                usePhoneNumber || useVerificationCode
-                  ? classes.phoneButtonSmall
-                  : null
-              }
-              useSubmit
-              variant="full"
-              submitText={buttonText}
-              disabled={disabled}
-            />
-          ) : (
-            <Button
-              style={{ minWidth: 90, marginTop: 4 }}
-              className={
-                usePhoneNumber || useVerificationCode
-                  ? classes.phoneButtonSmall
-                  : null
-              }
-              variant="full"
-              disabled={disabled}
-              submitText={buttonText}
-              onClick={(e) => {
-                e.preventDefault();
-                onClick();
-              }}
-            >
-              {buttonText}
-            </Button>
-          )}
-        </div>
-      ) : null}
+      <div
+        className={classes.breakpointMini}
+        data-testid="breakpoint-small-div"
+      >
+        {useSubmit ? (
+          <Button
+            style={{ minWidth: 90, marginTop: 4 }}
+            className={
+              usePhoneNumber || useVerificationCode
+                ? classes.phoneButtonSmall
+                : null
+            }
+            useSubmit
+            variant="full"
+            submitText={buttonText}
+            disabled={disabled}
+          />
+        ) : (
+          <Button
+            style={{ minWidth: 90, marginTop: 4 }}
+            className={
+              usePhoneNumber || useVerificationCode
+                ? classes.phoneButtonSmall
+                : null
+            }
+            variant="full"
+            disabled={disabled}
+            submitText={buttonText}
+            onClick={(e) => {
+              e.preventDefault();
+              onClick();
+            }}
+          >
+            {buttonText}
+          </Button>
+        )}
+      </div>
       <FormError
         errors={props.form.errors}
         touched={props.form.touched}

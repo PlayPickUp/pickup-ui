@@ -340,6 +340,10 @@ body #PickUpUI .j7 {
   width: auto;
 }
 
+body #PickUpUI .j9 {
+  width: 100%;
+}
+
 body #PickUpUI .j0 {
   width: 100%;
   display: flex;
@@ -382,6 +386,10 @@ body #PickUpUI .j5 {
   display: none;
 }
 
+body #PickUpUI .j8 {
+  display: inline;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -416,6 +424,18 @@ body #PickUpUI .j5 {
               value="Click Button"
             />
           </div>
+        </div>
+        <div
+          class="j8"
+          data-testid="breakpoint-small-div"
+        >
+          <input
+            class="j6 j9"
+            data-testid="pickup-button"
+            style="min-width: 90px; margin-top: 4px;"
+            type="submit"
+            value="Click Button"
+          />
         </div>
       </form>
     </div>
