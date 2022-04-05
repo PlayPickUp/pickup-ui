@@ -29,6 +29,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     textAlign: "center",
     transition: "opacity 200ms ease-in-out",
     opacity: 1,
+    margin: `0px 0px 0px 0px`,
     fallbacks: {
       background: theme.colors.primary.base,
     },

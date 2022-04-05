@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, waitFor } from "@testing-library/react";
-import jssSerializer from 'jss-snapshot-serializer';
+import jssSerializer from "jss-snapshot-serializer";
 expect.addSnapshotSerializer(jssSerializer);
 import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
@@ -144,4 +144,15 @@ test("Disabled prop passes and is rendered correctly", () => {
   expect(phoneInput.hasAttribute("disabled"));
   expect(submitButton.hasAttribute("disabled"));
   expect(standardButton.hasAttribute("disabled"));
+});
+
+test("breakpoint nested input is rendred correctly", () => {
+  const { getByTestId } = render(<NestedInputFormik usePhoneNumber />);
+  const hidden = getByTestId("breakpoint-large-div");
+  const shown = getByTestId("breakpoint-small-div");
+
+  const breakpointShownStyle = window.getComputedStyle(shown);
+  expect(breakpointShownStyle.display).toBe("inline");
+  const breakpointHiddenStyle = window.getComputedStyle(hidden);
+  expect(breakpointHiddenStyle.display).toBe("none");
 });

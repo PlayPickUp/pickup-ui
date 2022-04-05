@@ -84,6 +84,18 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     margin: 0,
     fontWeight: "normal",
   },
+  breakpointMini: {
+    display: "inline",
+    [theme.mediaQuery(320)]: {
+      display: "none",
+    },
+  },
+  breakpointLarge: {
+    display: "none",
+    [theme.mediaQuery(320)]: {
+      display: "inline",
+    },
+  },
 }));
 
 const NestedInput: React.FC<NestedInputProps> = ({
@@ -162,7 +174,10 @@ const NestedInput: React.FC<NestedInputProps> = ({
             />
           )}
         </div>
-        <div>
+        <div
+          className={classes.breakpointLarge}
+          data-testid="breakpoint-large-div"
+        >
           {useSubmit ? (
             <Button
               style={{ minWidth: 90 }}
@@ -196,6 +211,45 @@ const NestedInput: React.FC<NestedInputProps> = ({
           )}
         </div>
       </div>
+      {usePhoneNumber || useVerificationCode ? (
+        <div
+          className={classes.breakpointMini}
+          data-testid="breakpoint-small-div"
+        >
+          {useSubmit ? (
+            <Button
+              style={{ minWidth: 90, marginTop: 4 }}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
+              useSubmit
+              variant="full"
+              submitText={buttonText}
+              disabled={disabled}
+            />
+          ) : (
+            <Button
+              style={{ minWidth: 90, marginTop: 4 }}
+              className={
+                usePhoneNumber || useVerificationCode
+                  ? classes.phoneButtonSmall
+                  : null
+              }
+              variant="full"
+              disabled={disabled}
+              submitText={buttonText}
+              onClick={(e) => {
+                e.preventDefault();
+                onClick();
+              }}
+            >
+              {buttonText}
+            </Button>
+          )}
+        </div>
+      ) : null}
       <FormError
         errors={props.form.errors}
         touched={props.form.touched}
