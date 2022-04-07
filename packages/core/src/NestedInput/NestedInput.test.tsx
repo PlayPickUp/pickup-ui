@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, waitFor } from "@testing-library/react";
-import jssSerializer from 'jss-snapshot-serializer';
+import jssSerializer from "jss-snapshot-serializer";
 expect.addSnapshotSerializer(jssSerializer);
 import { Formik, Form, Field } from "formik";
 import ThemeProvider from "../ThemeProvider";
@@ -109,10 +109,12 @@ test("Verification code NestedInput props pass and render correctly", () => {
 
 test("Submit is passed when useSubmit is true", async () => {
   const handleSubmit = jest.fn();
-  const { getByText } = render(<NestedInputFormik onSubmit={handleSubmit} />);
-  const button = getByText("Click Button");
+  const { getAllByText } = render(
+    <NestedInputFormik onSubmit={handleSubmit} />
+  );
+  const button = getAllByText("Click Button");
   expect(button).toBeTruthy();
-  fireEvent.click(button);
+  fireEvent.click(button[0]);
   await waitFor(() =>
     expect(handleSubmit).toHaveBeenCalledWith({
       nestedInput: "initial value",
@@ -122,19 +124,19 @@ test("Submit is passed when useSubmit is true", async () => {
 
 test("onClick is passed when useSubmit is false", () => {
   const onClick = jest.fn();
-  const { getByText } = render(
+  const { getAllByText } = render(
     <NestedInputFormik useSubmit={false} onClick={onClick} />
   );
-  const button = getByText("Click Button");
+  const button = getAllByText("Click Button");
   expect(button).toBeTruthy();
-  fireEvent.click(button);
+  fireEvent.click(button[0]);
   expect(onClick).toBeCalled();
 });
 
 test("Disabled prop passes and is rendered correctly", () => {
   const standardComponent = render(<NestedInputFormik disabled={true} />);
   const input = standardComponent.getByPlaceholderText("Placeholder text");
-  const submitButton = standardComponent.getByText("Click Button");
+  const submitButton = standardComponent.getAllByText("Click Button");
   const phoneComponent = render(
     <NestedInputFormik usePhoneNumber disabled={true} useSubmit={false} />
   );
@@ -142,6 +144,17 @@ test("Disabled prop passes and is rendered correctly", () => {
   const standardButton = phoneComponent.getByTestId("pickup-nested-button");
   expect(input.hasAttribute("disabled"));
   expect(phoneInput.hasAttribute("disabled"));
-  expect(submitButton.hasAttribute("disabled"));
+  expect(submitButton[0].hasAttribute("disabled"));
   expect(standardButton.hasAttribute("disabled"));
+});
+
+test("breakpoint nested input is rendred correctly", () => {
+  const { getByTestId } = render(<NestedInputFormik usePhoneNumber />);
+  const hidden = getByTestId("breakpoint-large-div");
+  const shown = getByTestId("breakpoint-small-div");
+
+  const breakpointShownStyle = window.getComputedStyle(shown);
+  expect(breakpointShownStyle.display).toBe("inline");
+  const breakpointHiddenStyle = window.getComputedStyle(hidden);
+  expect(breakpointHiddenStyle.display).toBe("none");
 });
