@@ -54,7 +54,7 @@
     "he": "^1.2.0",
     "lodash": "^4.17.21",
     "match-sorter": "^6.2.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.33",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
