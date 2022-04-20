@@ -252,7 +252,7 @@ const App: React.FC = () => {
     <div className="Playground">
       <ThemeProvider theme={publisherTheme}>
         <Router>
-          <div id="parent" style={{ width: 320 }}>
+          <div id="parent" style={{ width: 295 }}>
             <Formik
               initialValues={{ phoneNumber: "" }}
               validationSchema={Yup.object().shape({

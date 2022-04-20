@@ -85,10 +85,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     fontWeight: "normal",
   },
   breakpointMini: {
-    display: (props) => (props.applicationWidth > 318 ? "none" : "inline"),
+    display: (props) => (props.applicationWidth > 293 ? "none" : "inline"),
   },
   breakpointLarge: {
-    display: (props) => (props.applicationWidth < 319 ? "none" : "inline"),
+    display: (props) => (props.applicationWidth < 294 ? "none" : "inline"),
   },
 }));
 
