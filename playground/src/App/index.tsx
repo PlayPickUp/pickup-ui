@@ -267,17 +267,41 @@ const App: React.FC = () => {
                 console.log(values);
               }}
             >
-              {({ isSubmitting }) => (
+              {({ isSubmitting, values }) => (
                 <Form noValidate>
                   <Field
                     id="phoneNumber"
                     name="phoneNumber"
-                    useVerificationCode={true}
+                    usePhoneNumber={true}
                     label="Mobile Phone Number"
                     buttonText="Submit"
                     useSubmit={true}
                     disabled={isSubmitting}
                     component={NestedInput}
+                    onClick={() => console.log(values)}
+                  />
+                  <br />
+                  <Field
+                    id="notNumber"
+                    name="notNumber"
+                    useVerificationCode={true}
+                    label="not Number"
+                    buttonText="Submit"
+                    useSubmit={true}
+                    disabled={isSubmitting}
+                    component={NestedInput}
+                    onClick={() => console.log(values)}
+                  />
+                  <br />
+                  <Field
+                    id="normal"
+                    name="normal"
+                    label="just nested"
+                    buttonText="Submit"
+                    useSubmit={true}
+                    disabled={isSubmitting}
+                    component={NestedInput}
+                    onClick={() => console.log(values)}
                   />
                 </Form>
               )}

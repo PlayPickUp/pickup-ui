@@ -6,6 +6,7 @@ body #PickUpUI .j0 {
   color: #FFF;
   border: none;
   height: auto;
+  margin: 0px 0px 0px 0px;
   display: flex;
   opacity: 1;
   padding: 0 30px;

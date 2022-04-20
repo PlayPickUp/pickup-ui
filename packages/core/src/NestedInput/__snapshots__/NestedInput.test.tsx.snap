@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NestedInput with usePhoneNumber renders without crashing, matches snapshot 1`] = `
-body #PickUpUI .j7 {
+body #PickUpUI .j8 {
   background: #7A60FF;
   color: #FFF;
   border: none;
   height: auto;
+  margin: 0px 0px 0px 0px;
   display: flex;
   opacity: 1;
   padding: 0 30px;
@@ -26,8 +27,12 @@ body #PickUpUI .j7 {
   justify-content: center;
 }
 
-body #PickUpUI .j8 {
+body #PickUpUI .j9 {
   width: auto;
+}
+
+body #PickUpUI .j12 {
+  width: 100%;
 }
 
 body #PickUpUI .j0 {
@@ -84,11 +89,19 @@ body #PickUpUI .j6 {
   line-height: 22px;
 }
 
-body #PickUpUI .j9 {
+body #PickUpUI .j7 {
+  display: none;
+}
+
+body #PickUpUI .j10 {
   margin: 0;
   padding: 0 8px;
   font-size: 14px;
   font-weight: normal;
+}
+
+body #PickUpUI .j11 {
+  display: inline;
 }
 
 <div>
@@ -124,15 +137,30 @@ body #PickUpUI .j9 {
               />
             </div>
           </div>
-          <div>
+          <div
+            class="j7"
+            data-testid="breakpoint-large-div"
+          >
             <input
-              class="j7 j8 j9"
+              class="j8 j9 j10"
               data-testid="pickup-button"
               style="min-width: 90px;"
               type="submit"
               value="Click Button"
             />
           </div>
+        </div>
+        <div
+          class="j11"
+          data-testid="breakpoint-small-div"
+        >
+          <input
+            class="j8 j12 j10"
+            data-testid="pickup-button"
+            style="min-width: 90px; margin-top: 4px;"
+            type="submit"
+            value="Click Button"
+          />
         </div>
       </form>
     </div>
@@ -141,11 +169,12 @@ body #PickUpUI .j9 {
 `;
 
 exports[`NestedInput with useVerificationCode renders without crashing, matches snapshot 1`] = `
-body #PickUpUI .j5 {
+body #PickUpUI .j6 {
   background: #7A60FF;
   color: #FFF;
   border: none;
   height: auto;
+  margin: 0px 0px 0px 0px;
   display: flex;
   opacity: 1;
   padding: 0 30px;
@@ -166,8 +195,12 @@ body #PickUpUI .j5 {
   justify-content: center;
 }
 
-body #PickUpUI .j6 {
+body #PickUpUI .j7 {
   width: auto;
+}
+
+body #PickUpUI .j10 {
+  width: 100%;
 }
 
 body #PickUpUI .j0 {
@@ -208,11 +241,19 @@ body #PickUpUI .j4 {
   line-height: 22px;
 }
 
-body #PickUpUI .j7 {
+body #PickUpUI .j5 {
+  display: none;
+}
+
+body #PickUpUI .j8 {
   margin: 0;
   padding: 0 8px;
   font-size: 14px;
   font-weight: normal;
+}
+
+body #PickUpUI .j9 {
+  display: inline;
 }
 
 <div>
@@ -237,15 +278,30 @@ body #PickUpUI .j7 {
               value="initial value"
             />
           </div>
-          <div>
+          <div
+            class="j5"
+            data-testid="breakpoint-large-div"
+          >
             <input
-              class="j5 j6 j7"
+              class="j6 j7 j8"
               data-testid="pickup-button"
               style="min-width: 90px;"
               type="submit"
               value="Click Button"
             />
           </div>
+        </div>
+        <div
+          class="j9"
+          data-testid="breakpoint-small-div"
+        >
+          <input
+            class="j6 j10 j8"
+            data-testid="pickup-button"
+            style="min-width: 90px; margin-top: 4px;"
+            type="submit"
+            value="Click Button"
+          />
         </div>
       </form>
     </div>
@@ -254,11 +310,12 @@ body #PickUpUI .j7 {
 `;
 
 exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
-body #PickUpUI .j5 {
+body #PickUpUI .j6 {
   background: #7A60FF;
   color: #FFF;
   border: none;
   height: auto;
+  margin: 0px 0px 0px 0px;
   display: flex;
   opacity: 1;
   padding: 0 30px;
@@ -279,8 +336,12 @@ body #PickUpUI .j5 {
   justify-content: center;
 }
 
-body #PickUpUI .j6 {
+body #PickUpUI .j7 {
   width: auto;
+}
+
+body #PickUpUI .j9 {
+  width: 100%;
 }
 
 body #PickUpUI .j0 {
@@ -321,6 +382,14 @@ body #PickUpUI .j4 {
   line-height: 24px;
 }
 
+body #PickUpUI .j5 {
+  display: none;
+}
+
+body #PickUpUI .j8 {
+  display: inline;
+}
+
 <div>
   <div
     id="PickUpUI"
@@ -343,15 +412,30 @@ body #PickUpUI .j4 {
               value="initial value"
             />
           </div>
-          <div>
+          <div
+            class="j5"
+            data-testid="breakpoint-large-div"
+          >
             <input
-              class="j5 j6"
+              class="j6 j7"
               data-testid="pickup-button"
               style="min-width: 90px;"
               type="submit"
               value="Click Button"
             />
           </div>
+        </div>
+        <div
+          class="j8"
+          data-testid="breakpoint-small-div"
+        >
+          <input
+            class="j6 j9"
+            data-testid="pickup-button"
+            style="min-width: 90px; margin-top: 4px;"
+            type="submit"
+            value="Click Button"
+          />
         </div>
       </form>
     </div>
