@@ -246,15 +246,13 @@ const App: React.FC = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const classes = useStyles();
 
-  useEffect(() => {
-    console.log(checked), [checked];
-  });
+  useEffect(() => {});
   // Outer div with className "Playground" is targeted by MakeMeUgly
   return (
     <div className="Playground">
       <ThemeProvider theme={publisherTheme}>
         <Router>
-          <div style={{ width: "90%" }}>
+          <div id="parent" style={{ width: 320 }}>
             <Formik
               initialValues={{ phoneNumber: "" }}
               validationSchema={Yup.object().shape({
