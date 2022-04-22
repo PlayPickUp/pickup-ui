@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { createUseStyles } from "react-jss";
 
 import Button from "../Button";
@@ -85,16 +85,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     fontWeight: "normal",
   },
   breakpointMini: {
-    display: "inline",
-    [theme.mediaQuery(320)]: {
-      display: "none",
-    },
+    display: (props) => (props.applicationWidth > 293 ? "none" : "inline"),
   },
   breakpointLarge: {
-    display: "none",
-    [theme.mediaQuery(320)]: {
-      display: "inline",
-    },
+    display: (props) => (props.applicationWidth < 294 ? "none" : "inline"),
   },
 }));
 
@@ -110,10 +104,12 @@ const NestedInput: React.FC<NestedInputProps> = ({
   ...props
 }) => {
   const [inputFocus, setInputFocus] = useState<boolean>(false);
+  const [applicationWidth, setApplicationWidth] = useState(null);
   const classes = useStyles({
     inputFocus,
     usePhoneNumber,
     useVerificationCode,
+    applicationWidth,
   });
   const inputRef = useRef();
 
@@ -126,9 +122,20 @@ const NestedInput: React.FC<NestedInputProps> = ({
     toggleFocus();
   };
 
+  const application = useRef<HTMLDivElement>(null);
+  const getNewWidth = useCallback((): void => {
+    const width = application?.current?.clientWidth;
+    setApplicationWidth(width ?? 720);
+  }, [setApplicationWidth]);
+
+  useEffect(() => {
+    window.addEventListener("resize", getNewWidth);
+    getNewWidth();
+  }, [getNewWidth]);
+
   return (
     <>
-      <div className={classes.root}>
+      <div className={classes.root} ref={application}>
         <div className={classes.inputContainer}>
           {(usePhoneNumber || useVerificationCode) && label ? (
             <label
