@@ -46,7 +46,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       paddingBottom: theme.spacing.base * 2,
     },
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      padding: 0,
+      paddingRight: theme.spacing.base * 2.5,
       alignItems: "start",
     },
   },
