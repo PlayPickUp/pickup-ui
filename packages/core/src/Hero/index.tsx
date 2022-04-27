@@ -106,6 +106,19 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       marginBottom: 0,
     },
   },
+  ctaButton: {
+    width: theme.spacing.base * 60,
+    marginTop: theme.spacing.base * 3,
+    fontFamily: theme.typography.fontFamilies.headline,
+    fontSize: 16,
+    fontWeight: "normal",
+    textDecoration: "none",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      width: theme.spacing.base * 75,
+    },
+  },
 }));
 
 const Hero: React.FC<HeroProps> = ({
@@ -153,7 +166,13 @@ const Hero: React.FC<HeroProps> = ({
               {description}
             </Typography>
             {ctaButton ? (
-              <Button href={ctaButton.url}>{ctaButton.label}</Button>
+              <Button
+                element="a"
+                href={ctaButton.url}
+                className={classes.ctaButton}
+              >
+                {ctaButton.label}
+              </Button>
             ) : null}
             {chip ? (
               <Chip className={classes.chip} label={chip} element="div" />

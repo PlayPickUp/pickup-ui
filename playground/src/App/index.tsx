@@ -256,6 +256,7 @@ const App: React.FC = () => {
           description="Unleash your fans' opinions with interactive content."
           image_src="https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/5e7f1fd3a77b87f1bd2a5c1488c1d98c/HERO-C-2b.png"
           image_alt="Fan hero"
+          ctaButton={{ label: "Get Started", url: "https://www.google.com" }}
         />
         <Router>
           <div id="parent" style={{ width: 295 }}>
