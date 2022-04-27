@@ -4,8 +4,7 @@ import { DefaultTheme, HeroProps } from "../types";
 import Typography from "../Typography";
 import Breadcrumbs from "../Breadcrumbs";
 import Chip from "../Chip";
-
-
+import PartnerLogos from "./PartnerLogos";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
@@ -116,6 +115,7 @@ const Hero: React.FC<HeroProps> = ({
   eyebrow,
   chip,
   crumbs,
+  logos,
 }) => {
   const classes = useStyles();
 
@@ -156,6 +156,7 @@ const Hero: React.FC<HeroProps> = ({
             ) : null}
           </div>
         </div>
+        <PartnerLogos logos={logos} />
       </div>
     </div>
   );

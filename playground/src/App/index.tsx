@@ -38,6 +38,38 @@ import {
 } from "@playpickup/core";
 import { Create, Countdown, Pick } from "@playpickup/icons";
 
+const logos = [
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/4dLm8VMrfP95hfh9tF4E4G/08fe8004b7fcb7c9b4bf616763401017/Partner_DraftKings.png",
+    alt: "DraftKings",
+  },
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/5hh6O5v5uW7QdNCDJGaXyO/aa0812b3150a04ee81677c84ef3484c9/Partner_USA_Today.png",
+    alt: "USA Today",
+  },
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/6xoss0oYKJcz8gW8PIKnH6/bbf802c8998ffb59a09dc5c417676f14/Partner_NASCAR.png",
+    alt: "Nascar",
+  },
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/4KOHlhrpJiE9lAHVBaibNQ/56f670444f641fb70f4f3ddd5aba1046/Partner_FloSports.png",
+    alt: "FloSports",
+  },
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/1W69IGJzWNiye8JtkjmKYT/bf6977704222bfa816c11f37c6362130/Partner_Comcast.png",
+    alt: "Comcast",
+  },
+  {
+    url:
+      "//images.ctfassets.net/vr34jcb0tstv/4eW6g2MiMUdb48QzBV5cK6/246d6eaef504a304e59565b531697e08/Partner_FanDuel.png",
+    alt: "FanDuel",
+  },
+];
 const useStyles = createUseStyles(() => ({
   horizontal: {
     color: "grey",
@@ -75,160 +107,6 @@ const useStyles = createUseStyles(() => ({
   },
 }));
 
-const handleEditClick = () => {
-  console.log("handledEditClick");
-};
-
-const rows = [
-  {
-    id: 23,
-    post_title: "Will the Cleveland Indians win the World Series?",
-    league: "MLB",
-    prop_id: 3923,
-    article_url:
-      "http://thetribe.net/2021/01/04/ranking-cleveland-indians-outfield-power",
-    headline: "Ranking the Cleveland Baseball team's outfield power",
-    excerpt:
-      "It's no secret that Cleveland has come up short the past few years, but will a weak offseason help?",
-    featured_img: "https://aws.bucket.fake.pickup/1299091083.jpg",
-    published_at: "Febuary 4th, 2021 3:44PM CST",
-    updated_at: "Febuary 4th, 2021 5:44PM CST",
-  },
-];
-
-const headCells = [
-  {
-    id: "id",
-    numeric: true,
-    disablePadding: true,
-    label: "ID",
-  },
-  {
-    id: "post_title",
-    numeric: false,
-    disablePadding: false,
-    label: "Title",
-    width: 120,
-  },
-  { id: "league", numeric: false, disablePadding: false, label: "League" },
-  {
-    id: "prop_id",
-    numeric: true,
-    disablePadding: true,
-    label: "Prop ID",
-    width: 100,
-  },
-  {
-    id: "article_url",
-    numeric: false,
-    disablePadding: false,
-    label: "Article URL",
-  },
-  {
-    id: "headline",
-    numeric: false,
-    disablePadding: false,
-    label: "Headline",
-  },
-  {
-    id: "excerpt",
-    numeric: false,
-    disablePadding: false,
-    label: "Excerpt",
-  },
-  {
-    id: "featured_img",
-    numeric: false,
-    disablePadding: false,
-    label: "Featured Image",
-  },
-  {
-    id: "published_at",
-    numeric: false,
-    disablePadding: false,
-    label: "Publish Date",
-  },
-  {
-    id: "updated_at",
-    numeric: false,
-    disablePadding: false,
-    label: "Updated Date",
-  },
-];
-
-const leagues = [
-  {
-    value: "mlb",
-    label: "MLB",
-  },
-  {
-    value: "nfl",
-    label: "NFL",
-  },
-  {
-    value: "mma",
-    label: "MMA",
-  },
-  {
-    value: "golf",
-    label: "Golf",
-  },
-  {
-    value: "frisbee",
-    label: "Frisbee",
-  },
-  {
-    value: "bowling",
-    label: "Bowling",
-  },
-  {
-    value: "polevault",
-    label: "polevault",
-  },
-  {
-    value: "billiards",
-    label: "billiards",
-  },
-  {
-    value: "dodgeball",
-    label: "Dodgeball",
-  },
-];
-
-const ActionToolbar = () => {
-  return <div>Edit</div>;
-};
-
-const handleChange = () => {
-  console.log("change!");
-};
-
-const Picks = [
-  { label: "Ravens", value: "Ravens" },
-  { label: "Chiefs", value: "Chiefs" },
-];
-
-const crumbs = [
-  {
-    name: "marketplace",
-    path: "/sports-betting",
-  },
-  {
-    name: "$200 off $400 TRX Suspension Trainer Bundle & Training Club",
-    path: "/$200 off $400 TRX Suspension Trainer Bundle & Training Club",
-  },
-];
-const red = {
-  light: "#FF1244",
-  base: "#FF1244",
-};
-const grey = {
-  light: "#FF1244",
-  lightBase: "#FF1244",
-  base: "#FF1244",
-  dark: "#FF1244",
-};
-
 const publisherTheme: Partial<DefaultTheme> = {
   colors: {
     primary: {
@@ -252,7 +130,15 @@ const App: React.FC = () => {
     <div className="Playground">
       <ThemeProvider theme={publisherTheme}>
         <Router>
-          <div id="parent" style={{ width: 295 }}>
+          <div id="parent" style={{ width: "100%" }}>
+            <Hero
+              title="Capture your audience. Build a community."
+              description="Unleash your fans' opinions with interactive content."
+              image_src="https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/5e7f1fd3a77b87f1bd2a5c1488c1d98c/HERO-C-2b.png"
+              image_alt="Fan hero"
+              // ctaButton={{ label: "Get Started", url: "https://www.google.com" }}
+              logos={logos}
+            />
             <Formik
               initialValues={{ phoneNumber: "" }}
               validationSchema={Yup.object().shape({
