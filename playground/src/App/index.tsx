@@ -4,7 +4,7 @@ put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
-import "./makeMeUgly.css";
+// import "./makeMeUgly.css";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -251,6 +251,12 @@ const App: React.FC = () => {
   return (
     <div className="Playground">
       <ThemeProvider theme={publisherTheme}>
+        <Hero
+          title="Capture your audience. Build a community."
+          description="Unleash your fans' opinions with interactive content."
+          image_src="https://images.ctfassets.net/vr34jcb0tstv/2XgjxzpUehZpgDwyeBTyVw/5e7f1fd3a77b87f1bd2a5c1488c1d98c/HERO-C-2b.png"
+          image_alt="Fan hero"
+        />
         <Router>
           <div id="parent" style={{ width: 295 }}>
             <Formik

@@ -571,6 +571,10 @@ export interface HeroProps {
   image_alt: string;
   chip?: string;
   crumbs?: Array<Path>;
+  ctaButton?: {
+    label: string;
+    url: string;
+  };
 }
 
 /**
