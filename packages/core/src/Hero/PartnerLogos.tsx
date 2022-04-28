@@ -9,14 +9,15 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     flexWrap: "wrap",
     justifyContent: "center",
     alignContent: "center",
+    marginBottom: theme.spacing.base * 2,
   },
   logo: {
     flex: "3 0 26%",
-    margin: [0, theme.spacing.base * 4],
+    margin: [0, theme.spacing.base * 4, theme.spacing.base * 2],
     display: "flex",
     justifyContent: "center",
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      margin: [0, theme.spacing.base * 8],
+      margin: [theme.spacing.base, theme.spacing.base * 8],
       flex: "8 0 12%",
     },
   },

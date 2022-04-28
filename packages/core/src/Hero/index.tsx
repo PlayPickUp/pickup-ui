@@ -19,13 +19,13 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   container: {
     margin: "0 auto",
-    padding: [theme.spacing.base * 5, theme.spacing.base * 5, 0],
+    padding: [theme.spacing.base * 5, theme.spacing.base * 5],
     boxSizing: "border-box",
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      padding: [theme.spacing.base * 5, theme.spacing.base * 7, 0],
+      padding: [theme.spacing.base * 5, theme.spacing.base * 7],
     },
     [theme.mediaQuery(theme.breakpoints.large)]: {
-      padding: "4%",
+      padding: [theme.spacing.base * 5, "4%", theme.spacing.base * 7],
     },
   },
   row: {

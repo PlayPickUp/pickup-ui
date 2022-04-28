@@ -40,33 +40,43 @@ import { Create, Countdown, Pick } from "@playpickup/icons";
 
 const logos = [
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/4dLm8VMrfP95hfh9tF4E4G/08fe8004b7fcb7c9b4bf616763401017/Partner_DraftKings.png",
+    url: "https://picsum.photos/125",
     alt: "DraftKings",
   },
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/5hh6O5v5uW7QdNCDJGaXyO/aa0812b3150a04ee81677c84ef3484c9/Partner_USA_Today.png",
+    url: "https://picsum.photos/125",
     alt: "USA Today",
   },
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/6xoss0oYKJcz8gW8PIKnH6/bbf802c8998ffb59a09dc5c417676f14/Partner_NASCAR.png",
+    url: "https://picsum.photos/125",
     alt: "Nascar",
   },
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/4KOHlhrpJiE9lAHVBaibNQ/56f670444f641fb70f4f3ddd5aba1046/Partner_FloSports.png",
+    url: "https://picsum.photos/125",
     alt: "FloSports",
   },
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/1W69IGJzWNiye8JtkjmKYT/bf6977704222bfa816c11f37c6362130/Partner_Comcast.png",
+    url: "https://picsum.photos/125",
     alt: "Comcast",
   },
   {
-    url:
-      "//images.ctfassets.net/vr34jcb0tstv/4eW6g2MiMUdb48QzBV5cK6/246d6eaef504a304e59565b531697e08/Partner_FanDuel.png",
+    url: "https://picsum.photos/125",
+    alt: "FanDuel",
+  },
+  {
+    url: "https://picsum.photos/125",
+    alt: "FanDuel",
+  },
+  {
+    url: "https://picsum.photos/125",
+    alt: "FanDuel",
+  },
+  {
+    url: "https://picsum.photos/125",
+    alt: "FanDuel",
+  },
+  {
+    url: "https://picsum.photos/125",
     alt: "FanDuel",
   },
 ];
