@@ -4,13 +4,13 @@ import { DefaultTheme, HeroProps } from "../types";
 import Typography from "../Typography";
 import Breadcrumbs from "../Breadcrumbs";
 import Chip from "../Chip";
-
-
+import Button from "../Button";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
   root: {
     width: "100%",
     backgroundColor: "#F6F4FF",
+    color: theme.colors.black,
     textAlign: "center",
     [theme.mediaQuery(theme.breakpoints.small)]: {
       textAlign: "left",
@@ -19,10 +19,12 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   container: {
     margin: "0 auto",
     padding: [theme.spacing.base * 5, theme.spacing.base * 5],
-    maxWidth: theme.spacing.base * 214,
     boxSizing: "border-box",
     [theme.mediaQuery(theme.breakpoints.small)]: {
       padding: theme.spacing.base * 7,
+    },
+    [theme.mediaQuery(theme.breakpoints.large)]: {
+      padding: "4%",
     },
   },
   row: {
@@ -44,7 +46,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       paddingBottom: theme.spacing.base * 2,
     },
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      padding: 0,
+      paddingRight: theme.spacing.base * 2.5,
       alignItems: "start",
     },
   },
@@ -60,8 +62,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   },
   imageContainer: {
     height: "100%",
-    maxHeight: 300,
-    maxWidth: 350,
     overflow: "hidden",
     borderRadius: 4,
   },
@@ -106,6 +106,19 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       marginBottom: 0,
     },
   },
+  ctaButton: {
+    width: theme.spacing.base * 60,
+    marginTop: theme.spacing.base * 3,
+    fontFamily: theme.typography.fontFamilies.headline,
+    fontSize: 16,
+    fontWeight: "normal",
+    textDecoration: "none",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+    [theme.mediaQuery(theme.breakpoints.small)]: {
+      width: theme.spacing.base * 75,
+    },
+  },
 }));
 
 const Hero: React.FC<HeroProps> = ({
@@ -116,6 +129,7 @@ const Hero: React.FC<HeroProps> = ({
   eyebrow,
   chip,
   crumbs,
+  ctaButton,
 }) => {
   const classes = useStyles();
 
@@ -151,6 +165,15 @@ const Hero: React.FC<HeroProps> = ({
             >
               {description}
             </Typography>
+            {ctaButton ? (
+              <Button
+                element="a"
+                href={ctaButton.url}
+                className={classes.ctaButton}
+              >
+                {ctaButton.label}
+              </Button>
+            ) : null}
             {chip ? (
               <Chip className={classes.chip} label={chip} element="div" />
             ) : null}
