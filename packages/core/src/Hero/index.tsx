@@ -25,7 +25,7 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
       padding: [theme.spacing.base * 5, theme.spacing.base * 7],
     },
     [theme.mediaQuery(theme.breakpoints.large)]: {
-      padding: [theme.spacing.base * 5, "4%", theme.spacing.base * 7],
+      padding: [theme.spacing.base * 5, "4%"],
     },
   },
   row: {

@@ -40,43 +40,43 @@ import { Create, Countdown, Pick } from "@playpickup/icons";
 
 const logos = [
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "DraftKings",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "USA Today",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "Nascar",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FloSports",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "Comcast",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FanDuel",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FanDuel",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FanDuel",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FanDuel",
   },
   {
-    url: "https://picsum.photos/125",
+    url: "https://picsum.photos/125/60",
     alt: "FanDuel",
   },
 ];
