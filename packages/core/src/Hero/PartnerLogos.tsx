@@ -6,18 +6,23 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
   logoList: {
     width: "100%",
     display: "flex",
-    flexFlow: "row wrap",
-    justifyContent: "space-between",
+    flexWrap: "wrap",
+    justifyContent: "center",
     alignContent: "center",
   },
   logo: {
     flex: "3 0 26%",
+    margin: [0, theme.spacing.base * 4],
+    display: "flex",
+    justifyContent: "center",
     [theme.mediaQuery(theme.breakpoints.small)]: {
+      margin: [0, theme.spacing.base * 8],
       flex: "8 0 12%",
     },
   },
   logoImage: {
     width: "100%",
+    maxWidth: theme.spacing.base * 37,
   },
 }));
 
@@ -29,7 +34,6 @@ const PartnerLogos: React.FC<PartnerLogoProps> = ({ logos }) => {
       {logos.map((logo, index) => (
         <div key={index} className={classes.logo}>
           <img src={logo.url} alt={logo.alt} className={classes.logoImage} />
-          {/* <h1>Hello World</h1> */}
         </div>
       ))}
     </div>
