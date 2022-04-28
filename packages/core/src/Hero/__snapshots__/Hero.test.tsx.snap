@@ -53,6 +53,7 @@ body #PickUpUI .j15 {
 }
 
 body #PickUpUI .j0 {
+  color: #2C2933;
   width: 100%;
   text-align: center;
   background-color: #F6F4FF;
@@ -61,7 +62,6 @@ body #PickUpUI .j0 {
 body #PickUpUI .j1 {
   margin: 0 auto;
   padding: 20px 20px;
-  max-width: 856px;
   box-sizing: border-box;
 }
 
@@ -81,8 +81,6 @@ body #PickUpUI .j3 {
 body #PickUpUI .j4 {
   height: 100%;
   overflow: hidden;
-  max-width: 350px;
-  max-height: 300px;
   border-radius: 4px;
 }
 

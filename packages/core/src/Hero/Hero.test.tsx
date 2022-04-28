@@ -1,6 +1,6 @@
 import React from "react";
 import { render, within } from "@testing-library/react";
-import jssSerializer from 'jss-snapshot-serializer';
+import jssSerializer from "jss-snapshot-serializer";
 expect.addSnapshotSerializer(jssSerializer);
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -17,6 +17,11 @@ const breadCrumbs = [
     path: "/crumb2",
   },
 ];
+
+const ctaButton = {
+  label: "CTA Button",
+  url: "https://www.playpickup.com",
+};
 
 test("Renders and matches snapshot", () => {
   const { container } = render(
@@ -48,6 +53,7 @@ test("Passes and renders props", () => {
           }}
           chip="Chip"
           crumbs={breadCrumbs}
+          ctaButton={ctaButton}
         />
       </Router>
     </ThemeProvider>
@@ -75,4 +81,8 @@ test("Passes and renders props", () => {
       "Crumb 2",
     ]
   `);
+  // button
+  expect(getByText("CTA Button").getAttribute("href")).toEqual(
+    "https://www.playpickup.com"
+  );
 });
