@@ -33,7 +33,7 @@ const PartnerLogos: React.FC<PartnerLogoProps> = ({ logos }) => {
   return (
     <div className={classes.logoList}>
       {logos.map((logo, index) => (
-        <div key={index} className={classes.logo}>
+        <div key={`partner-logo-${index}`} className={classes.logo}>
           <img src={logo.url} alt={logo.alt} className={classes.logoImage} />
         </div>
       ))}

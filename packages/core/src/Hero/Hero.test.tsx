@@ -18,6 +18,21 @@ const breadCrumbs = [
   },
 ];
 
+const logos = [
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 1",
+  },
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 2",
+  },
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 3",
+  },
+];
+
 const ctaButton = {
   label: "CTA Button",
   url: "https://www.playpickup.com",
@@ -32,6 +47,8 @@ test("Renders and matches snapshot", () => {
         image_src="https://playpickup.s3.us-east-2.amazonaws.com/away-team/kasper/homebase/prize-images/bowlero_lanes.jpg"
         image_alt="bowlero"
         eyebrow={{ name: "Eyebrow Title", description: "Eyebrow Description" }}
+        ctaButton={ctaButton}
+        logos={logos}
       />
     </ThemeProvider>
   );
@@ -54,6 +71,7 @@ test("Passes and renders props", () => {
           chip="Chip"
           crumbs={breadCrumbs}
           ctaButton={ctaButton}
+          logos={logos}
         />
       </Router>
     </ThemeProvider>
@@ -84,5 +102,8 @@ test("Passes and renders props", () => {
   // button
   expect(getByText("CTA Button").getAttribute("href")).toEqual(
     "https://www.playpickup.com"
+  );
+  expect(getByAltText("Image 1").getAttribute("src")).toEqual(
+    "https://picsum.photos/125/60"
   );
 });
