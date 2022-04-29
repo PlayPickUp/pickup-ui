@@ -2,6 +2,21 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 import { Hero, HeroProps } from "@playpickup/core";
 
+const logos = [
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 1",
+  },
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 2",
+  },
+  {
+    url: "https://picsum.photos/125/60",
+    alt: "Image 3",
+  },
+];
+
 export default {
   title: "Core/Hero",
   component: Hero,
@@ -45,6 +60,19 @@ export default {
       ],
       description: "An array of paths for breadcrumbs component",
     },
+    ctaButton: {
+      defaultValue: {
+        label: "Call to Action",
+        path: "https://www.google.com",
+      },
+      description:
+        "A button that shows a call to action and navigates the user to an external resource",
+    },
+    logos: {
+      defaultValue: logos,
+      description:
+        "An optional series of user-provided images at the bottom of the Hero",
+    },
   },
   args: {
     title: "Hero Title",
@@ -68,6 +96,11 @@ export default {
         path: "/arizona-sports-betting",
       },
     ],
+    ctaButton: {
+      label: "Call to Action",
+      path: "https://www.google.com",
+    },
+    logos: logos,
   },
 } as Meta;
 

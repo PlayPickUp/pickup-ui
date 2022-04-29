@@ -4,6 +4,7 @@ import { DefaultTheme, HeroProps } from "../types";
 import Typography from "../Typography";
 import Breadcrumbs from "../Breadcrumbs";
 import Chip from "../Chip";
+import PartnerLogos from "./PartnerLogos";
 import Button from "../Button";
 
 const useStyles = createUseStyles((theme: DefaultTheme) => ({
@@ -21,10 +22,10 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     padding: [theme.spacing.base * 5, theme.spacing.base * 5],
     boxSizing: "border-box",
     [theme.mediaQuery(theme.breakpoints.small)]: {
-      padding: theme.spacing.base * 7,
+      padding: [theme.spacing.base * 5, theme.spacing.base * 7],
     },
     [theme.mediaQuery(theme.breakpoints.large)]: {
-      padding: "4%",
+      padding: [theme.spacing.base * 5, "4%"],
     },
   },
   row: {
@@ -129,6 +130,7 @@ const Hero: React.FC<HeroProps> = ({
   eyebrow,
   chip,
   crumbs,
+  logos,
   ctaButton,
 }) => {
   const classes = useStyles();
@@ -179,6 +181,7 @@ const Hero: React.FC<HeroProps> = ({
             ) : null}
           </div>
         </div>
+        <PartnerLogos logos={logos} />
       </div>
     </div>
   );
