@@ -563,6 +563,11 @@ export interface Eyebrow {
   name: string;
   description: string;
 }
+
+interface PartnerLogo {
+  url: string;
+  alt: string;
+}
 export interface HeroProps {
   eyebrow?: Eyebrow;
   title: React.ReactText;
@@ -571,6 +576,15 @@ export interface HeroProps {
   image_alt: string;
   chip?: string;
   crumbs?: Array<Path>;
+  ctaButton?: {
+    label: string;
+    url: string;
+  };
+  logos?: Array<PartnerLogo>;
+}
+
+export interface PartnerLogoProps {
+  logos: Array<PartnerLogo>;
 }
 
 /**
