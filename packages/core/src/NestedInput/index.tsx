@@ -43,6 +43,8 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     color: theme.colors.grey.dark,
     appearance: "none",
     border: "none",
+    backgroundColor: theme.colors.white,
+
     "&:focus": {
       border: "none",
       outline: "none",
