@@ -2,6 +2,10 @@ body {
   background-color: darkgoldenrod;
 }
 
+input {
+  background-color: #000;
+}
+
 .Playground button:not(:hover):not(:active):not(.has-background) {
   background-color: #000;
 }
