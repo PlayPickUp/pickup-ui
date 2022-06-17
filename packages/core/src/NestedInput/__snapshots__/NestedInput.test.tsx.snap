@@ -82,6 +82,7 @@ body #PickUpUI .j5 {
   appearance: none;
   font-family: 'Inter', Helvetica, sans-serif;
   letter-spacing: 0.1px;
+  background-color: #FFF;
 }
 
 body #PickUpUI .j6 {
@@ -238,6 +239,7 @@ body #PickUpUI .j3 {
   appearance: none;
   font-family: 'Inter', Helvetica, sans-serif;
   letter-spacing: 0.1px;
+  background-color: #FFF;
 }
 
 body #PickUpUI .j4 {
@@ -383,6 +385,7 @@ body #PickUpUI .j3 {
   appearance: none;
   font-family: 'Inter', Helvetica, sans-serif;
   letter-spacing: 0.1px;
+  background-color: #FFF;
 }
 
 body #PickUpUI .j4 {
