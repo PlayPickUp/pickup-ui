@@ -17,8 +17,6 @@ import {
   ResponsiveFonts,
 } from "../types";
 
-// Purple - midnight or nebula
-
 // Color me PickUp ⚡
 const purple: PurpleMap = {
   light: "#F5F0FF",
