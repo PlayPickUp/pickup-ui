@@ -21,7 +21,8 @@ import {
 const purple: PurpleMap = {
   light: "#F5F0FF",
   lightBase: "#AFA0FF",
-  base: "#7A60FF",
+  pickup: "#7A60FF",
+  base: "#261733",
   dark: "#5E24FF",
   transparent: "#EAE5FF",
 };
@@ -42,6 +43,7 @@ const grey: GreyMap = {
 const red: RedMap = {
   light: "#FFF1F4",
   base: "#FF1244",
+  ruby: "#FB5858",
 };
 
 const colors: DefaultThemeColors = {

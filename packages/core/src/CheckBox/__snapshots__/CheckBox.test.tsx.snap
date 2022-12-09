@@ -17,7 +17,7 @@ body #PickUpUI .j1 {
   height: 16px;
   position: absolute;
   border-radius: 3px;
-  background-color: #7A60FF;
+  background-color: #261733;
 }
 
 <div>

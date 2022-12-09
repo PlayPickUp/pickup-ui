@@ -2,7 +2,7 @@
 
 exports[`NestedInput with usePhoneNumber renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j9 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;
@@ -175,7 +175,7 @@ body #PickUpUI .j13 {
 
 exports[`NestedInput with useVerificationCode renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j7 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;
@@ -321,7 +321,7 @@ body #PickUpUI .j11 {
 
 exports[`Standard NestedInput renders without crashing, matches snapshot 1`] = `
 body #PickUpUI .j7 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;
