@@ -74,7 +74,7 @@ body #PickUpUI .j22 {
 }
 
 body #PickUpUI .j17 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;

@@ -2,7 +2,7 @@
 
 exports[`Renders and matches snapshot 1`] = `
 body #PickUpUI .j0 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;
