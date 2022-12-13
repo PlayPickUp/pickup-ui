@@ -99,7 +99,7 @@ body #PickUpUI .j28 {
 body #PickUpUI .j29 {
   float: left;
   font-size: 11px;
-  font-color: #7A60FF;
+  font-color: #261733;
   line-height: 18px;
   vertical-align: middle;
 }
@@ -131,7 +131,7 @@ body #PickUpUI .j49 {
 }
 
 body #PickUpUI .j18 {
-  background: #7A60FF;
+  background: #261733;
   color: #FFF;
   border: none;
   height: auto;

@@ -26,7 +26,7 @@ exports[`Renders and matches snapshot 1`] = `
         >
           <p
             class="PU100000--root-0-2-7 PU100000--root-d6-0-2-16 PU100000--body2-0-2-15"
-            style="color: rgb(122, 96, 255);"
+            style="color: rgb(38, 23, 51);"
           >
             CROSSNET
           </p>

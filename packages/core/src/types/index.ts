@@ -47,6 +47,7 @@ export interface PurpleMap {
   base: string;
   dark: string;
   transparent: string;
+  pickup: string;
 }
 
 export interface GreenMap {
@@ -65,6 +66,7 @@ export interface GreyMap {
 export interface RedMap {
   light: string;
   base: string;
+  ruby: string;
 }
 
 export interface DefaultThemeColors {
