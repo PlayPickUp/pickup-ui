@@ -4,7 +4,8 @@ put some strong selectors in 'makeMeUgly.css' and uncomment its import below */
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./index.css";
-// import "./makeMeUgly.css";
+import "./makeMeUgly.css";
+import betmgm from "./PICKERBETMGM.jpeg";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
@@ -140,7 +141,7 @@ const App: React.FC = () => {
     <div className="Playground">
       <ThemeProvider theme={publisherTheme}>
         <Router>
-          <div id="parent" style={{ width: "100%" }}>
+          {/* <div id="parent" style={{ width: "20%" }}>
             <Hero
               title="Capture your audience. Build a community."
               description="Unleash your fans' opinions with interactive content."
@@ -202,8 +203,14 @@ const App: React.FC = () => {
                   />
                 </Form>
               )}
-            </Formik>
-          </div>
+            </Formik> */}
+          {/* </div> */}
+          <Ad
+            height={125}
+            width={600}
+            name={"HelloWorld Ad Default"}
+            backgroundImage={betmgm}
+          />
         </Router>
       </ThemeProvider>
     </div>
