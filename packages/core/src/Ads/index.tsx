@@ -34,7 +34,6 @@ const useStyles = createUseStyles((theme: DefaultTheme) => ({
     justifyContent: "space-around",
     alignItems: "center",
     textAlign: "center",
-    borderRadius: "4px",
     backgroundSize: `contain`,
     backgroundRepeat: `no-repeat`,
     backgroundColor: theme.colors.grey.light,
